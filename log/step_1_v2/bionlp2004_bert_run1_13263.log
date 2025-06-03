@@ -1,0 +1,438 @@
+05/26/2025 09:23:53 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: False, 16-bits training: False
+05/26/2025 09:23:53 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=True,
+do_eval=True,
+do_predict=True,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=epoch,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=info,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/project/hrao/Meta-Resample/output/bionlp2004_bert_run1/runs/May26_09-23-53_itiger02,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=8.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/project/hrao/Meta-Resample/output/bionlp2004_bert_run1,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=32,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=/project/hrao/Meta-Resample/output/bionlp2004_bert_run1,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+[INFO|configuration_utils.py:698] 2025-05-26 09:23:54,807 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:770] 2025-05-26 09:23:54,812 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "finetuning_task": "ner",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3",
+    "4": "LABEL_4",
+    "5": "LABEL_5",
+    "6": "LABEL_6",
+    "7": "LABEL_7",
+    "8": "LABEL_8",
+    "9": "LABEL_9",
+    "10": "LABEL_10"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_10": 10,
+    "LABEL_2": 2,
+    "LABEL_3": 3,
+    "LABEL_4": 4,
+    "LABEL_5": 5,
+    "LABEL_6": 6,
+    "LABEL_7": 7,
+    "LABEL_8": 8,
+    "LABEL_9": 9
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|configuration_utils.py:698] 2025-05-26 09:23:54,861 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:770] 2025-05-26 09:23:54,862 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 09:23:54,908 >> loading file vocab.txt from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/vocab.txt
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 09:23:54,908 >> loading file tokenizer.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/tokenizer.json
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 09:23:54,908 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 09:23:54,908 >> loading file special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 09:23:54,908 >> loading file tokenizer_config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 09:23:54,908 >> loading file chat_template.jinja from cache at None
+[INFO|configuration_utils.py:698] 2025-05-26 09:23:54,909 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:770] 2025-05-26 09:23:54,910 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|modeling_utils.py:1150] 2025-05-26 09:23:55,142 >> loading weights file model.safetensors from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/model.safetensors
+[INFO|logging.py:343] 2025-05-26 09:23:55,164 >> A pretrained model of type `BertForTokenClassification` contains parameters that have been renamed internally (a few are listed below but more are present in the model):
+* `cls.predictions.transform.LayerNorm.beta` -> `cls.predictions.transform.LayerNorm.bias`
+* `cls.predictions.transform.LayerNorm.gamma` -> `cls.predictions.transform.LayerNorm.weight`
+If you are using a model from the Hub, consider submitting a PR to adjust these weights and help future users.
+[INFO|modeling_utils.py:5120] 2025-05-26 09:23:55,211 >> Some weights of the model checkpoint at google-bert/bert-base-uncased were not used when initializing BertForTokenClassification: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:5132] 2025-05-26 09:23:55,211 >> Some weights of BertForTokenClassification were not initialized from the model checkpoint at google-bert/bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Running tokenizer on train dataset:   0%|          | 0/16619 [00:00<?, ? examples/s]
+Running tokenizer on train dataset:  12%|█▏        | 2000/16619 [00:00<00:01, 12656.20 examples/s]
+Running tokenizer on train dataset:  24%|██▍       | 4000/16619 [00:00<00:00, 12686.43 examples/s]
+Running tokenizer on train dataset:  36%|███▌      | 6000/16619 [00:00<00:00, 12746.71 examples/s]
+Running tokenizer on train dataset:  48%|████▊     | 8000/16619 [00:00<00:00, 9516.86 examples/s] 
+Running tokenizer on train dataset:  60%|██████    | 10000/16619 [00:00<00:00, 10306.76 examples/s]
+Running tokenizer on train dataset:  72%|███████▏  | 12000/16619 [00:01<00:00, 11036.60 examples/s]
+Running tokenizer on train dataset:  84%|████████▍ | 14000/16619 [00:01<00:00, 11642.80 examples/s]
+Running tokenizer on train dataset:  96%|█████████▋| 16000/16619 [00:01<00:00, 12011.58 examples/s]
+Running tokenizer on train dataset: 100%|██████████| 16619/16619 [00:01<00:00, 11469.46 examples/s]
+
+Running tokenizer on validation dataset:   0%|          | 0/1927 [00:00<?, ? examples/s]
+Running tokenizer on validation dataset: 100%|██████████| 1927/1927 [00:00<00:00, 13014.65 examples/s]
+Running tokenizer on validation dataset: 100%|██████████| 1927/1927 [00:00<00:00, 12836.21 examples/s]
+
+Running tokenizer on prediction dataset:   0%|          | 0/3856 [00:00<?, ? examples/s]
+Running tokenizer on prediction dataset:  52%|█████▏    | 2000/3856 [00:00<00:00, 6876.48 examples/s]
+Running tokenizer on prediction dataset: 100%|██████████| 3856/3856 [00:00<00:00, 9266.83 examples/s]
+Running tokenizer on prediction dataset: 100%|██████████| 3856/3856 [00:00<00:00, 8750.32 examples/s]
+05/26/2025 09:23:57 - INFO - __main__ - Using standard DataCollatorForTokenClassification.
+05/26/2025 09:23:57 - INFO - __main__ - Using standard Trainer.
+/project/hrao/Meta-Resample/step_1_v2/step1_run_ner.py:740: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(**trainer_kwargs)
+[INFO|trainer.py:934] 2025-05-26 09:23:58,005 >> The following columns in the Training set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:2409] 2025-05-26 09:23:58,012 >> ***** Running training *****
+[INFO|trainer.py:2410] 2025-05-26 09:23:58,012 >>   Num examples = 16,619
+[INFO|trainer.py:2411] 2025-05-26 09:23:58,012 >>   Num Epochs = 8
+[INFO|trainer.py:2412] 2025-05-26 09:23:58,012 >>   Instantaneous batch size per device = 32
+[INFO|trainer.py:2415] 2025-05-26 09:23:58,012 >>   Total train batch size (w. parallel, distributed & accumulation) = 32
+[INFO|trainer.py:2416] 2025-05-26 09:23:58,012 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:2417] 2025-05-26 09:23:58,012 >>   Total optimization steps = 4,160
+[INFO|trainer.py:2418] 2025-05-26 09:23:58,013 >>   Number of trainable parameters = 108,900,107
+[INFO|trainer.py:3993] 2025-05-26 09:24:37,362 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-500
+[INFO|configuration_utils.py:424] 2025-05-26 09:24:37,365 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-500/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:24:38,610 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:24:38,641 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:24:38,659 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-500/special_tokens_map.json
+[INFO|trainer.py:934] 2025-05-26 09:24:42,518 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:24:42,520 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 09:24:42,520 >>   Num examples = 1927
+[INFO|trainer.py:4332] 2025-05-26 09:24:42,520 >>   Batch size = 8
+[INFO|trainer.py:3993] 2025-05-26 09:25:23,178 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1000
+[INFO|configuration_utils.py:424] 2025-05-26 09:25:23,180 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1000/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:25:24,228 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1000/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:25:24,258 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1000/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:25:24,275 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1000/special_tokens_map.json
+[INFO|trainer.py:934] 2025-05-26 09:25:29,702 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:25:29,704 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 09:25:29,704 >>   Num examples = 1927
+[INFO|trainer.py:4332] 2025-05-26 09:25:29,704 >>   Batch size = 8
+[INFO|trainer.py:3993] 2025-05-26 09:26:09,047 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1500
+[INFO|configuration_utils.py:424] 2025-05-26 09:26:09,050 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1500/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:26:10,153 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:26:10,185 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:26:10,203 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-1500/special_tokens_map.json
+[INFO|trainer.py:934] 2025-05-26 09:26:17,263 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:26:17,265 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 09:26:17,265 >>   Num examples = 1927
+[INFO|trainer.py:4332] 2025-05-26 09:26:17,265 >>   Batch size = 8
+[INFO|trainer.py:3993] 2025-05-26 09:26:55,316 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2000
+[INFO|configuration_utils.py:424] 2025-05-26 09:26:55,320 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2000/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:26:56,318 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2000/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:26:56,322 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2000/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:26:56,324 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2000/special_tokens_map.json
+[INFO|trainer.py:934] 2025-05-26 09:27:05,074 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:27:05,076 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 09:27:05,076 >>   Num examples = 1927
+[INFO|trainer.py:4332] 2025-05-26 09:27:05,076 >>   Batch size = 8
+[INFO|trainer.py:3993] 2025-05-26 09:27:41,333 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2500
+[INFO|configuration_utils.py:424] 2025-05-26 09:27:41,337 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2500/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:27:42,528 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:27:42,560 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:27:42,577 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-2500/special_tokens_map.json
+[INFO|trainer.py:934] 2025-05-26 09:27:53,056 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:27:53,057 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 09:27:53,057 >>   Num examples = 1927
+[INFO|trainer.py:4332] 2025-05-26 09:27:53,057 >>   Batch size = 8
+[INFO|trainer.py:3993] 2025-05-26 09:28:27,816 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3000
+[INFO|configuration_utils.py:424] 2025-05-26 09:28:27,820 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3000/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:28:29,156 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3000/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:28:29,189 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3000/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:28:29,207 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3000/special_tokens_map.json
+[INFO|trainer.py:934] 2025-05-26 09:28:41,853 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:28:41,855 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 09:28:41,855 >>   Num examples = 1927
+[INFO|trainer.py:4332] 2025-05-26 09:28:41,855 >>   Batch size = 8
+[INFO|trainer.py:3993] 2025-05-26 09:29:15,123 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3500
+[INFO|configuration_utils.py:424] 2025-05-26 09:29:15,127 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3500/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:29:16,256 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:29:16,288 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:29:16,306 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-3500/special_tokens_map.json
+[INFO|trainer.py:934] 2025-05-26 09:29:29,957 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:29:29,959 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 09:29:29,959 >>   Num examples = 1927
+[INFO|trainer.py:4332] 2025-05-26 09:29:29,959 >>   Batch size = 8
+[INFO|trainer.py:3993] 2025-05-26 09:30:01,513 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4000
+[INFO|configuration_utils.py:424] 2025-05-26 09:30:01,517 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4000/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:30:02,539 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4000/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:30:02,572 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4000/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:30:02,591 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4000/special_tokens_map.json
+[INFO|trainer.py:3993] 2025-05-26 09:30:17,921 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4160
+[INFO|configuration_utils.py:424] 2025-05-26 09:30:17,923 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4160/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:30:19,013 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4160/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:30:19,046 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4160/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:30:19,064 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/checkpoint-4160/special_tokens_map.json
+[INFO|trainer.py:934] 2025-05-26 09:30:21,497 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:30:21,499 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 09:30:21,499 >>   Num examples = 1927
+[INFO|trainer.py:4332] 2025-05-26 09:30:21,499 >>   Batch size = 8
+[INFO|trainer.py:2676] 2025-05-26 09:30:23,952 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+[INFO|trainer.py:3993] 2025-05-26 09:30:23,957 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/bionlp2004_bert_run1
+[INFO|configuration_utils.py:424] 2025-05-26 09:30:23,959 >> Configuration saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 09:30:25,026 >> Model weights saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 09:30:25,047 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 09:30:25,059 >> Special tokens file saved in /project/hrao/Meta-Resample/output/bionlp2004_bert_run1/special_tokens_map.json
+{'loss': 0.3016, 'grad_norm': 1.3967567682266235, 'learning_rate': 1.760096153846154e-05, 'epoch': 0.9615384615384616}
+{'eval_loss': 0.16871203482151031, 'eval_overall_precision': 0.7389008087143093, 'eval_overall_recall': 0.8062308661984513, 'eval_overall_f1': 0.7710988632449192, 'eval_overall_accuracy': 0.9428419644262553, 'eval_runtime': 2.4426, 'eval_samples_per_second': 788.927, 'eval_steps_per_second': 98.667, 'epoch': 1.0}
+{'loss': 0.1592, 'grad_norm': 1.6098626852035522, 'learning_rate': 1.5197115384615386e-05, 'epoch': 1.9230769230769231}
+{'eval_loss': 0.16064532101154327, 'eval_overall_precision': 0.7573152587204497, 'eval_overall_recall': 0.8249594813614263, 'eval_overall_f1': 0.7896914325116359, 'eval_overall_accuracy': 0.945911380450181, 'eval_runtime': 2.4254, 'eval_samples_per_second': 794.513, 'eval_steps_per_second': 99.366, 'epoch': 2.0}
+{'loss': 0.1319, 'grad_norm': 1.5243076086044312, 'learning_rate': 1.2793269230769233e-05, 'epoch': 2.8846153846153846}
+{'eval_loss': 0.16176310181617737, 'eval_overall_precision': 0.7679457492557062, 'eval_overall_recall': 0.836124617323969, 'eval_overall_f1': 0.800586257435986, 'eval_overall_accuracy': 0.9473870612309145, 'eval_runtime': 2.4344, 'eval_samples_per_second': 791.567, 'eval_steps_per_second': 98.997, 'epoch': 3.0}
+{'loss': 0.1132, 'grad_norm': 1.4243550300598145, 'learning_rate': 1.0389423076923077e-05, 'epoch': 3.8461538461538463}
+{'eval_loss': 0.16385741531848907, 'eval_overall_precision': 0.7764283270612384, 'eval_overall_recall': 0.8173960021609941, 'eval_overall_f1': 0.7963856478638477, 'eval_overall_accuracy': 0.9485282543680151, 'eval_runtime': 2.4282, 'eval_samples_per_second': 793.592, 'eval_steps_per_second': 99.25, 'epoch': 4.0}
+{'loss': 0.0975, 'grad_norm': 1.0495190620422363, 'learning_rate': 7.985576923076924e-06, 'epoch': 4.8076923076923075}
+{'eval_loss': 0.17056074738502502, 'eval_overall_precision': 0.7796581196581197, 'eval_overall_recall': 0.8213578245993157, 'eval_overall_f1': 0.7999649215118828, 'eval_overall_accuracy': 0.9487053360617032, 'eval_runtime': 2.4315, 'eval_samples_per_second': 792.504, 'eval_steps_per_second': 99.114, 'epoch': 5.0}
+{'loss': 0.0877, 'grad_norm': 1.1290770769119263, 'learning_rate': 5.5817307692307694e-06, 'epoch': 5.769230769230769}
+{'eval_loss': 0.17884273827075958, 'eval_overall_precision': 0.7845500848896435, 'eval_overall_recall': 0.8321627948856474, 'eval_overall_f1': 0.8076553351393864, 'eval_overall_accuracy': 0.9489217692428774, 'eval_runtime': 2.438, 'eval_samples_per_second': 790.398, 'eval_steps_per_second': 98.851, 'epoch': 6.0}
+{'loss': 0.0783, 'grad_norm': 1.3167822360992432, 'learning_rate': 3.1778846153846155e-06, 'epoch': 6.730769230769231}
+{'eval_loss': 0.1817018687725067, 'eval_overall_precision': 0.7814411964649898, 'eval_overall_recall': 0.8280208896092203, 'eval_overall_f1': 0.8040570079566319, 'eval_overall_accuracy': 0.949374311348969, 'eval_runtime': 2.4359, 'eval_samples_per_second': 791.077, 'eval_steps_per_second': 98.936, 'epoch': 7.0}
+{'loss': 0.0714, 'grad_norm': 1.3859927654266357, 'learning_rate': 7.740384615384616e-07, 'epoch': 7.6923076923076925}
+{'eval_loss': 0.1854444295167923, 'eval_overall_precision': 0.7813351498637602, 'eval_overall_recall': 0.8262200612281649, 'eval_overall_f1': 0.8031509846827133, 'eval_overall_accuracy': 0.949197229655281, 'eval_runtime': 2.4469, 'eval_samples_per_second': 787.52, 'eval_steps_per_second': 98.491, 'epoch': 8.0}
+{'train_runtime': 385.9397, 'train_samples_per_second': 344.489, 'train_steps_per_second': 10.779, 'train_loss': 0.12785154099647816, 'epoch': 8.0}
+***** train metrics *****
+  epoch                    =        8.0
+  train_loss               =     0.1279
+  train_runtime            = 0:06:25.93
+  train_samples            =      16619
+  train_samples_per_second =    344.489
+  train_steps_per_second   =     10.779
+05/26/2025 09:30:25 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:934] 2025-05-26 09:30:25,086 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:30:25,087 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 09:30:25,087 >>   Num examples = 1927
+[INFO|trainer.py:4332] 2025-05-26 09:30:25,087 >>   Batch size = 8
+{'eval_loss': 0.1854444295167923, 'eval_overall_precision': 0.7813351498637602, 'eval_overall_recall': 0.8262200612281649, 'eval_overall_f1': 0.8031509846827133, 'eval_overall_accuracy': 0.949197229655281, 'eval_runtime': 2.4436, 'eval_samples_per_second': 788.597, 'eval_steps_per_second': 98.626, 'epoch': 8.0}
+***** eval metrics *****
+  epoch                   =        8.0
+  eval_loss               =     0.1854
+  eval_overall_accuracy   =     0.9492
+  eval_overall_f1         =     0.8032
+  eval_overall_precision  =     0.7813
+  eval_overall_recall     =     0.8262
+  eval_runtime            = 0:00:02.44
+  eval_samples            =       1927
+  eval_samples_per_second =    788.597
+  eval_steps_per_second   =     98.626
+05/26/2025 09:30:27 - INFO - __main__ - *** Predict ***
+[INFO|trainer.py:934] 2025-05-26 09:30:27,539 >> The following columns in the test set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 09:30:27,541 >> 
+***** Running Prediction *****
+[INFO|trainer.py:4329] 2025-05-26 09:30:27,541 >>   Num examples = 3856
+[INFO|trainer.py:4332] 2025-05-26 09:30:27,541 >>   Batch size = 8
+[INFO|modelcard.py:450] 2025-05-26 09:30:32,741 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Token Classification', 'type': 'token-classification'}}
+***** predict metrics *****
+  predict_loss               =      0.243
+  predict_overall_accuracy   =      0.937
+  predict_overall_f1         =     0.7208 ✅
+  predict_overall_precision  =     0.6712
+  predict_overall_recall     =     0.7783
+  predict_runtime            = 0:00:04.97
+  predict_samples_per_second =     774.72
+  predict_steps_per_second   =      96.84

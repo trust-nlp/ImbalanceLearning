@@ -1,0 +1,4 @@
+===== 开始运行：数据集 = mit_movie_trivia =====
+训练文件：/project/hrao/data/mit_movie_trivia/train.conll
+===== 运行完成：数据集 = mit_movie_trivia =====
+日志存放在：/project/hrao/Meta-Resample/log/step_3/mit_movie_trivia_bert_run_13546.log

@@ -1,0 +1,1720 @@
+05/26/2025 06:04:24 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: False, 16-bits training: False
+05/26/2025 06:04:24 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=True,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=epoch,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=info,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/runs/May26_06-04-23_itiger01,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=epoch,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=15.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=32,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=/project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+[INFO|configuration_utils.py:698] 2025-05-26 06:04:24,466 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:770] 2025-05-26 06:04:24,469 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "finetuning_task": "ner",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3",
+    "4": "LABEL_4",
+    "5": "LABEL_5",
+    "6": "LABEL_6",
+    "7": "LABEL_7",
+    "8": "LABEL_8",
+    "9": "LABEL_9",
+    "10": "LABEL_10",
+    "11": "LABEL_11",
+    "12": "LABEL_12",
+    "13": "LABEL_13",
+    "14": "LABEL_14",
+    "15": "LABEL_15",
+    "16": "LABEL_16",
+    "17": "LABEL_17",
+    "18": "LABEL_18",
+    "19": "LABEL_19",
+    "20": "LABEL_20",
+    "21": "LABEL_21",
+    "22": "LABEL_22",
+    "23": "LABEL_23",
+    "24": "LABEL_24"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_10": 10,
+    "LABEL_11": 11,
+    "LABEL_12": 12,
+    "LABEL_13": 13,
+    "LABEL_14": 14,
+    "LABEL_15": 15,
+    "LABEL_16": 16,
+    "LABEL_17": 17,
+    "LABEL_18": 18,
+    "LABEL_19": 19,
+    "LABEL_2": 2,
+    "LABEL_20": 20,
+    "LABEL_21": 21,
+    "LABEL_22": 22,
+    "LABEL_23": 23,
+    "LABEL_24": 24,
+    "LABEL_3": 3,
+    "LABEL_4": 4,
+    "LABEL_5": 5,
+    "LABEL_6": 6,
+    "LABEL_7": 7,
+    "LABEL_8": 8,
+    "LABEL_9": 9
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|configuration_utils.py:698] 2025-05-26 06:04:24,513 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:770] 2025-05-26 06:04:24,514 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 06:04:24,563 >> loading file vocab.txt from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/vocab.txt
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 06:04:24,563 >> loading file tokenizer.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/tokenizer.json
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 06:04:24,563 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 06:04:24,563 >> loading file special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 06:04:24,563 >> loading file tokenizer_config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 06:04:24,563 >> loading file chat_template.jinja from cache at None
+[INFO|configuration_utils.py:698] 2025-05-26 06:04:24,563 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:770] 2025-05-26 06:04:24,707 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|modeling_utils.py:1150] 2025-05-26 06:04:24,882 >> loading weights file model.safetensors from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/model.safetensors
+[INFO|logging.py:343] 2025-05-26 06:04:24,903 >> A pretrained model of type `BertForTokenClassification` contains parameters that have been renamed internally (a few are listed below but more are present in the model):
+* `cls.predictions.transform.LayerNorm.beta` -> `cls.predictions.transform.LayerNorm.bias`
+* `cls.predictions.transform.LayerNorm.gamma` -> `cls.predictions.transform.LayerNorm.weight`
+If you are using a model from the Hub, consider submitting a PR to adjust these weights and help future users.
+[INFO|modeling_utils.py:5120] 2025-05-26 06:04:24,938 >> Some weights of the model checkpoint at google-bert/bert-base-uncased were not used when initializing BertForTokenClassification: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:5132] 2025-05-26 06:04:24,938 >> Some weights of BertForTokenClassification were not initialized from the model checkpoint at google-bert/bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Running tokenizer on train dataset:   0%|          | 0/6816 [00:00<?, ? examples/s]
+Running tokenizer on train dataset:  29%|██▉       | 2000/6816 [00:00<00:00, 19489.90 examples/s]
+Running tokenizer on train dataset:  73%|███████▎  | 5000/6816 [00:00<00:00, 20292.92 examples/s]
+Running tokenizer on train dataset: 100%|██████████| 6816/6816 [00:00<00:00, 20252.75 examples/s]
+
+Running tokenizer on validation dataset:   0%|          | 0/1000 [00:00<?, ? examples/s]
+Running tokenizer on validation dataset: 100%|██████████| 1000/1000 [00:00<00:00, 20440.97 examples/s]
+
+Running tokenizer on prediction dataset:   0%|          | 0/1953 [00:00<?, ? examples/s]
+Running tokenizer on prediction dataset: 100%|██████████| 1953/1953 [00:00<00:00, 20910.86 examples/s]
+05/26/2025 06:04:25 - INFO - __main__ - Using standard DataCollatorForTokenClassification.
+05/26/2025 06:04:25 - INFO - __main__ - Using standard Trainer.
+/project/hrao/Meta-Resample/step_1/step1_run_ner.py:706: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(**trainer_kwargs)
+[INFO|trainer.py:934] 2025-05-26 06:04:26,357 >> The following columns in the Training set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:2409] 2025-05-26 06:04:26,363 >> ***** Running training *****
+[INFO|trainer.py:2410] 2025-05-26 06:04:26,363 >>   Num examples = 6,816
+[INFO|trainer.py:2411] 2025-05-26 06:04:26,363 >>   Num Epochs = 15
+[INFO|trainer.py:2412] 2025-05-26 06:04:26,363 >>   Instantaneous batch size per device = 32
+[INFO|trainer.py:2415] 2025-05-26 06:04:26,363 >>   Total train batch size (w. parallel, distributed & accumulation) = 32
+[INFO|trainer.py:2416] 2025-05-26 06:04:26,363 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:2417] 2025-05-26 06:04:26,363 >>   Total optimization steps = 3,195
+[INFO|trainer.py:2418] 2025-05-26 06:04:26,363 >>   Number of trainable parameters = 108,910,873
+
+  0%|          | 0/3195 [00:00<?, ?it/s]
+  0%|          | 1/3195 [00:00<10:41,  4.98it/s]
+  0%|          | 5/3195 [00:00<02:58, 17.83it/s]
+  0%|          | 9/3195 [00:00<02:15, 23.47it/s]
+  0%|          | 13/3195 [00:00<01:59, 26.72it/s]
+  1%|          | 17/3195 [00:00<01:49, 28.90it/s]
+  1%|          | 21/3195 [00:00<01:44, 30.41it/s]
+  1%|          | 25/3195 [00:00<01:48, 29.17it/s]
+  1%|          | 29/3195 [00:01<01:47, 29.38it/s]
+  1%|          | 33/3195 [00:01<01:43, 30.67it/s]
+  1%|          | 37/3195 [00:01<01:41, 31.11it/s]
+  1%|▏         | 41/3195 [00:01<01:40, 31.33it/s]
+  1%|▏         | 45/3195 [00:01<01:41, 31.13it/s]
+  2%|▏         | 49/3195 [00:01<01:41, 30.91it/s]
+  2%|▏         | 53/3195 [00:01<01:42, 30.71it/s]
+  2%|▏         | 57/3195 [00:01<01:40, 31.21it/s]
+  2%|▏         | 61/3195 [00:02<01:41, 30.94it/s]
+  2%|▏         | 65/3195 [00:02<01:41, 30.97it/s]
+  2%|▏         | 69/3195 [00:02<01:43, 30.19it/s]
+  2%|▏         | 73/3195 [00:02<01:40, 31.11it/s]
+  2%|▏         | 77/3195 [00:02<01:38, 31.68it/s]
+  3%|▎         | 81/3195 [00:02<01:38, 31.67it/s]
+  3%|▎         | 85/3195 [00:02<01:36, 32.22it/s]
+  3%|▎         | 89/3195 [00:02<01:37, 31.99it/s]
+  3%|▎         | 93/3195 [00:03<01:38, 31.55it/s]
+  3%|▎         | 97/3195 [00:03<01:36, 32.17it/s]
+  3%|▎         | 101/3195 [00:03<01:37, 31.73it/s]
+  3%|▎         | 105/3195 [00:03<01:36, 31.91it/s]
+  3%|▎         | 109/3195 [00:03<01:35, 32.46it/s]
+  4%|▎         | 113/3195 [00:03<01:33, 33.00it/s]
+  4%|▎         | 117/3195 [00:03<01:33, 32.83it/s]
+  4%|▍         | 121/3195 [00:03<01:33, 32.80it/s]
+  4%|▍         | 125/3195 [00:04<01:37, 31.40it/s]
+  4%|▍         | 129/3195 [00:04<01:36, 31.86it/s]
+  4%|▍         | 133/3195 [00:04<01:35, 31.99it/s]
+  4%|▍         | 137/3195 [00:04<01:37, 31.47it/s]
+  4%|▍         | 141/3195 [00:04<01:40, 30.42it/s]
+  5%|▍         | 145/3195 [00:04<01:37, 31.15it/s]
+  5%|▍         | 149/3195 [00:04<01:36, 31.46it/s]
+  5%|▍         | 153/3195 [00:05<01:35, 31.86it/s]
+  5%|▍         | 157/3195 [00:05<01:38, 30.79it/s]
+  5%|▌         | 161/3195 [00:05<01:38, 30.94it/s]
+  5%|▌         | 165/3195 [00:05<01:35, 31.80it/s]
+  5%|▌         | 169/3195 [00:05<01:36, 31.40it/s]
+  5%|▌         | 173/3195 [00:05<01:35, 31.65it/s]
+  6%|▌         | 177/3195 [00:05<01:35, 31.67it/s]
+  6%|▌         | 181/3195 [00:05<01:35, 31.48it/s]
+  6%|▌         | 185/3195 [00:06<01:33, 32.22it/s]
+  6%|▌         | 189/3195 [00:06<01:36, 31.21it/s]
+  6%|▌         | 193/3195 [00:06<01:35, 31.48it/s]
+  6%|▌         | 197/3195 [00:06<01:35, 31.52it/s]
+  6%|▋         | 201/3195 [00:06<01:34, 31.70it/s]
+  6%|▋         | 205/3195 [00:06<01:34, 31.62it/s]
+  7%|▋         | 209/3195 [00:06<01:33, 31.90it/s]
+  7%|▋         | 213/3195 [00:06<01:34, 31.67it/s]
+                                                  
+
+  7%|▋         | 213/3195 [00:06<01:34, 31.67it/s][INFO|trainer.py:934] 2025-05-26 06:04:33,286 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:04:33,288 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:04:33,288 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:04:33,288 >>   Batch size = 8
+{'loss': 0.748, 'grad_norm': 1.7635201215744019, 'learning_rate': 1.8672926447574337e-05, 'epoch': 1.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 202.84it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 199.14it/s][A
+
+ 50%|████▉     | 62/125 [00:00<00:00, 197.10it/s][A
+
+ 66%|██████▌   | 82/125 [00:00<00:00, 197.09it/s][A
+
+ 82%|████████▏ | 102/125 [00:00<00:00, 197.02it/s][A
+
+ 98%|█████████▊| 122/125 [00:00<00:00, 197.55it/s][A/project/hrao/miniconda3/envs/imbalance_env/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+                                                  
+
+                                                  
+[A
+  7%|▋         | 213/3195 [00:07<01:34, 31.67it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 197.55it/s][A
+
+                                                  [A
+  7%|▋         | 217/3195 [00:07<04:49, 10.29it/s]
+  7%|▋         | 221/3195 [00:08<03:50, 12.90it/s]
+  7%|▋         | 225/3195 [00:08<03:07, 15.86it/s]
+  7%|▋         | 228/3195 [00:08<02:46, 17.87it/s]
+  7%|▋         | 232/3195 [00:08<02:20, 21.03it/s]
+  7%|▋         | 236/3195 [00:08<02:05, 23.60it/s]
+  8%|▊         | 240/3195 [00:08<01:52, 26.17it/s]
+  8%|▊         | 244/3195 [00:08<01:49, 26.88it/s]
+  8%|▊         | 248/3195 [00:08<01:44, 28.33it/s]
+  8%|▊         | 252/3195 [00:09<01:42, 28.63it/s]
+  8%|▊         | 256/3195 [00:09<01:37, 30.10it/s]
+  8%|▊         | 260/3195 [00:09<01:37, 30.03it/s]
+  8%|▊         | 264/3195 [00:09<01:34, 31.12it/s]
+  8%|▊         | 268/3195 [00:09<01:32, 31.66it/s]
+  9%|▊         | 272/3195 [00:09<01:32, 31.74it/s]
+  9%|▊         | 276/3195 [00:09<01:32, 31.54it/s]
+  9%|▉         | 280/3195 [00:09<01:29, 32.42it/s]
+  9%|▉         | 284/3195 [00:09<01:30, 32.28it/s]
+  9%|▉         | 288/3195 [00:10<01:30, 32.07it/s]
+  9%|▉         | 292/3195 [00:10<01:29, 32.26it/s]
+  9%|▉         | 296/3195 [00:10<01:28, 32.64it/s]
+  9%|▉         | 300/3195 [00:10<01:28, 32.70it/s]
+ 10%|▉         | 304/3195 [00:10<01:29, 32.34it/s]
+ 10%|▉         | 308/3195 [00:10<01:29, 32.25it/s]
+ 10%|▉         | 312/3195 [00:10<01:34, 30.44it/s]
+ 10%|▉         | 316/3195 [00:11<01:34, 30.58it/s]
+ 10%|█         | 320/3195 [00:11<01:32, 31.16it/s]
+ 10%|█         | 324/3195 [00:11<01:29, 32.02it/s]
+ 10%|█         | 328/3195 [00:11<01:34, 30.29it/s]
+ 10%|█         | 332/3195 [00:11<01:32, 30.93it/s]
+ 11%|█         | 336/3195 [00:11<01:31, 31.29it/s]
+ 11%|█         | 340/3195 [00:11<01:29, 31.77it/s]
+ 11%|█         | 344/3195 [00:11<01:29, 31.90it/s]
+ 11%|█         | 348/3195 [00:12<01:31, 31.26it/s]
+ 11%|█         | 352/3195 [00:12<01:30, 31.33it/s]
+ 11%|█         | 356/3195 [00:12<01:31, 30.93it/s]
+ 11%|█▏        | 360/3195 [00:12<01:30, 31.27it/s]
+ 11%|█▏        | 364/3195 [00:12<01:30, 31.40it/s]
+ 12%|█▏        | 368/3195 [00:12<01:31, 30.92it/s]
+ 12%|█▏        | 372/3195 [00:12<01:30, 31.10it/s]
+ 12%|█▏        | 376/3195 [00:12<01:29, 31.38it/s]
+ 12%|█▏        | 380/3195 [00:13<01:30, 31.22it/s]
+ 12%|█▏        | 384/3195 [00:13<01:29, 31.25it/s]
+ 12%|█▏        | 388/3195 [00:13<01:29, 31.23it/s]
+ 12%|█▏        | 392/3195 [00:13<01:27, 31.87it/s]
+ 12%|█▏        | 396/3195 [00:13<01:30, 30.86it/s]
+ 13%|█▎        | 400/3195 [00:13<01:29, 31.08it/s]
+ 13%|█▎        | 404/3195 [00:13<01:30, 30.90it/s]
+ 13%|█▎        | 408/3195 [00:13<01:29, 31.08it/s]
+ 13%|█▎        | 412/3195 [00:14<01:27, 31.69it/s]
+ 13%|█▎        | 416/3195 [00:14<01:26, 32.20it/s]
+ 13%|█▎        | 420/3195 [00:14<01:25, 32.47it/s]
+ 13%|█▎        | 424/3195 [00:14<01:25, 32.23it/s]
+                                                  
+
+ 13%|█▎        | 426/3195 [00:14<01:25, 32.23it/s][INFO|trainer.py:934] 2025-05-26 06:04:40,879 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:04:40,880 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:04:40,880 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:04:40,880 >>   Batch size = 8
+{'eval_loss': 0.4001537561416626, 'eval_overall_precision': 0.6278132348001344, 'eval_overall_recall': 0.6856199559794571, 'eval_overall_f1': 0.6554445028932142, 'eval_overall_accuracy': 0.8746623446785521, 'eval_runtime': 0.8571, 'eval_samples_per_second': 1166.793, 'eval_steps_per_second': 145.849, 'epoch': 1.0}
+{'loss': 0.351, 'grad_norm': 2.692526340484619, 'learning_rate': 1.7339593114241004e-05, 'epoch': 2.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 205.37it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 200.80it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.42it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.14it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 197.64it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.14it/s][A
+                                                  
+
+                                                  
+[A
+ 13%|█▎        | 426/3195 [00:15<01:25, 32.23it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.14it/s][A
+
+                                                  [A
+ 13%|█▎        | 428/3195 [00:15<04:24, 10.48it/s]
+ 14%|█▎        | 432/3195 [00:15<03:28, 13.22it/s]
+ 14%|█▎        | 436/3195 [00:15<02:51, 16.08it/s]
+ 14%|█▍        | 440/3195 [00:15<02:25, 18.89it/s]
+ 14%|█▍        | 444/3195 [00:15<02:06, 21.71it/s]
+ 14%|█▍        | 448/3195 [00:16<01:55, 23.84it/s]
+ 14%|█▍        | 452/3195 [00:16<01:47, 25.44it/s]
+ 14%|█▍        | 456/3195 [00:16<01:42, 26.68it/s]
+ 14%|█▍        | 460/3195 [00:16<01:37, 28.05it/s]
+ 15%|█▍        | 464/3195 [00:16<01:33, 29.10it/s]
+ 15%|█▍        | 468/3195 [00:16<01:31, 29.80it/s]
+ 15%|█▍        | 472/3195 [00:16<01:30, 29.96it/s]
+ 15%|█▍        | 476/3195 [00:16<01:29, 30.42it/s]
+ 15%|█▌        | 480/3195 [00:17<01:26, 31.45it/s]
+ 15%|█▌        | 484/3195 [00:17<01:25, 31.65it/s]
+ 15%|█▌        | 488/3195 [00:17<01:27, 31.03it/s]
+ 15%|█▌        | 492/3195 [00:17<01:26, 31.39it/s]
+ 16%|█▌        | 496/3195 [00:17<01:26, 31.03it/s]
+ 16%|█▌        | 500/3195 [00:17<01:25, 31.53it/s][INFO|trainer.py:3993] 2025-05-26 06:04:44,068 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-500
+[INFO|configuration_utils.py:424] 2025-05-26 06:04:44,071 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-500/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 06:04:45,159 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 06:04:45,190 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 06:04:45,208 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-500/special_tokens_map.json
+
+ 16%|█▌        | 504/3195 [00:21<13:05,  3.43it/s]
+ 16%|█▌        | 508/3195 [00:21<09:33,  4.68it/s]
+ 16%|█▌        | 512/3195 [00:21<07:06,  6.30it/s]
+ 16%|█▌        | 515/3195 [00:21<05:44,  7.78it/s]
+ 16%|█▌        | 519/3195 [00:21<04:20, 10.25it/s]
+ 16%|█▋        | 523/3195 [00:21<03:25, 13.03it/s]
+ 16%|█▋        | 527/3195 [00:22<02:48, 15.84it/s]
+ 17%|█▋        | 531/3195 [00:22<02:26, 18.13it/s]
+ 17%|█▋        | 534/3195 [00:22<02:14, 19.77it/s]
+ 17%|█▋        | 537/3195 [00:22<02:04, 21.38it/s]
+ 17%|█▋        | 541/3195 [00:22<01:48, 24.39it/s]
+ 17%|█▋        | 545/3195 [00:22<01:44, 25.30it/s]
+ 17%|█▋        | 549/3195 [00:22<01:36, 27.47it/s]
+ 17%|█▋        | 553/3195 [00:22<01:32, 28.43it/s]
+ 17%|█▋        | 557/3195 [00:23<01:28, 29.71it/s]
+ 18%|█▊        | 561/3195 [00:23<01:24, 31.04it/s]
+ 18%|█▊        | 565/3195 [00:23<01:23, 31.61it/s]
+ 18%|█▊        | 569/3195 [00:23<01:22, 31.89it/s]
+ 18%|█▊        | 573/3195 [00:23<01:20, 32.62it/s]
+ 18%|█▊        | 577/3195 [00:23<01:19, 32.74it/s]
+ 18%|█▊        | 581/3195 [00:23<01:19, 33.05it/s]
+ 18%|█▊        | 585/3195 [00:23<01:19, 32.82it/s]
+ 18%|█▊        | 589/3195 [00:23<01:20, 32.26it/s]
+ 19%|█▊        | 593/3195 [00:24<01:20, 32.41it/s]
+ 19%|█▊        | 597/3195 [00:24<01:19, 32.70it/s]
+ 19%|█▉        | 601/3195 [00:24<01:20, 32.28it/s]
+ 19%|█▉        | 605/3195 [00:24<01:22, 31.33it/s]
+ 19%|█▉        | 609/3195 [00:24<01:24, 30.77it/s]
+ 19%|█▉        | 613/3195 [00:24<01:23, 30.93it/s]
+ 19%|█▉        | 617/3195 [00:24<01:22, 31.16it/s]
+ 19%|█▉        | 621/3195 [00:25<01:22, 31.36it/s]
+ 20%|█▉        | 625/3195 [00:25<01:22, 31.19it/s]
+ 20%|█▉        | 629/3195 [00:25<01:23, 30.81it/s]
+ 20%|█▉        | 633/3195 [00:25<01:21, 31.59it/s]
+ 20%|█▉        | 637/3195 [00:25<01:19, 32.23it/s]
+                                                  
+
+ 20%|██        | 639/3195 [00:25<01:19, 32.23it/s][INFO|trainer.py:934] 2025-05-26 06:04:51,961 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:04:51,962 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:04:51,962 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:04:51,963 >>   Batch size = 8
+{'eval_loss': 0.35476818680763245, 'eval_overall_precision': 0.6308503625576797, 'eval_overall_recall': 0.7021276595744681, 'eval_overall_f1': 0.6645833333333333, 'eval_overall_accuracy': 0.8816364618633662, 'eval_runtime': 0.8506, 'eval_samples_per_second': 1175.68, 'eval_steps_per_second': 146.96, 'epoch': 2.0}
+{'loss': 0.2819, 'grad_norm': 0.9172971248626709, 'learning_rate': 1.6006259780907668e-05, 'epoch': 3.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 205.80it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 201.17it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.54it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.16it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 197.79it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.11it/s][A
+                                                  
+
+                                                  
+[A
+ 20%|██        | 639/3195 [00:26<01:19, 32.23it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.11it/s][A
+
+                                                  [A
+ 20%|██        | 641/3195 [00:26<04:09, 10.22it/s]
+ 20%|██        | 645/3195 [00:26<03:18, 12.83it/s]
+ 20%|██        | 649/3195 [00:26<02:44, 15.51it/s]
+ 20%|██        | 653/3195 [00:26<02:18, 18.36it/s]
+ 21%|██        | 656/3195 [00:27<02:06, 20.06it/s]
+ 21%|██        | 660/3195 [00:27<01:50, 23.01it/s]
+ 21%|██        | 664/3195 [00:27<01:40, 25.13it/s]
+ 21%|██        | 668/3195 [00:27<01:33, 26.88it/s]
+ 21%|██        | 672/3195 [00:27<01:28, 28.60it/s]
+ 21%|██        | 676/3195 [00:27<01:24, 29.73it/s]
+ 21%|██▏       | 680/3195 [00:27<01:23, 30.18it/s]
+ 21%|██▏       | 684/3195 [00:27<01:22, 30.35it/s]
+ 22%|██▏       | 688/3195 [00:28<01:22, 30.23it/s]
+ 22%|██▏       | 692/3195 [00:28<01:21, 30.85it/s]
+ 22%|██▏       | 696/3195 [00:28<01:20, 31.22it/s]
+ 22%|██▏       | 700/3195 [00:28<01:19, 31.52it/s]
+ 22%|██▏       | 704/3195 [00:28<01:17, 32.06it/s]
+ 22%|██▏       | 708/3195 [00:28<01:18, 31.57it/s]
+ 22%|██▏       | 712/3195 [00:28<01:18, 31.53it/s]
+ 22%|██▏       | 716/3195 [00:28<01:18, 31.72it/s]
+ 23%|██▎       | 720/3195 [00:29<01:17, 31.82it/s]
+ 23%|██▎       | 724/3195 [00:29<01:18, 31.67it/s]
+ 23%|██▎       | 728/3195 [00:29<01:17, 31.86it/s]
+ 23%|██▎       | 732/3195 [00:29<01:17, 31.88it/s]
+ 23%|██▎       | 736/3195 [00:29<01:17, 31.80it/s]
+ 23%|██▎       | 740/3195 [00:29<01:16, 31.89it/s]
+ 23%|██▎       | 744/3195 [00:29<01:15, 32.34it/s]
+ 23%|██▎       | 748/3195 [00:29<01:17, 31.44it/s]
+ 24%|██▎       | 752/3195 [00:30<01:17, 31.57it/s]
+ 24%|██▎       | 756/3195 [00:30<01:16, 31.98it/s]
+ 24%|██▍       | 760/3195 [00:30<01:18, 31.01it/s]
+ 24%|██▍       | 764/3195 [00:30<01:18, 30.93it/s]
+ 24%|██▍       | 768/3195 [00:30<01:17, 31.17it/s]
+ 24%|██▍       | 772/3195 [00:30<01:18, 30.89it/s]
+ 24%|██▍       | 776/3195 [00:30<01:20, 30.14it/s]
+ 24%|██▍       | 780/3195 [00:30<01:19, 30.57it/s]
+ 25%|██▍       | 784/3195 [00:31<01:18, 30.54it/s]
+ 25%|██▍       | 788/3195 [00:31<01:19, 30.43it/s]
+ 25%|██▍       | 792/3195 [00:31<01:17, 30.82it/s]
+ 25%|██▍       | 796/3195 [00:31<01:15, 31.63it/s]
+ 25%|██▌       | 800/3195 [00:31<01:15, 31.64it/s]
+ 25%|██▌       | 804/3195 [00:31<01:14, 32.04it/s]
+ 25%|██▌       | 808/3195 [00:31<01:13, 32.32it/s]
+ 25%|██▌       | 812/3195 [00:31<01:14, 32.17it/s]
+ 26%|██▌       | 816/3195 [00:32<01:14, 31.95it/s]
+ 26%|██▌       | 820/3195 [00:32<01:12, 32.63it/s]
+ 26%|██▌       | 824/3195 [00:32<01:13, 32.34it/s]
+ 26%|██▌       | 828/3195 [00:32<01:15, 31.39it/s]
+ 26%|██▌       | 832/3195 [00:32<01:17, 30.35it/s]
+ 26%|██▌       | 836/3195 [00:32<01:17, 30.45it/s]
+ 26%|██▋       | 840/3195 [00:32<01:17, 30.31it/s]
+ 26%|██▋       | 844/3195 [00:32<01:16, 30.83it/s]
+ 27%|██▋       | 848/3195 [00:33<01:14, 31.38it/s]
+ 27%|██▋       | 852/3195 [00:33<01:13, 31.95it/s]
+                                                  
+
+ 27%|██▋       | 852/3195 [00:33<01:13, 31.95it/s][INFO|trainer.py:934] 2025-05-26 06:04:59,594 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:04:59,595 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:04:59,595 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:04:59,595 >>   Batch size = 8
+{'eval_loss': 0.33898237347602844, 'eval_overall_precision': 0.6739431739431739, 'eval_overall_recall': 0.7134996331621424, 'eval_overall_f1': 0.6931575196008553, 'eval_overall_accuracy': 0.8893963950690045, 'eval_runtime': 0.8561, 'eval_samples_per_second': 1168.107, 'eval_steps_per_second': 146.013, 'epoch': 3.0}
+{'loss': 0.2362, 'grad_norm': 1.175872802734375, 'learning_rate': 1.4672926447574336e-05, 'epoch': 4.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 201.96it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 199.39it/s][A
+
+ 50%|████▉     | 62/125 [00:00<00:00, 197.73it/s][A
+
+ 66%|██████▌   | 82/125 [00:00<00:00, 197.84it/s][A
+
+ 82%|████████▏ | 102/125 [00:00<00:00, 197.79it/s][A
+
+ 98%|█████████▊| 122/125 [00:00<00:00, 198.29it/s][A
+                                                  
+
+                                                  
+[A
+ 27%|██▋       | 852/3195 [00:34<01:13, 31.95it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.29it/s][A
+
+                                                  [A
+ 27%|██▋       | 856/3195 [00:34<03:45, 10.36it/s]
+ 27%|██▋       | 860/3195 [00:34<02:58, 13.09it/s]
+ 27%|██▋       | 864/3195 [00:34<02:26, 15.90it/s]
+ 27%|██▋       | 868/3195 [00:34<02:04, 18.72it/s]
+ 27%|██▋       | 872/3195 [00:34<01:50, 21.06it/s]
+ 27%|██▋       | 876/3195 [00:34<01:37, 23.77it/s]
+ 28%|██▊       | 880/3195 [00:34<01:30, 25.49it/s]
+ 28%|██▊       | 884/3195 [00:35<01:28, 26.17it/s]
+ 28%|██▊       | 888/3195 [00:35<01:24, 27.16it/s]
+ 28%|██▊       | 892/3195 [00:35<01:21, 28.29it/s]
+ 28%|██▊       | 896/3195 [00:35<01:18, 29.22it/s]
+ 28%|██▊       | 900/3195 [00:35<01:15, 30.35it/s]
+ 28%|██▊       | 904/3195 [00:35<01:16, 30.12it/s]
+ 28%|██▊       | 908/3195 [00:35<01:13, 31.01it/s]
+ 29%|██▊       | 912/3195 [00:35<01:11, 31.88it/s]
+ 29%|██▊       | 916/3195 [00:36<01:11, 31.99it/s]
+ 29%|██▉       | 920/3195 [00:36<01:12, 31.56it/s]
+ 29%|██▉       | 924/3195 [00:36<01:13, 31.09it/s]
+ 29%|██▉       | 928/3195 [00:36<01:11, 31.90it/s]
+ 29%|██▉       | 932/3195 [00:36<01:10, 32.11it/s]
+ 29%|██▉       | 936/3195 [00:36<01:10, 31.98it/s]
+ 29%|██▉       | 940/3195 [00:36<01:10, 32.00it/s]
+ 30%|██▉       | 944/3195 [00:37<01:11, 31.58it/s]
+ 30%|██▉       | 948/3195 [00:37<01:09, 32.37it/s]
+ 30%|██▉       | 952/3195 [00:37<01:10, 31.71it/s]
+ 30%|██▉       | 956/3195 [00:37<01:09, 32.19it/s]
+ 30%|███       | 960/3195 [00:37<01:09, 32.21it/s]
+ 30%|███       | 964/3195 [00:37<01:10, 31.67it/s]
+ 30%|███       | 968/3195 [00:37<01:09, 31.85it/s]
+ 30%|███       | 972/3195 [00:37<01:09, 31.82it/s]
+ 31%|███       | 976/3195 [00:37<01:08, 32.16it/s]
+ 31%|███       | 980/3195 [00:38<01:11, 31.06it/s]
+ 31%|███       | 984/3195 [00:38<01:10, 31.34it/s]
+ 31%|███       | 988/3195 [00:38<01:10, 31.37it/s]
+ 31%|███       | 992/3195 [00:38<01:08, 32.02it/s]
+ 31%|███       | 996/3195 [00:38<01:08, 31.91it/s]
+ 31%|███▏      | 1000/3195 [00:38<01:10, 31.01it/s][INFO|trainer.py:3993] 2025-05-26 06:05:05,139 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1000
+[INFO|configuration_utils.py:424] 2025-05-26 06:05:05,142 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1000/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 06:05:06,139 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1000/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 06:05:06,169 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1000/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 06:05:06,186 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1000/special_tokens_map.json
+
+ 31%|███▏      | 1004/3195 [00:42<10:02,  3.64it/s]
+ 32%|███▏      | 1007/3195 [00:42<07:52,  4.63it/s]
+ 32%|███▏      | 1010/3195 [00:42<06:10,  5.90it/s]
+ 32%|███▏      | 1014/3195 [00:42<04:31,  8.02it/s]
+ 32%|███▏      | 1018/3195 [00:42<03:26, 10.54it/s]
+ 32%|███▏      | 1022/3195 [00:42<02:42, 13.37it/s]
+ 32%|███▏      | 1026/3195 [00:42<02:11, 16.47it/s]
+ 32%|███▏      | 1030/3195 [00:42<01:50, 19.60it/s]
+ 32%|███▏      | 1034/3195 [00:43<01:38, 22.04it/s]
+ 32%|███▏      | 1038/3195 [00:43<01:28, 24.26it/s]
+ 33%|███▎      | 1042/3195 [00:43<01:22, 26.23it/s]
+ 33%|███▎      | 1046/3195 [00:43<01:20, 26.79it/s]
+ 33%|███▎      | 1050/3195 [00:43<01:15, 28.52it/s]
+ 33%|███▎      | 1054/3195 [00:43<01:11, 29.83it/s]
+ 33%|███▎      | 1058/3195 [00:43<01:09, 30.70it/s]
+ 33%|███▎      | 1062/3195 [00:43<01:08, 30.92it/s]
+                                                   
+
+ 33%|███▎      | 1065/3195 [00:44<01:08, 30.92it/s][INFO|trainer.py:934] 2025-05-26 06:05:10,445 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:05:10,446 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:05:10,446 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:05:10,446 >>   Batch size = 8
+{'eval_loss': 0.3546067476272583, 'eval_overall_precision': 0.6529392228495516, 'eval_overall_recall': 0.7212032281731474, 'eval_overall_f1': 0.6853756318633432, 'eval_overall_accuracy': 0.8883650115416728, 'eval_runtime': 0.8557, 'eval_samples_per_second': 1168.701, 'eval_steps_per_second': 146.088, 'epoch': 4.0}
+{'loss': 0.2016, 'grad_norm': 1.4949580430984497, 'learning_rate': 1.3339593114241003e-05, 'epoch': 5.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 205.57it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 200.77it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.27it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.04it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 198.05it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.53it/s][A
+                                                   
+
+                                                  
+[A
+ 33%|███▎      | 1065/3195 [00:44<01:08, 30.92it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.53it/s][A
+
+                                                  [A
+ 33%|███▎      | 1066/3195 [00:44<03:29, 10.18it/s]
+ 33%|███▎      | 1070/3195 [00:45<02:44, 12.88it/s]
+ 34%|███▎      | 1074/3195 [00:45<02:16, 15.55it/s]
+ 34%|███▎      | 1078/3195 [00:45<01:55, 18.40it/s]
+ 34%|███▍      | 1082/3195 [00:45<01:40, 21.04it/s]
+ 34%|███▍      | 1086/3195 [00:45<01:31, 23.15it/s]
+ 34%|███▍      | 1090/3195 [00:45<01:24, 25.05it/s]
+ 34%|███▍      | 1094/3195 [00:45<01:20, 25.99it/s]
+ 34%|███▍      | 1098/3195 [00:45<01:14, 28.14it/s]
+ 34%|███▍      | 1102/3195 [00:46<01:11, 29.17it/s]
+ 35%|███▍      | 1106/3195 [00:46<01:08, 30.51it/s]
+ 35%|███▍      | 1110/3195 [00:46<01:07, 31.06it/s]
+ 35%|███▍      | 1114/3195 [00:46<01:08, 30.28it/s]
+ 35%|███▍      | 1118/3195 [00:46<01:06, 31.34it/s]
+ 35%|███▌      | 1122/3195 [00:46<01:05, 31.45it/s]
+ 35%|███▌      | 1126/3195 [00:46<01:05, 31.66it/s]
+ 35%|███▌      | 1130/3195 [00:46<01:04, 32.05it/s]
+ 35%|███▌      | 1134/3195 [00:47<01:02, 32.86it/s]
+ 36%|███▌      | 1138/3195 [00:47<01:02, 32.80it/s]
+ 36%|███▌      | 1142/3195 [00:47<01:04, 31.91it/s]
+ 36%|███▌      | 1146/3195 [00:47<01:04, 31.84it/s]
+ 36%|███▌      | 1150/3195 [00:47<01:03, 32.46it/s]
+ 36%|███▌      | 1154/3195 [00:47<01:03, 32.32it/s]
+ 36%|███▌      | 1158/3195 [00:47<01:06, 30.78it/s]
+ 36%|███▋      | 1162/3195 [00:48<01:06, 30.80it/s]
+ 36%|███▋      | 1166/3195 [00:48<01:04, 31.39it/s]
+ 37%|███▋      | 1170/3195 [00:48<01:05, 30.99it/s]
+ 37%|███▋      | 1174/3195 [00:48<01:06, 30.56it/s]
+ 37%|███▋      | 1178/3195 [00:48<01:05, 30.98it/s]
+ 37%|███▋      | 1182/3195 [00:48<01:04, 31.39it/s]
+ 37%|███▋      | 1186/3195 [00:48<01:02, 32.09it/s]
+ 37%|███▋      | 1190/3195 [00:48<01:01, 32.48it/s]
+ 37%|███▋      | 1194/3195 [00:48<01:01, 32.44it/s]
+ 37%|███▋      | 1198/3195 [00:49<01:01, 32.22it/s]
+ 38%|███▊      | 1202/3195 [00:49<01:02, 32.02it/s]
+ 38%|███▊      | 1206/3195 [00:49<01:01, 32.45it/s]
+ 38%|███▊      | 1210/3195 [00:49<01:01, 32.29it/s]
+ 38%|███▊      | 1214/3195 [00:49<01:03, 31.33it/s]
+ 38%|███▊      | 1218/3195 [00:49<01:05, 30.27it/s]
+ 38%|███▊      | 1222/3195 [00:49<01:04, 30.78it/s]
+ 38%|███▊      | 1226/3195 [00:50<01:02, 31.28it/s]
+ 38%|███▊      | 1230/3195 [00:50<01:02, 31.65it/s]
+ 39%|███▊      | 1234/3195 [00:50<01:02, 31.50it/s]
+ 39%|███▊      | 1238/3195 [00:50<01:01, 31.58it/s]
+ 39%|███▉      | 1242/3195 [00:50<01:01, 31.52it/s]
+ 39%|███▉      | 1246/3195 [00:50<01:00, 32.05it/s]
+ 39%|███▉      | 1250/3195 [00:50<01:01, 31.72it/s]
+ 39%|███▉      | 1254/3195 [00:50<01:01, 31.81it/s]
+ 39%|███▉      | 1258/3195 [00:51<01:01, 31.35it/s]
+ 39%|███▉      | 1262/3195 [00:51<01:01, 31.58it/s]
+ 40%|███▉      | 1266/3195 [00:51<01:01, 31.55it/s]
+ 40%|███▉      | 1270/3195 [00:51<01:00, 31.93it/s]
+ 40%|███▉      | 1274/3195 [00:51<01:00, 31.94it/s]
+ 40%|████      | 1278/3195 [00:51<01:00, 31.77it/s]
+                                                   
+
+ 40%|████      | 1278/3195 [00:51<01:00, 31.77it/s][INFO|trainer.py:934] 2025-05-26 06:05:18,035 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:05:18,036 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:05:18,036 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:05:18,036 >>   Batch size = 8
+{'eval_loss': 0.38250550627708435, 'eval_overall_precision': 0.6454064771976207, 'eval_overall_recall': 0.7164343360234776, 'eval_overall_f1': 0.679068150208623, 'eval_overall_accuracy': 0.886253130985708, 'eval_runtime': 0.8532, 'eval_samples_per_second': 1172.083, 'eval_steps_per_second': 146.51, 'epoch': 5.0}
+{'loss': 0.1751, 'grad_norm': 1.632063388824463, 'learning_rate': 1.200625978090767e-05, 'epoch': 6.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 205.67it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 200.75it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.34it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.15it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 198.04it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.62it/s][A
+                                                   
+
+                                                  
+[A
+ 40%|████      | 1278/3195 [00:52<01:00, 31.77it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.62it/s][A
+
+                                                  [A
+ 40%|████      | 1282/3195 [00:52<03:04, 10.38it/s]
+ 40%|████      | 1286/3195 [00:52<02:26, 13.01it/s]
+ 40%|████      | 1290/3195 [00:52<02:00, 15.78it/s]
+ 41%|████      | 1294/3195 [00:53<01:41, 18.70it/s]
+ 41%|████      | 1297/3195 [00:53<01:32, 20.53it/s]
+ 41%|████      | 1301/3195 [00:53<01:21, 23.32it/s]
+ 41%|████      | 1305/3195 [00:53<01:13, 25.67it/s]
+ 41%|████      | 1309/3195 [00:53<01:08, 27.49it/s]
+ 41%|████      | 1313/3195 [00:53<01:05, 28.83it/s]
+ 41%|████      | 1317/3195 [00:53<01:03, 29.55it/s]
+ 41%|████▏     | 1321/3195 [00:53<01:02, 30.15it/s]
+ 41%|████▏     | 1325/3195 [00:53<01:00, 31.14it/s]
+ 42%|████▏     | 1329/3195 [00:54<00:59, 31.12it/s]
+ 42%|████▏     | 1333/3195 [00:54<00:59, 31.50it/s]
+ 42%|████▏     | 1337/3195 [00:54<00:58, 31.72it/s]
+ 42%|████▏     | 1341/3195 [00:54<00:57, 32.33it/s]
+ 42%|████▏     | 1345/3195 [00:54<00:56, 32.80it/s]
+ 42%|████▏     | 1349/3195 [00:54<00:56, 32.96it/s]
+ 42%|████▏     | 1353/3195 [00:54<00:58, 31.62it/s]
+ 42%|████▏     | 1357/3195 [00:54<00:57, 31.70it/s]
+ 43%|████▎     | 1361/3195 [00:55<00:56, 32.21it/s]
+ 43%|████▎     | 1365/3195 [00:55<00:57, 32.03it/s]
+ 43%|████▎     | 1369/3195 [00:55<00:57, 31.58it/s]
+ 43%|████▎     | 1373/3195 [00:55<00:57, 31.87it/s]
+ 43%|████▎     | 1377/3195 [00:55<00:58, 31.19it/s]
+ 43%|████▎     | 1381/3195 [00:55<00:56, 31.85it/s]
+ 43%|████▎     | 1385/3195 [00:55<00:57, 31.33it/s]
+ 43%|████▎     | 1389/3195 [00:56<00:58, 30.89it/s]
+ 44%|████▎     | 1393/3195 [00:56<00:57, 31.20it/s]
+ 44%|████▎     | 1397/3195 [00:56<00:58, 30.91it/s]
+ 44%|████▍     | 1401/3195 [00:56<01:01, 29.33it/s]
+ 44%|████▍     | 1405/3195 [00:56<00:58, 30.63it/s]
+ 44%|████▍     | 1409/3195 [00:56<00:56, 31.52it/s]
+ 44%|████▍     | 1413/3195 [00:56<00:55, 32.23it/s]
+ 44%|████▍     | 1417/3195 [00:56<00:55, 32.14it/s]
+ 44%|████▍     | 1421/3195 [00:57<00:55, 31.70it/s]
+ 45%|████▍     | 1425/3195 [00:57<00:55, 31.71it/s]
+ 45%|████▍     | 1429/3195 [00:57<00:56, 31.33it/s]
+ 45%|████▍     | 1433/3195 [00:57<00:56, 31.40it/s]
+ 45%|████▍     | 1437/3195 [00:57<00:54, 32.19it/s]
+ 45%|████▌     | 1441/3195 [00:57<00:54, 32.08it/s]
+ 45%|████▌     | 1445/3195 [00:57<00:55, 31.58it/s]
+ 45%|████▌     | 1449/3195 [00:57<00:54, 32.30it/s]
+ 45%|████▌     | 1453/3195 [00:58<00:53, 32.35it/s]
+ 46%|████▌     | 1457/3195 [00:58<00:53, 32.60it/s]
+ 46%|████▌     | 1461/3195 [00:58<00:52, 32.87it/s]
+ 46%|████▌     | 1465/3195 [00:58<00:54, 31.81it/s]
+ 46%|████▌     | 1469/3195 [00:58<00:55, 30.97it/s]
+ 46%|████▌     | 1473/3195 [00:58<00:56, 30.54it/s]
+ 46%|████▌     | 1477/3195 [00:58<00:54, 31.43it/s]
+ 46%|████▋     | 1481/3195 [00:58<00:54, 31.33it/s]
+ 46%|████▋     | 1485/3195 [00:59<00:54, 31.14it/s]
+ 47%|████▋     | 1489/3195 [00:59<00:54, 31.52it/s]
+                                                   
+
+ 47%|████▋     | 1491/3195 [00:59<00:54, 31.52it/s][INFO|trainer.py:934] 2025-05-26 06:05:25,602 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:05:25,603 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:05:25,603 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:05:25,603 >>   Batch size = 8
+{'eval_loss': 0.4019288122653961, 'eval_overall_precision': 0.6558852950983661, 'eval_overall_recall': 0.7215700660308144, 'eval_overall_f1': 0.6871615720524017, 'eval_overall_accuracy': 0.8863022444870094, 'eval_runtime': 0.8564, 'eval_samples_per_second': 1167.696, 'eval_steps_per_second': 145.962, 'epoch': 6.0}
+{'loss': 0.1546, 'grad_norm': 4.16721773147583, 'learning_rate': 1.0672926447574337e-05, 'epoch': 7.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 205.78it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 200.92it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.24it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.06it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 197.82it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.25it/s][A
+                                                   
+
+                                                  
+[A
+ 47%|████▋     | 1491/3195 [01:00<00:54, 31.52it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.25it/s][A
+
+                                                  [A
+ 47%|████▋     | 1493/3195 [01:00<02:43, 10.43it/s]
+ 47%|████▋     | 1496/3195 [01:00<02:17, 12.39it/s]
+ 47%|████▋     | 1499/3195 [01:00<01:56, 14.56it/s][INFO|trainer.py:3993] 2025-05-26 06:05:26,759 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1500
+[INFO|configuration_utils.py:424] 2025-05-26 06:05:26,761 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1500/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 06:05:27,746 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 06:05:27,776 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 06:05:27,793 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-1500/special_tokens_map.json
+
+ 47%|████▋     | 1502/3195 [01:03<10:09,  2.78it/s]
+ 47%|████▋     | 1506/3195 [01:03<06:59,  4.02it/s]
+ 47%|████▋     | 1510/3195 [01:04<04:59,  5.63it/s]
+ 47%|████▋     | 1514/3195 [01:04<03:38,  7.68it/s]
+ 48%|████▊     | 1518/3195 [01:04<02:45, 10.14it/s]
+ 48%|████▊     | 1522/3195 [01:04<02:11, 12.75it/s]
+ 48%|████▊     | 1526/3195 [01:04<01:46, 15.63it/s]
+ 48%|████▊     | 1530/3195 [01:04<01:30, 18.42it/s]
+ 48%|████▊     | 1534/3195 [01:04<01:19, 20.99it/s]
+ 48%|████▊     | 1538/3195 [01:04<01:10, 23.44it/s]
+ 48%|████▊     | 1542/3195 [01:05<01:05, 25.13it/s]
+ 48%|████▊     | 1546/3195 [01:05<01:02, 26.42it/s]
+ 49%|████▊     | 1550/3195 [01:05<01:01, 26.61it/s]
+ 49%|████▊     | 1553/3195 [01:05<01:00, 27.35it/s]
+ 49%|████▊     | 1557/3195 [01:05<00:57, 28.60it/s]
+ 49%|████▉     | 1561/3195 [01:05<00:56, 29.01it/s]
+ 49%|████▉     | 1565/3195 [01:05<00:54, 30.00it/s]
+ 49%|████▉     | 1569/3195 [01:05<00:52, 31.19it/s]
+ 49%|████▉     | 1573/3195 [01:06<00:51, 31.54it/s]
+ 49%|████▉     | 1577/3195 [01:06<00:51, 31.31it/s]
+ 49%|████▉     | 1581/3195 [01:06<00:51, 31.28it/s]
+ 50%|████▉     | 1585/3195 [01:06<00:53, 30.28it/s]
+ 50%|████▉     | 1589/3195 [01:06<00:51, 31.48it/s]
+ 50%|████▉     | 1593/3195 [01:06<00:52, 30.50it/s]
+ 50%|████▉     | 1597/3195 [01:06<00:51, 30.84it/s]
+ 50%|█████     | 1601/3195 [01:06<00:51, 31.18it/s]
+ 50%|█████     | 1605/3195 [01:07<00:50, 31.72it/s]
+ 50%|█████     | 1609/3195 [01:07<00:49, 32.36it/s]
+ 50%|█████     | 1613/3195 [01:07<00:49, 32.09it/s]
+ 51%|█████     | 1617/3195 [01:07<00:49, 31.91it/s]
+ 51%|█████     | 1621/3195 [01:07<00:49, 31.96it/s]
+ 51%|█████     | 1625/3195 [01:07<00:51, 30.78it/s]
+ 51%|█████     | 1629/3195 [01:07<00:50, 31.03it/s]
+ 51%|█████     | 1633/3195 [01:07<00:50, 30.90it/s]
+ 51%|█████     | 1637/3195 [01:08<00:50, 30.84it/s]
+ 51%|█████▏    | 1641/3195 [01:08<00:50, 30.77it/s]
+ 51%|█████▏    | 1645/3195 [01:08<00:49, 31.39it/s]
+ 52%|█████▏    | 1649/3195 [01:08<00:48, 31.86it/s]
+ 52%|█████▏    | 1653/3195 [01:08<00:47, 32.40it/s]
+ 52%|█████▏    | 1657/3195 [01:08<00:46, 32.78it/s]
+ 52%|█████▏    | 1661/3195 [01:08<00:47, 32.34it/s]
+ 52%|█████▏    | 1665/3195 [01:08<00:46, 32.91it/s]
+ 52%|█████▏    | 1669/3195 [01:09<00:46, 33.12it/s]
+ 52%|█████▏    | 1673/3195 [01:09<00:45, 33.29it/s]
+ 52%|█████▏    | 1677/3195 [01:09<00:46, 32.31it/s]
+ 53%|█████▎    | 1681/3195 [01:09<00:47, 31.83it/s]
+ 53%|█████▎    | 1685/3195 [01:09<00:48, 31.39it/s]
+ 53%|█████▎    | 1689/3195 [01:09<00:46, 32.17it/s]
+ 53%|█████▎    | 1693/3195 [01:09<00:46, 32.16it/s]
+ 53%|█████▎    | 1697/3195 [01:09<00:46, 32.50it/s]
+ 53%|█████▎    | 1701/3195 [01:10<00:46, 32.34it/s]
+                                                   
+
+ 53%|█████▎    | 1704/3195 [01:10<00:46, 32.34it/s][INFO|trainer.py:934] 2025-05-26 06:05:36,573 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:05:36,575 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:05:36,575 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:05:36,575 >>   Batch size = 8
+{'eval_loss': 0.42868366837501526, 'eval_overall_precision': 0.6576123407109322, 'eval_overall_recall': 0.719369038884813, 'eval_overall_f1': 0.6871058163980378, 'eval_overall_accuracy': 0.8849270664505673, 'eval_runtime': 0.8524, 'eval_samples_per_second': 1173.124, 'eval_steps_per_second': 146.64, 'epoch': 7.0}
+{'loss': 0.1363, 'grad_norm': 2.712435483932495, 'learning_rate': 9.339593114241003e-06, 'epoch': 8.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 200.83it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 198.92it/s][A
+
+ 50%|████▉     | 62/125 [00:00<00:00, 197.51it/s][A
+
+ 66%|██████▌   | 82/125 [00:00<00:00, 197.75it/s][A
+
+ 82%|████████▏ | 102/125 [00:00<00:00, 197.74it/s][A
+
+ 98%|█████████▊| 122/125 [00:00<00:00, 198.33it/s][A
+                                                   
+
+                                                  
+[A
+ 53%|█████▎    | 1704/3195 [01:11<00:46, 32.34it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.33it/s][A
+
+                                                  [A
+ 53%|█████▎    | 1705/3195 [01:11<02:25, 10.25it/s]
+ 53%|█████▎    | 1709/3195 [01:11<01:55, 12.89it/s]
+ 54%|█████▎    | 1713/3195 [01:11<01:34, 15.72it/s]
+ 54%|█████▎    | 1717/3195 [01:11<01:18, 18.81it/s]
+ 54%|█████▍    | 1721/3195 [01:11<01:09, 21.36it/s]
+ 54%|█████▍    | 1725/3195 [01:11<01:01, 24.00it/s]
+ 54%|█████▍    | 1729/3195 [01:11<00:56, 25.76it/s]
+ 54%|█████▍    | 1733/3195 [01:11<00:53, 27.26it/s]
+ 54%|█████▍    | 1737/3195 [01:12<00:51, 28.34it/s]
+ 54%|█████▍    | 1741/3195 [01:12<00:48, 29.69it/s]
+ 55%|█████▍    | 1745/3195 [01:12<00:47, 30.33it/s]
+ 55%|█████▍    | 1749/3195 [01:12<00:49, 29.26it/s]
+ 55%|█████▍    | 1753/3195 [01:12<00:47, 30.49it/s]
+ 55%|█████▍    | 1757/3195 [01:12<00:45, 31.70it/s]
+ 55%|█████▌    | 1761/3195 [01:12<00:45, 31.78it/s]
+ 55%|█████▌    | 1765/3195 [01:12<00:45, 31.74it/s]
+ 55%|█████▌    | 1769/3195 [01:13<00:44, 32.40it/s]
+ 55%|█████▌    | 1773/3195 [01:13<00:43, 32.47it/s]
+ 56%|█████▌    | 1777/3195 [01:13<00:45, 31.25it/s]
+ 56%|█████▌    | 1781/3195 [01:13<00:45, 31.14it/s]
+ 56%|█████▌    | 1785/3195 [01:13<00:44, 31.34it/s]
+ 56%|█████▌    | 1789/3195 [01:13<00:43, 32.36it/s]
+ 56%|█████▌    | 1793/3195 [01:13<00:44, 31.72it/s]
+ 56%|█████▌    | 1797/3195 [01:14<00:46, 30.13it/s]
+ 56%|█████▋    | 1801/3195 [01:14<00:46, 30.03it/s]
+ 56%|█████▋    | 1805/3195 [01:14<00:47, 29.48it/s]
+ 57%|█████▋    | 1809/3195 [01:14<00:46, 30.02it/s]
+ 57%|█████▋    | 1813/3195 [01:14<00:45, 30.45it/s]
+ 57%|█████▋    | 1817/3195 [01:14<00:43, 31.43it/s]
+ 57%|█████▋    | 1821/3195 [01:14<00:42, 32.08it/s]
+ 57%|█████▋    | 1825/3195 [01:14<00:42, 32.34it/s]
+ 57%|█████▋    | 1829/3195 [01:15<00:43, 31.61it/s]
+ 57%|█████▋    | 1833/3195 [01:15<00:42, 32.25it/s]
+ 57%|█████▋    | 1837/3195 [01:15<00:43, 31.11it/s]
+ 58%|█████▊    | 1841/3195 [01:15<00:43, 31.34it/s]
+ 58%|█████▊    | 1845/3195 [01:15<00:43, 30.99it/s]
+ 58%|█████▊    | 1849/3195 [01:15<00:42, 31.83it/s]
+ 58%|█████▊    | 1853/3195 [01:15<00:42, 31.77it/s]
+ 58%|█████▊    | 1857/3195 [01:15<00:42, 31.35it/s]
+ 58%|█████▊    | 1861/3195 [01:16<00:42, 31.64it/s]
+ 58%|█████▊    | 1865/3195 [01:16<00:41, 32.37it/s]
+ 58%|█████▊    | 1869/3195 [01:16<00:40, 32.40it/s]
+ 59%|█████▊    | 1873/3195 [01:16<00:40, 32.53it/s]
+ 59%|█████▊    | 1877/3195 [01:16<00:40, 32.81it/s]
+ 59%|█████▉    | 1881/3195 [01:16<00:40, 32.07it/s]
+ 59%|█████▉    | 1885/3195 [01:16<00:40, 32.66it/s]
+ 59%|█████▉    | 1889/3195 [01:16<00:40, 32.31it/s]
+ 59%|█████▉    | 1893/3195 [01:17<00:41, 31.18it/s]
+ 59%|█████▉    | 1897/3195 [01:17<00:41, 31.03it/s]
+ 59%|█████▉    | 1901/3195 [01:17<00:41, 31.35it/s]
+ 60%|█████▉    | 1905/3195 [01:17<00:41, 31.17it/s]
+ 60%|█████▉    | 1909/3195 [01:17<00:41, 31.19it/s]
+ 60%|█████▉    | 1913/3195 [01:17<00:40, 31.76it/s]
+ 60%|██████    | 1917/3195 [01:17<00:40, 31.89it/s]
+                                                   
+
+ 60%|██████    | 1917/3195 [01:17<00:40, 31.89it/s][INFO|trainer.py:934] 2025-05-26 06:05:44,163 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:05:44,164 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:05:44,164 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:05:44,164 >>   Batch size = 8
+{'eval_loss': 0.45073747634887695, 'eval_overall_precision': 0.6484349258649094, 'eval_overall_recall': 0.7219369038884813, 'eval_overall_f1': 0.6832147196667245, 'eval_overall_accuracy': 0.8839939099258386, 'eval_runtime': 0.8553, 'eval_samples_per_second': 1169.15, 'eval_steps_per_second': 146.144, 'epoch': 8.0}
+{'loss': 0.1203, 'grad_norm': 1.577384352684021, 'learning_rate': 8.00625978090767e-06, 'epoch': 9.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 206.08it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 200.89it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.35it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.33it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 198.16it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.61it/s][A
+                                                   
+
+                                                  
+[A
+ 60%|██████    | 1917/3195 [01:18<00:40, 31.89it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.61it/s][A
+
+                                                  [A
+ 60%|██████    | 1921/3195 [01:18<02:01, 10.45it/s]
+ 60%|██████    | 1925/3195 [01:18<01:36, 13.16it/s]
+ 60%|██████    | 1929/3195 [01:19<01:19, 15.84it/s]
+ 61%|██████    | 1933/3195 [01:19<01:07, 18.58it/s]
+ 61%|██████    | 1937/3195 [01:19<00:59, 21.29it/s]
+ 61%|██████    | 1941/3195 [01:19<00:53, 23.58it/s]
+ 61%|██████    | 1945/3195 [01:19<00:48, 25.64it/s]
+ 61%|██████    | 1949/3195 [01:19<00:46, 26.80it/s]
+ 61%|██████    | 1953/3195 [01:19<00:45, 27.51it/s]
+ 61%|██████▏   | 1957/3195 [01:19<00:43, 28.71it/s]
+ 61%|██████▏   | 1961/3195 [01:20<00:41, 29.61it/s]
+ 62%|██████▏   | 1965/3195 [01:20<00:39, 30.90it/s]
+ 62%|██████▏   | 1969/3195 [01:20<00:38, 31.58it/s]
+ 62%|██████▏   | 1973/3195 [01:20<00:37, 32.24it/s]
+ 62%|██████▏   | 1977/3195 [01:20<00:38, 32.04it/s]
+ 62%|██████▏   | 1981/3195 [01:20<00:37, 32.46it/s]
+ 62%|██████▏   | 1985/3195 [01:20<00:37, 32.03it/s]
+ 62%|██████▏   | 1989/3195 [01:20<00:37, 31.94it/s]
+ 62%|██████▏   | 1993/3195 [01:21<00:37, 31.89it/s]
+ 63%|██████▎   | 1997/3195 [01:21<00:37, 31.64it/s][INFO|trainer.py:3993] 2025-05-26 06:05:47,619 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2000
+[INFO|configuration_utils.py:424] 2025-05-26 06:05:47,621 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2000/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 06:05:48,565 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2000/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 06:05:48,596 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2000/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 06:05:48,613 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2000/special_tokens_map.json
+
+ 63%|██████▎   | 2001/3195 [01:24<05:24,  3.68it/s]
+ 63%|██████▎   | 2005/3195 [01:24<03:57,  5.01it/s]
+ 63%|██████▎   | 2009/3195 [01:24<02:56,  6.73it/s]
+ 63%|██████▎   | 2013/3195 [01:24<02:14,  8.80it/s]
+ 63%|██████▎   | 2017/3195 [01:24<01:44, 11.31it/s]
+ 63%|██████▎   | 2021/3195 [01:25<01:23, 14.04it/s]
+ 63%|██████▎   | 2025/3195 [01:25<01:09, 16.85it/s]
+ 64%|██████▎   | 2029/3195 [01:25<00:58, 19.76it/s]
+ 64%|██████▎   | 2033/3195 [01:25<00:53, 21.80it/s]
+ 64%|██████▍   | 2037/3195 [01:25<00:48, 23.84it/s]
+ 64%|██████▍   | 2041/3195 [01:25<00:44, 25.77it/s]
+ 64%|██████▍   | 2045/3195 [01:25<00:41, 27.65it/s]
+ 64%|██████▍   | 2049/3195 [01:25<00:39, 28.70it/s]
+ 64%|██████▍   | 2053/3195 [01:26<00:38, 29.39it/s]
+ 64%|██████▍   | 2057/3195 [01:26<00:37, 30.23it/s]
+ 65%|██████▍   | 2061/3195 [01:26<00:37, 30.63it/s]
+ 65%|██████▍   | 2065/3195 [01:26<00:35, 31.39it/s]
+ 65%|██████▍   | 2069/3195 [01:26<00:36, 30.51it/s]
+ 65%|██████▍   | 2073/3195 [01:26<00:36, 31.10it/s]
+ 65%|██████▌   | 2077/3195 [01:26<00:35, 31.37it/s]
+ 65%|██████▌   | 2081/3195 [01:27<00:35, 30.95it/s]
+ 65%|██████▌   | 2085/3195 [01:27<00:35, 30.96it/s]
+ 65%|██████▌   | 2089/3195 [01:27<00:36, 30.39it/s]
+ 66%|██████▌   | 2093/3195 [01:27<00:36, 30.50it/s]
+ 66%|██████▌   | 2097/3195 [01:27<00:35, 31.35it/s]
+ 66%|██████▌   | 2101/3195 [01:27<00:34, 31.99it/s]
+ 66%|██████▌   | 2105/3195 [01:27<00:35, 30.81it/s]
+ 66%|██████▌   | 2109/3195 [01:27<00:35, 30.59it/s]
+ 66%|██████▌   | 2113/3195 [01:28<00:35, 30.40it/s]
+ 66%|██████▋   | 2117/3195 [01:28<00:34, 30.93it/s]
+ 66%|██████▋   | 2121/3195 [01:28<00:34, 31.32it/s]
+ 67%|██████▋   | 2125/3195 [01:28<00:35, 30.42it/s]
+ 67%|██████▋   | 2129/3195 [01:28<00:34, 31.08it/s]
+                                                   
+
+ 67%|██████▋   | 2130/3195 [01:28<00:34, 31.08it/s][INFO|trainer.py:934] 2025-05-26 06:05:54,979 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:05:54,980 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:05:54,980 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:05:54,980 >>   Batch size = 8
+{'eval_loss': 0.4622858166694641, 'eval_overall_precision': 0.6550695825049702, 'eval_overall_recall': 0.7252384446074835, 'eval_overall_f1': 0.6883704735376045, 'eval_overall_accuracy': 0.8854673149648838, 'eval_runtime': 0.851, 'eval_samples_per_second': 1175.153, 'eval_steps_per_second': 146.894, 'epoch': 9.0}
+{'loss': 0.1089, 'grad_norm': 1.677413821220398, 'learning_rate': 6.672926447574335e-06, 'epoch': 10.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 205.73it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 201.10it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.77it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.61it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 198.41it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.84it/s][A
+                                                   
+
+                                                  
+[A
+ 67%|██████▋   | 2130/3195 [01:29<00:34, 31.08it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.84it/s][A
+
+                                                  [A
+ 67%|██████▋   | 2133/3195 [01:29<01:43, 10.23it/s]
+ 67%|██████▋   | 2137/3195 [01:29<01:21, 12.97it/s]
+ 67%|██████▋   | 2141/3195 [01:29<01:06, 15.78it/s]
+ 67%|██████▋   | 2145/3195 [01:29<00:56, 18.68it/s]
+ 67%|██████▋   | 2149/3195 [01:30<00:48, 21.35it/s]
+ 67%|██████▋   | 2153/3195 [01:30<00:43, 24.14it/s]
+ 68%|██████▊   | 2157/3195 [01:30<00:39, 25.96it/s]
+ 68%|██████▊   | 2161/3195 [01:30<00:38, 27.03it/s]
+ 68%|██████▊   | 2165/3195 [01:30<00:36, 28.36it/s]
+ 68%|██████▊   | 2169/3195 [01:30<00:34, 29.36it/s]
+ 68%|██████▊   | 2173/3195 [01:30<00:34, 29.97it/s]
+ 68%|██████▊   | 2177/3195 [01:30<00:33, 30.47it/s]
+ 68%|██████▊   | 2181/3195 [01:31<00:34, 29.28it/s]
+ 68%|██████▊   | 2185/3195 [01:31<00:34, 29.67it/s]
+ 69%|██████▊   | 2189/3195 [01:31<00:33, 30.19it/s]
+ 69%|██████▊   | 2193/3195 [01:31<00:32, 30.57it/s]
+ 69%|██████▉   | 2197/3195 [01:31<00:31, 31.32it/s]
+ 69%|██████▉   | 2201/3195 [01:31<00:32, 30.21it/s]
+ 69%|██████▉   | 2205/3195 [01:31<00:32, 30.43it/s]
+ 69%|██████▉   | 2209/3195 [01:31<00:31, 31.06it/s]
+ 69%|██████▉   | 2213/3195 [01:32<00:31, 31.03it/s]
+ 69%|██████▉   | 2217/3195 [01:32<00:31, 30.65it/s]
+ 70%|██████▉   | 2221/3195 [01:32<00:30, 31.49it/s]
+ 70%|██████▉   | 2225/3195 [01:32<00:31, 30.63it/s]
+ 70%|██████▉   | 2229/3195 [01:32<00:31, 30.90it/s]
+ 70%|██████▉   | 2233/3195 [01:32<00:30, 31.18it/s]
+ 70%|███████   | 2237/3195 [01:32<00:30, 31.44it/s]
+ 70%|███████   | 2241/3195 [01:33<00:29, 31.82it/s]
+ 70%|███████   | 2245/3195 [01:33<00:30, 31.33it/s]
+ 70%|███████   | 2249/3195 [01:33<00:29, 32.00it/s]
+ 71%|███████   | 2253/3195 [01:33<00:29, 32.06it/s]
+ 71%|███████   | 2257/3195 [01:33<00:29, 31.77it/s]
+ 71%|███████   | 2261/3195 [01:33<00:29, 32.10it/s]
+ 71%|███████   | 2265/3195 [01:33<00:28, 32.27it/s]
+ 71%|███████   | 2269/3195 [01:33<00:28, 32.13it/s]
+ 71%|███████   | 2273/3195 [01:34<00:29, 30.92it/s]
+ 71%|███████▏  | 2277/3195 [01:34<00:28, 31.66it/s]
+ 71%|███████▏  | 2281/3195 [01:34<00:29, 31.00it/s]
+ 72%|███████▏  | 2285/3195 [01:34<00:30, 30.27it/s]
+ 72%|███████▏  | 2289/3195 [01:34<00:29, 30.84it/s]
+ 72%|███████▏  | 2293/3195 [01:34<00:29, 30.69it/s]
+ 72%|███████▏  | 2297/3195 [01:34<00:28, 30.98it/s]
+ 72%|███████▏  | 2301/3195 [01:34<00:28, 31.36it/s]
+ 72%|███████▏  | 2305/3195 [01:35<00:27, 31.96it/s]
+ 72%|███████▏  | 2309/3195 [01:35<00:27, 32.05it/s]
+ 72%|███████▏  | 2313/3195 [01:35<00:27, 32.16it/s]
+ 73%|███████▎  | 2317/3195 [01:35<00:27, 32.03it/s]
+ 73%|███████▎  | 2321/3195 [01:35<00:27, 31.63it/s]
+ 73%|███████▎  | 2325/3195 [01:35<00:26, 32.37it/s]
+ 73%|███████▎  | 2329/3195 [01:35<00:27, 31.82it/s]
+ 73%|███████▎  | 2333/3195 [01:35<00:27, 31.84it/s]
+ 73%|███████▎  | 2337/3195 [01:36<00:27, 31.62it/s]
+ 73%|███████▎  | 2341/3195 [01:36<00:27, 31.46it/s]
+                                                   
+
+ 73%|███████▎  | 2343/3195 [01:36<00:27, 31.46it/s][INFO|trainer.py:934] 2025-05-26 06:06:02,601 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:06:02,603 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:06:02,603 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:06:02,603 >>   Batch size = 8
+{'eval_loss': 0.4761688709259033, 'eval_overall_precision': 0.6467678100263852, 'eval_overall_recall': 0.719369038884813, 'eval_overall_f1': 0.6811392844737755, 'eval_overall_accuracy': 0.8837974559206326, 'eval_runtime': 0.8513, 'eval_samples_per_second': 1174.679, 'eval_steps_per_second': 146.835, 'epoch': 10.0}
+{'loss': 0.0984, 'grad_norm': 1.88051176071167, 'learning_rate': 5.339593114241002e-06, 'epoch': 11.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 206.18it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 201.48it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.99it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.89it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 197.45it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.18it/s][A
+                                                   
+
+                                                  
+[A
+ 73%|███████▎  | 2343/3195 [01:37<00:27, 31.46it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.18it/s][A
+
+                                                  [A
+ 73%|███████▎  | 2345/3195 [01:37<01:21, 10.40it/s]
+ 74%|███████▎  | 2349/3195 [01:37<01:04, 13.02it/s]
+ 74%|███████▎  | 2353/3195 [01:37<00:53, 15.88it/s]
+ 74%|███████▍  | 2357/3195 [01:37<00:44, 18.90it/s]
+ 74%|███████▍  | 2361/3195 [01:37<00:38, 21.69it/s]
+ 74%|███████▍  | 2365/3195 [01:37<00:35, 23.34it/s]
+ 74%|███████▍  | 2369/3195 [01:37<00:32, 25.34it/s]
+ 74%|███████▍  | 2373/3195 [01:38<00:31, 26.24it/s]
+ 74%|███████▍  | 2377/3195 [01:38<00:29, 27.70it/s]
+ 75%|███████▍  | 2381/3195 [01:38<00:27, 29.45it/s]
+ 75%|███████▍  | 2385/3195 [01:38<00:26, 30.85it/s]
+ 75%|███████▍  | 2389/3195 [01:38<00:25, 31.73it/s]
+ 75%|███████▍  | 2393/3195 [01:38<00:25, 30.85it/s]
+ 75%|███████▌  | 2397/3195 [01:38<00:25, 31.11it/s]
+ 75%|███████▌  | 2401/3195 [01:38<00:25, 30.89it/s]
+ 75%|███████▌  | 2405/3195 [01:39<00:24, 31.62it/s]
+ 75%|███████▌  | 2409/3195 [01:39<00:24, 32.29it/s]
+ 76%|███████▌  | 2413/3195 [01:39<00:24, 31.74it/s]
+ 76%|███████▌  | 2417/3195 [01:39<00:25, 30.48it/s]
+ 76%|███████▌  | 2421/3195 [01:39<00:24, 31.33it/s]
+ 76%|███████▌  | 2425/3195 [01:39<00:24, 31.85it/s]
+ 76%|███████▌  | 2429/3195 [01:39<00:24, 31.81it/s]
+ 76%|███████▌  | 2433/3195 [01:39<00:24, 31.63it/s]
+ 76%|███████▋  | 2437/3195 [01:40<00:23, 31.90it/s]
+ 76%|███████▋  | 2441/3195 [01:40<00:23, 32.07it/s]
+ 77%|███████▋  | 2445/3195 [01:40<00:23, 32.01it/s]
+ 77%|███████▋  | 2449/3195 [01:40<00:23, 31.78it/s]
+ 77%|███████▋  | 2453/3195 [01:40<00:23, 32.17it/s]
+ 77%|███████▋  | 2457/3195 [01:40<00:23, 30.97it/s]
+ 77%|███████▋  | 2461/3195 [01:40<00:23, 31.01it/s]
+ 77%|███████▋  | 2465/3195 [01:40<00:23, 31.72it/s]
+ 77%|███████▋  | 2469/3195 [01:41<00:23, 31.38it/s]
+ 77%|███████▋  | 2473/3195 [01:41<00:22, 31.62it/s]
+ 78%|███████▊  | 2477/3195 [01:41<00:22, 31.97it/s]
+ 78%|███████▊  | 2481/3195 [01:41<00:22, 32.29it/s]
+ 78%|███████▊  | 2485/3195 [01:41<00:22, 31.30it/s]
+ 78%|███████▊  | 2489/3195 [01:41<00:22, 32.06it/s]
+ 78%|███████▊  | 2493/3195 [01:41<00:21, 31.95it/s]
+ 78%|███████▊  | 2497/3195 [01:41<00:21, 31.91it/s][INFO|trainer.py:3993] 2025-05-26 06:06:08,402 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2500
+[INFO|configuration_utils.py:424] 2025-05-26 06:06:08,405 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2500/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 06:06:09,433 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 06:06:09,465 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 06:06:09,484 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-2500/special_tokens_map.json
+
+ 78%|███████▊  | 2501/3195 [01:45<03:11,  3.63it/s]
+ 78%|███████▊  | 2505/3195 [01:45<02:19,  4.93it/s]
+ 79%|███████▊  | 2509/3195 [01:45<01:43,  6.60it/s]
+ 79%|███████▊  | 2513/3195 [01:45<01:18,  8.66it/s]
+ 79%|███████▊  | 2516/3195 [01:45<01:04, 10.45it/s]
+ 79%|███████▉  | 2520/3195 [01:45<00:51, 13.18it/s]
+ 79%|███████▉  | 2524/3195 [01:46<00:41, 16.14it/s]
+ 79%|███████▉  | 2528/3195 [01:46<00:34, 19.16it/s]
+ 79%|███████▉  | 2532/3195 [01:46<00:30, 21.63it/s]
+ 79%|███████▉  | 2536/3195 [01:46<00:27, 24.21it/s]
+ 79%|███████▉  | 2540/3195 [01:46<00:25, 25.85it/s]
+ 80%|███████▉  | 2544/3195 [01:46<00:23, 27.93it/s]
+ 80%|███████▉  | 2548/3195 [01:46<00:22, 28.59it/s]
+ 80%|███████▉  | 2552/3195 [01:46<00:21, 29.27it/s]
+ 80%|████████  | 2556/3195 [01:47<00:21, 29.22it/s]
+                                                   
+
+ 80%|████████  | 2556/3195 [01:47<00:21, 29.22it/s][INFO|trainer.py:934] 2025-05-26 06:06:13,472 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:06:13,473 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:06:13,473 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:06:13,473 >>   Batch size = 8
+{'eval_loss': 0.4851170480251312, 'eval_overall_precision': 0.6488015978695073, 'eval_overall_recall': 0.7149669845928099, 'eval_overall_f1': 0.6802792321116927, 'eval_overall_accuracy': 0.8830116398998085, 'eval_runtime': 0.8563, 'eval_samples_per_second': 1167.858, 'eval_steps_per_second': 145.982, 'epoch': 11.0}
+{'loss': 0.0884, 'grad_norm': 1.951507568359375, 'learning_rate': 4.006259780907669e-06, 'epoch': 12.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 205.51it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 200.90it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.45it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.30it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 197.99it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.27it/s][A
+                                                   
+
+                                                  
+[A
+ 80%|████████  | 2556/3195 [01:47<00:21, 29.22it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.27it/s][A
+
+                                                  [A
+ 80%|████████  | 2560/3195 [01:48<01:03,  9.97it/s]
+ 80%|████████  | 2563/3195 [01:48<00:53, 11.86it/s]
+ 80%|████████  | 2567/3195 [01:48<00:42, 14.76it/s]
+ 80%|████████  | 2570/3195 [01:48<00:37, 16.81it/s]
+ 81%|████████  | 2574/3195 [01:48<00:31, 19.94it/s]
+ 81%|████████  | 2578/3195 [01:48<00:26, 23.08it/s]
+ 81%|████████  | 2582/3195 [01:48<00:24, 25.07it/s]
+ 81%|████████  | 2586/3195 [01:48<00:22, 26.55it/s]
+ 81%|████████  | 2590/3195 [01:49<00:21, 28.26it/s]
+ 81%|████████  | 2594/3195 [01:49<00:20, 28.95it/s]
+ 81%|████████▏ | 2598/3195 [01:49<00:20, 29.70it/s]
+ 81%|████████▏ | 2602/3195 [01:49<00:19, 30.71it/s]
+ 82%|████████▏ | 2606/3195 [01:49<00:18, 31.02it/s]
+ 82%|████████▏ | 2610/3195 [01:49<00:18, 31.42it/s]
+ 82%|████████▏ | 2614/3195 [01:49<00:18, 31.47it/s]
+ 82%|████████▏ | 2618/3195 [01:49<00:18, 31.08it/s]
+ 82%|████████▏ | 2622/3195 [01:50<00:18, 30.98it/s]
+ 82%|████████▏ | 2626/3195 [01:50<00:18, 31.38it/s]
+ 82%|████████▏ | 2630/3195 [01:50<00:17, 31.53it/s]
+ 82%|████████▏ | 2634/3195 [01:50<00:17, 31.91it/s]
+ 83%|████████▎ | 2638/3195 [01:50<00:17, 31.65it/s]
+ 83%|████████▎ | 2642/3195 [01:50<00:17, 31.20it/s]
+ 83%|████████▎ | 2646/3195 [01:50<00:17, 31.18it/s]
+ 83%|████████▎ | 2650/3195 [01:50<00:17, 31.02it/s]
+ 83%|████████▎ | 2654/3195 [01:51<00:17, 30.96it/s]
+ 83%|████████▎ | 2658/3195 [01:51<00:17, 31.30it/s]
+ 83%|████████▎ | 2662/3195 [01:51<00:16, 31.59it/s]
+ 83%|████████▎ | 2666/3195 [01:51<00:16, 31.97it/s]
+ 84%|████████▎ | 2670/3195 [01:51<00:16, 31.58it/s]
+ 84%|████████▎ | 2674/3195 [01:51<00:16, 32.15it/s]
+ 84%|████████▍ | 2678/3195 [01:51<00:15, 32.51it/s]
+ 84%|████████▍ | 2682/3195 [01:51<00:15, 32.11it/s]
+ 84%|████████▍ | 2686/3195 [01:52<00:16, 30.81it/s]
+ 84%|████████▍ | 2690/3195 [01:52<00:15, 31.58it/s]
+ 84%|████████▍ | 2694/3195 [01:52<00:15, 31.45it/s]
+ 84%|████████▍ | 2698/3195 [01:52<00:15, 32.14it/s]
+ 85%|████████▍ | 2702/3195 [01:52<00:15, 30.83it/s]
+ 85%|████████▍ | 2706/3195 [01:52<00:15, 31.14it/s]
+ 85%|████████▍ | 2710/3195 [01:52<00:15, 30.98it/s]
+ 85%|████████▍ | 2714/3195 [01:52<00:15, 31.51it/s]
+ 85%|████████▌ | 2718/3195 [01:53<00:15, 31.60it/s]
+ 85%|████████▌ | 2722/3195 [01:53<00:15, 30.87it/s]
+ 85%|████████▌ | 2726/3195 [01:53<00:14, 31.99it/s]
+ 85%|████████▌ | 2730/3195 [01:53<00:14, 32.09it/s]
+ 86%|████████▌ | 2734/3195 [01:53<00:14, 32.03it/s]
+ 86%|████████▌ | 2738/3195 [01:53<00:14, 32.41it/s]
+ 86%|████████▌ | 2742/3195 [01:53<00:14, 32.16it/s]
+ 86%|████████▌ | 2746/3195 [01:53<00:14, 31.75it/s]
+ 86%|████████▌ | 2750/3195 [01:54<00:14, 31.64it/s]
+ 86%|████████▌ | 2754/3195 [01:54<00:14, 31.00it/s]
+ 86%|████████▋ | 2758/3195 [01:54<00:14, 31.07it/s]
+ 86%|████████▋ | 2762/3195 [01:54<00:13, 31.44it/s]
+ 87%|████████▋ | 2766/3195 [01:54<00:13, 31.17it/s]
+                                                   
+
+ 87%|████████▋ | 2769/3195 [01:54<00:13, 31.17it/s][INFO|trainer.py:934] 2025-05-26 06:06:21,104 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:06:21,105 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:06:21,105 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:06:21,105 >>   Batch size = 8
+{'eval_loss': 0.521737277507782, 'eval_overall_precision': 0.6437951411687459, 'eval_overall_recall': 0.719369038884813, 'eval_overall_f1': 0.6794871794871795, 'eval_overall_accuracy': 0.8819311428711752, 'eval_runtime': 0.8558, 'eval_samples_per_second': 1168.558, 'eval_steps_per_second': 146.07, 'epoch': 12.0}
+{'loss': 0.0833, 'grad_norm': 1.6947721242904663, 'learning_rate': 2.672926447574335e-06, 'epoch': 13.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 206.22it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 201.73it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 199.13it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.95it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 198.82it/s][A
+
+ 99%|█████████▉| 124/125 [00:00<00:00, 199.23it/s][A
+                                                   
+
+                                                  
+[A
+ 87%|████████▋ | 2769/3195 [01:55<00:13, 31.17it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 199.23it/s][A
+
+                                                  [A
+ 87%|████████▋ | 2770/3195 [01:55<00:41, 10.32it/s]
+ 87%|████████▋ | 2774/3195 [01:55<00:32, 12.99it/s]
+ 87%|████████▋ | 2778/3195 [01:55<00:26, 15.84it/s]
+ 87%|████████▋ | 2782/3195 [01:56<00:22, 18.43it/s]
+ 87%|████████▋ | 2786/3195 [01:56<00:19, 21.15it/s]
+ 87%|████████▋ | 2790/3195 [01:56<00:17, 23.49it/s]
+ 87%|████████▋ | 2794/3195 [01:56<00:15, 25.24it/s]
+ 88%|████████▊ | 2798/3195 [01:56<00:14, 27.13it/s]
+ 88%|████████▊ | 2802/3195 [01:56<00:13, 28.08it/s]
+ 88%|████████▊ | 2806/3195 [01:56<00:13, 29.37it/s]
+ 88%|████████▊ | 2810/3195 [01:56<00:12, 30.04it/s]
+ 88%|████████▊ | 2814/3195 [01:57<00:12, 29.90it/s]
+ 88%|████████▊ | 2818/3195 [01:57<00:12, 30.22it/s]
+ 88%|████████▊ | 2822/3195 [01:57<00:12, 30.22it/s]
+ 88%|████████▊ | 2826/3195 [01:57<00:12, 30.28it/s]
+ 89%|████████▊ | 2830/3195 [01:57<00:11, 30.77it/s]
+ 89%|████████▊ | 2834/3195 [01:57<00:11, 31.58it/s]
+ 89%|████████▉ | 2838/3195 [01:57<00:11, 32.05it/s]
+ 89%|████████▉ | 2842/3195 [01:57<00:11, 31.73it/s]
+ 89%|████████▉ | 2846/3195 [01:58<00:10, 31.89it/s]
+ 89%|████████▉ | 2850/3195 [01:58<00:11, 31.27it/s]
+ 89%|████████▉ | 2854/3195 [01:58<00:11, 30.80it/s]
+ 89%|████████▉ | 2858/3195 [01:58<00:10, 31.10it/s]
+ 90%|████████▉ | 2862/3195 [01:58<00:11, 29.68it/s]
+ 90%|████████▉ | 2866/3195 [01:58<00:10, 30.67it/s]
+ 90%|████████▉ | 2870/3195 [01:58<00:10, 31.19it/s]
+ 90%|████████▉ | 2874/3195 [01:58<00:10, 31.38it/s]
+ 90%|█████████ | 2878/3195 [01:59<00:10, 31.16it/s]
+ 90%|█████████ | 2882/3195 [01:59<00:09, 31.49it/s]
+ 90%|█████████ | 2886/3195 [01:59<00:09, 32.10it/s]
+ 90%|█████████ | 2890/3195 [01:59<00:09, 32.50it/s]
+ 91%|█████████ | 2894/3195 [01:59<00:09, 31.89it/s]
+ 91%|█████████ | 2898/3195 [01:59<00:09, 32.07it/s]
+ 91%|█████████ | 2902/3195 [01:59<00:08, 32.64it/s]
+ 91%|█████████ | 2906/3195 [01:59<00:09, 31.65it/s]
+ 91%|█████████ | 2910/3195 [02:00<00:08, 31.85it/s]
+ 91%|█████████ | 2914/3195 [02:00<00:08, 31.75it/s]
+ 91%|█████████▏| 2918/3195 [02:00<00:08, 31.47it/s]
+ 91%|█████████▏| 2922/3195 [02:00<00:08, 31.43it/s]
+ 92%|█████████▏| 2926/3195 [02:00<00:08, 31.32it/s]
+ 92%|█████████▏| 2930/3195 [02:00<00:08, 31.21it/s]
+ 92%|█████████▏| 2934/3195 [02:00<00:08, 31.76it/s]
+ 92%|█████████▏| 2938/3195 [02:00<00:08, 32.09it/s]
+ 92%|█████████▏| 2942/3195 [02:01<00:07, 31.90it/s]
+ 92%|█████████▏| 2946/3195 [02:01<00:07, 31.99it/s]
+ 92%|█████████▏| 2950/3195 [02:01<00:07, 32.20it/s]
+ 92%|█████████▏| 2954/3195 [02:01<00:07, 31.48it/s]
+ 93%|█████████▎| 2958/3195 [02:01<00:07, 30.25it/s]
+ 93%|█████████▎| 2962/3195 [02:01<00:07, 31.39it/s]
+ 93%|█████████▎| 2966/3195 [02:01<00:07, 31.47it/s]
+ 93%|█████████▎| 2970/3195 [02:01<00:07, 32.02it/s]
+ 93%|█████████▎| 2974/3195 [02:02<00:06, 32.74it/s]
+ 93%|█████████▎| 2978/3195 [02:02<00:06, 32.44it/s]
+ 93%|█████████▎| 2982/3195 [02:02<00:06, 31.88it/s]
+                                                   
+
+ 93%|█████████▎| 2982/3195 [02:02<00:06, 31.88it/s][INFO|trainer.py:934] 2025-05-26 06:06:28,716 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:06:28,717 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:06:28,717 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:06:28,717 >>   Batch size = 8
+{'eval_loss': 0.519972562789917, 'eval_overall_precision': 0.6504629629629629, 'eval_overall_recall': 0.7215700660308144, 'eval_overall_f1': 0.6841739130434783, 'eval_overall_accuracy': 0.8833063209076175, 'eval_runtime': 0.8543, 'eval_samples_per_second': 1170.538, 'eval_steps_per_second': 146.317, 'epoch': 13.0}
+{'loss': 0.0767, 'grad_norm': 1.4741581678390503, 'learning_rate': 1.339593114241002e-06, 'epoch': 14.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 205.69it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 201.33it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.82it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.52it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 198.25it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.67it/s][A
+                                                   
+
+                                                  
+[A
+ 93%|█████████▎| 2982/3195 [02:03<00:06, 31.88it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.67it/s][A
+
+                                                  [A
+ 93%|█████████▎| 2986/3195 [02:03<00:20, 10.45it/s]
+ 94%|█████████▎| 2990/3195 [02:03<00:15, 13.20it/s]
+ 94%|█████████▎| 2994/3195 [02:03<00:12, 16.15it/s]
+ 94%|█████████▍| 2998/3195 [02:03<00:10, 19.16it/s][INFO|trainer.py:3993] 2025-05-26 06:06:30,114 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3000
+[INFO|configuration_utils.py:424] 2025-05-26 06:06:30,117 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3000/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 06:06:31,021 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3000/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 06:06:31,049 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3000/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 06:06:31,065 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3000/special_tokens_map.json
+
+ 94%|█████████▍| 3002/3195 [02:06<00:52,  3.69it/s]
+ 94%|█████████▍| 3006/3195 [02:06<00:37,  5.01it/s]
+ 94%|█████████▍| 3010/3195 [02:07<00:27,  6.74it/s]
+ 94%|█████████▍| 3013/3195 [02:07<00:21,  8.30it/s]
+ 94%|█████████▍| 3017/3195 [02:07<00:16, 10.82it/s]
+ 95%|█████████▍| 3021/3195 [02:07<00:12, 13.60it/s]
+ 95%|█████████▍| 3024/3195 [02:07<00:10, 15.68it/s]
+ 95%|█████████▍| 3028/3195 [02:07<00:08, 18.92it/s]
+ 95%|█████████▍| 3032/3195 [02:07<00:07, 21.93it/s]
+ 95%|█████████▌| 3036/3195 [02:07<00:06, 23.60it/s]
+ 95%|█████████▌| 3040/3195 [02:08<00:06, 25.71it/s]
+ 95%|█████████▌| 3044/3195 [02:08<00:05, 27.89it/s]
+ 95%|█████████▌| 3048/3195 [02:08<00:05, 29.30it/s]
+ 96%|█████████▌| 3052/3195 [02:08<00:04, 30.09it/s]
+ 96%|█████████▌| 3056/3195 [02:08<00:04, 31.12it/s]
+ 96%|█████████▌| 3060/3195 [02:08<00:04, 30.54it/s]
+ 96%|█████████▌| 3064/3195 [02:08<00:04, 31.57it/s]
+ 96%|█████████▌| 3068/3195 [02:08<00:04, 31.63it/s]
+ 96%|█████████▌| 3072/3195 [02:08<00:03, 31.84it/s]
+ 96%|█████████▋| 3076/3195 [02:09<00:03, 31.34it/s]
+ 96%|█████████▋| 3080/3195 [02:09<00:03, 32.33it/s]
+ 97%|█████████▋| 3084/3195 [02:09<00:03, 31.12it/s]
+ 97%|█████████▋| 3088/3195 [02:09<00:03, 31.73it/s]
+ 97%|█████████▋| 3092/3195 [02:09<00:03, 31.69it/s]
+ 97%|█████████▋| 3096/3195 [02:09<00:03, 32.45it/s]
+ 97%|█████████▋| 3100/3195 [02:09<00:03, 30.93it/s]
+ 97%|█████████▋| 3104/3195 [02:10<00:03, 30.11it/s]
+ 97%|█████████▋| 3108/3195 [02:10<00:02, 29.78it/s]
+ 97%|█████████▋| 3112/3195 [02:10<00:02, 30.82it/s]
+ 98%|█████████▊| 3116/3195 [02:10<00:02, 30.82it/s]
+ 98%|█████████▊| 3120/3195 [02:10<00:02, 32.00it/s]
+ 98%|█████████▊| 3124/3195 [02:10<00:02, 31.13it/s]
+ 98%|█████████▊| 3128/3195 [02:10<00:02, 31.43it/s]
+ 98%|█████████▊| 3132/3195 [02:10<00:01, 32.25it/s]
+ 98%|█████████▊| 3136/3195 [02:11<00:01, 31.82it/s]
+ 98%|█████████▊| 3140/3195 [02:11<00:01, 31.95it/s]
+ 98%|█████████▊| 3144/3195 [02:11<00:01, 32.11it/s]
+ 99%|█████████▊| 3148/3195 [02:11<00:01, 31.51it/s]
+ 99%|█████████▊| 3152/3195 [02:11<00:01, 31.37it/s]
+ 99%|█████████▉| 3156/3195 [02:11<00:01, 31.92it/s]
+ 99%|█████████▉| 3160/3195 [02:11<00:01, 31.88it/s]
+ 99%|█████████▉| 3164/3195 [02:11<00:00, 31.31it/s]
+ 99%|█████████▉| 3168/3195 [02:12<00:00, 31.08it/s]
+ 99%|█████████▉| 3172/3195 [02:12<00:00, 31.81it/s]
+ 99%|█████████▉| 3176/3195 [02:12<00:00, 30.66it/s]
+100%|█████████▉| 3180/3195 [02:12<00:00, 30.50it/s]
+100%|█████████▉| 3184/3195 [02:12<00:00, 31.10it/s]
+100%|█████████▉| 3188/3195 [02:12<00:00, 31.55it/s]
+100%|█████████▉| 3192/3195 [02:12<00:00, 31.61it/s][INFO|trainer.py:3993] 2025-05-26 06:06:39,286 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3195
+[INFO|configuration_utils.py:424] 2025-05-26 06:06:39,295 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3195/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 06:06:40,406 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3195/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 06:06:40,439 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3195/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 06:06:40,457 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/checkpoint-3195/special_tokens_map.json
+
+                                                   
+
+100%|██████████| 3195/3195 [02:16<00:00, 31.61it/s][INFO|trainer.py:934] 2025-05-26 06:06:42,655 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:06:42,656 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:06:42,656 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:06:42,657 >>   Batch size = 8
+{'eval_loss': 0.5350183248519897, 'eval_overall_precision': 0.6458126448195962, 'eval_overall_recall': 0.7157006603081438, 'eval_overall_f1': 0.6789629371846182, 'eval_overall_accuracy': 0.8826678453906979, 'eval_runtime': 0.851, 'eval_samples_per_second': 1175.132, 'eval_steps_per_second': 146.891, 'epoch': 14.0}
+{'loss': 0.0732, 'grad_norm': 1.7284376621246338, 'learning_rate': 6.259780907668231e-09, 'epoch': 15.0}
+
+
+  0%|          | 0/125 [00:00<?, ?it/s][A
+
+ 17%|█▋        | 21/125 [00:00<00:00, 205.64it/s][A
+
+ 34%|███▎      | 42/125 [00:00<00:00, 200.95it/s][A
+
+ 50%|█████     | 63/125 [00:00<00:00, 198.40it/s][A
+
+ 66%|██████▋   | 83/125 [00:00<00:00, 198.20it/s][A
+
+ 82%|████████▏ | 103/125 [00:00<00:00, 198.00it/s][A
+
+ 98%|█████████▊| 123/125 [00:00<00:00, 198.46it/s][A
+                                                   
+
+                                                  
+[A
+100%|██████████| 3195/3195 [02:17<00:00, 31.61it/s]
+
+100%|██████████| 125/125 [00:00<00:00, 198.46it/s][A
+
+                                                  [A[INFO|trainer.py:2676] 2025-05-26 06:06:43,521 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+
+                                                   
+
+100%|██████████| 3195/3195 [02:17<00:00, 31.61it/s]
+100%|██████████| 3195/3195 [02:17<00:00, 23.29it/s]
+[INFO|trainer.py:3993] 2025-05-26 06:06:43,525 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1
+[INFO|configuration_utils.py:424] 2025-05-26 06:06:43,527 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 06:06:44,567 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 06:06:44,599 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 06:06:44,618 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_movie_trivia_bert_run1/special_tokens_map.json
+{'eval_loss': 0.5377206802368164, 'eval_overall_precision': 0.6465717124875787, 'eval_overall_recall': 0.7160674981658107, 'eval_overall_f1': 0.6795474325500435, 'eval_overall_accuracy': 0.8824222778841904, 'eval_runtime': 0.8541, 'eval_samples_per_second': 1170.889, 'eval_steps_per_second': 146.361, 'epoch': 15.0}
+{'train_runtime': 137.1578, 'train_samples_per_second': 745.419, 'train_steps_per_second': 23.294, 'train_loss': 0.1955943998596478, 'epoch': 15.0}
+***** train metrics *****
+  epoch                    =       15.0
+  total_flos               =  2012023GF
+  train_loss               =     0.1956
+  train_runtime            = 0:02:17.15
+  train_samples            =       6816
+  train_samples_per_second =    745.419
+  train_steps_per_second   =     23.294
+05/26/2025 06:06:44 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:934] 2025-05-26 06:06:44,650 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:06:44,651 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 06:06:44,652 >>   Num examples = 1000
+[INFO|trainer.py:4332] 2025-05-26 06:06:44,652 >>   Batch size = 8
+
+  0%|          | 0/125 [00:00<?, ?it/s]
+ 17%|█▋        | 21/125 [00:00<00:00, 205.34it/s]
+ 34%|███▎      | 42/125 [00:00<00:00, 200.67it/s]
+ 50%|█████     | 63/125 [00:00<00:00, 198.06it/s]
+ 66%|██████▋   | 83/125 [00:00<00:00, 197.72it/s]
+ 82%|████████▏ | 103/125 [00:00<00:00, 197.33it/s]
+ 98%|█████████▊| 123/125 [00:00<00:00, 197.74it/s]
+100%|██████████| 125/125 [00:00<00:00, 147.18it/s]
+***** eval metrics *****
+  epoch                   =       15.0
+  eval_loss               =     0.5377
+  eval_overall_accuracy   =     0.8824
+  eval_overall_f1         =     0.6795
+  eval_overall_precision  =     0.6466
+  eval_overall_recall     =     0.7161
+  eval_runtime            = 0:00:00.85
+  eval_samples            =       1000
+  eval_samples_per_second =    1175.45
+  eval_steps_per_second   =    146.931
+05/26/2025 06:06:45 - INFO - __main__ - *** Predict ***
+[INFO|trainer.py:934] 2025-05-26 06:06:45,511 >> The following columns in the test set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 06:06:45,512 >> 
+***** Running Prediction *****
+[INFO|trainer.py:4329] 2025-05-26 06:06:45,512 >>   Num examples = 1953
+[INFO|trainer.py:4332] 2025-05-26 06:06:45,512 >>   Batch size = 8
+
+  0%|          | 0/245 [00:00<?, ?it/s]
+  9%|▊         | 21/245 [00:00<00:01, 208.23it/s]
+ 17%|█▋        | 42/245 [00:00<00:00, 203.09it/s]
+ 26%|██▌       | 63/245 [00:00<00:00, 201.82it/s]
+ 34%|███▍      | 84/245 [00:00<00:00, 197.52it/s]
+ 42%|████▏     | 104/245 [00:00<00:00, 195.86it/s]
+ 51%|█████     | 124/245 [00:00<00:00, 196.92it/s]
+ 59%|█████▉    | 144/245 [00:00<00:00, 196.88it/s]
+ 67%|██████▋   | 165/245 [00:00<00:00, 197.98it/s]
+ 76%|███████▌  | 185/245 [00:00<00:00, 196.18it/s]
+ 84%|████████▎ | 205/245 [00:01<00:00, 195.84it/s]
+ 92%|█████████▏| 225/245 [00:01<00:00, 196.63it/s]
+100%|██████████| 245/245 [00:01<00:00, 149.16it/s]
+[INFO|modelcard.py:450] 2025-05-26 06:06:47,236 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Token Classification', 'type': 'token-classification'}}
+***** predict metrics *****
+  predict_loss               =     0.5482
+  predict_overall_accuracy   =     0.8813
+  predict_overall_f1         =     0.6992 ✅ 没变化
+  predict_overall_precision  =      0.672
+  predict_overall_recall     =     0.7288
+  predict_runtime            = 0:00:01.65
+  predict_samples_per_second =   1183.456
+  predict_steps_per_second   =    148.462

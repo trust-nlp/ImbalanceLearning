@@ -1,0 +1,1504 @@
+05/26/2025 13:01:30 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: False, 16-bits training: False
+05/26/2025 13:01:30 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=True,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=epoch,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=info,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/runs/May26_13-01-30_itiger03,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=epoch,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=8.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/project/hrao/Meta-Resample/output/mit_restaurant_bert_run1,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=32,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=/project/hrao/Meta-Resample/output/mit_restaurant_bert_run1,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+[INFO|configuration_utils.py:698] 2025-05-26 13:01:30,559 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:770] 2025-05-26 13:01:30,563 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "finetuning_task": "ner",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3",
+    "4": "LABEL_4",
+    "5": "LABEL_5",
+    "6": "LABEL_6",
+    "7": "LABEL_7",
+    "8": "LABEL_8",
+    "9": "LABEL_9",
+    "10": "LABEL_10",
+    "11": "LABEL_11",
+    "12": "LABEL_12",
+    "13": "LABEL_13",
+    "14": "LABEL_14",
+    "15": "LABEL_15",
+    "16": "LABEL_16"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_10": 10,
+    "LABEL_11": 11,
+    "LABEL_12": 12,
+    "LABEL_13": 13,
+    "LABEL_14": 14,
+    "LABEL_15": 15,
+    "LABEL_16": 16,
+    "LABEL_2": 2,
+    "LABEL_3": 3,
+    "LABEL_4": 4,
+    "LABEL_5": 5,
+    "LABEL_6": 6,
+    "LABEL_7": 7,
+    "LABEL_8": 8,
+    "LABEL_9": 9
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|configuration_utils.py:698] 2025-05-26 13:01:30,606 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:770] 2025-05-26 13:01:30,607 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 13:01:30,691 >> loading file vocab.txt from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/vocab.txt
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 13:01:30,691 >> loading file tokenizer.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/tokenizer.json
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 13:01:30,691 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 13:01:30,691 >> loading file special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 13:01:30,691 >> loading file tokenizer_config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2023] 2025-05-26 13:01:30,691 >> loading file chat_template.jinja from cache at None
+[INFO|configuration_utils.py:698] 2025-05-26 13:01:30,692 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:770] 2025-05-26 13:01:30,693 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|modeling_utils.py:1150] 2025-05-26 13:01:31,020 >> loading weights file model.safetensors from cache at /home/hrao/.cache/huggingface/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/model.safetensors
+[INFO|logging.py:343] 2025-05-26 13:01:31,042 >> A pretrained model of type `BertForTokenClassification` contains parameters that have been renamed internally (a few are listed below but more are present in the model):
+* `cls.predictions.transform.LayerNorm.beta` -> `cls.predictions.transform.LayerNorm.bias`
+* `cls.predictions.transform.LayerNorm.gamma` -> `cls.predictions.transform.LayerNorm.weight`
+If you are using a model from the Hub, consider submitting a PR to adjust these weights and help future users.
+[INFO|modeling_utils.py:5120] 2025-05-26 13:01:31,082 >> Some weights of the model checkpoint at google-bert/bert-base-uncased were not used when initializing BertForTokenClassification: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:5132] 2025-05-26 13:01:31,083 >> Some weights of BertForTokenClassification were not initialized from the model checkpoint at google-bert/bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Running tokenizer on train dataset:   0%|          | 0/6900 [00:00<?, ? examples/s]
+Running tokenizer on train dataset:  58%|█████▊    | 4000/6900 [00:00<00:00, 30861.57 examples/s]
+Running tokenizer on train dataset: 100%|██████████| 6900/6900 [00:00<00:00, 32051.06 examples/s]
+
+Running tokenizer on validation dataset:   0%|          | 0/760 [00:00<?, ? examples/s]
+Running tokenizer on validation dataset: 100%|██████████| 760/760 [00:00<00:00, 29840.96 examples/s]
+
+Running tokenizer on prediction dataset:   0%|          | 0/1521 [00:00<?, ? examples/s]
+Running tokenizer on prediction dataset: 100%|██████████| 1521/1521 [00:00<00:00, 31556.24 examples/s]
+[INFO|trainer.py:934] 2025-05-26 13:01:32,191 >> The following columns in the Training set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:2409] 2025-05-26 13:01:32,198 >> ***** Running training *****
+[INFO|trainer.py:2410] 2025-05-26 13:01:32,198 >>   Num examples = 6,900
+[INFO|trainer.py:2411] 2025-05-26 13:01:32,198 >>   Num Epochs = 8
+[INFO|trainer.py:2412] 2025-05-26 13:01:32,198 >>   Instantaneous batch size per device = 32
+[INFO|trainer.py:2415] 2025-05-26 13:01:32,198 >>   Total train batch size (w. parallel, distributed & accumulation) = 32
+[INFO|trainer.py:2416] 2025-05-26 13:01:32,198 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:2417] 2025-05-26 13:01:32,198 >>   Total optimization steps = 1,728
+[INFO|trainer.py:2418] 2025-05-26 13:01:32,198 >>   Number of trainable parameters = 108,904,721
+
+  0%|          | 0/1728 [00:00<?, ?it/s]
+  0%|          | 1/1728 [00:00<07:09,  4.02it/s]
+  0%|          | 3/1728 [00:00<02:58,  9.67it/s]
+  0%|          | 6/1728 [00:00<02:01, 14.15it/s]
+  0%|          | 8/1728 [00:00<01:49, 15.64it/s]
+  1%|          | 10/1728 [00:00<01:41, 16.90it/s]
+  1%|          | 12/1728 [00:00<01:36, 17.71it/s]
+  1%|          | 14/1728 [00:00<01:33, 18.26it/s]
+  1%|          | 17/1728 [00:01<01:29, 19.08it/s]
+  1%|          | 19/1728 [00:01<01:29, 19.17it/s]
+  1%|          | 21/1728 [00:01<01:28, 19.27it/s]
+  1%|▏         | 24/1728 [00:01<01:26, 19.63it/s]
+  2%|▏         | 26/1728 [00:01<01:27, 19.34it/s]
+  2%|▏         | 29/1728 [00:01<01:26, 19.63it/s]
+  2%|▏         | 31/1728 [00:01<01:26, 19.58it/s]
+  2%|▏         | 34/1728 [00:01<01:25, 19.74it/s]
+  2%|▏         | 37/1728 [00:02<01:25, 19.77it/s]
+  2%|▏         | 39/1728 [00:02<01:26, 19.61it/s]
+  2%|▏         | 42/1728 [00:02<01:25, 19.61it/s]
+  3%|▎         | 45/1728 [00:02<01:25, 19.77it/s]
+  3%|▎         | 47/1728 [00:02<01:26, 19.51it/s]
+  3%|▎         | 49/1728 [00:02<01:26, 19.51it/s]
+  3%|▎         | 51/1728 [00:02<01:25, 19.60it/s]
+  3%|▎         | 53/1728 [00:02<01:25, 19.66it/s]
+  3%|▎         | 55/1728 [00:02<01:26, 19.38it/s]
+  3%|▎         | 57/1728 [00:03<01:26, 19.27it/s]
+  3%|▎         | 59/1728 [00:03<01:25, 19.43it/s]
+  4%|▎         | 62/1728 [00:03<01:24, 19.73it/s]
+  4%|▎         | 64/1728 [00:03<01:24, 19.63it/s]
+  4%|▍         | 66/1728 [00:03<01:25, 19.54it/s]
+  4%|▍         | 69/1728 [00:03<01:23, 19.81it/s]
+  4%|▍         | 72/1728 [00:03<01:23, 19.91it/s]
+  4%|▍         | 74/1728 [00:03<01:23, 19.78it/s]
+  4%|▍         | 76/1728 [00:04<01:23, 19.71it/s]
+  5%|▍         | 79/1728 [00:04<01:23, 19.72it/s]
+  5%|▍         | 81/1728 [00:04<01:24, 19.52it/s]
+  5%|▍         | 84/1728 [00:04<01:23, 19.57it/s]
+  5%|▍         | 86/1728 [00:04<01:23, 19.63it/s]
+  5%|▌         | 89/1728 [00:04<01:22, 19.86it/s]
+  5%|▌         | 91/1728 [00:04<01:23, 19.63it/s]
+  5%|▌         | 93/1728 [00:04<01:23, 19.62it/s]
+  5%|▌         | 95/1728 [00:05<01:23, 19.65it/s]
+  6%|▌         | 97/1728 [00:05<01:23, 19.51it/s]
+  6%|▌         | 99/1728 [00:05<01:23, 19.46it/s]
+  6%|▌         | 102/1728 [00:05<01:21, 19.91it/s]
+  6%|▌         | 105/1728 [00:05<01:20, 20.04it/s]
+  6%|▌         | 107/1728 [00:05<01:21, 19.96it/s]
+  6%|▋         | 109/1728 [00:05<01:22, 19.64it/s]
+  6%|▋         | 111/1728 [00:05<01:22, 19.72it/s]
+  7%|▋         | 113/1728 [00:05<01:22, 19.54it/s]
+  7%|▋         | 115/1728 [00:06<01:23, 19.33it/s]
+  7%|▋         | 117/1728 [00:06<01:22, 19.49it/s]
+  7%|▋         | 120/1728 [00:06<01:22, 19.58it/s]
+  7%|▋         | 122/1728 [00:06<01:22, 19.41it/s]
+  7%|▋         | 124/1728 [00:06<01:22, 19.51it/s]
+  7%|▋         | 126/1728 [00:06<01:21, 19.54it/s]
+  7%|▋         | 129/1728 [00:06<01:20, 19.79it/s]
+  8%|▊         | 131/1728 [00:06<01:22, 19.47it/s]
+  8%|▊         | 133/1728 [00:06<01:21, 19.60it/s]
+  8%|▊         | 136/1728 [00:07<01:20, 19.77it/s]
+  8%|▊         | 138/1728 [00:07<01:20, 19.69it/s]
+  8%|▊         | 140/1728 [00:07<01:21, 19.50it/s]
+  8%|▊         | 142/1728 [00:07<01:21, 19.58it/s]
+  8%|▊         | 144/1728 [00:07<01:21, 19.35it/s]
+  8%|▊         | 146/1728 [00:07<01:22, 19.23it/s]
+  9%|▊         | 149/1728 [00:07<01:21, 19.43it/s]
+  9%|▉         | 152/1728 [00:07<01:20, 19.67it/s]
+  9%|▉         | 154/1728 [00:08<01:20, 19.50it/s]
+  9%|▉         | 156/1728 [00:08<01:22, 19.03it/s]
+  9%|▉         | 158/1728 [00:08<01:22, 19.07it/s]
+  9%|▉         | 161/1728 [00:08<01:20, 19.43it/s]
+  9%|▉         | 163/1728 [00:08<01:20, 19.46it/s]
+ 10%|▉         | 165/1728 [00:08<01:20, 19.45it/s]
+ 10%|▉         | 167/1728 [00:08<01:20, 19.28it/s]
+ 10%|▉         | 170/1728 [00:08<01:19, 19.52it/s]
+ 10%|▉         | 172/1728 [00:08<01:19, 19.49it/s]
+ 10%|█         | 175/1728 [00:09<01:18, 19.75it/s]
+ 10%|█         | 177/1728 [00:09<01:19, 19.41it/s]
+ 10%|█         | 179/1728 [00:09<01:19, 19.44it/s]
+ 10%|█         | 181/1728 [00:09<01:19, 19.48it/s]
+ 11%|█         | 183/1728 [00:09<01:18, 19.63it/s]
+ 11%|█         | 186/1728 [00:09<01:18, 19.72it/s]
+ 11%|█         | 189/1728 [00:09<01:17, 19.80it/s]
+ 11%|█         | 191/1728 [00:09<01:18, 19.53it/s]
+ 11%|█         | 193/1728 [00:10<01:18, 19.43it/s]
+ 11%|█▏        | 195/1728 [00:10<01:18, 19.52it/s]
+ 11%|█▏        | 197/1728 [00:10<01:18, 19.62it/s]
+ 12%|█▏        | 200/1728 [00:10<01:17, 19.69it/s]
+ 12%|█▏        | 202/1728 [00:10<01:17, 19.62it/s]
+ 12%|█▏        | 204/1728 [00:10<01:18, 19.44it/s]
+ 12%|█▏        | 207/1728 [00:10<01:17, 19.68it/s]
+ 12%|█▏        | 210/1728 [00:10<01:16, 19.87it/s]
+ 12%|█▏        | 212/1728 [00:11<01:16, 19.77it/s]
+ 12%|█▏        | 215/1728 [00:11<01:16, 19.89it/s]
+                                                  
+
+ 12%|█▎        | 216/1728 [00:11<01:16, 19.89it/s][INFO|trainer.py:934] 2025-05-26 13:01:43,420 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:01:43,422 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 13:01:43,422 >>   Num examples = 760
+[INFO|trainer.py:4332] 2025-05-26 13:01:43,422 >>   Batch size = 8
+{'loss': 0.7104, 'grad_norm': 2.959480047225952, 'learning_rate': 1.7511574074074077e-05, 'epoch': 1.0}
+
+
+  0%|          | 0/95 [00:00<?, ?it/s][A
+
+ 13%|█▎        | 12/95 [00:00<00:00, 115.42it/s][A
+
+ 25%|██▌       | 24/95 [00:00<00:00, 109.60it/s][A
+
+ 37%|███▋      | 35/95 [00:00<00:00, 107.41it/s][A
+
+ 48%|████▊     | 46/95 [00:00<00:00, 106.31it/s][A
+
+ 60%|██████    | 57/95 [00:00<00:00, 106.00it/s][A
+
+ 72%|███████▏  | 68/95 [00:00<00:00, 106.01it/s][A
+
+ 83%|████████▎ | 79/95 [00:00<00:00, 106.18it/s][A
+
+ 95%|█████████▍| 90/95 [00:00<00:00, 105.44it/s][A
+                                                  
+
+                                                
+[A
+ 12%|█▎        | 216/1728 [00:12<01:16, 19.89it/s]
+
+100%|██████████| 95/95 [00:01<00:00, 105.44it/s][A
+
+                                                [A
+ 13%|█▎        | 217/1728 [00:12<04:30,  5.58it/s]
+ 13%|█▎        | 219/1728 [00:12<03:39,  6.87it/s]
+ 13%|█▎        | 222/1728 [00:12<02:47,  9.01it/s]
+ 13%|█▎        | 224/1728 [00:12<02:24, 10.44it/s]
+ 13%|█▎        | 226/1728 [00:12<02:06, 11.91it/s]
+ 13%|█▎        | 228/1728 [00:12<01:51, 13.41it/s]
+ 13%|█▎        | 230/1728 [00:12<01:41, 14.71it/s]
+ 13%|█▎        | 232/1728 [00:13<01:34, 15.90it/s]
+ 14%|█▎        | 234/1728 [00:13<01:29, 16.66it/s]
+ 14%|█▎        | 236/1728 [00:13<01:25, 17.44it/s]
+ 14%|█▍        | 238/1728 [00:13<01:22, 17.97it/s]
+ 14%|█▍        | 241/1728 [00:13<01:19, 18.70it/s]
+ 14%|█▍        | 243/1728 [00:13<01:18, 18.87it/s]
+ 14%|█▍        | 245/1728 [00:13<01:17, 19.12it/s]
+ 14%|█▍        | 247/1728 [00:13<01:16, 19.25it/s]
+ 14%|█▍        | 249/1728 [00:13<01:16, 19.45it/s]
+ 15%|█▍        | 251/1728 [00:14<01:15, 19.45it/s]
+ 15%|█▍        | 253/1728 [00:14<01:15, 19.55it/s]
+ 15%|█▍        | 255/1728 [00:14<01:15, 19.61it/s]
+ 15%|█▍        | 257/1728 [00:14<01:14, 19.67it/s]
+ 15%|█▌        | 260/1728 [00:14<01:13, 19.86it/s]
+ 15%|█▌        | 262/1728 [00:14<01:14, 19.57it/s]
+ 15%|█▌        | 265/1728 [00:14<01:14, 19.64it/s]
+ 15%|█▌        | 267/1728 [00:14<01:14, 19.72it/s]
+ 16%|█▌        | 269/1728 [00:14<01:13, 19.79it/s]
+ 16%|█▌        | 271/1728 [00:15<01:13, 19.70it/s]
+ 16%|█▌        | 274/1728 [00:15<01:13, 19.90it/s]
+ 16%|█▌        | 276/1728 [00:15<01:13, 19.79it/s]
+ 16%|█▌        | 278/1728 [00:15<01:14, 19.57it/s]
+ 16%|█▋        | 281/1728 [00:15<01:13, 19.82it/s]
+ 16%|█▋        | 283/1728 [00:15<01:12, 19.81it/s]
+ 16%|█▋        | 285/1728 [00:15<01:13, 19.72it/s]
+ 17%|█▋        | 287/1728 [00:15<01:13, 19.59it/s]
+ 17%|█▋        | 289/1728 [00:15<01:13, 19.51it/s]
+ 17%|█▋        | 291/1728 [00:16<01:13, 19.61it/s]
+ 17%|█▋        | 293/1728 [00:16<01:13, 19.51it/s]
+ 17%|█▋        | 296/1728 [00:16<01:13, 19.60it/s]
+ 17%|█▋        | 298/1728 [00:16<01:13, 19.54it/s]
+ 17%|█▋        | 300/1728 [00:16<01:12, 19.65it/s]
+ 17%|█▋        | 302/1728 [00:16<01:12, 19.60it/s]
+ 18%|█▊        | 304/1728 [00:16<01:13, 19.37it/s]
+ 18%|█▊        | 306/1728 [00:16<01:12, 19.50it/s]
+ 18%|█▊        | 309/1728 [00:16<01:11, 19.79it/s]
+ 18%|█▊        | 311/1728 [00:17<01:11, 19.75it/s]
+ 18%|█▊        | 313/1728 [00:17<01:11, 19.76it/s]
+ 18%|█▊        | 315/1728 [00:17<01:11, 19.78it/s]
+ 18%|█▊        | 318/1728 [00:17<01:10, 20.05it/s]
+ 19%|█▊        | 320/1728 [00:17<01:11, 19.79it/s]
+ 19%|█▊        | 323/1728 [00:17<01:10, 19.98it/s]
+ 19%|█▉        | 325/1728 [00:17<01:10, 19.81it/s]
+ 19%|█▉        | 327/1728 [00:17<01:10, 19.81it/s]
+ 19%|█▉        | 329/1728 [00:17<01:11, 19.59it/s]
+ 19%|█▉        | 331/1728 [00:18<01:11, 19.55it/s]
+ 19%|█▉        | 333/1728 [00:18<01:11, 19.63it/s]
+ 19%|█▉        | 335/1728 [00:18<01:12, 19.34it/s]
+ 20%|█▉        | 337/1728 [00:18<01:11, 19.50it/s]
+ 20%|█▉        | 340/1728 [00:18<01:10, 19.71it/s]
+ 20%|█▉        | 343/1728 [00:18<01:09, 19.82it/s]
+ 20%|█▉        | 345/1728 [00:18<01:09, 19.86it/s]
+ 20%|██        | 347/1728 [00:18<01:10, 19.49it/s]
+ 20%|██        | 349/1728 [00:19<01:10, 19.47it/s]
+ 20%|██        | 351/1728 [00:19<01:11, 19.39it/s]
+ 20%|██        | 353/1728 [00:19<01:10, 19.43it/s]
+ 21%|██        | 356/1728 [00:19<01:09, 19.71it/s]
+ 21%|██        | 358/1728 [00:19<01:09, 19.73it/s]
+ 21%|██        | 360/1728 [00:19<01:09, 19.59it/s]
+ 21%|██        | 363/1728 [00:19<01:09, 19.66it/s]
+ 21%|██        | 365/1728 [00:19<01:09, 19.63it/s]
+ 21%|██▏       | 368/1728 [00:19<01:08, 19.80it/s]
+ 21%|██▏       | 370/1728 [00:20<01:09, 19.52it/s]
+ 22%|██▏       | 372/1728 [00:20<01:09, 19.58it/s]
+ 22%|██▏       | 374/1728 [00:20<01:09, 19.61it/s]
+ 22%|██▏       | 376/1728 [00:20<01:08, 19.61it/s]
+ 22%|██▏       | 378/1728 [00:20<01:09, 19.50it/s]
+ 22%|██▏       | 380/1728 [00:20<01:09, 19.52it/s]
+ 22%|██▏       | 382/1728 [00:20<01:09, 19.46it/s]
+ 22%|██▏       | 384/1728 [00:20<01:08, 19.49it/s]
+ 22%|██▏       | 387/1728 [00:20<01:08, 19.70it/s]
+ 23%|██▎       | 389/1728 [00:21<01:09, 19.40it/s]
+ 23%|██▎       | 391/1728 [00:21<01:09, 19.13it/s]
+ 23%|██▎       | 393/1728 [00:21<01:09, 19.27it/s]
+ 23%|██▎       | 396/1728 [00:21<01:07, 19.60it/s]
+ 23%|██▎       | 398/1728 [00:21<01:07, 19.58it/s]
+ 23%|██▎       | 400/1728 [00:21<01:07, 19.59it/s]
+ 23%|██▎       | 402/1728 [00:21<01:07, 19.70it/s]
+ 23%|██▎       | 404/1728 [00:21<01:07, 19.65it/s]
+ 23%|██▎       | 406/1728 [00:21<01:07, 19.63it/s]
+ 24%|██▎       | 408/1728 [00:22<01:07, 19.66it/s]
+ 24%|██▍       | 411/1728 [00:22<01:06, 19.85it/s]
+ 24%|██▍       | 413/1728 [00:22<01:06, 19.73it/s]
+ 24%|██▍       | 415/1728 [00:22<01:08, 19.22it/s]
+ 24%|██▍       | 417/1728 [00:22<01:07, 19.29it/s]
+ 24%|██▍       | 419/1728 [00:22<01:07, 19.43it/s]
+ 24%|██▍       | 421/1728 [00:22<01:07, 19.26it/s]
+ 25%|██▍       | 424/1728 [00:22<01:06, 19.58it/s]
+ 25%|██▍       | 426/1728 [00:22<01:06, 19.56it/s]
+ 25%|██▍       | 428/1728 [00:23<01:07, 19.30it/s]
+ 25%|██▍       | 430/1728 [00:23<01:07, 19.33it/s]
+                                                  
+
+ 25%|██▌       | 432/1728 [00:23<01:07, 19.33it/s][INFO|trainer.py:934] 2025-05-26 13:01:55,458 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:01:55,460 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 13:01:55,460 >>   Num examples = 760
+[INFO|trainer.py:4332] 2025-05-26 13:01:55,460 >>   Batch size = 8
+{'eval_loss': 0.3372201919555664, 'eval_Amenity_precision': 0.4971751412429379, 'eval_Amenity_recall': 0.6027397260273972, 'eval_Amenity_f1': 0.544891640866873, 'eval_Amenity_number': 292, 'eval_Cuisine_precision': 0.7439759036144579, 'eval_Cuisine_recall': 0.8045602605863192, 'eval_Cuisine_f1': 0.7730829420970267, 'eval_Cuisine_number': 307, 'eval_Dish_precision': 0.625, 'eval_Dish_recall': 0.6557377049180327, 'eval_Dish_f1': 0.64, 'eval_Dish_number': 122, 'eval_Hours_precision': 0.7368421052631579, 'eval_Hours_recall': 0.7058823529411765, 'eval_Hours_f1': 0.721030042918455, 'eval_Hours_number': 119, 'eval_Location_precision': 0.7782178217821782, 'eval_Location_recall': 0.8506493506493507, 'eval_Location_f1': 0.81282316442606, 'eval_Location_number': 462, 'eval_Price_precision': 0.7435897435897436, 'eval_Price_recall': 0.7733333333333333, 'eval_Price_f1': 0.7581699346405228, 'eval_Price_number': 75, 'eval_Rating_precision': 0.6941176470588235, 'eval_Rating_recall': 0.7108433734939759, 'eval_Rating_f1': 0.7023809523809523, 'eval_Rating_number': 83, 'eval_Restaurant_Name_precision': 0.8263888888888888, 'eval_Restaurant_Name_recall': 0.815068493150685, 'eval_Restaurant_Name_f1': 0.8206896551724138, 'eval_Restaurant_Name_number': 146, 'eval_overall_precision': 0.6988505747126437, 'eval_overall_recall': 0.7571606475716065, 'eval_overall_f1': 0.7268380155409444, 'eval_overall_accuracy': 0.9011852260198456, 'eval_runtime': 1.0087, 'eval_samples_per_second': 753.452, 'eval_steps_per_second': 94.181, 'epoch': 1.0}
+{'loss': 0.2872, 'grad_norm': 3.7014968395233154, 'learning_rate': 1.5011574074074076e-05, 'epoch': 2.0}
+
+
+  0%|          | 0/95 [00:00<?, ?it/s][A
+
+ 13%|█▎        | 12/95 [00:00<00:00, 116.48it/s][A
+
+ 25%|██▌       | 24/95 [00:00<00:00, 110.15it/s][A
+
+ 38%|███▊      | 36/95 [00:00<00:00, 107.77it/s][A
+
+ 49%|████▉     | 47/95 [00:00<00:00, 106.63it/s][A
+
+ 61%|██████    | 58/95 [00:00<00:00, 106.36it/s][A
+
+ 73%|███████▎  | 69/95 [00:00<00:00, 106.35it/s][A
+
+ 84%|████████▍ | 80/95 [00:00<00:00, 106.35it/s][A
+
+ 96%|█████████▌| 91/95 [00:00<00:00, 105.09it/s][A
+                                                  
+
+                                                
+[A
+ 25%|██▌       | 432/1728 [00:24<01:07, 19.33it/s]
+
+100%|██████████| 95/95 [00:01<00:00, 105.09it/s][A
+
+                                                [A
+ 25%|██▌       | 433/1728 [00:24<03:52,  5.57it/s]
+ 25%|██▌       | 435/1728 [00:24<03:09,  6.81it/s]
+ 25%|██▌       | 437/1728 [00:24<02:35,  8.30it/s]
+ 25%|██▌       | 440/1728 [00:24<02:02, 10.54it/s]
+ 26%|██▌       | 442/1728 [00:24<01:47, 11.93it/s]
+ 26%|██▌       | 445/1728 [00:24<01:31, 13.97it/s]
+ 26%|██▌       | 447/1728 [00:25<01:25, 14.95it/s]
+ 26%|██▌       | 449/1728 [00:25<01:21, 15.71it/s]
+ 26%|██▌       | 451/1728 [00:25<01:16, 16.63it/s]
+ 26%|██▋       | 454/1728 [00:25<01:11, 17.92it/s]
+ 26%|██▋       | 456/1728 [00:25<01:09, 18.32it/s]
+ 27%|██▋       | 459/1728 [00:25<01:06, 18.94it/s]
+ 27%|██▋       | 461/1728 [00:25<01:06, 19.00it/s]
+ 27%|██▋       | 463/1728 [00:25<01:06, 19.07it/s]
+ 27%|██▋       | 465/1728 [00:25<01:05, 19.26it/s]
+ 27%|██▋       | 468/1728 [00:26<01:04, 19.50it/s]
+ 27%|██▋       | 470/1728 [00:26<01:04, 19.44it/s]
+ 27%|██▋       | 472/1728 [00:26<01:04, 19.40it/s]
+ 27%|██▋       | 474/1728 [00:26<01:05, 19.26it/s]
+ 28%|██▊       | 476/1728 [00:26<01:04, 19.33it/s]
+ 28%|██▊       | 478/1728 [00:26<01:04, 19.44it/s]
+ 28%|██▊       | 480/1728 [00:26<01:04, 19.49it/s]
+ 28%|██▊       | 482/1728 [00:26<01:04, 19.44it/s]
+ 28%|██▊       | 485/1728 [00:26<01:03, 19.58it/s]
+ 28%|██▊       | 487/1728 [00:27<01:04, 19.31it/s]
+ 28%|██▊       | 490/1728 [00:27<01:03, 19.48it/s]
+ 28%|██▊       | 492/1728 [00:27<01:03, 19.51it/s]
+ 29%|██▊       | 494/1728 [00:27<01:03, 19.55it/s]
+ 29%|██▊       | 496/1728 [00:27<01:02, 19.58it/s]
+ 29%|██▉       | 498/1728 [00:27<01:03, 19.45it/s]
+ 29%|██▉       | 500/1728 [00:27<01:02, 19.55it/s][INFO|trainer.py:3993] 2025-05-26 13:01:59,969 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-500
+[INFO|configuration_utils.py:424] 2025-05-26 13:01:59,972 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-500/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 13:02:01,009 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 13:02:01,037 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 13:02:01,053 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-500/special_tokens_map.json
+
+ 29%|██▉       | 502/1728 [00:31<11:41,  1.75it/s]
+ 29%|██▉       | 504/1728 [00:31<08:32,  2.39it/s]
+ 29%|██▉       | 506/1728 [00:31<06:18,  3.23it/s]
+ 29%|██▉       | 509/1728 [00:31<04:14,  4.78it/s]
+ 30%|██▉       | 511/1728 [00:31<03:22,  6.02it/s]
+ 30%|██▉       | 513/1728 [00:31<02:43,  7.44it/s]
+ 30%|██▉       | 516/1728 [00:32<02:04,  9.72it/s]
+ 30%|██▉       | 518/1728 [00:32<01:48, 11.18it/s]
+ 30%|███       | 521/1728 [00:32<01:31, 13.14it/s]
+ 30%|███       | 524/1728 [00:32<01:20, 14.99it/s]
+ 30%|███       | 526/1728 [00:32<01:15, 15.95it/s]
+ 31%|███       | 528/1728 [00:32<01:11, 16.78it/s]
+ 31%|███       | 530/1728 [00:32<01:08, 17.46it/s]
+ 31%|███       | 533/1728 [00:33<01:05, 18.24it/s]
+ 31%|███       | 536/1728 [00:33<01:03, 18.70it/s]
+ 31%|███       | 538/1728 [00:33<01:02, 18.96it/s]
+ 31%|███▏      | 541/1728 [00:33<01:01, 19.32it/s]
+ 31%|███▏      | 543/1728 [00:33<01:01, 19.24it/s]
+ 32%|███▏      | 546/1728 [00:33<01:00, 19.68it/s]
+ 32%|███▏      | 549/1728 [00:33<00:59, 19.75it/s]
+ 32%|███▏      | 552/1728 [00:33<00:58, 19.95it/s]
+ 32%|███▏      | 555/1728 [00:34<00:59, 19.75it/s]
+ 32%|███▏      | 557/1728 [00:34<00:59, 19.55it/s]
+ 32%|███▏      | 559/1728 [00:34<01:00, 19.43it/s]
+ 32%|███▏      | 561/1728 [00:34<00:59, 19.53it/s]
+ 33%|███▎      | 564/1728 [00:34<00:58, 19.88it/s]
+ 33%|███▎      | 566/1728 [00:34<00:59, 19.67it/s]
+ 33%|███▎      | 569/1728 [00:34<00:58, 19.83it/s]
+ 33%|███▎      | 572/1728 [00:34<00:58, 19.65it/s]
+ 33%|███▎      | 574/1728 [00:35<00:58, 19.57it/s]
+ 33%|███▎      | 576/1728 [00:35<00:59, 19.48it/s]
+ 33%|███▎      | 578/1728 [00:35<00:58, 19.51it/s]
+ 34%|███▎      | 580/1728 [00:35<00:58, 19.52it/s]
+ 34%|███▎      | 582/1728 [00:35<00:58, 19.51it/s]
+ 34%|███▍      | 585/1728 [00:35<00:58, 19.64it/s]
+ 34%|███▍      | 587/1728 [00:35<00:58, 19.62it/s]
+ 34%|███▍      | 589/1728 [00:35<00:58, 19.61it/s]
+ 34%|███▍      | 591/1728 [00:35<00:58, 19.59it/s]
+ 34%|███▍      | 593/1728 [00:36<00:58, 19.45it/s]
+ 34%|███▍      | 595/1728 [00:36<00:58, 19.35it/s]
+ 35%|███▍      | 597/1728 [00:36<00:58, 19.35it/s]
+ 35%|███▍      | 600/1728 [00:36<00:57, 19.71it/s]
+ 35%|███▍      | 602/1728 [00:36<00:57, 19.74it/s]
+ 35%|███▍      | 604/1728 [00:36<00:56, 19.80it/s]
+ 35%|███▌      | 607/1728 [00:36<00:55, 20.22it/s]
+ 35%|███▌      | 610/1728 [00:36<00:55, 20.06it/s]
+ 35%|███▌      | 613/1728 [00:37<00:55, 20.11it/s]
+ 36%|███▌      | 616/1728 [00:37<00:55, 19.92it/s]
+ 36%|███▌      | 618/1728 [00:37<00:56, 19.61it/s]
+ 36%|███▌      | 621/1728 [00:37<00:55, 19.79it/s]
+ 36%|███▌      | 623/1728 [00:37<00:55, 19.80it/s]
+ 36%|███▌      | 625/1728 [00:37<00:55, 19.75it/s]
+ 36%|███▋      | 628/1728 [00:37<00:55, 19.85it/s]
+ 36%|███▋      | 630/1728 [00:37<00:55, 19.83it/s]
+ 37%|███▋      | 633/1728 [00:38<00:55, 19.75it/s]
+ 37%|███▋      | 635/1728 [00:38<00:55, 19.60it/s]
+ 37%|███▋      | 637/1728 [00:38<00:55, 19.60it/s]
+ 37%|███▋      | 639/1728 [00:38<00:55, 19.62it/s]
+ 37%|███▋      | 642/1728 [00:38<00:54, 19.85it/s]
+ 37%|███▋      | 645/1728 [00:38<00:53, 20.07it/s]
+ 38%|███▊      | 648/1728 [00:38<00:53, 20.27it/s]
+                                                  
+
+ 38%|███▊      | 648/1728 [00:38<00:53, 20.27it/s][INFO|trainer.py:934] 2025-05-26 13:02:11,028 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:02:11,030 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 13:02:11,030 >>   Num examples = 760
+[INFO|trainer.py:4332] 2025-05-26 13:02:11,030 >>   Batch size = 8
+{'eval_loss': 0.29225924611091614, 'eval_Amenity_precision': 0.594059405940594, 'eval_Amenity_recall': 0.6164383561643836, 'eval_Amenity_f1': 0.6050420168067228, 'eval_Amenity_number': 292, 'eval_Cuisine_precision': 0.8547854785478548, 'eval_Cuisine_recall': 0.8436482084690554, 'eval_Cuisine_f1': 0.8491803278688526, 'eval_Cuisine_number': 307, 'eval_Dish_precision': 0.765625, 'eval_Dish_recall': 0.8032786885245902, 'eval_Dish_f1': 0.784, 'eval_Dish_number': 122, 'eval_Hours_precision': 0.7301587301587301, 'eval_Hours_recall': 0.773109243697479, 'eval_Hours_f1': 0.7510204081632652, 'eval_Hours_number': 119, 'eval_Location_precision': 0.8163265306122449, 'eval_Location_recall': 0.8658008658008658, 'eval_Location_f1': 0.8403361344537814, 'eval_Location_number': 462, 'eval_Price_precision': 0.7922077922077922, 'eval_Price_recall': 0.8133333333333334, 'eval_Price_f1': 0.8026315789473685, 'eval_Price_number': 75, 'eval_Rating_precision': 0.6804123711340206, 'eval_Rating_recall': 0.7951807228915663, 'eval_Rating_f1': 0.7333333333333334, 'eval_Rating_number': 83, 'eval_Restaurant_Name_precision': 0.8486842105263158, 'eval_Restaurant_Name_recall': 0.8835616438356164, 'eval_Restaurant_Name_f1': 0.8657718120805369, 'eval_Restaurant_Name_number': 146, 'eval_overall_precision': 0.7667064439140812, 'eval_overall_recall': 0.8001245330012453, 'eval_overall_f1': 0.7830591102985984, 'eval_overall_accuracy': 0.913175303197354, 'eval_runtime': 1.0036, 'eval_samples_per_second': 757.285, 'eval_steps_per_second': 94.661, 'epoch': 2.0}
+{'loss': 0.2265, 'grad_norm': 2.412281036376953, 'learning_rate': 1.2511574074074076e-05, 'epoch': 3.0}
+
+
+  0%|          | 0/95 [00:00<?, ?it/s][A
+
+ 13%|█▎        | 12/95 [00:00<00:00, 117.51it/s][A
+
+ 25%|██▌       | 24/95 [00:00<00:00, 111.08it/s][A
+
+ 38%|███▊      | 36/95 [00:00<00:00, 108.70it/s][A
+
+ 49%|████▉     | 47/95 [00:00<00:00, 107.55it/s][A
+
+ 61%|██████    | 58/95 [00:00<00:00, 107.27it/s][A
+
+ 73%|███████▎  | 69/95 [00:00<00:00, 107.30it/s][A
+
+ 84%|████████▍ | 80/95 [00:00<00:00, 107.33it/s][A
+
+ 96%|█████████▌| 91/95 [00:00<00:00, 106.51it/s][A
+                                                  
+
+                                                
+[A
+ 38%|███▊      | 648/1728 [00:39<00:53, 20.27it/s]
+
+100%|██████████| 95/95 [00:00<00:00, 106.51it/s][A
+
+                                                [A
+ 38%|███▊      | 651/1728 [00:39<02:50,  6.31it/s]
+ 38%|███▊      | 654/1728 [00:40<02:13,  8.04it/s]
+ 38%|███▊      | 656/1728 [00:40<01:55,  9.32it/s]
+ 38%|███▊      | 658/1728 [00:40<01:40, 10.65it/s]
+ 38%|███▊      | 660/1728 [00:40<01:28, 12.11it/s]
+ 38%|███▊      | 662/1728 [00:40<01:18, 13.50it/s]
+ 38%|███▊      | 665/1728 [00:40<01:08, 15.49it/s]
+ 39%|███▊      | 667/1728 [00:40<01:05, 16.25it/s]
+ 39%|███▊      | 669/1728 [00:40<01:02, 16.99it/s]
+ 39%|███▉      | 671/1728 [00:41<01:00, 17.46it/s]
+ 39%|███▉      | 674/1728 [00:41<00:57, 18.42it/s]
+ 39%|███▉      | 676/1728 [00:41<00:56, 18.74it/s]
+ 39%|███▉      | 679/1728 [00:41<00:54, 19.34it/s]
+ 39%|███▉      | 681/1728 [00:41<00:54, 19.28it/s]
+ 40%|███▉      | 683/1728 [00:41<00:54, 19.34it/s]
+ 40%|███▉      | 685/1728 [00:41<00:53, 19.41it/s]
+ 40%|███▉      | 688/1728 [00:41<00:52, 19.68it/s]
+ 40%|███▉      | 691/1728 [00:42<00:52, 19.93it/s]
+ 40%|████      | 693/1728 [00:42<00:52, 19.80it/s]
+ 40%|████      | 695/1728 [00:42<00:52, 19.72it/s]
+ 40%|████      | 697/1728 [00:42<00:52, 19.69it/s]
+ 40%|████      | 699/1728 [00:42<00:52, 19.61it/s]
+ 41%|████      | 701/1728 [00:42<00:52, 19.50it/s]
+ 41%|████      | 704/1728 [00:42<00:51, 19.74it/s]
+ 41%|████      | 707/1728 [00:42<00:51, 19.88it/s]
+ 41%|████      | 709/1728 [00:42<00:52, 19.56it/s]
+ 41%|████      | 712/1728 [00:43<00:51, 19.76it/s]
+ 41%|████▏     | 714/1728 [00:43<00:51, 19.58it/s]
+ 41%|████▏     | 716/1728 [00:43<00:51, 19.65it/s]
+ 42%|████▏     | 719/1728 [00:43<00:50, 19.94it/s]
+ 42%|████▏     | 722/1728 [00:43<00:50, 20.02it/s]
+ 42%|████▏     | 724/1728 [00:43<00:50, 19.99it/s]
+ 42%|████▏     | 727/1728 [00:43<00:49, 20.17it/s]
+ 42%|████▏     | 730/1728 [00:43<00:49, 20.27it/s]
+ 42%|████▏     | 733/1728 [00:44<00:49, 20.07it/s]
+ 43%|████▎     | 736/1728 [00:44<00:49, 19.98it/s]
+ 43%|████▎     | 738/1728 [00:44<00:51, 19.33it/s]
+ 43%|████▎     | 741/1728 [00:44<00:50, 19.69it/s]
+ 43%|████▎     | 743/1728 [00:44<00:50, 19.43it/s]
+ 43%|████▎     | 745/1728 [00:44<00:50, 19.43it/s]
+ 43%|████▎     | 747/1728 [00:44<00:50, 19.52it/s]
+ 43%|████▎     | 749/1728 [00:44<00:50, 19.57it/s]
+ 43%|████▎     | 751/1728 [00:45<00:50, 19.48it/s]
+ 44%|████▎     | 754/1728 [00:45<00:49, 19.67it/s]
+ 44%|████▍     | 756/1728 [00:45<00:49, 19.74it/s]
+ 44%|████▍     | 759/1728 [00:45<00:48, 19.88it/s]
+ 44%|████▍     | 761/1728 [00:45<00:49, 19.69it/s]
+ 44%|████▍     | 763/1728 [00:45<00:49, 19.53it/s]
+ 44%|████▍     | 765/1728 [00:45<00:49, 19.58it/s]
+ 44%|████▍     | 767/1728 [00:45<00:48, 19.63it/s]
+ 45%|████▍     | 770/1728 [00:46<00:47, 20.01it/s]
+ 45%|████▍     | 772/1728 [00:46<00:48, 19.91it/s]
+ 45%|████▍     | 774/1728 [00:46<00:48, 19.68it/s]
+ 45%|████▍     | 776/1728 [00:46<00:48, 19.60it/s]
+ 45%|████▌     | 778/1728 [00:46<00:48, 19.49it/s]
+ 45%|████▌     | 780/1728 [00:46<00:49, 19.15it/s]
+ 45%|████▌     | 782/1728 [00:46<00:49, 19.28it/s]
+ 45%|████▌     | 785/1728 [00:46<00:47, 19.66it/s]
+ 46%|████▌     | 788/1728 [00:46<00:47, 19.75it/s]
+ 46%|████▌     | 791/1728 [00:47<00:47, 19.88it/s]
+ 46%|████▌     | 793/1728 [00:47<00:47, 19.50it/s]
+ 46%|████▌     | 795/1728 [00:47<00:48, 19.34it/s]
+ 46%|████▌     | 797/1728 [00:47<00:48, 19.29it/s]
+ 46%|████▌     | 799/1728 [00:47<00:47, 19.48it/s]
+ 46%|████▋     | 801/1728 [00:47<00:47, 19.43it/s]
+ 46%|████▋     | 803/1728 [00:47<00:47, 19.56it/s]
+ 47%|████▋     | 805/1728 [00:47<00:47, 19.63it/s]
+ 47%|████▋     | 807/1728 [00:47<00:46, 19.62it/s]
+ 47%|████▋     | 810/1728 [00:48<00:46, 19.77it/s]
+ 47%|████▋     | 812/1728 [00:48<00:46, 19.74it/s]
+ 47%|████▋     | 814/1728 [00:48<00:46, 19.76it/s]
+ 47%|████▋     | 816/1728 [00:48<00:46, 19.48it/s]
+ 47%|████▋     | 818/1728 [00:48<00:46, 19.43it/s]
+ 48%|████▊     | 821/1728 [00:48<00:45, 19.74it/s]
+ 48%|████▊     | 823/1728 [00:48<00:46, 19.65it/s]
+ 48%|████▊     | 826/1728 [00:48<00:45, 19.72it/s]
+ 48%|████▊     | 829/1728 [00:49<00:44, 20.04it/s]
+ 48%|████▊     | 831/1728 [00:49<00:45, 19.85it/s]
+ 48%|████▊     | 833/1728 [00:49<00:45, 19.84it/s]
+ 48%|████▊     | 836/1728 [00:49<00:44, 20.04it/s]
+ 48%|████▊     | 838/1728 [00:49<00:44, 19.84it/s]
+ 49%|████▊     | 841/1728 [00:49<00:44, 20.11it/s]
+ 49%|████▉     | 844/1728 [00:49<00:43, 20.11it/s]
+ 49%|████▉     | 847/1728 [00:49<00:44, 19.83it/s]
+ 49%|████▉     | 850/1728 [00:50<00:43, 19.97it/s]
+ 49%|████▉     | 853/1728 [00:50<00:43, 20.19it/s]
+ 50%|████▉     | 856/1728 [00:50<00:43, 20.12it/s]
+ 50%|████▉     | 859/1728 [00:50<00:43, 20.04it/s]
+ 50%|████▉     | 862/1728 [00:50<00:42, 20.20it/s]
+                                                  
+
+ 50%|█████     | 864/1728 [00:50<00:42, 20.20it/s][INFO|trainer.py:934] 2025-05-26 13:02:22,970 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:02:22,972 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 13:02:22,972 >>   Num examples = 760
+[INFO|trainer.py:4332] 2025-05-26 13:02:22,972 >>   Batch size = 8
+{'eval_loss': 0.2954428791999817, 'eval_Amenity_precision': 0.6079734219269103, 'eval_Amenity_recall': 0.6267123287671232, 'eval_Amenity_f1': 0.6172006745362564, 'eval_Amenity_number': 292, 'eval_Cuisine_precision': 0.8552631578947368, 'eval_Cuisine_recall': 0.8469055374592834, 'eval_Cuisine_f1': 0.851063829787234, 'eval_Cuisine_number': 307, 'eval_Dish_precision': 0.7480314960629921, 'eval_Dish_recall': 0.7786885245901639, 'eval_Dish_f1': 0.7630522088353414, 'eval_Dish_number': 122, 'eval_Hours_precision': 0.7398373983739838, 'eval_Hours_recall': 0.7647058823529411, 'eval_Hours_f1': 0.7520661157024795, 'eval_Hours_number': 119, 'eval_Location_precision': 0.8285714285714286, 'eval_Location_recall': 0.8787878787878788, 'eval_Location_f1': 0.8529411764705883, 'eval_Location_number': 462, 'eval_Price_precision': 0.8552631578947368, 'eval_Price_recall': 0.8666666666666667, 'eval_Price_f1': 0.8609271523178809, 'eval_Price_number': 75, 'eval_Rating_precision': 0.7272727272727273, 'eval_Rating_recall': 0.7710843373493976, 'eval_Rating_f1': 0.7485380116959065, 'eval_Rating_number': 83, 'eval_Restaurant_Name_precision': 0.8666666666666667, 'eval_Restaurant_Name_recall': 0.8904109589041096, 'eval_Restaurant_Name_f1': 0.8783783783783784, 'eval_Restaurant_Name_number': 146, 'eval_overall_precision': 0.7799879445449066, 'eval_overall_recall': 0.8057285180572852, 'eval_overall_f1': 0.7926493108728944, 'eval_overall_accuracy': 0.9156560088202866, 'eval_runtime': 0.9949, 'eval_samples_per_second': 763.88, 'eval_steps_per_second': 95.485, 'epoch': 3.0}
+{'loss': 0.1889, 'grad_norm': 2.841243267059326, 'learning_rate': 1.0011574074074074e-05, 'epoch': 4.0}
+
+
+  0%|          | 0/95 [00:00<?, ?it/s][A
+
+ 13%|█▎        | 12/95 [00:00<00:00, 117.37it/s][A
+
+ 25%|██▌       | 24/95 [00:00<00:00, 111.09it/s][A
+
+ 38%|███▊      | 36/95 [00:00<00:00, 108.62it/s][A
+
+ 49%|████▉     | 47/95 [00:00<00:00, 107.49it/s][A
+
+ 61%|██████    | 58/95 [00:00<00:00, 107.03it/s][A
+
+ 73%|███████▎  | 69/95 [00:00<00:00, 107.09it/s][A
+
+ 84%|████████▍ | 80/95 [00:00<00:00, 107.18it/s][A
+
+ 96%|█████████▌| 91/95 [00:00<00:00, 106.52it/s][A
+                                                  
+
+                                                
+[A
+ 50%|█████     | 864/1728 [00:51<00:42, 20.20it/s]
+
+100%|██████████| 95/95 [00:01<00:00, 106.52it/s][A
+
+                                                [A
+ 50%|█████     | 865/1728 [00:51<02:11,  6.57it/s]
+ 50%|█████     | 867/1728 [00:51<01:51,  7.72it/s]
+ 50%|█████     | 869/1728 [00:52<01:34,  9.06it/s]
+ 50%|█████     | 871/1728 [00:52<01:21, 10.51it/s]
+ 51%|█████     | 873/1728 [00:52<01:11, 11.96it/s]
+ 51%|█████     | 875/1728 [00:52<01:03, 13.45it/s]
+ 51%|█████     | 877/1728 [00:52<00:57, 14.81it/s]
+ 51%|█████     | 879/1728 [00:52<00:53, 15.88it/s]
+ 51%|█████     | 881/1728 [00:52<00:50, 16.82it/s]
+ 51%|█████     | 884/1728 [00:52<00:47, 17.92it/s]
+ 51%|█████▏    | 886/1728 [00:52<00:45, 18.38it/s]
+ 51%|█████▏    | 888/1728 [00:53<00:44, 18.72it/s]
+ 52%|█████▏    | 890/1728 [00:53<00:44, 18.93it/s]
+ 52%|█████▏    | 893/1728 [00:53<00:43, 19.37it/s]
+ 52%|█████▏    | 896/1728 [00:53<00:43, 19.29it/s]
+ 52%|█████▏    | 898/1728 [00:53<00:42, 19.34it/s]
+ 52%|█████▏    | 901/1728 [00:53<00:42, 19.45it/s]
+ 52%|█████▏    | 903/1728 [00:53<00:42, 19.33it/s]
+ 52%|█████▏    | 905/1728 [00:53<00:42, 19.20it/s]
+ 52%|█████▏    | 907/1728 [00:53<00:42, 19.37it/s]
+ 53%|█████▎    | 909/1728 [00:54<00:42, 19.47it/s]
+ 53%|█████▎    | 911/1728 [00:54<00:41, 19.59it/s]
+ 53%|█████▎    | 914/1728 [00:54<00:40, 19.87it/s]
+ 53%|█████▎    | 916/1728 [00:54<00:40, 19.89it/s]
+ 53%|█████▎    | 918/1728 [00:54<00:40, 19.78it/s]
+ 53%|█████▎    | 921/1728 [00:54<00:40, 19.91it/s]
+ 53%|█████▎    | 923/1728 [00:54<00:40, 19.76it/s]
+ 54%|█████▎    | 925/1728 [00:54<00:40, 19.65it/s]
+ 54%|█████▎    | 927/1728 [00:54<00:40, 19.62it/s]
+ 54%|█████▍    | 929/1728 [00:55<00:40, 19.65it/s]
+ 54%|█████▍    | 932/1728 [00:55<00:39, 19.92it/s]
+ 54%|█████▍    | 935/1728 [00:55<00:39, 19.96it/s]
+ 54%|█████▍    | 938/1728 [00:55<00:39, 20.03it/s]
+ 54%|█████▍    | 940/1728 [00:55<00:40, 19.63it/s]
+ 55%|█████▍    | 942/1728 [00:55<00:40, 19.56it/s]
+ 55%|█████▍    | 944/1728 [00:55<00:40, 19.39it/s]
+ 55%|█████▍    | 946/1728 [00:55<00:40, 19.51it/s]
+ 55%|█████▍    | 948/1728 [00:56<00:39, 19.64it/s]
+ 55%|█████▍    | 950/1728 [00:56<00:39, 19.65it/s]
+ 55%|█████▌    | 952/1728 [00:56<00:39, 19.68it/s]
+ 55%|█████▌    | 954/1728 [00:56<00:39, 19.58it/s]
+ 55%|█████▌    | 957/1728 [00:56<00:39, 19.64it/s]
+ 56%|█████▌    | 960/1728 [00:56<00:38, 19.96it/s]
+ 56%|█████▌    | 963/1728 [00:56<00:37, 20.15it/s]
+ 56%|█████▌    | 966/1728 [00:56<00:38, 19.98it/s]
+ 56%|█████▌    | 968/1728 [00:57<00:38, 19.91it/s]
+ 56%|█████▌    | 971/1728 [00:57<00:37, 20.06it/s]
+ 56%|█████▋    | 974/1728 [00:57<00:37, 19.85it/s]
+ 56%|█████▋    | 976/1728 [00:57<00:38, 19.70it/s]
+ 57%|█████▋    | 978/1728 [00:57<00:38, 19.69it/s]
+ 57%|█████▋    | 981/1728 [00:57<00:37, 19.91it/s]
+ 57%|█████▋    | 983/1728 [00:57<00:37, 19.75it/s]
+ 57%|█████▋    | 985/1728 [00:57<00:38, 19.52it/s]
+ 57%|█████▋    | 988/1728 [00:58<00:37, 19.62it/s]
+ 57%|█████▋    | 990/1728 [00:58<00:38, 19.23it/s]
+ 57%|█████▋    | 992/1728 [00:58<00:38, 19.35it/s]
+ 58%|█████▊    | 994/1728 [00:58<00:37, 19.52it/s]
+ 58%|█████▊    | 996/1728 [00:58<00:38, 19.04it/s]
+ 58%|█████▊    | 998/1728 [00:58<00:38, 19.21it/s]
+ 58%|█████▊    | 1000/1728 [00:58<00:37, 19.40it/s][INFO|trainer.py:3993] 2025-05-26 13:02:30,903 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1000
+[INFO|configuration_utils.py:424] 2025-05-26 13:02:30,906 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1000/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 13:02:31,974 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1000/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 13:02:31,995 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1000/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 13:02:32,007 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1000/special_tokens_map.json
+
+ 58%|█████▊    | 1002/1728 [01:02<06:50,  1.77it/s]
+ 58%|█████▊    | 1004/1728 [01:02<04:59,  2.42it/s]
+ 58%|█████▊    | 1006/1728 [01:02<03:40,  3.27it/s]
+ 58%|█████▊    | 1008/1728 [01:02<02:45,  4.34it/s]
+ 58%|█████▊    | 1010/1728 [01:02<02:07,  5.65it/s]
+ 59%|█████▊    | 1012/1728 [01:02<01:39,  7.19it/s]
+ 59%|█████▊    | 1015/1728 [01:02<01:14,  9.57it/s]
+ 59%|█████▉    | 1017/1728 [01:03<01:04, 11.05it/s]
+ 59%|█████▉    | 1019/1728 [01:03<00:56, 12.58it/s]
+ 59%|█████▉    | 1021/1728 [01:03<00:50, 13.93it/s]
+ 59%|█████▉    | 1023/1728 [01:03<00:46, 15.19it/s]
+ 59%|█████▉    | 1025/1728 [01:03<00:43, 16.28it/s]
+ 59%|█████▉    | 1027/1728 [01:03<00:40, 17.20it/s]
+ 60%|█████▉    | 1030/1728 [01:03<00:38, 18.07it/s]
+ 60%|█████▉    | 1033/1728 [01:03<00:36, 18.80it/s]
+ 60%|█████▉    | 1036/1728 [01:04<00:36, 19.08it/s]
+ 60%|██████    | 1039/1728 [01:04<00:35, 19.26it/s]
+ 60%|██████    | 1041/1728 [01:04<00:35, 19.34it/s]
+ 60%|██████    | 1043/1728 [01:04<00:35, 19.45it/s]
+ 61%|██████    | 1046/1728 [01:04<00:34, 19.59it/s]
+ 61%|██████    | 1049/1728 [01:04<00:34, 19.71it/s]
+ 61%|██████    | 1051/1728 [01:04<00:34, 19.69it/s]
+ 61%|██████    | 1054/1728 [01:04<00:34, 19.79it/s]
+ 61%|██████    | 1056/1728 [01:05<00:34, 19.53it/s]
+ 61%|██████    | 1058/1728 [01:05<00:34, 19.35it/s]
+ 61%|██████▏   | 1060/1728 [01:05<00:34, 19.41it/s]
+ 61%|██████▏   | 1062/1728 [01:05<00:34, 19.43it/s]
+ 62%|██████▏   | 1064/1728 [01:05<00:34, 19.36it/s]
+ 62%|██████▏   | 1066/1728 [01:05<00:34, 19.44it/s]
+ 62%|██████▏   | 1069/1728 [01:05<00:33, 19.70it/s]
+ 62%|██████▏   | 1071/1728 [01:05<00:33, 19.47it/s]
+ 62%|██████▏   | 1073/1728 [01:05<00:33, 19.55it/s]
+ 62%|██████▏   | 1075/1728 [01:06<00:33, 19.53it/s]
+ 62%|██████▏   | 1077/1728 [01:06<00:33, 19.52it/s]
+ 62%|██████▏   | 1079/1728 [01:06<00:33, 19.58it/s]
+                                                   
+
+ 62%|██████▎   | 1080/1728 [01:06<00:33, 19.58it/s][INFO|trainer.py:934] 2025-05-26 13:02:38,495 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:02:38,497 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 13:02:38,497 >>   Num examples = 760
+[INFO|trainer.py:4332] 2025-05-26 13:02:38,497 >>   Batch size = 8
+{'eval_loss': 0.2995556592941284, 'eval_Amenity_precision': 0.6073825503355704, 'eval_Amenity_recall': 0.6198630136986302, 'eval_Amenity_f1': 0.6135593220338983, 'eval_Amenity_number': 292, 'eval_Cuisine_precision': 0.8391167192429022, 'eval_Cuisine_recall': 0.8664495114006515, 'eval_Cuisine_f1': 0.8525641025641025, 'eval_Cuisine_number': 307, 'eval_Dish_precision': 0.7786885245901639, 'eval_Dish_recall': 0.7786885245901639, 'eval_Dish_f1': 0.7786885245901639, 'eval_Dish_number': 122, 'eval_Hours_precision': 0.7265625, 'eval_Hours_recall': 0.7815126050420168, 'eval_Hours_f1': 0.7530364372469636, 'eval_Hours_number': 119, 'eval_Location_precision': 0.8319672131147541, 'eval_Location_recall': 0.8787878787878788, 'eval_Location_f1': 0.8547368421052632, 'eval_Location_number': 462, 'eval_Price_precision': 0.8552631578947368, 'eval_Price_recall': 0.8666666666666667, 'eval_Price_f1': 0.8609271523178809, 'eval_Price_number': 75, 'eval_Rating_precision': 0.6842105263157895, 'eval_Rating_recall': 0.7831325301204819, 'eval_Rating_f1': 0.7303370786516855, 'eval_Rating_number': 83, 'eval_Restaurant_Name_precision': 0.8675496688741722, 'eval_Restaurant_Name_recall': 0.8972602739726028, 'eval_Restaurant_Name_f1': 0.8821548821548821, 'eval_Restaurant_Name_number': 146, 'eval_overall_precision': 0.7773134328358209, 'eval_overall_recall': 0.8107098381070984, 'eval_overall_f1': 0.7936604693690947, 'eval_overall_accuracy': 0.9179988974641676, 'eval_runtime': 0.997, 'eval_samples_per_second': 762.27, 'eval_steps_per_second': 95.284, 'epoch': 4.0}
+{'loss': 0.1608, 'grad_norm': 2.622074842453003, 'learning_rate': 7.511574074074075e-06, 'epoch': 5.0}
+
+
+  0%|          | 0/95 [00:00<?, ?it/s][A
+
+ 13%|█▎        | 12/95 [00:00<00:00, 116.34it/s][A
+
+ 25%|██▌       | 24/95 [00:00<00:00, 110.16it/s][A
+
+ 38%|███▊      | 36/95 [00:00<00:00, 107.68it/s][A
+
+ 49%|████▉     | 47/95 [00:00<00:00, 106.58it/s][A
+
+ 61%|██████    | 58/95 [00:00<00:00, 106.30it/s][A
+
+ 73%|███████▎  | 69/95 [00:00<00:00, 106.37it/s][A
+
+ 84%|████████▍ | 80/95 [00:00<00:00, 106.33it/s][A
+
+ 96%|█████████▌| 91/95 [00:00<00:00, 105.53it/s][A
+                                                   
+
+                                                
+[A
+ 62%|██████▎   | 1080/1728 [01:07<00:33, 19.58it/s]
+
+100%|██████████| 95/95 [00:01<00:00, 105.53it/s][A
+
+                                                [A
+ 63%|██████▎   | 1081/1728 [01:07<02:12,  4.90it/s]
+ 63%|██████▎   | 1083/1728 [01:07<01:42,  6.28it/s]
+ 63%|██████▎   | 1085/1728 [01:07<01:21,  7.87it/s]
+ 63%|██████▎   | 1087/1728 [01:07<01:06,  9.58it/s]
+ 63%|██████▎   | 1089/1728 [01:07<00:56, 11.29it/s]
+ 63%|██████▎   | 1091/1728 [01:07<00:49, 12.97it/s]
+ 63%|██████▎   | 1094/1728 [01:08<00:41, 15.10it/s]
+ 63%|██████▎   | 1096/1728 [01:08<00:39, 16.01it/s]
+ 64%|██████▎   | 1098/1728 [01:08<00:37, 16.89it/s]
+ 64%|██████▎   | 1100/1728 [01:08<00:35, 17.62it/s]
+ 64%|██████▍   | 1102/1728 [01:08<00:34, 18.20it/s]
+ 64%|██████▍   | 1105/1728 [01:08<00:32, 18.88it/s]
+ 64%|██████▍   | 1107/1728 [01:08<00:33, 18.73it/s]
+ 64%|██████▍   | 1109/1728 [01:08<00:32, 18.81it/s]
+ 64%|██████▍   | 1111/1728 [01:08<00:32, 19.12it/s]
+ 64%|██████▍   | 1114/1728 [01:09<00:31, 19.51it/s]
+ 65%|██████▍   | 1116/1728 [01:09<00:31, 19.47it/s]
+ 65%|██████▍   | 1118/1728 [01:09<00:31, 19.55it/s]
+ 65%|██████▍   | 1120/1728 [01:09<00:30, 19.64it/s]
+ 65%|██████▍   | 1122/1728 [01:09<00:30, 19.67it/s]
+ 65%|██████▌   | 1125/1728 [01:09<00:30, 19.86it/s]
+ 65%|██████▌   | 1127/1728 [01:09<00:30, 19.78it/s]
+ 65%|██████▌   | 1129/1728 [01:09<00:30, 19.80it/s]
+ 66%|██████▌   | 1132/1728 [01:09<00:29, 19.98it/s]
+ 66%|██████▌   | 1134/1728 [01:10<00:29, 19.87it/s]
+ 66%|██████▌   | 1137/1728 [01:10<00:29, 19.90it/s]
+ 66%|██████▌   | 1139/1728 [01:10<00:29, 19.79it/s]
+ 66%|██████▌   | 1141/1728 [01:10<00:29, 19.81it/s]
+ 66%|██████▌   | 1143/1728 [01:10<00:29, 19.59it/s]
+ 66%|██████▋   | 1145/1728 [01:10<00:30, 19.41it/s]
+ 66%|██████▋   | 1147/1728 [01:10<00:30, 19.16it/s]
+ 67%|██████▋   | 1150/1728 [01:10<00:29, 19.65it/s]
+ 67%|██████▋   | 1153/1728 [01:11<00:29, 19.70it/s]
+ 67%|██████▋   | 1155/1728 [01:11<00:29, 19.76it/s]
+ 67%|██████▋   | 1158/1728 [01:11<00:28, 19.92it/s]
+ 67%|██████▋   | 1160/1728 [01:11<00:28, 19.84it/s]
+ 67%|██████▋   | 1162/1728 [01:11<00:28, 19.84it/s]
+ 67%|██████▋   | 1164/1728 [01:11<00:28, 19.72it/s]
+ 67%|██████▋   | 1166/1728 [01:11<00:28, 19.67it/s]
+ 68%|██████▊   | 1168/1728 [01:11<00:28, 19.76it/s]
+ 68%|██████▊   | 1170/1728 [01:11<00:28, 19.68it/s]
+ 68%|██████▊   | 1173/1728 [01:12<00:28, 19.72it/s]
+ 68%|██████▊   | 1175/1728 [01:12<00:28, 19.73it/s]
+ 68%|██████▊   | 1177/1728 [01:12<00:28, 19.35it/s]
+ 68%|██████▊   | 1179/1728 [01:12<00:28, 19.41it/s]
+ 68%|██████▊   | 1181/1728 [01:12<00:28, 19.42it/s]
+ 68%|██████▊   | 1183/1728 [01:12<00:28, 18.97it/s]
+ 69%|██████▊   | 1185/1728 [01:12<00:28, 19.12it/s]
+ 69%|██████▊   | 1187/1728 [01:12<00:28, 19.12it/s]
+ 69%|██████▉   | 1189/1728 [01:12<00:27, 19.35it/s]
+ 69%|██████▉   | 1191/1728 [01:12<00:27, 19.41it/s]
+ 69%|██████▉   | 1193/1728 [01:13<00:27, 19.54it/s]
+ 69%|██████▉   | 1195/1728 [01:13<00:27, 19.52it/s]
+ 69%|██████▉   | 1197/1728 [01:13<00:27, 19.59it/s]
+ 69%|██████▉   | 1199/1728 [01:13<00:26, 19.65it/s]
+ 70%|██████▉   | 1202/1728 [01:13<00:26, 19.77it/s]
+ 70%|██████▉   | 1204/1728 [01:13<00:26, 19.66it/s]
+ 70%|██████▉   | 1207/1728 [01:13<00:26, 19.65it/s]
+ 70%|███████   | 1210/1728 [01:13<00:26, 19.78it/s]
+ 70%|███████   | 1212/1728 [01:14<00:26, 19.45it/s]
+ 70%|███████   | 1214/1728 [01:14<00:26, 19.49it/s]
+ 70%|███████   | 1216/1728 [01:14<00:26, 19.51it/s]
+ 70%|███████   | 1218/1728 [01:14<00:26, 19.39it/s]
+ 71%|███████   | 1220/1728 [01:14<00:26, 19.41it/s]
+ 71%|███████   | 1222/1728 [01:14<00:25, 19.52it/s]
+ 71%|███████   | 1224/1728 [01:14<00:25, 19.52it/s]
+ 71%|███████   | 1227/1728 [01:14<00:25, 19.76it/s]
+ 71%|███████   | 1229/1728 [01:14<00:25, 19.54it/s]
+ 71%|███████▏  | 1232/1728 [01:15<00:25, 19.72it/s]
+ 71%|███████▏  | 1234/1728 [01:15<00:25, 19.37it/s]
+ 72%|███████▏  | 1237/1728 [01:15<00:24, 19.77it/s]
+ 72%|███████▏  | 1239/1728 [01:15<00:24, 19.72it/s]
+ 72%|███████▏  | 1241/1728 [01:15<00:24, 19.69it/s]
+ 72%|███████▏  | 1244/1728 [01:15<00:24, 19.85it/s]
+ 72%|███████▏  | 1246/1728 [01:15<00:24, 19.63it/s]
+ 72%|███████▏  | 1249/1728 [01:15<00:24, 19.73it/s]
+ 72%|███████▏  | 1252/1728 [01:16<00:23, 19.89it/s]
+ 73%|███████▎  | 1255/1728 [01:16<00:23, 19.80it/s]
+ 73%|███████▎  | 1257/1728 [01:16<00:23, 19.78it/s]
+ 73%|███████▎  | 1260/1728 [01:16<00:23, 19.92it/s]
+ 73%|███████▎  | 1262/1728 [01:16<00:23, 19.69it/s]
+ 73%|███████▎  | 1264/1728 [01:16<00:23, 19.50it/s]
+ 73%|███████▎  | 1266/1728 [01:16<00:23, 19.51it/s]
+ 73%|███████▎  | 1268/1728 [01:16<00:23, 19.53it/s]
+ 73%|███████▎  | 1270/1728 [01:17<00:23, 19.15it/s]
+ 74%|███████▎  | 1272/1728 [01:17<00:23, 19.26it/s]
+ 74%|███████▎  | 1274/1728 [01:17<00:23, 19.42it/s]
+ 74%|███████▍  | 1276/1728 [01:17<00:23, 19.44it/s]
+ 74%|███████▍  | 1278/1728 [01:17<00:23, 19.40it/s]
+ 74%|███████▍  | 1280/1728 [01:17<00:23, 19.40it/s]
+ 74%|███████▍  | 1282/1728 [01:17<00:23, 19.14it/s]
+ 74%|███████▍  | 1285/1728 [01:17<00:22, 19.44it/s]
+ 74%|███████▍  | 1287/1728 [01:17<00:22, 19.54it/s]
+ 75%|███████▍  | 1289/1728 [01:17<00:22, 19.42it/s]
+ 75%|███████▍  | 1292/1728 [01:18<00:22, 19.74it/s]
+ 75%|███████▍  | 1294/1728 [01:18<00:21, 19.81it/s]
+                                                   
+
+ 75%|███████▌  | 1296/1728 [01:18<00:21, 19.81it/s][INFO|trainer.py:934] 2025-05-26 13:02:50,536 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:02:50,538 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 13:02:50,538 >>   Num examples = 760
+[INFO|trainer.py:4332] 2025-05-26 13:02:50,538 >>   Batch size = 8
+{'eval_loss': 0.30630648136138916, 'eval_Amenity_precision': 0.6140939597315436, 'eval_Amenity_recall': 0.6267123287671232, 'eval_Amenity_f1': 0.6203389830508474, 'eval_Amenity_number': 292, 'eval_Cuisine_precision': 0.8111455108359134, 'eval_Cuisine_recall': 0.8534201954397395, 'eval_Cuisine_f1': 0.8317460317460318, 'eval_Cuisine_number': 307, 'eval_Dish_precision': 0.8067226890756303, 'eval_Dish_recall': 0.7868852459016393, 'eval_Dish_f1': 0.7966804979253113, 'eval_Dish_number': 122, 'eval_Hours_precision': 0.6541353383458647, 'eval_Hours_recall': 0.7310924369747899, 'eval_Hours_f1': 0.6904761904761905, 'eval_Hours_number': 119, 'eval_Location_precision': 0.8213552361396304, 'eval_Location_recall': 0.8658008658008658, 'eval_Location_f1': 0.8429926238145415, 'eval_Location_number': 462, 'eval_Price_precision': 0.8904109589041096, 'eval_Price_recall': 0.8666666666666667, 'eval_Price_f1': 0.8783783783783784, 'eval_Price_number': 75, 'eval_Rating_precision': 0.6842105263157895, 'eval_Rating_recall': 0.7831325301204819, 'eval_Rating_f1': 0.7303370786516855, 'eval_Rating_number': 83, 'eval_Restaurant_Name_precision': 0.8648648648648649, 'eval_Restaurant_Name_recall': 0.8767123287671232, 'eval_Restaurant_Name_f1': 0.870748299319728, 'eval_Restaurant_Name_number': 146, 'eval_overall_precision': 0.7673031026252983, 'eval_overall_recall': 0.800747198007472, 'eval_overall_f1': 0.7836684948202316, 'eval_overall_accuracy': 0.9173098125689085, 'eval_runtime': 1.003, 'eval_samples_per_second': 757.704, 'eval_steps_per_second': 94.713, 'epoch': 5.0}
+{'loss': 0.1417, 'grad_norm': 1.7184048891067505, 'learning_rate': 5.011574074074075e-06, 'epoch': 6.0}
+
+
+  0%|          | 0/95 [00:00<?, ?it/s][A
+
+ 13%|█▎        | 12/95 [00:00<00:00, 116.95it/s][A
+
+ 25%|██▌       | 24/95 [00:00<00:00, 110.65it/s][A
+
+ 38%|███▊      | 36/95 [00:00<00:00, 108.25it/s][A
+
+ 49%|████▉     | 47/95 [00:00<00:00, 107.16it/s][A
+
+ 61%|██████    | 58/95 [00:00<00:00, 106.90it/s][A
+
+ 73%|███████▎  | 69/95 [00:00<00:00, 106.98it/s][A
+
+ 84%|████████▍ | 80/95 [00:00<00:00, 107.00it/s][A
+
+ 96%|█████████▌| 91/95 [00:00<00:00, 106.24it/s][A
+                                                   
+
+                                                
+[A
+ 75%|███████▌  | 1296/1728 [01:19<00:21, 19.81it/s]
+
+100%|██████████| 95/95 [00:01<00:00, 106.24it/s][A
+
+                                                [A
+ 75%|███████▌  | 1297/1728 [01:19<01:14,  5.80it/s]
+ 75%|███████▌  | 1300/1728 [01:19<00:56,  7.64it/s]
+ 75%|███████▌  | 1302/1728 [01:19<00:47,  8.98it/s]
+ 75%|███████▌  | 1304/1728 [01:19<00:40, 10.45it/s]
+ 76%|███████▌  | 1307/1728 [01:19<00:33, 12.59it/s]
+ 76%|███████▌  | 1309/1728 [01:20<00:30, 13.86it/s]
+ 76%|███████▌  | 1311/1728 [01:20<00:27, 15.05it/s]
+ 76%|███████▌  | 1314/1728 [01:20<00:24, 16.60it/s]
+ 76%|███████▌  | 1316/1728 [01:20<00:23, 17.29it/s]
+ 76%|███████▋  | 1318/1728 [01:20<00:22, 17.83it/s]
+ 76%|███████▋  | 1320/1728 [01:20<00:22, 18.24it/s]
+ 77%|███████▋  | 1323/1728 [01:20<00:21, 18.89it/s]
+ 77%|███████▋  | 1325/1728 [01:20<00:21, 19.04it/s]
+ 77%|███████▋  | 1327/1728 [01:20<00:21, 19.07it/s]
+ 77%|███████▋  | 1330/1728 [01:21<00:20, 19.47it/s]
+ 77%|███████▋  | 1332/1728 [01:21<00:20, 19.28it/s]
+ 77%|███████▋  | 1334/1728 [01:21<00:20, 19.34it/s]
+ 77%|███████▋  | 1336/1728 [01:21<00:20, 19.35it/s]
+ 77%|███████▋  | 1339/1728 [01:21<00:19, 19.50it/s]
+ 78%|███████▊  | 1341/1728 [01:21<00:19, 19.37it/s]
+ 78%|███████▊  | 1344/1728 [01:21<00:19, 19.51it/s]
+ 78%|███████▊  | 1347/1728 [01:21<00:19, 19.73it/s]
+ 78%|███████▊  | 1349/1728 [01:22<00:19, 19.63it/s]
+ 78%|███████▊  | 1351/1728 [01:22<00:19, 19.34it/s]
+ 78%|███████▊  | 1353/1728 [01:22<00:19, 19.41it/s]
+ 78%|███████▊  | 1355/1728 [01:22<00:19, 19.30it/s]
+ 79%|███████▊  | 1357/1728 [01:22<00:19, 19.46it/s]
+ 79%|███████▊  | 1359/1728 [01:22<00:18, 19.53it/s]
+ 79%|███████▉  | 1362/1728 [01:22<00:18, 19.76it/s]
+ 79%|███████▉  | 1364/1728 [01:22<00:18, 19.41it/s]
+ 79%|███████▉  | 1366/1728 [01:22<00:18, 19.52it/s]
+ 79%|███████▉  | 1368/1728 [01:23<00:18, 19.56it/s]
+ 79%|███████▉  | 1370/1728 [01:23<00:18, 19.45it/s]
+ 79%|███████▉  | 1372/1728 [01:23<00:18, 19.51it/s]
+ 80%|███████▉  | 1374/1728 [01:23<00:18, 19.24it/s]
+ 80%|███████▉  | 1377/1728 [01:23<00:17, 19.60it/s]
+ 80%|███████▉  | 1379/1728 [01:23<00:17, 19.69it/s]
+ 80%|███████▉  | 1382/1728 [01:23<00:17, 19.71it/s]
+ 80%|████████  | 1385/1728 [01:23<00:17, 19.81it/s]
+ 80%|████████  | 1387/1728 [01:23<00:17, 19.70it/s]
+ 80%|████████  | 1389/1728 [01:24<00:17, 19.57it/s]
+ 80%|████████  | 1391/1728 [01:24<00:17, 19.67it/s]
+ 81%|████████  | 1393/1728 [01:24<00:17, 19.63it/s]
+ 81%|████████  | 1395/1728 [01:24<00:16, 19.60it/s]
+ 81%|████████  | 1397/1728 [01:24<00:16, 19.51it/s]
+ 81%|████████  | 1399/1728 [01:24<00:16, 19.48it/s]
+ 81%|████████  | 1401/1728 [01:24<00:17, 19.16it/s]
+ 81%|████████▏ | 1404/1728 [01:24<00:16, 19.37it/s]
+ 81%|████████▏ | 1407/1728 [01:25<00:16, 19.44it/s]
+ 82%|████████▏ | 1409/1728 [01:25<00:16, 19.26it/s]
+ 82%|████████▏ | 1411/1728 [01:25<00:16, 19.36it/s]
+ 82%|████████▏ | 1413/1728 [01:25<00:16, 19.47it/s]
+ 82%|████████▏ | 1415/1728 [01:25<00:15, 19.62it/s]
+ 82%|████████▏ | 1417/1728 [01:25<00:15, 19.66it/s]
+ 82%|████████▏ | 1420/1728 [01:25<00:15, 19.80it/s]
+ 82%|████████▏ | 1422/1728 [01:25<00:15, 19.64it/s]
+ 82%|████████▏ | 1424/1728 [01:25<00:15, 19.56it/s]
+ 83%|████████▎ | 1426/1728 [01:25<00:15, 19.41it/s]
+ 83%|████████▎ | 1428/1728 [01:26<00:15, 19.43it/s]
+ 83%|████████▎ | 1430/1728 [01:26<00:15, 19.37it/s]
+ 83%|████████▎ | 1432/1728 [01:26<00:15, 19.50it/s]
+ 83%|████████▎ | 1434/1728 [01:26<00:15, 19.59it/s]
+ 83%|████████▎ | 1436/1728 [01:26<00:14, 19.59it/s]
+ 83%|████████▎ | 1438/1728 [01:26<00:14, 19.58it/s]
+ 83%|████████▎ | 1441/1728 [01:26<00:14, 19.49it/s]
+ 84%|████████▎ | 1444/1728 [01:26<00:14, 19.72it/s]
+ 84%|████████▎ | 1446/1728 [01:27<00:14, 19.57it/s]
+ 84%|████████▍ | 1448/1728 [01:27<00:14, 19.37it/s]
+ 84%|████████▍ | 1450/1728 [01:27<00:14, 19.13it/s]
+ 84%|████████▍ | 1452/1728 [01:27<00:14, 19.27it/s]
+ 84%|████████▍ | 1454/1728 [01:27<00:14, 19.38it/s]
+ 84%|████████▍ | 1456/1728 [01:27<00:14, 19.31it/s]
+ 84%|████████▍ | 1459/1728 [01:27<00:14, 19.21it/s]
+ 85%|████████▍ | 1461/1728 [01:27<00:13, 19.14it/s]
+ 85%|████████▍ | 1463/1728 [01:27<00:13, 19.16it/s]
+ 85%|████████▍ | 1466/1728 [01:28<00:13, 19.51it/s]
+ 85%|████████▍ | 1468/1728 [01:28<00:13, 19.63it/s]
+ 85%|████████▌ | 1470/1728 [01:28<00:13, 19.58it/s]
+ 85%|████████▌ | 1472/1728 [01:28<00:13, 19.65it/s]
+ 85%|████████▌ | 1474/1728 [01:28<00:12, 19.56it/s]
+ 85%|████████▌ | 1477/1728 [01:28<00:12, 19.79it/s]
+ 86%|████████▌ | 1479/1728 [01:28<00:12, 19.84it/s]
+ 86%|████████▌ | 1481/1728 [01:28<00:12, 19.88it/s]
+ 86%|████████▌ | 1484/1728 [01:28<00:12, 19.89it/s]
+ 86%|████████▌ | 1486/1728 [01:29<00:12, 19.89it/s]
+ 86%|████████▌ | 1488/1728 [01:29<00:12, 19.79it/s]
+ 86%|████████▋ | 1491/1728 [01:29<00:11, 19.96it/s]
+ 86%|████████▋ | 1493/1728 [01:29<00:11, 19.67it/s]
+ 87%|████████▋ | 1495/1728 [01:29<00:11, 19.54it/s]
+ 87%|████████▋ | 1497/1728 [01:29<00:11, 19.47it/s]
+ 87%|████████▋ | 1500/1728 [01:29<00:11, 19.68it/s][INFO|trainer.py:3993] 2025-05-26 13:03:01,974 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1500
+[INFO|configuration_utils.py:424] 2025-05-26 13:03:01,978 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1500/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 13:03:03,310 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 13:03:03,339 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 13:03:03,355 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1500/special_tokens_map.json
+
+ 87%|████████▋ | 1502/1728 [01:33<01:57,  1.92it/s]
+ 87%|████████▋ | 1504/1728 [01:33<01:28,  2.54it/s]
+ 87%|████████▋ | 1506/1728 [01:33<01:05,  3.36it/s]
+ 87%|████████▋ | 1508/1728 [01:33<00:49,  4.41it/s]
+ 87%|████████▋ | 1510/1728 [01:33<00:38,  5.67it/s]
+                                                   
+
+ 88%|████████▊ | 1512/1728 [01:33<00:38,  5.67it/s][INFO|trainer.py:934] 2025-05-26 13:03:06,186 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:03:06,188 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 13:03:06,188 >>   Num examples = 760
+[INFO|trainer.py:4332] 2025-05-26 13:03:06,188 >>   Batch size = 8
+{'eval_loss': 0.3136195242404938, 'eval_Amenity_precision': 0.6372549019607843, 'eval_Amenity_recall': 0.6678082191780822, 'eval_Amenity_f1': 0.6521739130434782, 'eval_Amenity_number': 292, 'eval_Cuisine_precision': 0.8348909657320872, 'eval_Cuisine_recall': 0.8729641693811075, 'eval_Cuisine_f1': 0.8535031847133758, 'eval_Cuisine_number': 307, 'eval_Dish_precision': 0.7777777777777778, 'eval_Dish_recall': 0.8032786885245902, 'eval_Dish_f1': 0.7903225806451613, 'eval_Dish_number': 122, 'eval_Hours_precision': 0.7401574803149606, 'eval_Hours_recall': 0.7899159663865546, 'eval_Hours_f1': 0.7642276422764228, 'eval_Hours_number': 119, 'eval_Location_precision': 0.8285123966942148, 'eval_Location_recall': 0.8679653679653679, 'eval_Location_f1': 0.8477801268498943, 'eval_Location_number': 462, 'eval_Price_precision': 0.8441558441558441, 'eval_Price_recall': 0.8666666666666667, 'eval_Price_f1': 0.8552631578947368, 'eval_Price_number': 75, 'eval_Rating_precision': 0.6774193548387096, 'eval_Rating_recall': 0.7590361445783133, 'eval_Rating_f1': 0.7159090909090909, 'eval_Rating_number': 83, 'eval_Restaurant_Name_precision': 0.8951048951048951, 'eval_Restaurant_Name_recall': 0.8767123287671232, 'eval_Restaurant_Name_f1': 0.8858131487889274, 'eval_Restaurant_Name_number': 146, 'eval_overall_precision': 0.7823494335122242, 'eval_overall_recall': 0.8169364881693649, 'eval_overall_f1': 0.7992689613158697, 'eval_overall_accuracy': 0.9186879823594267, 'eval_runtime': 0.9967, 'eval_samples_per_second': 762.554, 'eval_steps_per_second': 95.319, 'epoch': 6.0}
+{'loss': 0.1268, 'grad_norm': 2.3056752681732178, 'learning_rate': 2.511574074074074e-06, 'epoch': 7.0}
+
+
+  0%|          | 0/95 [00:00<?, ?it/s][A
+
+ 13%|█▎        | 12/95 [00:00<00:00, 116.31it/s][A
+
+ 25%|██▌       | 24/95 [00:00<00:00, 110.07it/s][A
+
+ 38%|███▊      | 36/95 [00:00<00:00, 107.70it/s][A
+
+ 49%|████▉     | 47/95 [00:00<00:00, 106.60it/s][A
+
+ 61%|██████    | 58/95 [00:00<00:00, 106.36it/s][A
+
+ 73%|███████▎  | 69/95 [00:00<00:00, 106.36it/s][A
+
+ 84%|████████▍ | 80/95 [00:00<00:00, 106.33it/s][A
+
+ 96%|█████████▌| 91/95 [00:00<00:00, 105.55it/s][A
+                                                   
+
+                                                
+[A
+ 88%|████████▊ | 1512/1728 [01:35<00:38,  5.67it/s]
+
+100%|██████████| 95/95 [00:01<00:00, 105.55it/s][A
+
+                                                [A
+ 88%|████████▊ | 1513/1728 [01:35<00:56,  3.83it/s]
+ 88%|████████▊ | 1516/1728 [01:35<00:39,  5.37it/s]
+ 88%|████████▊ | 1519/1728 [01:35<00:29,  7.10it/s]
+ 88%|████████▊ | 1521/1728 [01:35<00:24,  8.41it/s]
+ 88%|████████▊ | 1523/1728 [01:35<00:20,  9.85it/s]
+ 88%|████████▊ | 1526/1728 [01:35<00:16, 12.04it/s]
+ 88%|████████▊ | 1528/1728 [01:35<00:15, 13.33it/s]
+ 89%|████████▊ | 1531/1728 [01:35<00:13, 15.15it/s]
+ 89%|████████▊ | 1533/1728 [01:36<00:12, 16.00it/s]
+ 89%|████████▉ | 1535/1728 [01:36<00:11, 16.88it/s]
+ 89%|████████▉ | 1537/1728 [01:36<00:10, 17.49it/s]
+ 89%|████████▉ | 1539/1728 [01:36<00:10, 18.00it/s]
+ 89%|████████▉ | 1541/1728 [01:36<00:10, 18.42it/s]
+ 89%|████████▉ | 1544/1728 [01:36<00:09, 19.01it/s]
+ 89%|████████▉ | 1546/1728 [01:36<00:09, 18.96it/s]
+ 90%|████████▉ | 1548/1728 [01:36<00:09, 18.83it/s]
+ 90%|████████▉ | 1550/1728 [01:36<00:09, 19.15it/s]
+ 90%|████████▉ | 1552/1728 [01:37<00:09, 19.22it/s]
+ 90%|████████▉ | 1554/1728 [01:37<00:09, 19.00it/s]
+ 90%|█████████ | 1556/1728 [01:37<00:08, 19.23it/s]
+ 90%|█████████ | 1558/1728 [01:37<00:08, 19.16it/s]
+ 90%|█████████ | 1560/1728 [01:37<00:08, 19.21it/s]
+ 90%|█████████ | 1562/1728 [01:37<00:08, 19.42it/s]
+ 91%|█████████ | 1564/1728 [01:37<00:08, 19.45it/s]
+ 91%|█████████ | 1566/1728 [01:37<00:08, 19.60it/s]
+ 91%|█████████ | 1568/1728 [01:37<00:08, 19.57it/s]
+ 91%|█████████ | 1570/1728 [01:37<00:08, 19.55it/s]
+ 91%|█████████ | 1572/1728 [01:38<00:07, 19.60it/s]
+ 91%|█████████ | 1574/1728 [01:38<00:08, 19.20it/s]
+ 91%|█████████▏| 1577/1728 [01:38<00:07, 19.69it/s]
+ 91%|█████████▏| 1579/1728 [01:38<00:07, 19.70it/s]
+ 91%|█████████▏| 1581/1728 [01:38<00:07, 19.63it/s]
+ 92%|█████████▏| 1583/1728 [01:38<00:07, 19.73it/s]
+ 92%|█████████▏| 1586/1728 [01:38<00:07, 19.84it/s]
+ 92%|█████████▏| 1589/1728 [01:38<00:06, 19.89it/s]
+ 92%|█████████▏| 1592/1728 [01:39<00:06, 20.13it/s]
+ 92%|█████████▏| 1595/1728 [01:39<00:06, 19.88it/s]
+ 92%|█████████▏| 1598/1728 [01:39<00:06, 19.84it/s]
+ 93%|█████████▎| 1601/1728 [01:39<00:06, 20.05it/s]
+ 93%|█████████▎| 1604/1728 [01:39<00:06, 20.18it/s]
+ 93%|█████████▎| 1607/1728 [01:39<00:06, 20.07it/s]
+ 93%|█████████▎| 1610/1728 [01:39<00:05, 19.95it/s]
+ 93%|█████████▎| 1612/1728 [01:40<00:05, 19.88it/s]
+ 93%|█████████▎| 1615/1728 [01:40<00:05, 19.95it/s]
+ 94%|█████████▎| 1617/1728 [01:40<00:05, 19.77it/s]
+ 94%|█████████▎| 1619/1728 [01:40<00:05, 19.70it/s]
+ 94%|█████████▍| 1621/1728 [01:40<00:05, 19.37it/s]
+ 94%|█████████▍| 1623/1728 [01:40<00:05, 19.39it/s]
+ 94%|█████████▍| 1625/1728 [01:40<00:05, 19.43it/s]
+ 94%|█████████▍| 1627/1728 [01:40<00:05, 19.41it/s]
+ 94%|█████████▍| 1629/1728 [01:40<00:05, 19.30it/s]
+ 94%|█████████▍| 1632/1728 [01:41<00:04, 19.61it/s]
+ 95%|█████████▍| 1635/1728 [01:41<00:04, 19.69it/s]
+ 95%|█████████▍| 1637/1728 [01:41<00:04, 19.70it/s]
+ 95%|█████████▍| 1639/1728 [01:41<00:04, 19.78it/s]
+ 95%|█████████▌| 1642/1728 [01:41<00:04, 19.93it/s]
+ 95%|█████████▌| 1644/1728 [01:41<00:04, 19.71it/s]
+ 95%|█████████▌| 1646/1728 [01:41<00:04, 19.47it/s]
+ 95%|█████████▌| 1648/1728 [01:41<00:04, 19.55it/s]
+ 95%|█████████▌| 1650/1728 [01:42<00:04, 19.42it/s]
+ 96%|█████████▌| 1653/1728 [01:42<00:03, 19.56it/s]
+ 96%|█████████▌| 1656/1728 [01:42<00:03, 19.58it/s]
+ 96%|█████████▌| 1658/1728 [01:42<00:03, 19.41it/s]
+ 96%|█████████▌| 1661/1728 [01:42<00:03, 19.63it/s]
+ 96%|█████████▌| 1663/1728 [01:42<00:03, 19.60it/s]
+ 96%|█████████▋| 1665/1728 [01:42<00:03, 19.69it/s]
+ 97%|█████████▋| 1668/1728 [01:42<00:03, 19.77it/s]
+ 97%|█████████▋| 1670/1728 [01:43<00:02, 19.73it/s]
+ 97%|█████████▋| 1672/1728 [01:43<00:02, 19.69it/s]
+ 97%|█████████▋| 1674/1728 [01:43<00:02, 19.56it/s]
+ 97%|█████████▋| 1677/1728 [01:43<00:02, 19.76it/s]
+ 97%|█████████▋| 1679/1728 [01:43<00:02, 19.82it/s]
+ 97%|█████████▋| 1681/1728 [01:43<00:02, 19.68it/s]
+ 97%|█████████▋| 1684/1728 [01:43<00:02, 19.97it/s]
+ 98%|█████████▊| 1686/1728 [01:43<00:02, 19.59it/s]
+ 98%|█████████▊| 1688/1728 [01:43<00:02, 19.39it/s]
+ 98%|█████████▊| 1691/1728 [01:44<00:01, 19.63it/s]
+ 98%|█████████▊| 1693/1728 [01:44<00:01, 19.54it/s]
+ 98%|█████████▊| 1695/1728 [01:44<00:01, 19.58it/s]
+ 98%|█████████▊| 1698/1728 [01:44<00:01, 19.62it/s]
+ 98%|█████████▊| 1700/1728 [01:44<00:01, 19.61it/s]
+ 98%|█████████▊| 1702/1728 [01:44<00:01, 19.57it/s]
+ 99%|█████████▊| 1704/1728 [01:44<00:01, 19.60it/s]
+ 99%|█████████▊| 1706/1728 [01:44<00:01, 19.45it/s]
+ 99%|█████████▉| 1708/1728 [01:44<00:01, 19.32it/s]
+ 99%|█████████▉| 1711/1728 [01:45<00:00, 19.51it/s]
+ 99%|█████████▉| 1713/1728 [01:45<00:00, 19.61it/s]
+ 99%|█████████▉| 1715/1728 [01:45<00:00, 19.54it/s]
+ 99%|█████████▉| 1717/1728 [01:45<00:00, 19.48it/s]
+ 99%|█████████▉| 1719/1728 [01:45<00:00, 19.52it/s]
+100%|█████████▉| 1721/1728 [01:45<00:00, 19.23it/s]
+100%|█████████▉| 1724/1728 [01:45<00:00, 19.63it/s]
+100%|█████████▉| 1726/1728 [01:45<00:00, 19.60it/s][INFO|trainer.py:3993] 2025-05-26 13:03:18,205 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1728
+[INFO|configuration_utils.py:424] 2025-05-26 13:03:18,208 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1728/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 13:03:19,270 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1728/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 13:03:19,302 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1728/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 13:03:19,319 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/checkpoint-1728/special_tokens_map.json
+
+                                                   
+
+100%|██████████| 1728/1728 [01:49<00:00, 19.60it/s][INFO|trainer.py:934] 2025-05-26 13:03:21,688 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:03:21,689 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 13:03:21,689 >>   Num examples = 760
+[INFO|trainer.py:4332] 2025-05-26 13:03:21,689 >>   Batch size = 8
+{'eval_loss': 0.3290758728981018, 'eval_Amenity_precision': 0.64, 'eval_Amenity_recall': 0.6575342465753424, 'eval_Amenity_f1': 0.6486486486486486, 'eval_Amenity_number': 292, 'eval_Cuisine_precision': 0.81875, 'eval_Cuisine_recall': 0.8534201954397395, 'eval_Cuisine_f1': 0.835725677830941, 'eval_Cuisine_number': 307, 'eval_Dish_precision': 0.8205128205128205, 'eval_Dish_recall': 0.7868852459016393, 'eval_Dish_f1': 0.803347280334728, 'eval_Dish_number': 122, 'eval_Hours_precision': 0.72, 'eval_Hours_recall': 0.7563025210084033, 'eval_Hours_f1': 0.7377049180327868, 'eval_Hours_number': 119, 'eval_Location_precision': 0.8329896907216495, 'eval_Location_recall': 0.8744588744588745, 'eval_Location_f1': 0.8532206969376981, 'eval_Location_number': 462, 'eval_Price_precision': 0.8783783783783784, 'eval_Price_recall': 0.8666666666666667, 'eval_Price_f1': 0.87248322147651, 'eval_Price_number': 75, 'eval_Rating_precision': 0.6923076923076923, 'eval_Rating_recall': 0.7590361445783133, 'eval_Rating_f1': 0.7241379310344828, 'eval_Rating_number': 83, 'eval_Restaurant_Name_precision': 0.8783783783783784, 'eval_Restaurant_Name_recall': 0.8904109589041096, 'eval_Restaurant_Name_f1': 0.8843537414965986, 'eval_Restaurant_Name_number': 146, 'eval_overall_precision': 0.7843373493975904, 'eval_overall_recall': 0.8107098381070984, 'eval_overall_f1': 0.7973055725658297, 'eval_overall_accuracy': 0.9182745314222712, 'eval_runtime': 1.0013, 'eval_samples_per_second': 759.045, 'eval_steps_per_second': 94.881, 'epoch': 7.0}
+{'loss': 0.1184, 'grad_norm': 2.42533802986145, 'learning_rate': 1.1574074074074074e-08, 'epoch': 8.0}
+
+
+  0%|          | 0/95 [00:00<?, ?it/s][A
+
+ 13%|█▎        | 12/95 [00:00<00:00, 114.98it/s][A
+
+ 25%|██▌       | 24/95 [00:00<00:00, 108.82it/s][A
+
+ 37%|███▋      | 35/95 [00:00<00:00, 106.47it/s][A
+
+ 48%|████▊     | 46/95 [00:00<00:00, 105.52it/s][A
+
+ 60%|██████    | 57/95 [00:00<00:00, 105.18it/s][A
+
+ 72%|███████▏  | 68/95 [00:00<00:00, 105.06it/s][A
+
+ 83%|████████▎ | 79/95 [00:00<00:00, 105.24it/s][A
+
+ 95%|█████████▍| 90/95 [00:00<00:00, 104.54it/s][A
+                                                   
+
+                                                
+[A
+100%|██████████| 1728/1728 [01:50<00:00, 19.60it/s]
+
+100%|██████████| 95/95 [00:01<00:00, 104.54it/s][A
+
+                                                [A[INFO|trainer.py:2676] 2025-05-26 13:03:22,727 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+
+                                                   
+
+100%|██████████| 1728/1728 [01:50<00:00, 19.60it/s]
+100%|██████████| 1728/1728 [01:50<00:00, 15.63it/s]
+[INFO|trainer.py:3993] 2025-05-26 13:03:22,731 >> Saving model checkpoint to /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1
+[INFO|configuration_utils.py:424] 2025-05-26 13:03:22,733 >> Configuration saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/config.json
+[INFO|modeling_utils.py:3724] 2025-05-26 13:03:23,939 >> Model weights saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-05-26 13:03:23,964 >> tokenizer config file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-05-26 13:03:23,978 >> Special tokens file saved in /project/hrao/Meta-Resample/output/mit_restaurant_bert_run1/special_tokens_map.json
+{'eval_loss': 0.33042263984680176, 'eval_Amenity_precision': 0.6414473684210527, 'eval_Amenity_recall': 0.6678082191780822, 'eval_Amenity_f1': 0.6543624161073824, 'eval_Amenity_number': 292, 'eval_Cuisine_precision': 0.8354430379746836, 'eval_Cuisine_recall': 0.8599348534201955, 'eval_Cuisine_f1': 0.8475120385232746, 'eval_Cuisine_number': 307, 'eval_Dish_precision': 0.8151260504201681, 'eval_Dish_recall': 0.7950819672131147, 'eval_Dish_f1': 0.8049792531120331, 'eval_Dish_number': 122, 'eval_Hours_precision': 0.744, 'eval_Hours_recall': 0.7815126050420168, 'eval_Hours_f1': 0.7622950819672131, 'eval_Hours_number': 119, 'eval_Location_precision': 0.8322981366459627, 'eval_Location_recall': 0.8701298701298701, 'eval_Location_f1': 0.8507936507936508, 'eval_Location_number': 462, 'eval_Price_precision': 0.8666666666666667, 'eval_Price_recall': 0.8666666666666667, 'eval_Price_f1': 0.8666666666666667, 'eval_Price_number': 75, 'eval_Rating_precision': 0.6847826086956522, 'eval_Rating_recall': 0.7590361445783133, 'eval_Rating_f1': 0.7200000000000001, 'eval_Rating_number': 83, 'eval_Restaurant_Name_precision': 0.8791946308724832, 'eval_Restaurant_Name_recall': 0.8972602739726028, 'eval_Restaurant_Name_f1': 0.888135593220339, 'eval_Restaurant_Name_number': 146, 'eval_overall_precision': 0.7877330126277812, 'eval_overall_recall': 0.8156911581569116, 'eval_overall_f1': 0.8014683389415724, 'eval_overall_accuracy': 0.9191014332965821, 'eval_runtime': 1.0143, 'eval_samples_per_second': 749.27, 'eval_steps_per_second': 93.659, 'epoch': 8.0}
+{'train_runtime': 110.5291, 'train_samples_per_second': 499.416, 'train_steps_per_second': 15.634, 'train_loss': 0.24507802614459284, 'epoch': 8.0}
+***** train metrics *****
+  epoch                    =        8.0
+  total_flos               =   577806GF
+  train_loss               =     0.2451
+  train_runtime            = 0:01:50.52
+  train_samples            =       6900
+  train_samples_per_second =    499.416
+  train_steps_per_second   =     15.634
+05/26/2025 13:03:24 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:934] 2025-05-26 13:03:24,007 >> The following columns in the Evaluation set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:03:24,009 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-05-26 13:03:24,009 >>   Num examples = 760
+[INFO|trainer.py:4332] 2025-05-26 13:03:24,009 >>   Batch size = 8
+
+  0%|          | 0/95 [00:00<?, ?it/s]
+ 13%|█▎        | 12/95 [00:00<00:00, 114.92it/s]
+ 25%|██▌       | 24/95 [00:00<00:00, 108.76it/s]
+ 37%|███▋      | 35/95 [00:00<00:00, 106.28it/s]
+ 48%|████▊     | 46/95 [00:00<00:00, 105.35it/s]
+ 60%|██████    | 57/95 [00:00<00:00, 104.34it/s]
+ 72%|███████▏  | 68/95 [00:00<00:00, 104.45it/s]
+ 83%|████████▎ | 79/95 [00:00<00:00, 104.76it/s]
+ 95%|█████████▍| 90/95 [00:00<00:00, 104.21it/s]
+100%|██████████| 95/95 [00:01<00:00, 92.89it/s] 
+***** eval metrics *****
+  epoch                          =        8.0
+  eval_Amenity_f1                =     0.6544
+  eval_Amenity_number            =        292
+  eval_Amenity_precision         =     0.6414
+  eval_Amenity_recall            =     0.6678
+  eval_Cuisine_f1                =     0.8475
+  eval_Cuisine_number            =        307
+  eval_Cuisine_precision         =     0.8354
+  eval_Cuisine_recall            =     0.8599
+  eval_Dish_f1                   =      0.805
+  eval_Dish_number               =        122
+  eval_Dish_precision            =     0.8151
+  eval_Dish_recall               =     0.7951
+  eval_Hours_f1                  =     0.7623
+  eval_Hours_number              =        119
+  eval_Hours_precision           =      0.744
+  eval_Hours_recall              =     0.7815
+  eval_Location_f1               =     0.8508
+  eval_Location_number           =        462
+  eval_Location_precision        =     0.8323
+  eval_Location_recall           =     0.8701
+  eval_Price_f1                  =     0.8667
+  eval_Price_number              =         75
+  eval_Price_precision           =     0.8667
+  eval_Price_recall              =     0.8667
+  eval_Rating_f1                 =       0.72
+  eval_Rating_number             =         83
+  eval_Rating_precision          =     0.6848
+  eval_Rating_recall             =      0.759
+  eval_Restaurant_Name_f1        =     0.8881
+  eval_Restaurant_Name_number    =        146
+  eval_Restaurant_Name_precision =     0.8792
+  eval_Restaurant_Name_recall    =     0.8973
+  eval_loss                      =     0.3304
+  eval_overall_accuracy          =     0.9191
+  eval_overall_f1                =     0.8015
+  eval_overall_precision         =     0.7877
+  eval_overall_recall            =     0.8157
+  eval_runtime                   = 0:00:01.01
+  eval_samples                   =        760
+  eval_samples_per_second        =    747.502
+  eval_steps_per_second          =     93.438
+05/26/2025 13:03:25 - INFO - __main__ - *** Predict ***
+[INFO|trainer.py:934] 2025-05-26 13:03:25,045 >> The following columns in the test set don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, tokens. If ner_tags, tokens are not expected by `BertForTokenClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:4327] 2025-05-26 13:03:25,047 >> 
+***** Running Prediction *****
+[INFO|trainer.py:4329] 2025-05-26 13:03:25,047 >>   Num examples = 1521
+[INFO|trainer.py:4332] 2025-05-26 13:03:25,047 >>   Batch size = 8
+
+  0%|          | 0/191 [00:00<?, ?it/s]
+  6%|▋         | 12/191 [00:00<00:01, 116.60it/s]
+ 13%|█▎        | 24/191 [00:00<00:01, 110.38it/s]
+ 19%|█▉        | 36/191 [00:00<00:01, 108.42it/s]
+ 25%|██▍       | 47/191 [00:00<00:01, 107.48it/s]
+ 30%|███       | 58/191 [00:00<00:01, 106.86it/s]
+ 36%|███▌      | 69/191 [00:00<00:01, 106.59it/s]
+ 42%|████▏     | 80/191 [00:00<00:01, 105.95it/s]
+ 48%|████▊     | 91/191 [00:00<00:00, 105.78it/s]
+ 53%|█████▎    | 102/191 [00:00<00:00, 105.70it/s]
+ 59%|█████▉    | 113/191 [00:01<00:00, 105.55it/s]
+ 65%|██████▍   | 124/191 [00:01<00:00, 105.00it/s]
+ 71%|███████   | 135/191 [00:01<00:00, 104.36it/s]
+ 76%|███████▋  | 146/191 [00:01<00:00, 104.86it/s]
+ 82%|████████▏ | 157/191 [00:01<00:00, 105.06it/s]
+ 88%|████████▊ | 168/191 [00:01<00:00, 105.25it/s]
+ 94%|█████████▎| 179/191 [00:01<00:00, 105.31it/s]
+ 99%|█████████▉| 190/191 [00:01<00:00, 105.26it/s]
+100%|██████████| 191/191 [00:01<00:00, 96.04it/s] 
+[INFO|modelcard.py:450] 2025-05-26 13:03:27,109 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Token Classification', 'type': 'token-classification'}}
+***** predict metrics *****
+  predict_Amenity_f1                =     0.6673
+  predict_Amenity_number            =        533
+  predict_Amenity_precision         =     0.6473
+  predict_Amenity_recall            =     0.6886
+  predict_Cuisine_f1                =     0.8353
+  predict_Cuisine_number            =        532
+  predict_Cuisine_precision         =      0.818
+  predict_Cuisine_recall            =     0.8534
+  predict_Dish_f1                   =     0.8088
+  predict_Dish_number               =        288
+  predict_Dish_precision            =     0.7888
+  predict_Dish_recall               =     0.8299
+  predict_Hours_f1                  =     0.6802
+  predict_Hours_number              =        212
+  predict_Hours_precision           =     0.6509
+  predict_Hours_recall              =     0.7123
+  predict_Location_f1               =     0.8396
+  predict_Location_number           =        812
+  predict_Location_precision        =     0.8285
+  predict_Location_recall           =      0.851
+  predict_Price_f1                  =     0.8169
+  predict_Price_number              =        171
+  predict_Price_precision           =      0.788
+  predict_Price_recall              =      0.848
+  predict_Rating_f1                 =      0.757
+  predict_Rating_number             =        201
+  predict_Rating_precision          =     0.7137
+  predict_Rating_recall             =      0.806
+  predict_Restaurant_Name_f1        =     0.8308
+  predict_Restaurant_Name_number    =        402
+  predict_Restaurant_Name_precision =     0.8308
+  predict_Restaurant_Name_recall    =     0.8308
+  predict_loss                      =     0.3185
+  predict_overall_accuracy          =     0.9181
+  predict_overall_f1                =     0.7879 ✅
+  predict_overall_precision         =     0.7697
+  predict_overall_recall            =      0.807
+  predict_runtime                   = 0:00:01.99
+  predict_samples_per_second        =    760.589
+  predict_steps_per_second          =     95.511

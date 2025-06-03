@@ -1,0 +1,4 @@
+开始第 1 次运行...
+启动数据集任务: mit_movie_trivia, 运行次数=1, PID=1341133
+开始运行: 数据集=mit_movie_trivia, 运行次数=1
+使用训练文件: /project/hrao/data/mit_movie_trivia/train.conll
