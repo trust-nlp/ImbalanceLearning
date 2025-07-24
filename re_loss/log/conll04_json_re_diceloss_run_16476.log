@@ -1,0 +1,431 @@
+Current Transformers version lacks `evaluation_strategy` in TrainingArguments; argument will be ignored.
+07/22/2025 04:26:27 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: False, 16-bits training: False
+07/22/2025 04:26:27 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=True,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=500.0,
+eval_strategy=no,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=./re_model/runs/Jul22_04-26-27_itiger01,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=50,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=8.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=./re_model_16476,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=32,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=./re_model,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+07/22/2025 04:26:27 - INFO - __main__ - load a local file for train: /project/hrao/data/conll04_json/train.json
+07/22/2025 04:26:27 - INFO - __main__ - load a local file for validation: /project/hrao/data/conll04_json/validation.json
+07/22/2025 04:26:27 - INFO - __main__ - load a local file for test: /project/hrao/data/conll04_json/test.json
+Using custom data configuration default-f9505140c5911664
+07/22/2025 04:26:28 - INFO - datasets.builder - Using custom data configuration default-f9505140c5911664
+Found cached dataset json (/home/hrao/.cache/huggingface/datasets/json/default-f9505140c5911664/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092)
+07/22/2025 04:26:28 - INFO - datasets.builder - Found cached dataset json (/home/hrao/.cache/huggingface/datasets/json/default-f9505140c5911664/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092)
+[INFO|configuration_utils.py:698] 2025-07-22 04:26:28,326 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/config.json
+[INFO|configuration_utils.py:770] 2025-07-22 04:26:28,331 >> Model config DebertaV2Config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "legacy": true,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 04:26:28,396 >> loading file spm.model from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/spm.model
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 04:26:28,396 >> loading file tokenizer.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 04:26:28,396 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 04:26:28,396 >> loading file special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 04:26:28,396 >> loading file tokenizer_config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 04:26:28,396 >> loading file chat_template.jinja from cache at None
+[INFO|configuration_utils.py:698] 2025-07-22 04:26:28,397 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/config.json
+[INFO|configuration_utils.py:770] 2025-07-22 04:26:28,397 >> Model config DebertaV2Config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "legacy": true,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+[INFO|configuration_utils.py:698] 2025-07-22 04:26:28,683 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/config.json
+[INFO|configuration_utils.py:770] 2025-07-22 04:26:28,685 >> Model config DebertaV2Config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "legacy": true,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+/project/hrao/miniconda3/envs/imbalance_env/lib/python3.10/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+07/22/2025 04:26:28 - INFO - __main__ - setting problem type to single label classification
+[INFO|configuration_utils.py:698] 2025-07-22 04:26:28,982 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/config.json
+[INFO|configuration_utils.py:770] 2025-07-22 04:26:28,982 >> Model config DebertaV2Config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "Kill",
+    "1": "Live_In",
+    "2": "Located_In",
+    "3": "OrgBased_In",
+    "4": "Work_For",
+    "5": "no_relation"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "Kill": 0,
+    "Live_In": 1,
+    "Located_In": 2,
+    "OrgBased_In": 3,
+    "Work_For": 4,
+    "no_relation": 5
+  },
+  "layer_norm_eps": 1e-07,
+  "legacy": true,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "problem_type": "single_label_classification",
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+[INFO|modeling_utils.py:1150] 2025-07-22 04:26:29,384 >> loading weights file pytorch_model.bin from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/pytorch_model.bin
+[INFO|safetensors_conversion.py:61] 2025-07-22 04:26:29,503 >> Attempting to create safetensors variant
+[INFO|modeling_utils.py:5120] 2025-07-22 04:26:29,628 >> Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2ForSequenceClassification: ['lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.LayerNorm.weight', 'lm_predictions.lm_head.bias', 'lm_predictions.lm_head.dense.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.LayerNorm.weight', 'mask_predictions.classifier.bias', 'mask_predictions.classifier.weight', 'mask_predictions.dense.bias', 'mask_predictions.dense.weight']
+- This IS expected if you are initializing DebertaV2ForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2ForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:5132] 2025-07-22 04:26:29,628 >> Some weights of DebertaV2ForSequenceClassification were not initialized from the model checkpoint at microsoft/deberta-v3-base and are newly initialized: ['classifier.bias', 'classifier.weight', 'pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[INFO|modeling_utils.py:2876] 2025-07-22 04:26:29,646 >> You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 128005. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
+[INFO|safetensors_conversion.py:74] 2025-07-22 04:26:29,727 >> Safetensors PR exists
+Running tokenizer on dataset:   0%|          | 0/922 [00:00<?, ? examples/s]Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-f9505140c5911664/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-5a2bb767b5c2df72.arrow
+07/22/2025 04:26:30 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-f9505140c5911664/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-5a2bb767b5c2df72.arrow
+Running tokenizer on dataset: 100%|██████████| 922/922 [00:00<00:00, 3500.89 examples/s]Running tokenizer on dataset: 100%|██████████| 922/922 [00:00<00:00, 3321.44 examples/s]
+Running tokenizer on dataset:   0%|          | 0/231 [00:00<?, ? examples/s]Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-f9505140c5911664/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-6aa395ba04ba182e.arrow
+07/22/2025 04:26:30 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-f9505140c5911664/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-6aa395ba04ba182e.arrow
+Running tokenizer on dataset: 100%|██████████| 231/231 [00:00<00:00, 3100.62 examples/s]
+Running tokenizer on dataset:   0%|          | 0/288 [00:00<?, ? examples/s]Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-f9505140c5911664/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-6b4247296f8a8930.arrow
+07/22/2025 04:26:30 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-f9505140c5911664/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-6b4247296f8a8930.arrow
+Running tokenizer on dataset: 100%|██████████| 288/288 [00:00<00:00, 3082.41 examples/s]
+07/22/2025 04:26:30 - INFO - __main__ - Sample 146 of the training set: {'input_ids': [1, 325, 269, 756, 272, 1083, 21426, 90217, 366, 267, 315, 1122, 275, 2492, 3838, 366, 1255, 417, 991, 1658, 2301, 277, 262, 128001, 2967, 9498, 33384, 128002, 571, 366, 328, 283, 274, 391, 284, 4720, 3264, 283, 262, 642, 328, 2178, 128003, 1083, 7102, 128004, 323, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'label': 0}.
+07/22/2025 04:26:30 - INFO - __main__ - Sample 1247 of the training set: {'input_ids': [1, 279, 128001, 122452, 27425, 1422, 260, 128002, 265, 128003, 7915, 11754, 128004, 366, 1149, 260, 2252, 260, 366, 58313, 262, 9445, 6924, 366, 1231, 314, 419, 445, 448, 260, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'label': 3}.
+07/22/2025 04:26:30 - INFO - __main__ - Sample 1300 of the training set: {'input_ids': [1, 128001, 102118, 128002, 366, 327, 756, 283, 262, 128003, 19854, 17768, 128004, 366, 38917, 262, 1668, 11465, 3931, 366, 2028, 5877, 18306, 366, 263, 262, 8442, 543, 260, 1609, 260, 26945, 366, 13812, 17947, 473, 50646, 407, 35682, 260, 2600, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'label': 5}.
+07/22/2025 04:26:31 - INFO - __main__ - Metrics loaded: macro-F1, micro-F1, accuracy
+/project/hrao/imbalance/re_loss/run_re.py:726: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `SequenceTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(*args, **kwargs)
+[INFO|trainer.py:2409] 2025-07-22 04:26:31,743 >> ***** Running training *****
+[INFO|trainer.py:2410] 2025-07-22 04:26:31,743 >>   Num examples = 1,318
+[INFO|trainer.py:2411] 2025-07-22 04:26:31,743 >>   Num Epochs = 8
+[INFO|trainer.py:2412] 2025-07-22 04:26:31,743 >>   Instantaneous batch size per device = 32
+[INFO|trainer.py:2415] 2025-07-22 04:26:31,743 >>   Total train batch size (w. parallel, distributed & accumulation) = 32
+[INFO|trainer.py:2416] 2025-07-22 04:26:31,743 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:2417] 2025-07-22 04:26:31,743 >>   Total optimization steps = 336
+[INFO|trainer.py:2418] 2025-07-22 04:26:31,743 >>   Number of trainable parameters = 184,353,798
+  0%|          | 0/336 [00:00<?, ?it/s]  0%|          | 1/336 [00:00<03:20,  1.67it/s]  1%|          | 2/336 [00:01<02:49,  1.97it/s]  1%|          | 3/336 [00:01<02:29,  2.23it/s]  1%|          | 4/336 [00:01<02:20,  2.37it/s]  1%|▏         | 5/336 [00:02<02:14,  2.46it/s]  2%|▏         | 6/336 [00:02<02:11,  2.51it/s]  2%|▏         | 7/336 [00:02<02:08,  2.55it/s]  2%|▏         | 8/336 [00:03<02:07,  2.58it/s]  3%|▎         | 9/336 [00:03<02:06,  2.59it/s]  3%|▎         | 10/336 [00:04<02:05,  2.60it/s]  3%|▎         | 11/336 [00:04<02:04,  2.61it/s]  4%|▎         | 12/336 [00:04<02:04,  2.61it/s]  4%|▍         | 13/336 [00:05<02:03,  2.62it/s]  4%|▍         | 14/336 [00:05<02:02,  2.62it/s]  4%|▍         | 15/336 [00:05<02:02,  2.62it/s]  5%|▍         | 16/336 [00:06<02:02,  2.62it/s]  5%|▌         | 17/336 [00:06<02:01,  2.62it/s]  5%|▌         | 18/336 [00:07<02:01,  2.62it/s]  6%|▌         | 19/336 [00:07<02:00,  2.62it/s]  6%|▌         | 20/336 [00:07<02:00,  2.62it/s]  6%|▋         | 21/336 [00:08<02:00,  2.62it/s]  7%|▋         | 22/336 [00:08<01:59,  2.62it/s]  7%|▋         | 23/336 [00:09<01:59,  2.62it/s]  7%|▋         | 24/336 [00:09<01:59,  2.62it/s]  7%|▋         | 25/336 [00:09<01:58,  2.62it/s]  8%|▊         | 26/336 [00:10<01:58,  2.62it/s]  8%|▊         | 27/336 [00:10<01:57,  2.62it/s]  8%|▊         | 28/336 [00:10<01:57,  2.62it/s]  9%|▊         | 29/336 [00:11<01:57,  2.62it/s]  9%|▉         | 30/336 [00:11<01:56,  2.62it/s]  9%|▉         | 31/336 [00:12<01:56,  2.62it/s] 10%|▉         | 32/336 [00:12<01:55,  2.62it/s] 10%|▉         | 33/336 [00:12<01:55,  2.62it/s] 10%|█         | 34/336 [00:13<01:55,  2.62it/s] 10%|█         | 35/336 [00:13<01:54,  2.62it/s] 11%|█         | 36/336 [00:14<01:54,  2.62it/s] 11%|█         | 37/336 [00:14<01:54,  2.62it/s] 11%|█▏        | 38/336 [00:14<01:53,  2.62it/s] 12%|█▏        | 39/336 [00:15<01:53,  2.62it/s] 12%|█▏        | 40/336 [00:15<01:52,  2.62it/s] 12%|█▏        | 41/336 [00:15<01:51,  2.65it/s] 13%|█▎        | 43/336 [00:16<01:32,  3.16it/s] 13%|█▎        | 44/336 [00:16<01:37,  3.01it/s] 13%|█▎        | 45/336 [00:17<01:40,  2.90it/s] 14%|█▎        | 46/336 [00:17<01:42,  2.82it/s] 14%|█▍        | 47/336 [00:17<01:44,  2.76it/s] 14%|█▍        | 48/336 [00:18<01:45,  2.72it/s] 15%|█▍        | 49/336 [00:18<01:46,  2.69it/s] 15%|█▍        | 50/336 [00:19<01:46,  2.68it/s]                                                 15%|█▍        | 50/336 [00:19<01:46,  2.68it/s] 15%|█▌        | 51/336 [00:19<01:47,  2.65it/s] 15%|█▌        | 52/336 [00:19<01:47,  2.65it/s] 16%|█▌        | 53/336 [00:20<01:47,  2.64it/s] 16%|█▌        | 54/336 [00:20<01:46,  2.64it/s] 16%|█▋        | 55/336 [00:20<01:46,  2.64it/s] 17%|█▋        | 56/336 [00:21<01:46,  2.64it/s] 17%|█▋        | 57/336 [00:21<01:45,  2.63it/s] 17%|█▋        | 58/336 [00:22<01:45,  2.63it/s] 18%|█▊        | 59/336 [00:22<01:45,  2.63it/s] 18%|█▊        | 60/336 [00:22<01:44,  2.63it/s] 18%|█▊        | 61/336 [00:23<01:44,  2.63it/s] 18%|█▊        | 62/336 [00:23<01:44,  2.63it/s] 19%|█▉        | 63/336 [00:23<01:43,  2.63it/s] 19%|█▉        | 64/336 [00:24<01:43,  2.63it/s] 19%|█▉        | 65/336 [00:24<01:42,  2.63it/s] 20%|█▉        | 66/336 [00:25<01:42,  2.63it/s] 20%|█▉        | 67/336 [00:25<01:42,  2.63it/s] 20%|██        | 68/336 [00:25<01:41,  2.63it/s] 21%|██        | 69/336 [00:26<01:41,  2.63it/s] 21%|██        | 70/336 [00:26<01:41,  2.63it/s] 21%|██        | 71/336 [00:27<01:40,  2.63it/s] 21%|██▏       | 72/336 [00:27<01:40,  2.63it/s] 22%|██▏       | 73/336 [00:27<01:39,  2.63it/s] 22%|██▏       | 74/336 [00:28<01:39,  2.63it/s] 22%|██▏       | 75/336 [00:28<01:39,  2.63it/s] 23%|██▎       | 76/336 [00:28<01:38,  2.63it/s] 23%|██▎       | 77/336 [00:29<01:38,  2.63it/s] 23%|██▎       | 78/336 [00:29<01:38,  2.63it/s] 24%|██▎       | 79/336 [00:30<01:37,  2.63it/s] 24%|██▍       | 80/336 [00:30<01:37,  2.63it/s] 24%|██▍       | 81/336 [00:30<01:36,  2.63it/s] 24%|██▍       | 82/336 [00:31<01:36,  2.63it/s] 25%|██▍       | 83/336 [00:31<01:35,  2.66it/s] 25%|██▌       | 85/336 [00:32<01:18,  3.18it/s] 26%|██▌       | 86/336 [00:32<01:22,  3.02it/s] 26%|██▌       | 87/336 [00:32<01:25,  2.91it/s] 26%|██▌       | 88/336 [00:33<01:27,  2.83it/s] 26%|██▋       | 89/336 [00:33<01:29,  2.77it/s] 27%|██▋       | 90/336 [00:33<01:30,  2.73it/s] 27%|██▋       | 91/336 [00:34<01:30,  2.70it/s] 27%|██▋       | 92/336 [00:34<01:31,  2.68it/s] 28%|██▊       | 93/336 [00:35<01:31,  2.67it/s] 28%|██▊       | 94/336 [00:35<01:31,  2.66it/s] 28%|██▊       | 95/336 [00:35<01:30,  2.65it/s] 29%|██▊       | 96/336 [00:36<01:30,  2.64it/s] 29%|██▉       | 97/336 [00:36<01:30,  2.64it/s] 29%|██▉       | 98/336 [00:37<01:30,  2.64it/s] 29%|██▉       | 99/336 [00:37<01:29,  2.63it/s] 30%|██▉       | 100/336 [00:37<01:29,  2.63it/s]                                                  30%|██▉       | 100/336 [00:37<01:29,  2.63it/s] 30%|███       | 101/336 [00:38<01:29,  2.63it/s] 30%|███       | 102/336 [00:38<01:29,  2.63it/s] 31%|███       | 103/336 [00:38<01:28,  2.63it/s] 31%|███       | 104/336 [00:39<01:28,  2.63it/s] 31%|███▏      | 105/336 [00:39<01:27,  2.63it/s] 32%|███▏      | 106/336 [00:40<01:27,  2.63it/s] 32%|███▏      | 107/336 [00:40<01:27,  2.63it/s] 32%|███▏      | 108/336 [00:40<01:26,  2.63it/s] 32%|███▏      | 109/336 [00:41<01:26,  2.63it/s] 33%|███▎      | 110/336 [00:41<01:25,  2.63it/s] 33%|███▎      | 111/336 [00:41<01:25,  2.63it/s] 33%|███▎      | 112/336 [00:42<01:25,  2.63it/s] 34%|███▎      | 113/336 [00:42<01:24,  2.63it/s] 34%|███▍      | 114/336 [00:43<01:24,  2.63it/s] 34%|███▍      | 115/336 [00:43<01:23,  2.63it/s] 35%|███▍      | 116/336 [00:43<01:23,  2.63it/s] 35%|███▍      | 117/336 [00:44<01:23,  2.63it/s] 35%|███▌      | 118/336 [00:44<01:22,  2.63it/s] 35%|███▌      | 119/336 [00:44<01:22,  2.63it/s] 36%|███▌      | 120/336 [00:45<01:22,  2.63it/s] 36%|███▌      | 121/336 [00:45<01:21,  2.63it/s] 36%|███▋      | 122/336 [00:46<01:21,  2.63it/s] 37%|███▋      | 123/336 [00:46<01:20,  2.63it/s] 37%|███▋      | 124/336 [00:46<01:20,  2.63it/s] 37%|███▋      | 125/336 [00:47<01:19,  2.66it/s] 38%|███▊      | 127/336 [00:47<01:05,  3.18it/s] 38%|███▊      | 128/336 [00:48<01:08,  3.02it/s] 38%|███▊      | 129/336 [00:48<01:11,  2.91it/s] 39%|███▊      | 130/336 [00:48<01:12,  2.83it/s] 39%|███▉      | 131/336 [00:49<01:13,  2.77it/s] 39%|███▉      | 132/336 [00:49<01:14,  2.73it/s] 40%|███▉      | 133/336 [00:50<01:15,  2.70it/s] 40%|███▉      | 134/336 [00:50<01:15,  2.68it/s] 40%|████      | 135/336 [00:50<01:15,  2.66it/s] 40%|████      | 136/336 [00:51<01:15,  2.65it/s] 41%|████      | 137/336 [00:51<01:15,  2.65it/s] 41%|████      | 138/336 [00:51<01:14,  2.64it/s] 41%|████▏     | 139/336 [00:52<01:14,  2.64it/s] 42%|████▏     | 140/336 [00:52<01:14,  2.64it/s] 42%|████▏     | 141/336 [00:53<01:14,  2.63it/s] 42%|████▏     | 142/336 [00:53<01:13,  2.63it/s] 43%|████▎     | 143/336 [00:53<01:13,  2.63it/s] 43%|████▎     | 144/336 [00:54<01:12,  2.63it/s] 43%|████▎     | 145/336 [00:54<01:12,  2.63it/s] 43%|████▎     | 146/336 [00:54<01:12,  2.63it/s] 44%|████▍     | 147/336 [00:55<01:11,  2.63it/s] 44%|████▍     | 148/336 [00:55<01:11,  2.63it/s] 44%|████▍     | 149/336 [00:56<01:11,  2.63it/s] 45%|████▍     | 150/336 [00:56<01:10,  2.63it/s]                                                  45%|████▍     | 150/336 [00:56<01:10,  2.63it/s] 45%|████▍     | 151/336 [00:56<01:10,  2.62it/s] 45%|████▌     | 152/336 [00:57<01:10,  2.63it/s] 46%|████▌     | 153/336 [00:57<01:09,  2.63it/s] 46%|████▌     | 154/336 [00:58<01:09,  2.63it/s] 46%|████▌     | 155/336 [00:58<01:08,  2.63it/s] 46%|████▋     | 156/336 [00:58<01:08,  2.63it/s] 47%|████▋     | 157/336 [00:59<01:08,  2.63it/s] 47%|████▋     | 158/336 [00:59<01:07,  2.63it/s] 47%|████▋     | 159/336 [00:59<01:07,  2.63it/s] 48%|████▊     | 160/336 [01:00<01:06,  2.63it/s] 48%|████▊     | 161/336 [01:00<01:06,  2.63it/s] 48%|████▊     | 162/336 [01:01<01:06,  2.63it/s] 49%|████▊     | 163/336 [01:01<01:05,  2.63it/s] 49%|████▉     | 164/336 [01:01<01:05,  2.63it/s] 49%|████▉     | 165/336 [01:02<01:04,  2.63it/s] 49%|████▉     | 166/336 [01:02<01:04,  2.63it/s] 50%|████▉     | 167/336 [01:02<01:03,  2.66it/s] 50%|█████     | 169/336 [01:03<00:52,  3.18it/s] 51%|█████     | 170/336 [01:03<00:54,  3.03it/s] 51%|█████     | 171/336 [01:04<00:56,  2.91it/s] 51%|█████     | 172/336 [01:04<00:57,  2.83it/s] 51%|█████▏    | 173/336 [01:04<00:58,  2.77it/s] 52%|█████▏    | 174/336 [01:05<00:59,  2.73it/s] 52%|█████▏    | 175/336 [01:05<00:59,  2.70it/s] 52%|█████▏    | 176/336 [01:06<00:59,  2.68it/s] 53%|█████▎    | 177/336 [01:06<00:59,  2.67it/s] 53%|█████▎    | 178/336 [01:06<00:59,  2.66it/s] 53%|█████▎    | 179/336 [01:07<00:59,  2.65it/s] 54%|█████▎    | 180/336 [01:07<00:59,  2.64it/s] 54%|█████▍    | 181/336 [01:07<00:58,  2.64it/s] 54%|█████▍    | 182/336 [01:08<00:58,  2.64it/s] 54%|█████▍    | 183/336 [01:08<00:58,  2.64it/s] 55%|█████▍    | 184/336 [01:09<00:57,  2.63it/s] 55%|█████▌    | 185/336 [01:09<00:57,  2.63it/s] 55%|█████▌    | 186/336 [01:09<00:56,  2.63it/s] 56%|█████▌    | 187/336 [01:10<00:56,  2.63it/s] 56%|█████▌    | 188/336 [01:10<00:56,  2.63it/s] 56%|█████▋    | 189/336 [01:11<00:55,  2.63it/s] 57%|█████▋    | 190/336 [01:11<00:55,  2.63it/s] 57%|█████▋    | 191/336 [01:11<00:55,  2.63it/s] 57%|█████▋    | 192/336 [01:12<00:54,  2.63it/s] 57%|█████▋    | 193/336 [01:12<00:54,  2.63it/s] 58%|█████▊    | 194/336 [01:12<00:53,  2.63it/s] 58%|█████▊    | 195/336 [01:13<00:53,  2.63it/s] 58%|█████▊    | 196/336 [01:13<00:53,  2.63it/s] 59%|█████▊    | 197/336 [01:14<00:52,  2.63it/s] 59%|█████▉    | 198/336 [01:14<00:52,  2.63it/s] 59%|█████▉    | 199/336 [01:14<00:52,  2.63it/s] 60%|█████▉    | 200/336 [01:15<00:51,  2.63it/s]                                                  60%|█████▉    | 200/336 [01:15<00:51,  2.63it/s] 60%|█████▉    | 201/336 [01:15<00:51,  2.62it/s] 60%|██████    | 202/336 [01:15<00:51,  2.63it/s] 60%|██████    | 203/336 [01:16<00:50,  2.63it/s] 61%|██████    | 204/336 [01:16<00:50,  2.63it/s] 61%|██████    | 205/336 [01:17<00:49,  2.63it/s] 61%|██████▏   | 206/336 [01:17<00:49,  2.63it/s] 62%|██████▏   | 207/336 [01:17<00:49,  2.63it/s] 62%|██████▏   | 208/336 [01:18<00:48,  2.63it/s] 62%|██████▏   | 209/336 [01:18<00:47,  2.66it/s] 63%|██████▎   | 211/336 [01:19<00:39,  3.18it/s] 63%|██████▎   | 212/336 [01:19<00:41,  3.02it/s] 63%|██████▎   | 213/336 [01:19<00:42,  2.91it/s] 64%|██████▎   | 214/336 [01:20<00:43,  2.83it/s] 64%|██████▍   | 215/336 [01:20<00:43,  2.77it/s] 64%|██████▍   | 216/336 [01:20<00:43,  2.73it/s] 65%|██████▍   | 217/336 [01:21<00:44,  2.70it/s] 65%|██████▍   | 218/336 [01:21<00:44,  2.68it/s] 65%|██████▌   | 219/336 [01:22<00:43,  2.67it/s] 65%|██████▌   | 220/336 [01:22<00:43,  2.66it/s] 66%|██████▌   | 221/336 [01:22<00:43,  2.65it/s] 66%|██████▌   | 222/336 [01:23<00:43,  2.64it/s] 66%|██████▋   | 223/336 [01:23<00:42,  2.64it/s] 67%|██████▋   | 224/336 [01:24<00:42,  2.64it/s] 67%|██████▋   | 225/336 [01:24<00:42,  2.64it/s] 67%|██████▋   | 226/336 [01:24<00:41,  2.63it/s] 68%|██████▊   | 227/336 [01:25<00:41,  2.63it/s] 68%|██████▊   | 228/336 [01:25<00:41,  2.63it/s] 68%|██████▊   | 229/336 [01:25<00:40,  2.63it/s] 68%|██████▊   | 230/336 [01:26<00:40,  2.63it/s] 69%|██████▉   | 231/336 [01:26<00:39,  2.63it/s] 69%|██████▉   | 232/336 [01:27<00:39,  2.63it/s] 69%|██████▉   | 233/336 [01:27<00:39,  2.63it/s] 70%|██████▉   | 234/336 [01:27<00:38,  2.63it/s] 70%|██████▉   | 235/336 [01:28<00:38,  2.63it/s] 70%|███████   | 236/336 [01:28<00:37,  2.63it/s] 71%|███████   | 237/336 [01:28<00:37,  2.63it/s] 71%|███████   | 238/336 [01:29<00:37,  2.63it/s] 71%|███████   | 239/336 [01:29<00:36,  2.63it/s] 71%|███████▏  | 240/336 [01:30<00:36,  2.63it/s] 72%|███████▏  | 241/336 [01:30<00:36,  2.63it/s] 72%|███████▏  | 242/336 [01:30<00:35,  2.63it/s] 72%|███████▏  | 243/336 [01:31<00:35,  2.63it/s] 73%|███████▎  | 244/336 [01:31<00:34,  2.63it/s] 73%|███████▎  | 245/336 [01:32<00:34,  2.63it/s] 73%|███████▎  | 246/336 [01:32<00:34,  2.63it/s] 74%|███████▎  | 247/336 [01:32<00:33,  2.63it/s] 74%|███████▍  | 248/336 [01:33<00:33,  2.63it/s] 74%|███████▍  | 249/336 [01:33<00:33,  2.63it/s] 74%|███████▍  | 250/336 [01:33<00:32,  2.63it/s]                                                  74%|███████▍  | 250/336 [01:33<00:32,  2.63it/s] 75%|███████▍  | 251/336 [01:34<00:32,  2.65it/s] 75%|███████▌  | 253/336 [01:34<00:26,  3.18it/s] 76%|███████▌  | 254/336 [01:35<00:27,  3.02it/s] 76%|███████▌  | 255/336 [01:35<00:27,  2.91it/s] 76%|███████▌  | 256/336 [01:35<00:28,  2.83it/s] 76%|███████▋  | 257/336 [01:36<00:28,  2.77it/s] 77%|███████▋  | 258/336 [01:36<00:28,  2.73it/s] 77%|███████▋  | 259/336 [01:37<00:28,  2.70it/s] 77%|███████▋  | 260/336 [01:37<00:28,  2.68it/s] 78%|███████▊  | 261/336 [01:37<00:28,  2.67it/s] 78%|███████▊  | 262/336 [01:38<00:27,  2.66it/s] 78%|███████▊  | 263/336 [01:38<00:27,  2.65it/s] 79%|███████▊  | 264/336 [01:38<00:27,  2.64it/s] 79%|███████▉  | 265/336 [01:39<00:26,  2.64it/s] 79%|███████▉  | 266/336 [01:39<00:26,  2.64it/s] 79%|███████▉  | 267/336 [01:40<00:26,  2.64it/s] 80%|███████▉  | 268/336 [01:40<00:25,  2.63it/s] 80%|████████  | 269/336 [01:40<00:25,  2.63it/s] 80%|████████  | 270/336 [01:41<00:25,  2.63it/s] 81%|████████  | 271/336 [01:41<00:24,  2.63it/s] 81%|████████  | 272/336 [01:41<00:24,  2.63it/s] 81%|████████▏ | 273/336 [01:42<00:23,  2.63it/s] 82%|████████▏ | 274/336 [01:42<00:23,  2.63it/s] 82%|████████▏ | 275/336 [01:43<00:23,  2.63it/s] 82%|████████▏ | 276/336 [01:43<00:22,  2.63it/s] 82%|████████▏ | 277/336 [01:43<00:22,  2.63it/s] 83%|████████▎ | 278/336 [01:44<00:22,  2.63it/s] 83%|████████▎ | 279/336 [01:44<00:21,  2.63it/s] 83%|████████▎ | 280/336 [01:45<00:21,  2.63it/s] 84%|████████▎ | 281/336 [01:45<00:20,  2.63it/s] 84%|████████▍ | 282/336 [01:45<00:20,  2.63it/s] 84%|████████▍ | 283/336 [01:46<00:20,  2.63it/s] 85%|████████▍ | 284/336 [01:46<00:19,  2.63it/s] 85%|████████▍ | 285/336 [01:46<00:19,  2.63it/s] 85%|████████▌ | 286/336 [01:47<00:18,  2.63it/s] 85%|████████▌ | 287/336 [01:47<00:18,  2.63it/s] 86%|████████▌ | 288/336 [01:48<00:18,  2.63it/s] 86%|████████▌ | 289/336 [01:48<00:17,  2.63it/s] 86%|████████▋ | 290/336 [01:48<00:17,  2.63it/s] 87%|████████▋ | 291/336 [01:49<00:17,  2.63it/s] 87%|████████▋ | 292/336 [01:49<00:16,  2.63it/s] 87%|████████▋ | 293/336 [01:49<00:16,  2.66it/s] 88%|████████▊ | 295/336 [01:50<00:12,  3.18it/s] 88%|████████▊ | 296/336 [01:50<00:13,  3.02it/s] 88%|████████▊ | 297/336 [01:51<00:13,  2.91it/s] 89%|████████▊ | 298/336 [01:51<00:13,  2.83it/s] 89%|████████▉ | 299/336 [01:51<00:13,  2.77it/s] 89%|████████▉ | 300/336 [01:52<00:13,  2.73it/s]                                                  89%|████████▉ | 300/336 [01:52<00:13,  2.73it/s] 90%|████████▉ | 301/336 [01:52<00:13,  2.69it/s] 90%|████████▉ | 302/336 [01:53<00:12,  2.67it/s] 90%|█████████ | 303/336 [01:53<00:12,  2.66it/s] 90%|█████████ | 304/336 [01:53<00:12,  2.65it/s] 91%|█████████ | 305/336 [01:54<00:11,  2.65it/s] 91%|█████████ | 306/336 [01:54<00:11,  2.64it/s] 91%|█████████▏| 307/336 [01:54<00:10,  2.64it/s] 92%|█████████▏| 308/336 [01:55<00:10,  2.64it/s] 92%|█████████▏| 309/336 [01:55<00:10,  2.64it/s] 92%|█████████▏| 310/336 [01:56<00:09,  2.63it/s] 93%|█████████▎| 311/336 [01:56<00:09,  2.63it/s] 93%|█████████▎| 312/336 [01:56<00:09,  2.63it/s] 93%|█████████▎| 313/336 [01:57<00:08,  2.63it/s] 93%|█████████▎| 314/336 [01:57<00:08,  2.63it/s] 94%|█████████▍| 315/336 [01:58<00:07,  2.63it/s] 94%|█████████▍| 316/336 [01:58<00:07,  2.63it/s] 94%|█████████▍| 317/336 [01:58<00:07,  2.63it/s] 95%|█████████▍| 318/336 [01:59<00:06,  2.63it/s] 95%|█████████▍| 319/336 [01:59<00:06,  2.63it/s] 95%|█████████▌| 320/336 [01:59<00:06,  2.63it/s] 96%|█████████▌| 321/336 [02:00<00:05,  2.63it/s] 96%|█████████▌| 322/336 [02:00<00:05,  2.63it/s] 96%|█████████▌| 323/336 [02:01<00:04,  2.63it/s] 96%|█████████▋| 324/336 [02:01<00:04,  2.63it/s] 97%|█████████▋| 325/336 [02:01<00:04,  2.63it/s] 97%|█████████▋| 326/336 [02:02<00:03,  2.63it/s] 97%|█████████▋| 327/336 [02:02<00:03,  2.63it/s] 98%|█████████▊| 328/336 [02:02<00:03,  2.63it/s] 98%|█████████▊| 329/336 [02:03<00:02,  2.63it/s] 98%|█████████▊| 330/336 [02:03<00:02,  2.63it/s] 99%|█████████▊| 331/336 [02:04<00:01,  2.63it/s] 99%|█████████▉| 332/336 [02:04<00:01,  2.63it/s] 99%|█████████▉| 333/336 [02:04<00:01,  2.63it/s] 99%|█████████▉| 334/336 [02:05<00:00,  2.63it/s]100%|█████████▉| 335/336 [02:05<00:00,  2.65it/s][INFO|trainer.py:3993] 2025-07-22 04:28:37,468 >> Saving model checkpoint to ./re_model_16476/checkpoint-336
+[INFO|configuration_utils.py:424] 2025-07-22 04:28:37,471 >> Configuration saved in ./re_model_16476/checkpoint-336/config.json
+[INFO|modeling_utils.py:3724] 2025-07-22 04:28:38,998 >> Model weights saved in ./re_model_16476/checkpoint-336/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-07-22 04:28:39,045 >> tokenizer config file saved in ./re_model_16476/checkpoint-336/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-07-22 04:28:39,072 >> Special tokens file saved in ./re_model_16476/checkpoint-336/special_tokens_map.json
+[INFO|trainer.py:2676] 2025-07-22 04:28:42,653 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                                 100%|██████████| 336/336 [02:10<00:00,  2.65it/s]100%|██████████| 336/336 [02:10<00:00,  2.57it/s]
+[INFO|trainer.py:3993] 2025-07-22 04:28:42,691 >> Saving model checkpoint to ./re_model_16476
+[INFO|configuration_utils.py:424] 2025-07-22 04:28:42,696 >> Configuration saved in ./re_model_16476/config.json
+[INFO|modeling_utils.py:3724] 2025-07-22 04:28:44,287 >> Model weights saved in ./re_model_16476/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-07-22 04:28:44,335 >> tokenizer config file saved in ./re_model_16476/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-07-22 04:28:44,362 >> Special tokens file saved in ./re_model_16476/special_tokens_map.json
+{'loss': 0.6635, 'grad_norm': 1.1972618103027344, 'learning_rate': 4.270833333333333e-05, 'epoch': 1.19}
+{'loss': 0.347, 'grad_norm': 3.4897124767303467, 'learning_rate': 3.5267857142857145e-05, 'epoch': 2.38}
+{'loss': 0.2747, 'grad_norm': 3.364605188369751, 'learning_rate': 2.7827380952380955e-05, 'epoch': 3.57}
+{'loss': 0.2345, 'grad_norm': 17.446914672851562, 'learning_rate': 2.038690476190476e-05, 'epoch': 4.76}
+{'loss': 0.2141, 'grad_norm': 0.02505616843700409, 'learning_rate': 1.2946428571428574e-05, 'epoch': 5.95}
+{'loss': 0.2039, 'grad_norm': 0.018397413194179535, 'learning_rate': 5.505952380952381e-06, 'epoch': 7.14}
+{'train_runtime': 130.9106, 'train_samples_per_second': 80.544, 'train_steps_per_second': 2.567, 'train_loss': 0.3101194060984112, 'epoch': 8.0}
+***** train metrics *****
+  epoch                    =        8.0
+  total_flos               =  2583854GF
+  train_loss               =     0.3101
+  train_runtime            = 0:02:10.91
+  train_samples            =       1318
+  train_samples_per_second =     80.544
+  train_steps_per_second   =      2.567
+07/22/2025 04:28:44 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:4327] 2025-07-22 04:28:44,423 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-07-22 04:28:44,423 >>   Num examples = 358
+[INFO|trainer.py:4332] 2025-07-22 04:28:44,423 >>   Batch size = 8
+  0%|          | 0/45 [00:00<?, ?it/s]  9%|▉         | 4/45 [00:00<00:01, 31.57it/s] 18%|█▊        | 8/45 [00:00<00:01, 26.39it/s] 24%|██▍       | 11/45 [00:00<00:01, 25.27it/s] 31%|███       | 14/45 [00:00<00:01, 24.68it/s] 38%|███▊      | 17/45 [00:00<00:01, 24.33it/s] 44%|████▍     | 20/45 [00:00<00:01, 24.11it/s] 51%|█████     | 23/45 [00:00<00:00, 23.97it/s] 58%|█████▊    | 26/45 [00:01<00:00, 23.87it/s] 64%|██████▍   | 29/45 [00:01<00:00, 23.75it/s] 71%|███████   | 32/45 [00:01<00:00, 23.72it/s] 78%|███████▊  | 35/45 [00:01<00:00, 23.71it/s] 84%|████████▍ | 38/45 [00:01<00:00, 23.72it/s] 91%|█████████ | 41/45 [00:01<00:00, 23.73it/s] 98%|█████████▊| 44/45 [00:01<00:00, 23.79it/s]/home/hrao/.local/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/home/hrao/.local/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/home/hrao/.local/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100%|██████████| 45/45 [00:01<00:00, 23.91it/s]
+
+              precision    recall  f1-score   support
+
+        Kill     1.0000    1.0000    1.0000        42
+     Live_In     0.9255    0.9560    0.9405        91
+  Located_In     0.8767    0.9846    0.9275        65
+ OrgBased_In     0.9241    0.9605    0.9419        76
+    Work_For     0.9429    0.9565    0.9496        69
+ no_relation     0.0000    0.0000    0.0000        15
+
+    accuracy                         0.9274       358
+   macro avg     0.7782    0.8096    0.7933       358
+weighted avg     0.8896    0.9274    0.9078       358
+
+***** eval metrics *****
+  epoch                   =        8.0
+  eval_accuracy           =     0.9274
+  eval_loss               =      0.396
+  eval_macro_f1           =     0.7933
+  eval_micro_f1           =     0.9274
+  eval_runtime            = 0:00:01.92
+  eval_samples            =        358
+  eval_samples_per_second =    185.968
+  eval_steps_per_second   =     23.376
+07/22/2025 04:28:46 - INFO - __main__ - *** Predict ***
+[INFO|trainer.py:4327] 2025-07-22 04:28:46,355 >> 
+***** Running Prediction *****
+[INFO|trainer.py:4329] 2025-07-22 04:28:46,355 >>   Num examples = 441
+[INFO|trainer.py:4332] 2025-07-22 04:28:46,355 >>   Batch size = 8
+  0%|          | 0/56 [00:00<?, ?it/s]  7%|▋         | 4/56 [00:00<00:01, 31.72it/s] 14%|█▍        | 8/56 [00:00<00:01, 26.46it/s] 20%|█▉        | 11/56 [00:00<00:01, 25.34it/s] 25%|██▌       | 14/56 [00:00<00:01, 24.73it/s] 30%|███       | 17/56 [00:00<00:01, 24.38it/s] 36%|███▌      | 20/56 [00:00<00:01, 24.17it/s] 41%|████      | 23/56 [00:00<00:01, 24.04it/s] 46%|████▋     | 26/56 [00:01<00:01, 23.95it/s] 52%|█████▏    | 29/56 [00:01<00:01, 23.89it/s] 57%|█████▋    | 32/56 [00:01<00:01, 23.83it/s] 62%|██████▎   | 35/56 [00:01<00:00, 23.77it/s] 68%|██████▊   | 38/56 [00:01<00:00, 23.75it/s] 73%|███████▎  | 41/56 [00:01<00:00, 23.75it/s] 79%|███████▊  | 44/56 [00:01<00:00, 23.76it/s] 84%|████████▍ | 47/56 [00:01<00:00, 23.75it/s] 89%|████████▉ | 50/56 [00:02<00:00, 23.75it/s] 95%|█████████▍| 53/56 [00:02<00:00, 23.75it/s]/home/hrao/.local/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/home/hrao/.local/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/home/hrao/.local/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100%|██████████| 56/56 [00:02<00:00, 24.27it/s]
+
+              precision    recall  f1-score   support
+
+        Kill     1.0000    1.0000    1.0000        47
+     Live_In     0.9135    0.9500    0.9314       100
+  Located_In     0.9444    0.9043    0.9239        94
+ OrgBased_In     0.8644    0.9714    0.9148       105
+    Work_For     0.8902    0.9605    0.9241        76
+ no_relation     0.0000    0.0000    0.0000        19
+
+    accuracy                         0.9116       441
+   macro avg     0.7688    0.7977    0.7824       441
+weighted avg     0.8743    0.9116    0.8918       441
+
+***** test metrics *****
+  test_accuracy           =     0.9116
+  test_loss               =      0.594
+  test_macro_f1           =     0.7824
+  test_micro_f1           =     0.9116
+  test_runtime            = 0:00:02.35
+  test_samples_per_second =    187.259
+  test_steps_per_second   =     23.779
+07/22/2025 04:28:48 - INFO - __main__ - Test predictions saved at ./re_model_16476/test_predictions.txt
+脚本测试完成！

@@ -1,0 +1,1230 @@
+Current Transformers version lacks `evaluation_strategy` in TrainingArguments; argument will be ignored.
+07/22/2025 12:47:56 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: False, 16-bits training: False
+07/22/2025 12:47:56 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=True,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=500.0,
+eval_strategy=no,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=./re_model/runs/Jul22_12-47-56_itiger01,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=50,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=8.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=./re_model_16569,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=32,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=./re_model,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+07/22/2025 12:47:56 - INFO - __main__ - load a local file for train: /project/hrao/data/conll04_json/train.json
+07/22/2025 12:47:56 - INFO - __main__ - load a local file for validation: /project/hrao/data/conll04_json/validation.json
+07/22/2025 12:47:56 - INFO - __main__ - load a local file for test: /project/hrao/data/conll04_json/test.json
+Using custom data configuration default-d8fdee35c91b9532
+07/22/2025 12:47:56 - INFO - datasets.builder - Using custom data configuration default-d8fdee35c91b9532
+Found cached dataset json (/home/hrao/.cache/huggingface/datasets/json/default-d8fdee35c91b9532/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092)
+07/22/2025 12:47:56 - INFO - datasets.builder - Found cached dataset json (/home/hrao/.cache/huggingface/datasets/json/default-d8fdee35c91b9532/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092)
+[INFO|configuration_utils.py:698] 2025-07-22 12:47:56,800 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/config.json
+[INFO|configuration_utils.py:770] 2025-07-22 12:47:56,806 >> Model config DebertaV2Config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "legacy": true,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 12:47:56,878 >> loading file spm.model from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/spm.model
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 12:47:56,878 >> loading file tokenizer.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 12:47:56,878 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 12:47:56,878 >> loading file special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 12:47:56,878 >> loading file tokenizer_config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2023] 2025-07-22 12:47:56,878 >> loading file chat_template.jinja from cache at None
+[INFO|configuration_utils.py:698] 2025-07-22 12:47:56,879 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/config.json
+[INFO|configuration_utils.py:770] 2025-07-22 12:47:56,879 >> Model config DebertaV2Config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "legacy": true,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+[INFO|configuration_utils.py:698] 2025-07-22 12:47:57,153 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/config.json
+[INFO|configuration_utils.py:770] 2025-07-22 12:47:57,154 >> Model config DebertaV2Config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-07,
+  "legacy": true,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+/project/hrao/miniconda3/envs/imbalance_env/lib/python3.10/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+07/22/2025 12:47:57 - INFO - __main__ - setting problem type to single label classification
+[INFO|configuration_utils.py:698] 2025-07-22 12:47:57,448 >> loading configuration file config.json from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/config.json
+[INFO|configuration_utils.py:770] 2025-07-22 12:47:57,448 >> Model config DebertaV2Config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "Kill",
+    "1": "Live_In",
+    "2": "Located_In",
+    "3": "OrgBased_In",
+    "4": "Work_For",
+    "5": "no_relation"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "Kill": 0,
+    "Live_In": 1,
+    "Located_In": 2,
+    "OrgBased_In": 3,
+    "Work_For": 4,
+    "no_relation": 5
+  },
+  "layer_norm_eps": 1e-07,
+  "legacy": true,
+  "max_position_embeddings": 512,
+  "max_relative_positions": -1,
+  "model_type": "deberta-v2",
+  "norm_rel_ebd": "layer_norm",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_dropout": 0,
+  "pooler_hidden_act": "gelu",
+  "pooler_hidden_size": 768,
+  "pos_att_type": [
+    "p2c",
+    "c2p"
+  ],
+  "position_biased_input": false,
+  "position_buckets": 256,
+  "problem_type": "single_label_classification",
+  "relative_attention": true,
+  "share_att_key": true,
+  "transformers_version": "4.52.3",
+  "type_vocab_size": 0,
+  "vocab_size": 128100
+}
+
+[INFO|modeling_utils.py:1150] 2025-07-22 12:47:57,864 >> loading weights file pytorch_model.bin from cache at /home/hrao/.cache/huggingface/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3/pytorch_model.bin
+[INFO|safetensors_conversion.py:61] 2025-07-22 12:47:57,979 >> Attempting to create safetensors variant
+[INFO|modeling_utils.py:5120] 2025-07-22 12:47:58,111 >> Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2ForSequenceClassification: ['lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.LayerNorm.weight', 'lm_predictions.lm_head.bias', 'lm_predictions.lm_head.dense.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.LayerNorm.weight', 'mask_predictions.classifier.bias', 'mask_predictions.classifier.weight', 'mask_predictions.dense.bias', 'mask_predictions.dense.weight']
+- This IS expected if you are initializing DebertaV2ForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2ForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:5132] 2025-07-22 12:47:58,112 >> Some weights of DebertaV2ForSequenceClassification were not initialized from the model checkpoint at microsoft/deberta-v3-base and are newly initialized: ['classifier.bias', 'classifier.weight', 'pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[INFO|modeling_utils.py:2876] 2025-07-22 12:47:58,132 >> You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 128005. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
+[INFO|safetensors_conversion.py:74] 2025-07-22 12:47:58,246 >> Safetensors PR exists
+
+Running tokenizer on dataset:   0%|          | 0/1152 [00:00<?, ? examples/s]Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-d8fdee35c91b9532/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-a069f412d8f0775e.arrow
+07/22/2025 12:47:58 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-d8fdee35c91b9532/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-a069f412d8f0775e.arrow
+
+Running tokenizer on dataset:  87%|████████▋ | 1000/1152 [00:00<00:00, 2158.51 examples/s]
+Running tokenizer on dataset: 100%|██████████| 1152/1152 [00:00<00:00, 2048.34 examples/s]
+
+Running tokenizer on dataset:   0%|          | 0/144 [00:00<?, ? examples/s]Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-d8fdee35c91b9532/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-94069cbfe00ae483.arrow
+07/22/2025 12:47:59 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-d8fdee35c91b9532/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-94069cbfe00ae483.arrow
+
+Running tokenizer on dataset: 100%|██████████| 144/144 [00:00<00:00, 2199.95 examples/s]
+
+Running tokenizer on dataset:   0%|          | 0/145 [00:00<?, ? examples/s]Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-d8fdee35c91b9532/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-bef5211c28691c6e.arrow
+07/22/2025 12:47:59 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/hrao/.cache/huggingface/datasets/json/default-d8fdee35c91b9532/0.0.0/f4e89e8750d5d5ffbef2c078bf0ddfedef29dc2faff52a6255cf513c05eb1092/cache-bef5211c28691c6e.arrow
+
+Running tokenizer on dataset: 100%|██████████| 145/145 [00:00<00:00, 2120.61 examples/s]
+07/22/2025 12:47:59 - INFO - __main__ - Sample 1895 of the training set: {'input_ids': [1, 1586, 382, 268, 1463, 727, 296, 282, 21921, 264, 128003, 3491, 128004, 293, 262, 128001, 9213, 15517, 128002, 267, 1336, 366, 9262, 382, 268, 11308, 4290, 343, 260, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'label': 3}.
+07/22/2025 12:47:59 - INFO - __main__ - Sample 2377 of the training set: {'input_ids': [1, 383, 357, 313, 364, 1859, 315, 1503, 284, 266, 1442, 271, 27843, 1799, 288, 128001, 987, 260, 11160, 3505, 128002, 267, 1968, 268, 28385, 267, 13695, 1991, 385, 313, 1675, 128003, 375, 388, 128004, 824, 323, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'label': 5}.
+07/22/2025 12:47:59 - INFO - __main__ - Sample 2270 of the training set: {'input_ids': [1, 128001, 101460, 6177, 128002, 284, 1607, 267, 262, 396, 267, 8404, 293, 128003, 918, 66479, 13401, 128004, 366, 328, 968, 266, 11460, 49326, 532, 417, 366, 263, 328, 743, 1532, 2873, 262, 21006, 263, 15337, 288, 266, 1148, 44482, 1106, 267, 18722, 7167, 323, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'label': 5}.
+07/22/2025 12:48:00 - INFO - __main__ - Metrics loaded: macro-F1, micro-F1, accuracy
+/project/hrao/imbalance/re_loss/run_re.py:726: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `SequenceTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(*args, **kwargs)
+[INFO|trainer.py:2409] 2025-07-22 12:48:00,584 >> ***** Running training *****
+[INFO|trainer.py:2410] 2025-07-22 12:48:00,584 >>   Num examples = 2,829
+[INFO|trainer.py:2411] 2025-07-22 12:48:00,584 >>   Num Epochs = 8
+[INFO|trainer.py:2412] 2025-07-22 12:48:00,584 >>   Instantaneous batch size per device = 32
+[INFO|trainer.py:2415] 2025-07-22 12:48:00,584 >>   Total train batch size (w. parallel, distributed & accumulation) = 32
+[INFO|trainer.py:2416] 2025-07-22 12:48:00,584 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:2417] 2025-07-22 12:48:00,584 >>   Total optimization steps = 712
+[INFO|trainer.py:2418] 2025-07-22 12:48:00,584 >>   Number of trainable parameters = 184,353,798
+
+  0%|          | 0/712 [00:00<?, ?it/s]
+  0%|          | 1/712 [00:00<07:22,  1.61it/s]
+  0%|          | 2/712 [00:01<06:08,  1.93it/s]
+  0%|          | 3/712 [00:01<05:23,  2.19it/s]
+  1%|          | 4/712 [00:01<05:02,  2.34it/s]
+  1%|          | 5/712 [00:02<04:50,  2.43it/s]
+  1%|          | 6/712 [00:02<04:42,  2.50it/s]
+  1%|          | 7/712 [00:02<04:37,  2.54it/s]
+  1%|          | 8/712 [00:03<04:34,  2.57it/s]
+  1%|▏         | 9/712 [00:03<04:31,  2.59it/s]
+  1%|▏         | 10/712 [00:04<04:30,  2.60it/s]
+  2%|▏         | 11/712 [00:04<04:28,  2.61it/s]
+  2%|▏         | 12/712 [00:04<04:27,  2.61it/s]
+  2%|▏         | 13/712 [00:05<04:26,  2.62it/s]
+  2%|▏         | 14/712 [00:05<04:26,  2.62it/s]
+  2%|▏         | 15/712 [00:06<04:25,  2.62it/s]
+  2%|▏         | 16/712 [00:06<04:25,  2.63it/s]
+  2%|▏         | 17/712 [00:06<04:24,  2.63it/s]
+  3%|▎         | 18/712 [00:07<04:23,  2.63it/s]
+  3%|▎         | 19/712 [00:07<04:23,  2.63it/s]
+  3%|▎         | 20/712 [00:07<04:23,  2.63it/s]
+  3%|▎         | 21/712 [00:08<04:22,  2.63it/s]
+  3%|▎         | 22/712 [00:08<04:22,  2.63it/s]
+  3%|▎         | 23/712 [00:09<04:21,  2.63it/s]
+  3%|▎         | 24/712 [00:09<04:21,  2.63it/s]
+  4%|▎         | 25/712 [00:09<04:21,  2.63it/s]
+  4%|▎         | 26/712 [00:10<04:20,  2.63it/s]
+  4%|▍         | 27/712 [00:10<04:20,  2.63it/s]
+  4%|▍         | 28/712 [00:10<04:20,  2.63it/s]
+  4%|▍         | 29/712 [00:11<04:19,  2.63it/s]
+  4%|▍         | 30/712 [00:11<04:19,  2.63it/s]
+  4%|▍         | 31/712 [00:12<04:19,  2.62it/s]
+  4%|▍         | 32/712 [00:12<04:18,  2.63it/s]
+  5%|▍         | 33/712 [00:12<04:18,  2.63it/s]
+  5%|▍         | 34/712 [00:13<04:17,  2.63it/s]
+  5%|▍         | 35/712 [00:13<04:17,  2.63it/s]
+  5%|▌         | 36/712 [00:14<04:17,  2.63it/s]
+  5%|▌         | 37/712 [00:14<04:16,  2.63it/s]
+  5%|▌         | 38/712 [00:14<04:16,  2.63it/s]
+  5%|▌         | 39/712 [00:15<04:15,  2.63it/s]
+  6%|▌         | 40/712 [00:15<04:15,  2.63it/s]
+  6%|▌         | 41/712 [00:15<04:15,  2.63it/s]
+  6%|▌         | 42/712 [00:16<04:14,  2.63it/s]
+  6%|▌         | 43/712 [00:16<04:14,  2.63it/s]
+  6%|▌         | 44/712 [00:17<04:13,  2.63it/s]
+  6%|▋         | 45/712 [00:17<04:13,  2.63it/s]
+  6%|▋         | 46/712 [00:17<04:13,  2.63it/s]
+  7%|▋         | 47/712 [00:18<04:12,  2.63it/s]
+  7%|▋         | 48/712 [00:18<04:12,  2.63it/s]
+  7%|▋         | 49/712 [00:18<04:12,  2.63it/s]
+  7%|▋         | 50/712 [00:19<04:11,  2.63it/s]
+                                                
+
+  7%|▋         | 50/712 [00:19<04:11,  2.63it/s]
+  7%|▋         | 51/712 [00:19<04:11,  2.62it/s]
+  7%|▋         | 52/712 [00:20<04:11,  2.63it/s]
+  7%|▋         | 53/712 [00:20<04:10,  2.63it/s]
+  8%|▊         | 54/712 [00:20<04:10,  2.63it/s]
+  8%|▊         | 55/712 [00:21<04:09,  2.63it/s]
+  8%|▊         | 56/712 [00:21<04:09,  2.63it/s]
+  8%|▊         | 57/712 [00:21<04:08,  2.63it/s]
+  8%|▊         | 58/712 [00:22<04:08,  2.63it/s]
+  8%|▊         | 59/712 [00:22<04:08,  2.63it/s]
+  8%|▊         | 60/712 [00:23<04:07,  2.63it/s]
+  9%|▊         | 61/712 [00:23<04:07,  2.63it/s]
+  9%|▊         | 62/712 [00:23<04:07,  2.63it/s]
+  9%|▉         | 63/712 [00:24<04:06,  2.63it/s]
+  9%|▉         | 64/712 [00:24<04:06,  2.63it/s]
+  9%|▉         | 65/712 [00:25<04:05,  2.63it/s]
+  9%|▉         | 66/712 [00:25<04:05,  2.63it/s]
+  9%|▉         | 67/712 [00:25<04:05,  2.63it/s]
+ 10%|▉         | 68/712 [00:26<04:04,  2.63it/s]
+ 10%|▉         | 69/712 [00:26<04:04,  2.63it/s]
+ 10%|▉         | 70/712 [00:26<04:04,  2.63it/s]
+ 10%|▉         | 71/712 [00:27<04:04,  2.63it/s]
+ 10%|█         | 72/712 [00:27<04:03,  2.63it/s]
+ 10%|█         | 73/712 [00:28<04:03,  2.62it/s]
+ 10%|█         | 74/712 [00:28<04:03,  2.62it/s]
+ 11%|█         | 75/712 [00:28<04:02,  2.62it/s]
+ 11%|█         | 76/712 [00:29<04:02,  2.62it/s]
+ 11%|█         | 77/712 [00:29<04:02,  2.62it/s]
+ 11%|█         | 78/712 [00:29<04:01,  2.62it/s]
+ 11%|█         | 79/712 [00:30<04:01,  2.62it/s]
+ 11%|█         | 80/712 [00:30<04:00,  2.62it/s]
+ 11%|█▏        | 81/712 [00:31<04:00,  2.62it/s]
+ 12%|█▏        | 82/712 [00:31<04:00,  2.62it/s]
+ 12%|█▏        | 83/712 [00:31<03:59,  2.62it/s]
+ 12%|█▏        | 84/712 [00:32<03:59,  2.62it/s]
+ 12%|█▏        | 85/712 [00:32<03:59,  2.62it/s]
+ 12%|█▏        | 86/712 [00:33<03:58,  2.62it/s]
+ 12%|█▏        | 87/712 [00:33<03:58,  2.62it/s]
+ 12%|█▏        | 88/712 [00:33<03:56,  2.64it/s]
+ 12%|█▎        | 89/712 [00:33<03:17,  3.15it/s]
+ 13%|█▎        | 90/712 [00:34<03:31,  2.94it/s]
+ 13%|█▎        | 91/712 [00:34<03:39,  2.83it/s]
+ 13%|█▎        | 92/712 [00:35<03:44,  2.77it/s]
+ 13%|█▎        | 93/712 [00:35<03:47,  2.72it/s]
+ 13%|█▎        | 94/712 [00:35<03:49,  2.69it/s]
+ 13%|█▎        | 95/712 [00:36<03:51,  2.67it/s]
+ 13%|█▎        | 96/712 [00:36<03:52,  2.65it/s]
+ 14%|█▎        | 97/712 [00:37<03:52,  2.65it/s]
+ 14%|█▍        | 98/712 [00:37<03:52,  2.64it/s]
+ 14%|█▍        | 99/712 [00:37<03:52,  2.63it/s]
+ 14%|█▍        | 100/712 [00:38<03:52,  2.63it/s]
+                                                 
+
+ 14%|█▍        | 100/712 [00:38<03:52,  2.63it/s]
+ 14%|█▍        | 101/712 [00:38<03:53,  2.62it/s]
+ 14%|█▍        | 102/712 [00:38<03:52,  2.62it/s]
+ 14%|█▍        | 103/712 [00:39<03:52,  2.62it/s]
+ 15%|█▍        | 104/712 [00:39<03:51,  2.62it/s]
+ 15%|█▍        | 105/712 [00:40<03:51,  2.62it/s]
+ 15%|█▍        | 106/712 [00:40<03:51,  2.62it/s]
+ 15%|█▌        | 107/712 [00:40<03:50,  2.62it/s]
+ 15%|█▌        | 108/712 [00:41<03:50,  2.62it/s]
+ 15%|█▌        | 109/712 [00:41<03:50,  2.62it/s]
+ 15%|█▌        | 110/712 [00:41<03:49,  2.62it/s]
+ 16%|█▌        | 111/712 [00:42<03:49,  2.62it/s]
+ 16%|█▌        | 112/712 [00:42<03:48,  2.62it/s]
+ 16%|█▌        | 113/712 [00:43<03:48,  2.62it/s]
+ 16%|█▌        | 114/712 [00:43<03:48,  2.62it/s]
+ 16%|█▌        | 115/712 [00:43<03:47,  2.62it/s]
+ 16%|█▋        | 116/712 [00:44<03:47,  2.62it/s]
+ 16%|█▋        | 117/712 [00:44<03:46,  2.62it/s]
+ 17%|█▋        | 118/712 [00:45<03:46,  2.62it/s]
+ 17%|█▋        | 119/712 [00:45<03:46,  2.62it/s]
+ 17%|█▋        | 120/712 [00:45<03:45,  2.62it/s]
+ 17%|█▋        | 121/712 [00:46<03:45,  2.62it/s]
+ 17%|█▋        | 122/712 [00:46<03:45,  2.62it/s]
+ 17%|█▋        | 123/712 [00:46<03:44,  2.62it/s]
+ 17%|█▋        | 124/712 [00:47<03:44,  2.62it/s]
+ 18%|█▊        | 125/712 [00:47<03:43,  2.62it/s]
+ 18%|█▊        | 126/712 [00:48<03:43,  2.62it/s]
+ 18%|█▊        | 127/712 [00:48<03:43,  2.62it/s]
+ 18%|█▊        | 128/712 [00:48<03:42,  2.62it/s]
+ 18%|█▊        | 129/712 [00:49<03:42,  2.62it/s]
+ 18%|█▊        | 130/712 [00:49<03:42,  2.62it/s]
+ 18%|█▊        | 131/712 [00:49<03:41,  2.62it/s]
+ 19%|█▊        | 132/712 [00:50<03:41,  2.62it/s]
+ 19%|█▊        | 133/712 [00:50<03:41,  2.62it/s]
+ 19%|█▉        | 134/712 [00:51<03:40,  2.62it/s]
+ 19%|█▉        | 135/712 [00:51<03:40,  2.62it/s]
+ 19%|█▉        | 136/712 [00:51<03:39,  2.62it/s]
+ 19%|█▉        | 137/712 [00:52<03:39,  2.62it/s]
+ 19%|█▉        | 138/712 [00:52<03:39,  2.62it/s]
+ 20%|█▉        | 139/712 [00:53<03:38,  2.62it/s]
+ 20%|█▉        | 140/712 [00:53<03:38,  2.62it/s]
+ 20%|█▉        | 141/712 [00:53<03:37,  2.62it/s]
+ 20%|█▉        | 142/712 [00:54<03:37,  2.62it/s]
+ 20%|██        | 143/712 [00:54<03:37,  2.62it/s]
+ 20%|██        | 144/712 [00:54<03:36,  2.62it/s]
+ 20%|██        | 145/712 [00:55<03:36,  2.62it/s]
+ 21%|██        | 146/712 [00:55<03:35,  2.62it/s]
+ 21%|██        | 147/712 [00:56<03:35,  2.62it/s]
+ 21%|██        | 148/712 [00:56<03:35,  2.62it/s]
+ 21%|██        | 149/712 [00:56<03:34,  2.62it/s]
+ 21%|██        | 150/712 [00:57<03:34,  2.62it/s]
+                                                 
+
+ 21%|██        | 150/712 [00:57<03:34,  2.62it/s]
+ 21%|██        | 151/712 [00:57<03:34,  2.62it/s]
+ 21%|██▏       | 152/712 [00:58<03:34,  2.61it/s]
+ 21%|██▏       | 153/712 [00:58<03:33,  2.62it/s]
+ 22%|██▏       | 154/712 [00:58<03:33,  2.62it/s]
+ 22%|██▏       | 155/712 [00:59<03:32,  2.62it/s]
+ 22%|██▏       | 156/712 [00:59<03:32,  2.62it/s]
+ 22%|██▏       | 157/712 [00:59<03:32,  2.62it/s]
+ 22%|██▏       | 158/712 [01:00<03:31,  2.62it/s]
+ 22%|██▏       | 159/712 [01:00<03:31,  2.62it/s]
+ 22%|██▏       | 160/712 [01:01<03:30,  2.62it/s]
+ 23%|██▎       | 161/712 [01:01<03:30,  2.62it/s]
+ 23%|██▎       | 162/712 [01:01<03:29,  2.62it/s]
+ 23%|██▎       | 163/712 [01:02<03:29,  2.62it/s]
+ 23%|██▎       | 164/712 [01:02<03:29,  2.62it/s]
+ 23%|██▎       | 165/712 [01:02<03:28,  2.62it/s]
+ 23%|██▎       | 166/712 [01:03<03:28,  2.62it/s]
+ 23%|██▎       | 167/712 [01:03<03:27,  2.62it/s]
+ 24%|██▎       | 168/712 [01:04<03:27,  2.62it/s]
+ 24%|██▎       | 169/712 [01:04<03:27,  2.62it/s]
+ 24%|██▍       | 170/712 [01:04<03:26,  2.62it/s]
+ 24%|██▍       | 171/712 [01:05<03:26,  2.62it/s]
+ 24%|██▍       | 172/712 [01:05<03:25,  2.62it/s]
+ 24%|██▍       | 173/712 [01:06<03:25,  2.62it/s]
+ 24%|██▍       | 174/712 [01:06<03:25,  2.62it/s]
+ 25%|██▍       | 175/712 [01:06<03:24,  2.62it/s]
+ 25%|██▍       | 176/712 [01:07<03:24,  2.62it/s]
+ 25%|██▍       | 177/712 [01:07<03:22,  2.64it/s]
+ 25%|██▌       | 178/712 [01:07<02:49,  3.15it/s]
+ 25%|██▌       | 179/712 [01:08<03:01,  2.94it/s]
+ 25%|██▌       | 180/712 [01:08<03:07,  2.84it/s]
+ 25%|██▌       | 181/712 [01:08<03:11,  2.77it/s]
+ 26%|██▌       | 182/712 [01:09<03:14,  2.72it/s]
+ 26%|██▌       | 183/712 [01:09<03:16,  2.69it/s]
+ 26%|██▌       | 184/712 [01:10<03:17,  2.67it/s]
+ 26%|██▌       | 185/712 [01:10<03:18,  2.66it/s]
+ 26%|██▌       | 186/712 [01:10<03:18,  2.65it/s]
+ 26%|██▋       | 187/712 [01:11<03:18,  2.64it/s]
+ 26%|██▋       | 188/712 [01:11<03:18,  2.63it/s]
+ 27%|██▋       | 189/712 [01:11<03:18,  2.63it/s]
+ 27%|██▋       | 190/712 [01:12<03:18,  2.63it/s]
+ 27%|██▋       | 191/712 [01:12<03:18,  2.63it/s]
+ 27%|██▋       | 192/712 [01:13<03:18,  2.63it/s]
+ 27%|██▋       | 193/712 [01:13<03:17,  2.62it/s]
+ 27%|██▋       | 194/712 [01:13<03:17,  2.62it/s]
+ 27%|██▋       | 195/712 [01:14<03:17,  2.62it/s]
+ 28%|██▊       | 196/712 [01:14<03:16,  2.62it/s]
+ 28%|██▊       | 197/712 [01:14<03:16,  2.62it/s]
+ 28%|██▊       | 198/712 [01:15<03:16,  2.62it/s]
+ 28%|██▊       | 199/712 [01:15<03:15,  2.62it/s]
+ 28%|██▊       | 200/712 [01:16<03:15,  2.62it/s]
+                                                 
+
+ 28%|██▊       | 200/712 [01:16<03:15,  2.62it/s]
+ 28%|██▊       | 201/712 [01:16<03:15,  2.62it/s]
+ 28%|██▊       | 202/712 [01:16<03:14,  2.62it/s]
+ 29%|██▊       | 203/712 [01:17<03:14,  2.62it/s]
+ 29%|██▊       | 204/712 [01:17<03:13,  2.62it/s]
+ 29%|██▉       | 205/712 [01:18<03:13,  2.62it/s]
+ 29%|██▉       | 206/712 [01:18<03:13,  2.62it/s]
+ 29%|██▉       | 207/712 [01:18<03:12,  2.62it/s]
+ 29%|██▉       | 208/712 [01:19<03:12,  2.62it/s]
+ 29%|██▉       | 209/712 [01:19<03:11,  2.62it/s]
+ 29%|██▉       | 210/712 [01:19<03:11,  2.62it/s]
+ 30%|██▉       | 211/712 [01:20<03:11,  2.62it/s]
+ 30%|██▉       | 212/712 [01:20<03:10,  2.62it/s]
+ 30%|██▉       | 213/712 [01:21<03:10,  2.62it/s]
+ 30%|███       | 214/712 [01:21<03:09,  2.62it/s]
+ 30%|███       | 215/712 [01:21<03:09,  2.62it/s]
+ 30%|███       | 216/712 [01:22<03:09,  2.62it/s]
+ 30%|███       | 217/712 [01:22<03:08,  2.62it/s]
+ 31%|███       | 218/712 [01:22<03:08,  2.62it/s]
+ 31%|███       | 219/712 [01:23<03:07,  2.62it/s]
+ 31%|███       | 220/712 [01:23<03:07,  2.62it/s]
+ 31%|███       | 221/712 [01:24<03:07,  2.62it/s]
+ 31%|███       | 222/712 [01:24<03:06,  2.62it/s]
+ 31%|███▏      | 223/712 [01:24<03:06,  2.62it/s]
+ 31%|███▏      | 224/712 [01:25<03:06,  2.62it/s]
+ 32%|███▏      | 225/712 [01:25<03:05,  2.62it/s]
+ 32%|███▏      | 226/712 [01:26<03:05,  2.62it/s]
+ 32%|███▏      | 227/712 [01:26<03:04,  2.62it/s]
+ 32%|███▏      | 228/712 [01:26<03:04,  2.62it/s]
+ 32%|███▏      | 229/712 [01:27<03:04,  2.62it/s]
+ 32%|███▏      | 230/712 [01:27<03:03,  2.62it/s]
+ 32%|███▏      | 231/712 [01:27<03:03,  2.62it/s]
+ 33%|███▎      | 232/712 [01:28<03:03,  2.62it/s]
+ 33%|███▎      | 233/712 [01:28<03:02,  2.62it/s]
+ 33%|███▎      | 234/712 [01:29<03:02,  2.62it/s]
+ 33%|███▎      | 235/712 [01:29<03:01,  2.62it/s]
+ 33%|███▎      | 236/712 [01:29<03:01,  2.62it/s]
+ 33%|███▎      | 237/712 [01:30<03:01,  2.62it/s]
+ 33%|███▎      | 238/712 [01:30<03:00,  2.62it/s]
+ 34%|███▎      | 239/712 [01:30<03:00,  2.62it/s]
+ 34%|███▎      | 240/712 [01:31<03:00,  2.62it/s]
+ 34%|███▍      | 241/712 [01:31<02:59,  2.62it/s]
+ 34%|███▍      | 242/712 [01:32<02:59,  2.62it/s]
+ 34%|███▍      | 243/712 [01:32<02:58,  2.62it/s]
+ 34%|███▍      | 244/712 [01:32<02:58,  2.62it/s]
+ 34%|███▍      | 245/712 [01:33<02:58,  2.62it/s]
+ 35%|███▍      | 246/712 [01:33<02:57,  2.62it/s]
+ 35%|███▍      | 247/712 [01:34<02:57,  2.62it/s]
+ 35%|███▍      | 248/712 [01:34<02:57,  2.62it/s]
+ 35%|███▍      | 249/712 [01:34<02:56,  2.62it/s]
+ 35%|███▌      | 250/712 [01:35<02:56,  2.62it/s]
+                                                 
+
+ 35%|███▌      | 250/712 [01:35<02:56,  2.62it/s]
+ 35%|███▌      | 251/712 [01:35<02:56,  2.61it/s]
+ 35%|███▌      | 252/712 [01:35<02:55,  2.62it/s]
+ 36%|███▌      | 253/712 [01:36<02:55,  2.62it/s]
+ 36%|███▌      | 254/712 [01:36<02:54,  2.62it/s]
+ 36%|███▌      | 255/712 [01:37<02:54,  2.62it/s]
+ 36%|███▌      | 256/712 [01:37<02:53,  2.62it/s]
+ 36%|███▌      | 257/712 [01:37<02:53,  2.62it/s]
+ 36%|███▌      | 258/712 [01:38<02:53,  2.62it/s]
+ 36%|███▋      | 259/712 [01:38<02:52,  2.62it/s]
+ 37%|███▋      | 260/712 [01:39<02:52,  2.62it/s]
+ 37%|███▋      | 261/712 [01:39<02:52,  2.62it/s]
+ 37%|███▋      | 262/712 [01:39<02:51,  2.62it/s]
+ 37%|███▋      | 263/712 [01:40<02:51,  2.62it/s]
+ 37%|███▋      | 264/712 [01:40<02:50,  2.62it/s]
+ 37%|███▋      | 265/712 [01:40<02:50,  2.62it/s]
+ 37%|███▋      | 266/712 [01:41<02:48,  2.64it/s]
+ 38%|███▊      | 267/712 [01:41<02:20,  3.16it/s]
+ 38%|███▊      | 268/712 [01:41<02:30,  2.94it/s]
+ 38%|███▊      | 269/712 [01:42<02:36,  2.84it/s]
+ 38%|███▊      | 270/712 [01:42<02:39,  2.77it/s]
+ 38%|███▊      | 271/712 [01:42<02:41,  2.72it/s]
+ 38%|███▊      | 272/712 [01:43<02:43,  2.69it/s]
+ 38%|███▊      | 273/712 [01:43<02:44,  2.67it/s]
+ 38%|███▊      | 274/712 [01:44<02:44,  2.66it/s]
+ 39%|███▊      | 275/712 [01:44<02:45,  2.65it/s]
+ 39%|███▉      | 276/712 [01:44<02:45,  2.64it/s]
+ 39%|███▉      | 277/712 [01:45<02:45,  2.63it/s]
+ 39%|███▉      | 278/712 [01:45<02:45,  2.63it/s]
+ 39%|███▉      | 279/712 [01:46<02:44,  2.63it/s]
+ 39%|███▉      | 280/712 [01:46<02:44,  2.63it/s]
+ 39%|███▉      | 281/712 [01:46<02:44,  2.62it/s]
+ 40%|███▉      | 282/712 [01:47<02:43,  2.62it/s]
+ 40%|███▉      | 283/712 [01:47<02:43,  2.62it/s]
+ 40%|███▉      | 284/712 [01:47<02:43,  2.62it/s]
+ 40%|████      | 285/712 [01:48<02:42,  2.62it/s]
+ 40%|████      | 286/712 [01:48<02:42,  2.62it/s]
+ 40%|████      | 287/712 [01:49<02:42,  2.62it/s]
+ 40%|████      | 288/712 [01:49<02:41,  2.62it/s]
+ 41%|████      | 289/712 [01:49<02:41,  2.62it/s]
+ 41%|████      | 290/712 [01:50<02:40,  2.62it/s]
+ 41%|████      | 291/712 [01:50<02:40,  2.62it/s]
+ 41%|████      | 292/712 [01:51<02:40,  2.62it/s]
+ 41%|████      | 293/712 [01:51<02:39,  2.62it/s]
+ 41%|████▏     | 294/712 [01:51<02:39,  2.62it/s]
+ 41%|████▏     | 295/712 [01:52<02:39,  2.62it/s]
+ 42%|████▏     | 296/712 [01:52<02:38,  2.62it/s]
+ 42%|████▏     | 297/712 [01:52<02:38,  2.62it/s]
+ 42%|████▏     | 298/712 [01:53<02:37,  2.62it/s]
+ 42%|████▏     | 299/712 [01:53<02:37,  2.62it/s]
+ 42%|████▏     | 300/712 [01:54<02:37,  2.62it/s]
+                                                 
+
+ 42%|████▏     | 300/712 [01:54<02:37,  2.62it/s]
+ 42%|████▏     | 301/712 [01:54<02:37,  2.61it/s]
+ 42%|████▏     | 302/712 [01:54<02:36,  2.62it/s]
+ 43%|████▎     | 303/712 [01:55<02:36,  2.62it/s]
+ 43%|████▎     | 304/712 [01:55<02:35,  2.62it/s]
+ 43%|████▎     | 305/712 [01:55<02:35,  2.62it/s]
+ 43%|████▎     | 306/712 [01:56<02:35,  2.62it/s]
+ 43%|████▎     | 307/712 [01:56<02:34,  2.62it/s]
+ 43%|████▎     | 308/712 [01:57<02:34,  2.62it/s]
+ 43%|████▎     | 309/712 [01:57<02:33,  2.62it/s]
+ 44%|████▎     | 310/712 [01:57<02:33,  2.62it/s]
+ 44%|████▎     | 311/712 [01:58<02:33,  2.62it/s]
+ 44%|████▍     | 312/712 [01:58<02:32,  2.62it/s]
+ 44%|████▍     | 313/712 [01:59<02:32,  2.62it/s]
+ 44%|████▍     | 314/712 [01:59<02:31,  2.62it/s]
+ 44%|████▍     | 315/712 [01:59<02:31,  2.62it/s]
+ 44%|████▍     | 316/712 [02:00<02:31,  2.62it/s]
+ 45%|████▍     | 317/712 [02:00<02:30,  2.62it/s]
+ 45%|████▍     | 318/712 [02:00<02:30,  2.62it/s]
+ 45%|████▍     | 319/712 [02:01<02:30,  2.62it/s]
+ 45%|████▍     | 320/712 [02:01<02:29,  2.62it/s]
+ 45%|████▌     | 321/712 [02:02<02:29,  2.62it/s]
+ 45%|████▌     | 322/712 [02:02<02:28,  2.62it/s]
+ 45%|████▌     | 323/712 [02:02<02:28,  2.62it/s]
+ 46%|████▌     | 324/712 [02:03<02:28,  2.62it/s]
+ 46%|████▌     | 325/712 [02:03<02:27,  2.62it/s]
+ 46%|████▌     | 326/712 [02:03<02:27,  2.62it/s]
+ 46%|████▌     | 327/712 [02:04<02:26,  2.62it/s]
+ 46%|████▌     | 328/712 [02:04<02:26,  2.62it/s]
+ 46%|████▌     | 329/712 [02:05<02:26,  2.62it/s]
+ 46%|████▋     | 330/712 [02:05<02:25,  2.62it/s]
+ 46%|████▋     | 331/712 [02:05<02:25,  2.62it/s]
+ 47%|████▋     | 332/712 [02:06<02:25,  2.62it/s]
+ 47%|████▋     | 333/712 [02:06<02:24,  2.62it/s]
+ 47%|████▋     | 334/712 [02:07<02:24,  2.62it/s]
+ 47%|████▋     | 335/712 [02:07<02:23,  2.62it/s]
+ 47%|████▋     | 336/712 [02:07<02:23,  2.62it/s]
+ 47%|████▋     | 337/712 [02:08<02:23,  2.62it/s]
+ 47%|████▋     | 338/712 [02:08<02:22,  2.62it/s]
+ 48%|████▊     | 339/712 [02:08<02:22,  2.62it/s]
+ 48%|████▊     | 340/712 [02:09<02:21,  2.62it/s]
+ 48%|████▊     | 341/712 [02:09<02:21,  2.62it/s]
+ 48%|████▊     | 342/712 [02:10<02:21,  2.62it/s]
+ 48%|████▊     | 343/712 [02:10<02:20,  2.62it/s]
+ 48%|████▊     | 344/712 [02:10<02:20,  2.62it/s]
+ 48%|████▊     | 345/712 [02:11<02:20,  2.62it/s]
+ 49%|████▊     | 346/712 [02:11<02:19,  2.62it/s]
+ 49%|████▊     | 347/712 [02:12<02:19,  2.62it/s]
+ 49%|████▉     | 348/712 [02:12<02:18,  2.62it/s]
+ 49%|████▉     | 349/712 [02:12<02:18,  2.62it/s]
+ 49%|████▉     | 350/712 [02:13<02:18,  2.62it/s]
+                                                 
+
+ 49%|████▉     | 350/712 [02:13<02:18,  2.62it/s]
+ 49%|████▉     | 351/712 [02:13<02:18,  2.61it/s]
+ 49%|████▉     | 352/712 [02:13<02:17,  2.62it/s]
+ 50%|████▉     | 353/712 [02:14<02:17,  2.62it/s]
+ 50%|████▉     | 354/712 [02:14<02:16,  2.62it/s]
+ 50%|████▉     | 355/712 [02:15<02:15,  2.64it/s]
+ 50%|█████     | 356/712 [02:15<01:52,  3.15it/s]
+ 50%|█████     | 357/712 [02:15<02:00,  2.94it/s]
+ 50%|█████     | 358/712 [02:16<02:04,  2.84it/s]
+ 50%|█████     | 359/712 [02:16<02:07,  2.77it/s]
+ 51%|█████     | 360/712 [02:16<02:09,  2.72it/s]
+ 51%|█████     | 361/712 [02:17<02:10,  2.69it/s]
+ 51%|█████     | 362/712 [02:17<02:11,  2.67it/s]
+ 51%|█████     | 363/712 [02:17<02:11,  2.65it/s]
+ 51%|█████     | 364/712 [02:18<02:11,  2.64it/s]
+ 51%|█████▏    | 365/712 [02:18<02:11,  2.64it/s]
+ 51%|█████▏    | 366/712 [02:19<02:11,  2.63it/s]
+ 52%|█████▏    | 367/712 [02:19<02:11,  2.63it/s]
+ 52%|█████▏    | 368/712 [02:19<02:11,  2.63it/s]
+ 52%|█████▏    | 369/712 [02:20<02:10,  2.62it/s]
+ 52%|█████▏    | 370/712 [02:20<02:10,  2.62it/s]
+ 52%|█████▏    | 371/712 [02:20<02:10,  2.62it/s]
+ 52%|█████▏    | 372/712 [02:21<02:09,  2.62it/s]
+ 52%|█████▏    | 373/712 [02:21<02:09,  2.62it/s]
+ 53%|█████▎    | 374/712 [02:22<02:09,  2.62it/s]
+ 53%|█████▎    | 375/712 [02:22<02:08,  2.62it/s]
+ 53%|█████▎    | 376/712 [02:22<02:08,  2.62it/s]
+ 53%|█████▎    | 377/712 [02:23<02:07,  2.62it/s]
+ 53%|█████▎    | 378/712 [02:23<02:07,  2.62it/s]
+ 53%|█████▎    | 379/712 [02:24<02:07,  2.62it/s]
+ 53%|█████▎    | 380/712 [02:24<02:06,  2.62it/s]
+ 54%|█████▎    | 381/712 [02:24<02:06,  2.62it/s]
+ 54%|█████▎    | 382/712 [02:25<02:05,  2.62it/s]
+ 54%|█████▍    | 383/712 [02:25<02:05,  2.62it/s]
+ 54%|█████▍    | 384/712 [02:25<02:05,  2.62it/s]
+ 54%|█████▍    | 385/712 [02:26<02:04,  2.62it/s]
+ 54%|█████▍    | 386/712 [02:26<02:04,  2.62it/s]
+ 54%|█████▍    | 387/712 [02:27<02:04,  2.62it/s]
+ 54%|█████▍    | 388/712 [02:27<02:03,  2.62it/s]
+ 55%|█████▍    | 389/712 [02:27<02:03,  2.62it/s]
+ 55%|█████▍    | 390/712 [02:28<02:02,  2.62it/s]
+ 55%|█████▍    | 391/712 [02:28<02:02,  2.62it/s]
+ 55%|█████▌    | 392/712 [02:28<02:02,  2.62it/s]
+ 55%|█████▌    | 393/712 [02:29<02:01,  2.62it/s]
+ 55%|█████▌    | 394/712 [02:29<02:01,  2.62it/s]
+ 55%|█████▌    | 395/712 [02:30<02:00,  2.62it/s]
+ 56%|█████▌    | 396/712 [02:30<02:00,  2.62it/s]
+ 56%|█████▌    | 397/712 [02:30<02:00,  2.62it/s]
+ 56%|█████▌    | 398/712 [02:31<01:59,  2.62it/s]
+ 56%|█████▌    | 399/712 [02:31<01:59,  2.62it/s]
+ 56%|█████▌    | 400/712 [02:32<01:59,  2.62it/s]
+                                                 
+
+ 56%|█████▌    | 400/712 [02:32<01:59,  2.62it/s]
+ 56%|█████▋    | 401/712 [02:32<01:58,  2.61it/s]
+ 56%|█████▋    | 402/712 [02:32<01:58,  2.62it/s]
+ 57%|█████▋    | 403/712 [02:33<01:58,  2.62it/s]
+ 57%|█████▋    | 404/712 [02:33<01:57,  2.62it/s]
+ 57%|█████▋    | 405/712 [02:33<01:57,  2.62it/s]
+ 57%|█████▋    | 406/712 [02:34<01:56,  2.62it/s]
+ 57%|█████▋    | 407/712 [02:34<01:56,  2.62it/s]
+ 57%|█████▋    | 408/712 [02:35<01:56,  2.62it/s]
+ 57%|█████▋    | 409/712 [02:35<01:55,  2.62it/s]
+ 58%|█████▊    | 410/712 [02:35<01:55,  2.62it/s]
+ 58%|█████▊    | 411/712 [02:36<01:54,  2.62it/s]
+ 58%|█████▊    | 412/712 [02:36<01:54,  2.62it/s]
+ 58%|█████▊    | 413/712 [02:36<01:54,  2.62it/s]
+ 58%|█████▊    | 414/712 [02:37<01:53,  2.62it/s]
+ 58%|█████▊    | 415/712 [02:37<01:53,  2.62it/s]
+ 58%|█████▊    | 416/712 [02:38<01:53,  2.62it/s]
+ 59%|█████▊    | 417/712 [02:38<01:52,  2.62it/s]
+ 59%|█████▊    | 418/712 [02:38<01:52,  2.62it/s]
+ 59%|█████▉    | 419/712 [02:39<01:51,  2.62it/s]
+ 59%|█████▉    | 420/712 [02:39<01:51,  2.62it/s]
+ 59%|█████▉    | 421/712 [02:40<01:51,  2.62it/s]
+ 59%|█████▉    | 422/712 [02:40<01:50,  2.62it/s]
+ 59%|█████▉    | 423/712 [02:40<01:50,  2.62it/s]
+ 60%|█████▉    | 424/712 [02:41<01:49,  2.62it/s]
+ 60%|█████▉    | 425/712 [02:41<01:49,  2.62it/s]
+ 60%|█████▉    | 426/712 [02:41<01:49,  2.62it/s]
+ 60%|█████▉    | 427/712 [02:42<01:48,  2.62it/s]
+ 60%|██████    | 428/712 [02:42<01:48,  2.62it/s]
+ 60%|██████    | 429/712 [02:43<01:48,  2.62it/s]
+ 60%|██████    | 430/712 [02:43<01:47,  2.62it/s]
+ 61%|██████    | 431/712 [02:43<01:47,  2.62it/s]
+ 61%|██████    | 432/712 [02:44<01:46,  2.62it/s]
+ 61%|██████    | 433/712 [02:44<01:46,  2.62it/s]
+ 61%|██████    | 434/712 [02:45<01:46,  2.62it/s]
+ 61%|██████    | 435/712 [02:45<01:45,  2.62it/s]
+ 61%|██████    | 436/712 [02:45<01:45,  2.62it/s]
+ 61%|██████▏   | 437/712 [02:46<01:44,  2.62it/s]
+ 62%|██████▏   | 438/712 [02:46<01:44,  2.62it/s]
+ 62%|██████▏   | 439/712 [02:46<01:44,  2.62it/s]
+ 62%|██████▏   | 440/712 [02:47<01:43,  2.62it/s]
+ 62%|██████▏   | 441/712 [02:47<01:43,  2.62it/s]
+ 62%|██████▏   | 442/712 [02:48<01:43,  2.62it/s]
+ 62%|██████▏   | 443/712 [02:48<01:42,  2.62it/s]
+ 62%|██████▏   | 444/712 [02:48<01:41,  2.64it/s]
+ 62%|██████▎   | 445/712 [02:48<01:24,  3.15it/s]
+ 63%|██████▎   | 446/712 [02:49<01:30,  2.94it/s]
+ 63%|██████▎   | 447/712 [02:49<01:33,  2.84it/s]
+ 63%|██████▎   | 448/712 [02:50<01:35,  2.77it/s]
+ 63%|██████▎   | 449/712 [02:50<01:36,  2.72it/s]
+ 63%|██████▎   | 450/712 [02:50<01:37,  2.69it/s]
+                                                 
+
+ 63%|██████▎   | 450/712 [02:50<01:37,  2.69it/s]
+ 63%|██████▎   | 451/712 [02:51<01:38,  2.66it/s]
+ 63%|██████▎   | 452/712 [02:51<01:38,  2.65it/s]
+ 64%|██████▎   | 453/712 [02:52<01:38,  2.64it/s]
+ 64%|██████▍   | 454/712 [02:52<01:38,  2.63it/s]
+ 64%|██████▍   | 455/712 [02:52<01:37,  2.63it/s]
+ 64%|██████▍   | 456/712 [02:53<01:37,  2.63it/s]
+ 64%|██████▍   | 457/712 [02:53<01:37,  2.62it/s]
+ 64%|██████▍   | 458/712 [02:53<01:36,  2.62it/s]
+ 64%|██████▍   | 459/712 [02:54<01:36,  2.62it/s]
+ 65%|██████▍   | 460/712 [02:54<01:36,  2.62it/s]
+ 65%|██████▍   | 461/712 [02:55<01:35,  2.62it/s]
+ 65%|██████▍   | 462/712 [02:55<01:35,  2.62it/s]
+ 65%|██████▌   | 463/712 [02:55<01:35,  2.62it/s]
+ 65%|██████▌   | 464/712 [02:56<01:34,  2.62it/s]
+ 65%|██████▌   | 465/712 [02:56<01:34,  2.62it/s]
+ 65%|██████▌   | 466/712 [02:57<01:33,  2.62it/s]
+ 66%|██████▌   | 467/712 [02:57<01:33,  2.62it/s]
+ 66%|██████▌   | 468/712 [02:57<01:33,  2.62it/s]
+ 66%|██████▌   | 469/712 [02:58<01:32,  2.62it/s]
+ 66%|██████▌   | 470/712 [02:58<01:32,  2.62it/s]
+ 66%|██████▌   | 471/712 [02:58<01:32,  2.62it/s]
+ 66%|██████▋   | 472/712 [02:59<01:31,  2.62it/s]
+ 66%|██████▋   | 473/712 [02:59<01:31,  2.62it/s]
+ 67%|██████▋   | 474/712 [03:00<01:30,  2.62it/s]
+ 67%|██████▋   | 475/712 [03:00<01:30,  2.62it/s]
+ 67%|██████▋   | 476/712 [03:00<01:30,  2.62it/s]
+ 67%|██████▋   | 477/712 [03:01<01:29,  2.62it/s]
+ 67%|██████▋   | 478/712 [03:01<01:29,  2.62it/s]
+ 67%|██████▋   | 479/712 [03:01<01:28,  2.62it/s]
+ 67%|██████▋   | 480/712 [03:02<01:28,  2.62it/s]
+ 68%|██████▊   | 481/712 [03:02<01:28,  2.62it/s]
+ 68%|██████▊   | 482/712 [03:03<01:27,  2.62it/s]
+ 68%|██████▊   | 483/712 [03:03<01:27,  2.62it/s]
+ 68%|██████▊   | 484/712 [03:03<01:27,  2.62it/s]
+ 68%|██████▊   | 485/712 [03:04<01:26,  2.62it/s]
+ 68%|██████▊   | 486/712 [03:04<01:26,  2.62it/s]
+ 68%|██████▊   | 487/712 [03:05<01:25,  2.62it/s]
+ 69%|██████▊   | 488/712 [03:05<01:25,  2.62it/s]
+ 69%|██████▊   | 489/712 [03:05<01:25,  2.62it/s]
+ 69%|██████▉   | 490/712 [03:06<01:24,  2.62it/s]
+ 69%|██████▉   | 491/712 [03:06<01:24,  2.62it/s]
+ 69%|██████▉   | 492/712 [03:06<01:23,  2.62it/s]
+ 69%|██████▉   | 493/712 [03:07<01:23,  2.62it/s]
+ 69%|██████▉   | 494/712 [03:07<01:23,  2.62it/s]
+ 70%|██████▉   | 495/712 [03:08<01:22,  2.62it/s]
+ 70%|██████▉   | 496/712 [03:08<01:22,  2.62it/s]
+ 70%|██████▉   | 497/712 [03:08<01:22,  2.62it/s]
+ 70%|██████▉   | 498/712 [03:09<01:21,  2.62it/s]
+ 70%|███████   | 499/712 [03:09<01:21,  2.62it/s]
+ 70%|███████   | 500/712 [03:10<01:20,  2.62it/s]
+                                                 
+
+ 70%|███████   | 500/712 [03:10<01:20,  2.62it/s][INFO|trainer.py:3993] 2025-07-22 12:51:10,606 >> Saving model checkpoint to ./re_model_16569/checkpoint-500
+[INFO|configuration_utils.py:424] 2025-07-22 12:51:10,609 >> Configuration saved in ./re_model_16569/checkpoint-500/config.json
+[INFO|modeling_utils.py:3724] 2025-07-22 12:51:12,326 >> Model weights saved in ./re_model_16569/checkpoint-500/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-07-22 12:51:12,346 >> tokenizer config file saved in ./re_model_16569/checkpoint-500/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-07-22 12:51:12,356 >> Special tokens file saved in ./re_model_16569/checkpoint-500/special_tokens_map.json
+
+ 70%|███████   | 501/712 [03:16<07:15,  2.06s/it]
+ 71%|███████   | 502/712 [03:16<05:27,  1.56s/it]
+ 71%|███████   | 503/712 [03:16<04:12,  1.21s/it]
+ 71%|███████   | 504/712 [03:17<03:19,  1.04it/s]
+ 71%|███████   | 505/712 [03:17<02:42,  1.27it/s]
+ 71%|███████   | 506/712 [03:17<02:16,  1.51it/s]
+ 71%|███████   | 507/712 [03:18<01:58,  1.73it/s]
+ 71%|███████▏  | 508/712 [03:18<01:45,  1.93it/s]
+ 71%|███████▏  | 509/712 [03:19<01:36,  2.09it/s]
+ 72%|███████▏  | 510/712 [03:19<01:30,  2.23it/s]
+ 72%|███████▏  | 511/712 [03:19<01:26,  2.34it/s]
+ 72%|███████▏  | 512/712 [03:20<01:22,  2.42it/s]
+ 72%|███████▏  | 513/712 [03:20<01:20,  2.48it/s]
+ 72%|███████▏  | 514/712 [03:20<01:18,  2.52it/s]
+ 72%|███████▏  | 515/712 [03:21<01:17,  2.55it/s]
+ 72%|███████▏  | 516/712 [03:21<01:16,  2.57it/s]
+ 73%|███████▎  | 517/712 [03:22<01:15,  2.59it/s]
+ 73%|███████▎  | 518/712 [03:22<01:14,  2.60it/s]
+ 73%|███████▎  | 519/712 [03:22<01:13,  2.61it/s]
+ 73%|███████▎  | 520/712 [03:23<01:13,  2.61it/s]
+ 73%|███████▎  | 521/712 [03:23<01:12,  2.62it/s]
+ 73%|███████▎  | 522/712 [03:23<01:12,  2.62it/s]
+ 73%|███████▎  | 523/712 [03:24<01:12,  2.62it/s]
+ 74%|███████▎  | 524/712 [03:24<01:11,  2.63it/s]
+ 74%|███████▎  | 525/712 [03:25<01:11,  2.63it/s]
+ 74%|███████▍  | 526/712 [03:25<01:10,  2.63it/s]
+ 74%|███████▍  | 527/712 [03:25<01:10,  2.63it/s]
+ 74%|███████▍  | 528/712 [03:26<01:10,  2.63it/s]
+ 74%|███████▍  | 529/712 [03:26<01:09,  2.63it/s]
+ 74%|███████▍  | 530/712 [03:27<01:09,  2.63it/s]
+ 75%|███████▍  | 531/712 [03:27<01:08,  2.63it/s]
+ 75%|███████▍  | 532/712 [03:27<01:08,  2.63it/s]
+ 75%|███████▍  | 533/712 [03:28<01:07,  2.65it/s]
+ 75%|███████▌  | 534/712 [03:28<00:56,  3.16it/s]
+ 75%|███████▌  | 535/712 [03:28<01:00,  2.95it/s]
+ 75%|███████▌  | 536/712 [03:29<01:01,  2.85it/s]
+ 75%|███████▌  | 537/712 [03:29<01:03,  2.78it/s]
+ 76%|███████▌  | 538/712 [03:29<01:03,  2.73it/s]
+ 76%|███████▌  | 539/712 [03:30<01:04,  2.70it/s]
+ 76%|███████▌  | 540/712 [03:30<01:04,  2.68it/s]
+ 76%|███████▌  | 541/712 [03:31<01:04,  2.66it/s]
+ 76%|███████▌  | 542/712 [03:31<01:04,  2.65it/s]
+ 76%|███████▋  | 543/712 [03:31<01:03,  2.65it/s]
+ 76%|███████▋  | 544/712 [03:32<01:03,  2.64it/s]
+ 77%|███████▋  | 545/712 [03:32<01:03,  2.64it/s]
+ 77%|███████▋  | 546/712 [03:32<01:02,  2.64it/s]
+ 77%|███████▋  | 547/712 [03:33<01:02,  2.63it/s]
+ 77%|███████▋  | 548/712 [03:33<01:02,  2.63it/s]
+ 77%|███████▋  | 549/712 [03:34<01:01,  2.63it/s]
+ 77%|███████▋  | 550/712 [03:34<01:01,  2.63it/s]
+                                                 
+
+ 77%|███████▋  | 550/712 [03:34<01:01,  2.63it/s]
+ 77%|███████▋  | 551/712 [03:34<01:01,  2.61it/s]
+ 78%|███████▊  | 552/712 [03:35<01:01,  2.61it/s]
+ 78%|███████▊  | 553/712 [03:35<01:00,  2.62it/s]
+ 78%|███████▊  | 554/712 [03:35<01:00,  2.62it/s]
+ 78%|███████▊  | 555/712 [03:36<00:59,  2.62it/s]
+ 78%|███████▊  | 556/712 [03:36<00:59,  2.62it/s]
+ 78%|███████▊  | 557/712 [03:37<00:59,  2.63it/s]
+ 78%|███████▊  | 558/712 [03:37<00:58,  2.63it/s]
+ 79%|███████▊  | 559/712 [03:37<00:58,  2.63it/s]
+ 79%|███████▊  | 560/712 [03:38<00:57,  2.63it/s]
+ 79%|███████▉  | 561/712 [03:38<00:57,  2.63it/s]
+ 79%|███████▉  | 562/712 [03:39<00:57,  2.63it/s]
+ 79%|███████▉  | 563/712 [03:39<00:56,  2.63it/s]
+ 79%|███████▉  | 564/712 [03:39<00:56,  2.63it/s]
+ 79%|███████▉  | 565/712 [03:40<00:55,  2.63it/s]
+ 79%|███████▉  | 566/712 [03:40<00:55,  2.63it/s]
+ 80%|███████▉  | 567/712 [03:40<00:55,  2.63it/s]
+ 80%|███████▉  | 568/712 [03:41<00:54,  2.63it/s]
+ 80%|███████▉  | 569/712 [03:41<00:54,  2.63it/s]
+ 80%|████████  | 570/712 [03:42<00:54,  2.63it/s]
+ 80%|████████  | 571/712 [03:42<00:53,  2.63it/s]
+ 80%|████████  | 572/712 [03:42<00:53,  2.63it/s]
+ 80%|████████  | 573/712 [03:43<00:52,  2.63it/s]
+ 81%|████████  | 574/712 [03:43<00:52,  2.63it/s]
+ 81%|████████  | 575/712 [03:43<00:52,  2.63it/s]
+ 81%|████████  | 576/712 [03:44<00:51,  2.63it/s]
+ 81%|████████  | 577/712 [03:44<00:51,  2.63it/s]
+ 81%|████████  | 578/712 [03:45<00:50,  2.63it/s]
+ 81%|████████▏ | 579/712 [03:45<00:50,  2.63it/s]
+ 81%|████████▏ | 580/712 [03:45<00:50,  2.63it/s]
+ 82%|████████▏ | 581/712 [03:46<00:49,  2.63it/s]
+ 82%|████████▏ | 582/712 [03:46<00:49,  2.63it/s]
+ 82%|████████▏ | 583/712 [03:47<00:49,  2.63it/s]
+ 82%|████████▏ | 584/712 [03:47<00:48,  2.63it/s]
+ 82%|████████▏ | 585/712 [03:47<00:48,  2.63it/s]
+ 82%|████████▏ | 586/712 [03:48<00:47,  2.63it/s]
+ 82%|████████▏ | 587/712 [03:48<00:47,  2.63it/s]
+ 83%|████████▎ | 588/712 [03:48<00:47,  2.63it/s]
+ 83%|████████▎ | 589/712 [03:49<00:46,  2.63it/s]
+ 83%|████████▎ | 590/712 [03:49<00:46,  2.63it/s]
+ 83%|████████▎ | 591/712 [03:50<00:45,  2.63it/s]
+ 83%|████████▎ | 592/712 [03:50<00:45,  2.63it/s]
+ 83%|████████▎ | 593/712 [03:50<00:45,  2.63it/s]
+ 83%|████████▎ | 594/712 [03:51<00:44,  2.63it/s]
+ 84%|████████▎ | 595/712 [03:51<00:44,  2.63it/s]
+ 84%|████████▎ | 596/712 [03:51<00:44,  2.63it/s]
+ 84%|████████▍ | 597/712 [03:52<00:43,  2.63it/s]
+ 84%|████████▍ | 598/712 [03:52<00:43,  2.63it/s]
+ 84%|████████▍ | 599/712 [03:53<00:42,  2.63it/s]
+ 84%|████████▍ | 600/712 [03:53<00:42,  2.63it/s]
+                                                 
+
+ 84%|████████▍ | 600/712 [03:53<00:42,  2.63it/s]
+ 84%|████████▍ | 601/712 [03:53<00:42,  2.62it/s]
+ 85%|████████▍ | 602/712 [03:54<00:41,  2.62it/s]
+ 85%|████████▍ | 603/712 [03:54<00:41,  2.62it/s]
+ 85%|████████▍ | 604/712 [03:54<00:41,  2.63it/s]
+ 85%|████████▍ | 605/712 [03:55<00:40,  2.63it/s]
+ 85%|████████▌ | 606/712 [03:55<00:40,  2.63it/s]
+ 85%|████████▌ | 607/712 [03:56<00:39,  2.63it/s]
+ 85%|████████▌ | 608/712 [03:56<00:39,  2.63it/s]
+ 86%|████████▌ | 609/712 [03:56<00:39,  2.63it/s]
+ 86%|████████▌ | 610/712 [03:57<00:38,  2.63it/s]
+ 86%|████████▌ | 611/712 [03:57<00:38,  2.63it/s]
+ 86%|████████▌ | 612/712 [03:58<00:38,  2.63it/s]
+ 86%|████████▌ | 613/712 [03:58<00:37,  2.63it/s]
+ 86%|████████▌ | 614/712 [03:58<00:37,  2.63it/s]
+ 86%|████████▋ | 615/712 [03:59<00:36,  2.63it/s]
+ 87%|████████▋ | 616/712 [03:59<00:36,  2.63it/s]
+ 87%|████████▋ | 617/712 [03:59<00:36,  2.63it/s]
+ 87%|████████▋ | 618/712 [04:00<00:35,  2.63it/s]
+ 87%|████████▋ | 619/712 [04:00<00:35,  2.63it/s]
+ 87%|████████▋ | 620/712 [04:01<00:34,  2.63it/s]
+ 87%|████████▋ | 621/712 [04:01<00:34,  2.63it/s]
+ 87%|████████▋ | 622/712 [04:01<00:34,  2.65it/s]
+ 88%|████████▊ | 623/712 [04:02<00:28,  3.17it/s]
+ 88%|████████▊ | 624/712 [04:02<00:29,  2.95it/s]
+ 88%|████████▊ | 625/712 [04:02<00:30,  2.85it/s]
+ 88%|████████▊ | 626/712 [04:03<00:30,  2.78it/s]
+ 88%|████████▊ | 627/712 [04:03<00:31,  2.73it/s]
+ 88%|████████▊ | 628/712 [04:03<00:31,  2.70it/s]
+ 88%|████████▊ | 629/712 [04:04<00:30,  2.68it/s]
+ 88%|████████▊ | 630/712 [04:04<00:30,  2.66it/s]
+ 89%|████████▊ | 631/712 [04:05<00:30,  2.65it/s]
+ 89%|████████▉ | 632/712 [04:05<00:30,  2.65it/s]
+ 89%|████████▉ | 633/712 [04:05<00:29,  2.64it/s]
+ 89%|████████▉ | 634/712 [04:06<00:29,  2.64it/s]
+ 89%|████████▉ | 635/712 [04:06<00:29,  2.64it/s]
+ 89%|████████▉ | 636/712 [04:06<00:28,  2.63it/s]
+ 89%|████████▉ | 637/712 [04:07<00:28,  2.63it/s]
+ 90%|████████▉ | 638/712 [04:07<00:28,  2.63it/s]
+ 90%|████████▉ | 639/712 [04:08<00:27,  2.63it/s]
+ 90%|████████▉ | 640/712 [04:08<00:27,  2.63it/s]
+ 90%|█████████ | 641/712 [04:08<00:26,  2.63it/s]
+ 90%|█████████ | 642/712 [04:09<00:26,  2.63it/s]
+ 90%|█████████ | 643/712 [04:09<00:26,  2.63it/s]
+ 90%|█████████ | 644/712 [04:09<00:25,  2.63it/s]
+ 91%|█████████ | 645/712 [04:10<00:25,  2.63it/s]
+ 91%|█████████ | 646/712 [04:10<00:25,  2.63it/s]
+ 91%|█████████ | 647/712 [04:11<00:24,  2.63it/s]
+ 91%|█████████ | 648/712 [04:11<00:24,  2.63it/s]
+ 91%|█████████ | 649/712 [04:11<00:23,  2.63it/s]
+ 91%|█████████▏| 650/712 [04:12<00:23,  2.63it/s]
+                                                 
+
+ 91%|█████████▏| 650/712 [04:12<00:23,  2.63it/s]
+ 91%|█████████▏| 651/712 [04:12<00:23,  2.62it/s]
+ 92%|█████████▏| 652/712 [04:13<00:22,  2.63it/s]
+ 92%|█████████▏| 653/712 [04:13<00:22,  2.63it/s]
+ 92%|█████████▏| 654/712 [04:13<00:22,  2.63it/s]
+ 92%|█████████▏| 655/712 [04:14<00:21,  2.63it/s]
+ 92%|█████████▏| 656/712 [04:14<00:21,  2.63it/s]
+ 92%|█████████▏| 657/712 [04:14<00:20,  2.63it/s]
+ 92%|█████████▏| 658/712 [04:15<00:20,  2.63it/s]
+ 93%|█████████▎| 659/712 [04:15<00:20,  2.63it/s]
+ 93%|█████████▎| 660/712 [04:16<00:19,  2.63it/s]
+ 93%|█████████▎| 661/712 [04:16<00:19,  2.63it/s]
+ 93%|█████████▎| 662/712 [04:16<00:19,  2.63it/s]
+ 93%|█████████▎| 663/712 [04:17<00:18,  2.63it/s]
+ 93%|█████████▎| 664/712 [04:17<00:18,  2.63it/s]
+ 93%|█████████▎| 665/712 [04:17<00:17,  2.63it/s]
+ 94%|█████████▎| 666/712 [04:18<00:17,  2.63it/s]
+ 94%|█████████▎| 667/712 [04:18<00:17,  2.63it/s]
+ 94%|█████████▍| 668/712 [04:19<00:16,  2.63it/s]
+ 94%|█████████▍| 669/712 [04:19<00:16,  2.63it/s]
+ 94%|█████████▍| 670/712 [04:19<00:15,  2.63it/s]
+ 94%|█████████▍| 671/712 [04:20<00:15,  2.63it/s]
+ 94%|█████████▍| 672/712 [04:20<00:15,  2.63it/s]
+ 95%|█████████▍| 673/712 [04:21<00:14,  2.63it/s]
+ 95%|█████████▍| 674/712 [04:21<00:14,  2.63it/s]
+ 95%|█████████▍| 675/712 [04:21<00:14,  2.63it/s]
+ 95%|█████████▍| 676/712 [04:22<00:13,  2.63it/s]
+ 95%|█████████▌| 677/712 [04:22<00:13,  2.63it/s]
+ 95%|█████████▌| 678/712 [04:22<00:12,  2.63it/s]
+ 95%|█████████▌| 679/712 [04:23<00:12,  2.63it/s]
+ 96%|█████████▌| 680/712 [04:23<00:12,  2.63it/s]
+ 96%|█████████▌| 681/712 [04:24<00:11,  2.63it/s]
+ 96%|█████████▌| 682/712 [04:24<00:11,  2.63it/s]
+ 96%|█████████▌| 683/712 [04:24<00:11,  2.63it/s]
+ 96%|█████████▌| 684/712 [04:25<00:10,  2.63it/s]
+ 96%|█████████▌| 685/712 [04:25<00:10,  2.63it/s]
+ 96%|█████████▋| 686/712 [04:25<00:09,  2.63it/s]
+ 96%|█████████▋| 687/712 [04:26<00:09,  2.63it/s]
+ 97%|█████████▋| 688/712 [04:26<00:09,  2.63it/s]
+ 97%|█████████▋| 689/712 [04:27<00:08,  2.63it/s]
+ 97%|█████████▋| 690/712 [04:27<00:08,  2.63it/s]
+ 97%|█████████▋| 691/712 [04:27<00:07,  2.63it/s]
+ 97%|█████████▋| 692/712 [04:28<00:07,  2.63it/s]
+ 97%|█████████▋| 693/712 [04:28<00:07,  2.63it/s]
+ 97%|█████████▋| 694/712 [04:29<00:06,  2.63it/s]
+ 98%|█████████▊| 695/712 [04:29<00:06,  2.63it/s]
+ 98%|█████████▊| 696/712 [04:29<00:06,  2.63it/s]
+ 98%|█████████▊| 697/712 [04:30<00:05,  2.63it/s]
+ 98%|█████████▊| 698/712 [04:30<00:05,  2.63it/s]
+ 98%|█████████▊| 699/712 [04:30<00:04,  2.63it/s]
+ 98%|█████████▊| 700/712 [04:31<00:04,  2.63it/s]
+                                                 
+
+ 98%|█████████▊| 700/712 [04:31<00:04,  2.63it/s]
+ 98%|█████████▊| 701/712 [04:31<00:04,  2.62it/s]
+ 99%|█████████▊| 702/712 [04:32<00:03,  2.63it/s]
+ 99%|█████████▊| 703/712 [04:32<00:03,  2.63it/s]
+ 99%|█████████▉| 704/712 [04:32<00:03,  2.63it/s]
+ 99%|█████████▉| 705/712 [04:33<00:02,  2.63it/s]
+ 99%|█████████▉| 706/712 [04:33<00:02,  2.63it/s]
+ 99%|█████████▉| 707/712 [04:33<00:01,  2.63it/s]
+ 99%|█████████▉| 708/712 [04:34<00:01,  2.63it/s]
+100%|█████████▉| 709/712 [04:34<00:01,  2.63it/s]
+100%|█████████▉| 710/712 [04:35<00:00,  2.63it/s]
+100%|█████████▉| 711/712 [04:35<00:00,  2.65it/s]
+100%|██████████| 712/712 [04:35<00:00,  3.17it/s][INFO|trainer.py:3993] 2025-07-22 12:52:36,228 >> Saving model checkpoint to ./re_model_16569/checkpoint-712
+[INFO|configuration_utils.py:424] 2025-07-22 12:52:36,230 >> Configuration saved in ./re_model_16569/checkpoint-712/config.json
+[INFO|modeling_utils.py:3724] 2025-07-22 12:52:38,156 >> Model weights saved in ./re_model_16569/checkpoint-712/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-07-22 12:52:38,204 >> tokenizer config file saved in ./re_model_16569/checkpoint-712/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-07-22 12:52:38,231 >> Special tokens file saved in ./re_model_16569/checkpoint-712/special_tokens_map.json
+[INFO|trainer.py:2676] 2025-07-22 12:52:42,153 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+
+                                                 
+
+100%|██████████| 712/712 [04:41<00:00,  3.17it/s]
+100%|██████████| 712/712 [04:41<00:00,  2.53it/s]
+[INFO|trainer.py:3993] 2025-07-22 12:52:42,183 >> Saving model checkpoint to ./re_model_16569
+[INFO|configuration_utils.py:424] 2025-07-22 12:52:42,187 >> Configuration saved in ./re_model_16569/config.json
+[INFO|modeling_utils.py:3724] 2025-07-22 12:52:44,255 >> Model weights saved in ./re_model_16569/model.safetensors
+[INFO|tokenization_utils_base.py:2525] 2025-07-22 12:52:44,301 >> tokenizer config file saved in ./re_model_16569/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2534] 2025-07-22 12:52:44,327 >> Special tokens file saved in ./re_model_16569/special_tokens_map.json
+{'loss': 0.8089, 'grad_norm': 0.9366465210914612, 'learning_rate': 4.655898876404495e-05, 'epoch': 0.56}
+{'loss': 0.6284, 'grad_norm': 1.874664545059204, 'learning_rate': 4.304775280898877e-05, 'epoch': 1.12}
+{'loss': 0.4883, 'grad_norm': 3.1288201808929443, 'learning_rate': 3.953651685393259e-05, 'epoch': 1.69}
+{'loss': 0.4194, 'grad_norm': 2.6909549236297607, 'learning_rate': 3.6025280898876406e-05, 'epoch': 2.25}
+{'loss': 0.3959, 'grad_norm': 4.176644325256348, 'learning_rate': 3.2514044943820225e-05, 'epoch': 2.81}
+{'loss': 0.3225, 'grad_norm': 2.105858325958252, 'learning_rate': 2.9002808988764048e-05, 'epoch': 3.37}
+{'loss': 0.3091, 'grad_norm': 7.040692329406738, 'learning_rate': 2.5491573033707867e-05, 'epoch': 3.93}
+{'loss': 0.2938, 'grad_norm': 3.6977992057800293, 'learning_rate': 2.1980337078651686e-05, 'epoch': 4.49}
+{'loss': 0.2329, 'grad_norm': 3.516685962677002, 'learning_rate': 1.8469101123595506e-05, 'epoch': 5.06}
+{'loss': 0.1915, 'grad_norm': 5.160304069519043, 'learning_rate': 1.4957865168539326e-05, 'epoch': 5.62}
+{'loss': 0.1961, 'grad_norm': 5.1893534660339355, 'learning_rate': 1.1446629213483147e-05, 'epoch': 6.18}
+{'loss': 0.1873, 'grad_norm': 1.657369613647461, 'learning_rate': 7.935393258426967e-06, 'epoch': 6.74}
+{'loss': 0.167, 'grad_norm': 4.3768510818481445, 'learning_rate': 4.424157303370787e-06, 'epoch': 7.3}
+{'loss': 0.1635, 'grad_norm': 4.386300086975098, 'learning_rate': 9.129213483146068e-07, 'epoch': 7.87}
+{'train_runtime': 281.5694, 'train_samples_per_second': 80.378, 'train_steps_per_second': 2.529, 'train_loss': 0.3404754494013411, 'epoch': 8.0}
+***** train metrics *****
+  epoch                    =        8.0
+  total_flos               =  5546072GF
+  train_loss               =     0.3405
+  train_runtime            = 0:04:41.56
+  train_samples            =       2829
+  train_samples_per_second =     80.378
+  train_steps_per_second   =      2.529
+07/22/2025 12:52:44 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:4327] 2025-07-22 12:52:44,390 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:4329] 2025-07-22 12:52:44,390 >>   Num examples = 336
+[INFO|trainer.py:4332] 2025-07-22 12:52:44,390 >>   Batch size = 8
+
+  0%|          | 0/42 [00:00<?, ?it/s]
+ 10%|▉         | 4/42 [00:00<00:01, 31.60it/s]
+ 19%|█▉        | 8/42 [00:00<00:01, 26.46it/s]
+ 26%|██▌       | 11/42 [00:00<00:01, 25.34it/s]
+ 33%|███▎      | 14/42 [00:00<00:01, 24.75it/s]
+ 40%|████      | 17/42 [00:00<00:01, 24.40it/s]
+ 48%|████▊     | 20/42 [00:00<00:00, 24.18it/s]
+ 55%|█████▍    | 23/42 [00:00<00:00, 24.04it/s]
+ 62%|██████▏   | 26/42 [00:01<00:00, 23.95it/s]
+ 69%|██████▉   | 29/42 [00:01<00:00, 23.88it/s]
+ 76%|███████▌  | 32/42 [00:01<00:00, 23.84it/s]
+ 83%|████████▎ | 35/42 [00:01<00:00, 23.81it/s]
+ 90%|█████████ | 38/42 [00:01<00:00, 23.79it/s]
+ 98%|█████████▊| 41/42 [00:01<00:00, 23.77it/s]
+100%|██████████| 42/42 [00:01<00:00, 23.89it/s]
+
+              precision    recall  f1-score   support
+
+        Kill     0.9000    1.0000    0.9474        27
+     Live_In     0.8864    0.7358    0.8041        53
+  Located_In     0.8108    0.8824    0.8451        34
+ OrgBased_In     0.8571    0.8824    0.8696        34
+    Work_For     0.9111    0.8723    0.8913        47
+ no_relation     0.8414    0.8652    0.8531       141
+
+    accuracy                         0.8601       336
+   macro avg     0.8678    0.8730    0.8684       336
+weighted avg     0.8614    0.8601    0.8592       336
+
+***** eval metrics *****
+  epoch                   =        8.0
+  eval_accuracy           =     0.8601
+  eval_loss               =     0.4111
+  eval_macro_f1           =     0.8684
+  eval_micro_f1           =     0.8601
+  eval_runtime            = 0:00:01.80
+  eval_samples            =        336
+  eval_samples_per_second =    186.489
+  eval_steps_per_second   =     23.311
+07/22/2025 12:52:46 - INFO - __main__ - *** Predict ***
+[INFO|trainer.py:4327] 2025-07-22 12:52:46,198 >> 
+***** Running Prediction *****
+[INFO|trainer.py:4329] 2025-07-22 12:52:46,198 >>   Num examples = 361
+[INFO|trainer.py:4332] 2025-07-22 12:52:46,199 >>   Batch size = 8
+
+  0%|          | 0/46 [00:00<?, ?it/s]
+  9%|▊         | 4/46 [00:00<00:01, 31.72it/s]
+ 17%|█▋        | 8/46 [00:00<00:01, 26.48it/s]
+ 24%|██▍       | 11/46 [00:00<00:01, 25.35it/s]
+ 30%|███       | 14/46 [00:00<00:01, 24.75it/s]
+ 37%|███▋      | 17/46 [00:00<00:01, 24.40it/s]
+ 43%|████▎     | 20/46 [00:00<00:01, 24.18it/s]
+ 50%|█████     | 23/46 [00:00<00:00, 24.04it/s]
+ 57%|█████▋    | 26/46 [00:01<00:00, 23.93it/s]
+ 63%|██████▎   | 29/46 [00:01<00:00, 23.88it/s]
+ 70%|██████▉   | 32/46 [00:01<00:00, 23.83it/s]
+ 76%|███████▌  | 35/46 [00:01<00:00, 23.80it/s]
+ 83%|████████▎ | 38/46 [00:01<00:00, 23.78it/s]
+ 89%|████████▉ | 41/46 [00:01<00:00, 23.76it/s]
+ 96%|█████████▌| 44/46 [00:01<00:00, 23.75it/s]
+100%|██████████| 46/46 [00:01<00:00, 24.41it/s]
+
+              precision    recall  f1-score   support
+
+        Kill     0.8276    1.0000    0.9057        24
+     Live_In     0.9167    0.8302    0.8713        53
+  Located_In     0.7460    0.9792    0.8468        48
+ OrgBased_In     0.7600    0.7308    0.7451        52
+    Work_For     0.9310    0.9000    0.9153        30
+ no_relation     0.8169    0.7532    0.7838       154
+
+    accuracy                         0.8199       361
+   macro avg     0.8330    0.8656    0.8447       361
+weighted avg     0.8241    0.8199    0.8185       361
+
+***** test metrics *****
+  test_accuracy           =     0.8199
+  test_loss               =     0.4972
+  test_macro_f1           =     0.8447
+  test_micro_f1           =     0.8199
+  test_runtime            = 0:00:01.93
+  test_samples_per_second =    186.955
+  test_steps_per_second   =     23.823
+07/22/2025 12:52:48 - INFO - __main__ - Test predictions saved at ./re_model_16569/test_predictions.txt
+脚本测试完成！
+0.8447/0.8199
