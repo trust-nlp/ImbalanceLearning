@@ -1,0 +1,760 @@
+{"tokens": ["2", "start", "restaurants", "with", "inside", "dining"], "ner_tags": ["B-Rating", "I-Rating", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["34"], "ner_tags": ["O"]}
+{"tokens": ["5", "star", "resturants", "in", "my", "town"], "ner_tags": ["B-Rating", "I-Rating", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["98", "hong", "kong", "restaurant", "reasonable", "prices"], "ner_tags": ["O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Price", "O"]}
+{"tokens": ["a", "great", "lunch", "spot", "but", "open", "till", "2", "a", "m", "passims", "kitchen"], "ner_tags": ["O", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["a", "place", "that", "serves", "soft", "serve", "ice", "cream"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "I-Dish", "I-Dish", "I-Dish"]}
+{"tokens": ["a", "restaurant", "that", "is", "good", "for", "groups"], "ner_tags": ["O", "O", "O", "O", "B-Rating", "B-Amenity", "I-Amenity"]}
+{"tokens": ["a", "salad", "would", "make", "my", "day"], "ner_tags": ["O", "B-Dish", "O", "O", "O", "O"]}
+{"tokens": ["a", "smoothie", "would", "hit", "the", "spot"], "ner_tags": ["O", "B-Cuisine", "O", "O", "O", "O"]}
+{"tokens": ["a", "steak", "would", "be", "nice"], "ner_tags": ["O", "B-Dish", "O", "O", "O"]}
+{"tokens": ["a", "sub", "place", "near", "independence", "boulevard"], "ner_tags": ["O", "B-Dish", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["about", "how", "much", "is", "a", "midpriced", "bottle", "of", "good", "wine", "at", "davidos", "italian", "palace"], "ner_tags": ["O", "O", "O", "O", "O", "B-Price", "B-Rating", "O", "B-Rating", "B-Cuisine", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["about", "how", "much", "will", "it", "cost", "to", "eat", "at", "johns", "pizza", "cafe", "for", "dinner", "per", "person"], "ner_tags": ["O", "O", "O", "O", "O", "B-Price", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "O", "B-Hours", "B-Price", "I-Price"]}
+{"tokens": ["adress", "of", "the", "nearest", "cracker", "barrel"], "ner_tags": ["O", "O", "O", "B-Location", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["after", "hour", "dining"], "ner_tags": ["B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["all", "i", "want", "is", "a", "bagel", "and", "coffee", "can", "you", "direct", "me"], "ner_tags": ["O", "O", "O", "O", "O", "B-Dish", "I-Dish", "I-Dish", "O", "O", "O", "O"]}
+{"tokens": ["all", "i", "want", "is", "salmon"], "ner_tags": ["O", "O", "O", "O", "B-Dish"]}
+{"tokens": ["all", "i", "want", "is", "some", "fresh", "fruits", "where", "is", "the", "nearest", "supermarket"], "ner_tags": ["O", "O", "O", "O", "O", "B-Dish", "I-Dish", "O", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["all", "i", "want", "is", "some", "good", "chili", "can", "you", "help", "me", "find", "that"], "ner_tags": ["O", "O", "O", "O", "O", "B-Rating", "B-Dish", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["along", "my", "route", "tell", "me", "the", "next", "steak", "house", "that", "is", "within", "a", "mile"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["alot", "of", "parking", "indian", "food"], "ner_tags": ["O", "O", "B-Amenity", "B-Cuisine", "O"]}
+{"tokens": ["although", "a", "good", "burger", "would", "be", "good", "time", "for", "burger", "king"], "ner_tags": ["O", "O", "B-Rating", "B-Dish", "O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["am", "i", "ablle", "to", "get", "a", "reservation", "at", "mcdills", "tonight"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "B-Hours"]}
+{"tokens": ["american", "style", "restaurants", "reviews"], "ner_tags": ["B-Cuisine", "O", "O", "B-Rating"]}
+{"tokens": ["anniversary", "dinner"], "ner_tags": ["B-Amenity", "I-Amenity"]}
+{"tokens": ["any", "50s", "style", "diners", "around"], "ner_tags": ["O", "B-Amenity", "I-Amenity", "B-Cuisine", "O"]}
+{"tokens": ["any", "bars", "around", "that", "are", "open", "before", "11", "a", "m"], "ner_tags": ["O", "B-Cuisine", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["any", "beanery", "restaurants", "at", "the", "north", "end"], "ner_tags": ["O", "B-Restaurant_Name", "O", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["any", "beanery", "restaurants", "on", "westborough"], "ner_tags": ["O", "B-Cuisine", "O", "O", "B-Location"]}
+{"tokens": ["any", "beef", "cuisine", "restaurants", "with", "brewpub", "and", "great", "prices"], "ner_tags": ["O", "B-Dish", "O", "O", "O", "B-Amenity", "O", "B-Price", "O"]}
+{"tokens": ["any", "buffet", "style", "restaurant", "in", "my", "area"], "ner_tags": ["O", "B-Amenity", "I-Amenity", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["any", "business", "eateries", "with", "great", "portions"], "ner_tags": ["O", "B-Amenity", "I-Amenity", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["any", "busy", "restaurants", "around", "here"], "ner_tags": ["O", "B-Rating", "O", "B-Location", "I-Location"]}
+{"tokens": ["any", "cali", "eateries", "open", "at", "11", "am"], "ner_tags": ["O", "B-Cuisine", "I-Cuisine", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["any", "chance", "i", "can", "get", "a", "reservation", "at", "that", "fine", "dining", "place", "thats", "the", "top", "rated", "on", "tripadvisor"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "B-Rating", "I-Rating", "I-Rating", "I-Rating"]}
+{"tokens": ["any", "cheap", "places", "on", "middleboro"], "ner_tags": ["O", "B-Price", "O", "O", "B-Location"]}
+{"tokens": ["any", "cheap", "restaurants", "open", "before", "8", "a", "m"], "ner_tags": ["O", "B-Price", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["any", "cheap", "spanish", "places"], "ner_tags": ["O", "B-Price", "B-Cuisine", "O"]}
+{"tokens": ["any", "crowd", "pleasing", "restaurants", "around", "here"], "ner_tags": ["O", "B-Rating", "I-Rating", "O", "B-Location", "I-Location"]}
+{"tokens": ["any", "deli", "with", "catering", "services"], "ner_tags": ["O", "B-Cuisine", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["any", "family", "restaurant", "nearby"], "ner_tags": ["O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["any", "fast", "food", "nearby"], "ner_tags": ["O", "B-Cuisine", "I-Cuisine", "B-Location"]}
+{"tokens": ["any", "fast", "food", "places", "open", "this", "late"], "ner_tags": ["O", "B-Cuisine", "I-Cuisine", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["any", "fast", "food", "restaurants", "nearby"], "ner_tags": ["O", "B-Cuisine", "I-Cuisine", "O", "B-Location"]}
+{"tokens": ["any", "fastfood", "nearby"], "ner_tags": ["O", "B-Cuisine", "B-Location"]}
+{"tokens": ["any", "food", "low", "fat", "food", "resteraunt"], "ner_tags": ["O", "O", "B-Cuisine", "I-Cuisine", "O", "O"]}
+{"tokens": ["any", "food", "within", "5", "miles"], "ner_tags": ["O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["any", "german", "cuisine", "diners", "around", "with", "no", "smoking", "permitted"], "ner_tags": ["O", "B-Cuisine", "O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity", "O"]}
+{"tokens": ["any", "good", "ice", "cream", "places", "around"], "ner_tags": ["O", "B-Rating", "B-Cuisine", "I-Cuisine", "O", "B-Location"]}
+{"tokens": ["any", "good", "steak", "houses", "around", "me"], "ner_tags": ["O", "B-Rating", "B-Cuisine", "I-Cuisine", "B-Location", "O"]}
+{"tokens": ["any", "ihops", "around"], "ner_tags": ["O", "B-Restaurant_Name", "B-Location"]}
+{"tokens": ["any", "inernational", "brownies", "around", "here"], "ner_tags": ["O", "B-Restaurant_Name", "B-Dish", "B-Location", "I-Location"]}
+{"tokens": ["any", "kid", "friendly", "restaurants", "around", "here"], "ner_tags": ["O", "B-Amenity", "I-Amenity", "O", "B-Location", "I-Location"]}
+{"tokens": ["any", "late", "night", "diners", "featuring", "sake"], "ner_tags": ["O", "B-Hours", "I-Hours", "B-Cuisine", "O", "B-Dish"]}
+{"tokens": ["any", "nice", "dine", "in", "restaurants", "next", "to", "here"], "ner_tags": ["O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["any", "nicely", "priced", "places", "in", "harvard", "with", "nice", "toppings"], "ner_tags": ["O", "B-Price", "O", "O", "B-Location", "I-Location", "O", "B-Rating", "I-Rating"]}
+{"tokens": ["any", "of", "the", "landrys", "restaurants", "offer", "carry", "out", "until", "at", "least", "9", "pm"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "O", "O", "B-Amenity", "I-Amenity", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["any", "pho", "hoa", "restaurants", "with", "late", "night", "dining"], "ner_tags": ["O", "O", "B-Cuisine", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["any", "place", "around", "that", "serves", "sandwichs", "on", "their", "lunch", "menu"], "ner_tags": ["O", "O", "B-Location", "O", "O", "B-Dish", "O", "O", "B-Hours", "O"]}
+{"tokens": ["any", "place", "around", "that", "serves", "vegan", "food", "options"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "O"]}
+{"tokens": ["any", "place", "good", "to", "eat", "nearby"], "ner_tags": ["O", "O", "B-Rating", "O", "O", "B-Location"]}
+{"tokens": ["any", "place", "to", "eat", "nearby", "that", "takes", "travelers", "checks"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["any", "places", "along", "this", "road", "serve", "chips"], "ner_tags": ["O", "O", "B-Location", "I-Location", "I-Location", "O", "B-Dish"]}
+{"tokens": ["any", "places", "in", "harvard", "square", "where", "i", "can", "get", "potato", "pie", "and", "see", "some", "celebrities"], "ner_tags": ["O", "O", "O", "B-Location", "I-Location", "O", "O", "O", "O", "B-Dish", "I-Dish", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["any", "reasonable", "priced", "chowder", "restaurants", "offering", "group", "dining"], "ner_tags": ["O", "B-Price", "O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["any", "restaurant", "close", "by", "that", "serves", "vegan", "dish", "and", "its", "affordable"], "ner_tags": ["O", "O", "B-Location", "I-Location", "O", "O", "B-Cuisine", "O", "O", "O", "B-Price"]}
+{"tokens": ["any", "restaurant", "that", "opens", "24", "hours"], "ner_tags": ["O", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["any", "restaurants", "around", "featuring", "brunch", "on", "hovendon", "avenue"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["any", "restaurants", "around", "four", "miles", "from", "here", "with", "private", "rooms"], "ner_tags": ["O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["any", "restaurants", "around", "government", "center", "with", "great", "prices"], "ner_tags": ["O", "O", "O", "B-Location", "I-Location", "O", "B-Price", "O"]}
+{"tokens": ["any", "restaurants", "around", "sacramento", "with", "fireplace", "and", "great", "atmosphere"], "ner_tags": ["O", "O", "B-Location", "I-Location", "O", "B-Amenity", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["any", "restaurants", "around", "that", "serve", "organic", "foods"], "ner_tags": ["O", "O", "B-Location", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["any", "restaurants", "take", "checks"], "ner_tags": ["O", "O", "B-Location", "I-Location"]}
+{"tokens": ["any", "restaurants", "that", "serve", "french", "fries", "and", "have", "a", "patio", "nearby"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "I-Dish", "O", "O", "O", "B-Amenity", "B-Location"]}
+{"tokens": ["any", "southwestern", "cuisine", "restaurants", "featuring", "romantic", "dining", "nearby"], "ner_tags": ["O", "B-Cuisine", "O", "O", "O", "B-Amenity", "I-Amenity", "B-Location"]}
+{"tokens": ["any", "spanish", "restaurants", "in", "jamaica", "plain", "open", "in", "the", "morning"], "ner_tags": ["O", "B-Cuisine", "O", "O", "B-Location", "I-Location", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["any", "suggestions", "on", "what", "to", "eat"], "ner_tags": ["O", "B-Rating", "O", "O", "O", "O"]}
+{"tokens": ["any", "tapas", "places", "with", "drink", "specials"], "ner_tags": ["O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["any", "unique", "foods", "here"], "ner_tags": ["O", "B-Cuisine", "O", "O"]}
+{"tokens": ["anybody", "serve", "boardwalk", "fries", "around", "here"], "ner_tags": ["O", "O", "B-Dish", "I-Dish", "B-Location", "I-Location"]}
+{"tokens": ["anyplace", "i", "can", "get", "some", "good", "pita", "bread", "thats", "not", "more", "than", "4", "miles", "out"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "O"]}
+{"tokens": ["anything", "good", "to", "eat", "within", "10", "miles"], "ner_tags": ["O", "B-Rating", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["anything", "with", "group", "seating"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["anywhere", "i", "can", "get", "a", "tasty", "and", "cheap", "noodle", "dish"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Price", "B-Dish", "I-Dish"]}
+{"tokens": ["anywhere", "thats", "not", "crowded", "before", "the", "game", "where", "i", "can", "get", "a", "bite"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["apple", "bs", "resturant", "in", "town"], "ner_tags": ["B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Location", "I-Location"]}
+{"tokens": ["arabic", "cuisine", "near", "me"], "ner_tags": ["B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "any", "doughnut", "shops", "open", "right", "now"], "ner_tags": ["O", "O", "B-Cuisine", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "any", "vegetarian", "restaurants", "within", "5", "blocks", "of", "here"], "ner_tags": ["O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "O", "O"]}
+{"tokens": ["are", "children", "allowed", "in", "mi", "piacis"], "ner_tags": ["O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["are", "rivertown", "coffee", "co", "or", "aromas", "coffee", "bar", "expensive"], "ner_tags": ["O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "O"]}
+{"tokens": ["are", "sebastians", "restaurants", "portions", "big"], "ner_tags": ["O", "B-Restaurant_Name", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "than", "any", "sushi", "restaurants", "on", "the", "north", "side", "of", "town", "and", "i", "need", "to", "know", "their", "phone", "number", "and", "directions"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["are", "the", "any", "vegetarian", "restaurants", "in", "cleveland", "park"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "the", "proportions", "big", "or", "small"], "ner_tags": ["O", "O", "O", "O", "O", "O"]}
+{"tokens": ["are", "the", "reviews", "good", "for", "chichis", "in", "gona"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name", "O", "B-Location"]}
+{"tokens": ["are", "the", "reviews", "good", "for", "donovans", "rooftop", "grill"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["are", "the", "servers", "attractive"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "their", "any", "places", "to", "eat", "near", "my", "location"], "ner_tags": ["O", "O", "O", "B-Location", "O", "O", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "affordable", "restaurants", "in", "kingston", "open", "until", "11", "pm"], "ner_tags": ["O", "O", "B-Price", "O", "O", "B-Location", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "24", "hour", "diners", "around", "here"], "ner_tags": ["O", "O", "O", "B-Hours", "I-Hours", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "24", "hour", "diners", "near", "by"], "ner_tags": ["O", "O", "O", "B-Hours", "I-Hours", "B-Cuisine", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "24", "hour", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Hours", "I-Hours", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "4", "star", "seafood", "restaurants", "within", "10", "miles"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "5", "star", "restaurants", "near"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "affordable", "meat", "serving", "venues", "within", "five", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "B-Price", "B-Cuisine", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "affordable", "steak", "places", "in", "littleton"], "ner_tags": ["O", "O", "O", "B-Price", "O", "O", "O", "O"]}
+{"tokens": ["are", "there", "any", "all", "you", "can", "eat", "sushi", "buffets", "in", "westbury"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "B-Cuisine", "B-Amenity", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "american", "restaurants", "in", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "american", "restaurants", "that", "are", "also", "carry", "out"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "arbys", "in", "this", "area"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "arbys", "with", "in", "ten", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "asian", "restaurants", "close", "by"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "authentic", "greek", "restaurants", "that", "serve", "gyros", "around", "here"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "O", "B-Dish", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "authentic", "vietnamese", "restaurants", "in", "the", "area", "that", "specialize", "in", "regional", "dishes"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location", "I-Location", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["are", "there", "any", "bob", "evans", "restaurants", "around", "this", "late", "at", "night", "that", "can", "wait", "on", "us", "quickly"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "breakfast", "places", "that", "serve", "steak", "near", "elm", "park"], "ner_tags": ["O", "O", "O", "B-Hours", "O", "O", "O", "B-Dish", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "brewery", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "brewpubs", "on", "our", "route"], "ner_tags": ["O", "O", "O", "B-Amenity", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "buffets", "in", "town", "with", "a", "smoking", "section"], "ner_tags": ["O", "O", "O", "B-Amenity", "B-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "buffets", "within", "2", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "B-Amenity", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "burger", "joints", "in", "atlanta", "that", "are", "open", "after", "midnight"], "ner_tags": ["O", "O", "O", "B-Dish", "O", "O", "B-Location", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "burger", "joints", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "burger", "king", "restaurants", "on", "my", "route"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "burger", "kings", "near", "by"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "burger", "kings", "nearby"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location"]}
+{"tokens": ["are", "there", "any", "burger", "kings", "within", "5", "miles"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "burger", "kings", "within", "5", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location", "I-Location", "O", "O"]}
+{"tokens": ["are", "there", "any", "burgers", "and", "cupcakes", "locations", "outside", "of", "manhattan"], "ner_tags": ["O", "O", "O", "B-Dish", "O", "B-Dish", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "byob", "joints", "on", "chester", "st"], "ner_tags": ["O", "O", "O", "B-Amenity", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cafes", "open", "past", "11", "pm", "which", "have", "internet", "access"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "casual", "patio", "type", "dining", "places", "nearby"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "celebrity", "hangouts", "that", "serve", "german", "food", "near", "here"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "chain", "restaurants", "nearby", "where", "kids", "eat", "free"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "charming", "non", "smoking", "ice", "cream", "parlors", "nearby"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "B-Cuisine", "I-Cuisine", "I-Cuisine", "B-Location"]}
+{"tokens": ["are", "there", "any", "cheap", "4", "star", "restaurants", "near", "here"], "ner_tags": ["O", "O", "O", "B-Price", "B-Rating", "I-Rating", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cheap", "burger", "places", "in", "this", "neighborhood"], "ner_tags": ["O", "O", "O", "B-Price", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cheap", "cafes", "near", "here"], "ner_tags": ["O", "O", "O", "B-Price", "B-Cuisine", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cheap", "colombian", "restaurants", "around", "3", "rd", "street"], "ner_tags": ["O", "O", "O", "B-Price", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cheap", "cuban", "joints", "along", "terminal", "road"], "ner_tags": ["O", "O", "O", "B-Price", "B-Cuisine", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cheap", "cuban", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Price", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "cheap", "family", "style", "restaurants", "open", "after", "12", "pm", "nearby"], "ner_tags": ["O", "O", "O", "B-Price", "B-Cuisine", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "B-Location"]}
+{"tokens": ["are", "there", "any", "cheap", "halal", "places", "around", "here", "with", "good", "views"], "ner_tags": ["O", "O", "O", "B-Price", "B-Cuisine", "B-Location", "I-Location", "I-Location", "O", "B-Rating", "I-Rating"]}
+{"tokens": ["are", "there", "any", "cheap", "places", "to", "eat", "nearby"], "ner_tags": ["O", "O", "O", "B-Price", "O", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "cheap", "restaurants", "near", "canton"], "ner_tags": ["O", "O", "O", "B-Price", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "chilean", "restaurants", "with", "live", "music", "on", "the", "south", "side"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "chilis", "in", "my", "area"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "chinese", "restaurant", "within", "10", "miles"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "chinese", "restaurants", "around", "here"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "chinese", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "chinese", "restaurants", "nearby", "with", "a", "historical", "design"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "chinese", "restaurants", "on", "east", "86th", "street", "in", "manhattan", "where", "i", "can", "get", "takeout", "lunch", "specials"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "chinese", "restaurants", "that", "serve", "carry", "out", "in", "this", "city"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Amenity", "I-Amenity", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cicis", "pizza", "near", "the", "hotel"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "O", "O"]}
+{"tokens": ["are", "there", "any", "completely", "vegan", "restaurants", "around", "here"], "ner_tags": ["O", "O", "O", "B-Amenity", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cuban", "restaurants", "in", "this", "city"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cuban", "restaurants", "near", "milford"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "cuban", "restaurants", "open", "at", "2", "pm", "for", "a", "late", "lunch", "in", "miami"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "O", "O", "B-Hours", "I-Hours", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "delis", "along", "my", "route"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "delis", "near", "by"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "delis", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location"]}
+{"tokens": ["are", "there", "any", "denneys", "restaurants", "in", "this", "town"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "dennys", "within", "5", "miles"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "dessert", "bars", "in", "san", "francisco"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "diners", "along", "my", "route"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "diners", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "diners", "near", "my", "current", "location"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "diners", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location"]}
+{"tokens": ["are", "there", "any", "diners", "open", "before", "5", "am", "that", "allow", "smoking"], "ner_tags": ["O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "diners", "that", "serve", "breakfast", "all", "day", "in", "town"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Hours", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "diners", "within", "5", "miles"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "donut", "shops", "around", "here"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "drive", "throughs", "nearby"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "B-Location"]}
+{"tokens": ["are", "there", "any", "eateries", "nearby", "that", "where", "can", "dine", "at", "the", "bar", "after", "2", "am"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "elegant", "dress", "restaurants", "that", "serve", "messy", "hot", "wings", "after", "midnight"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "B-Dish", "I-Dish", "I-Dish", "B-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "ethiopian", "restaurants", "in", "town"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "ethiopian", "restaurants", "on", "the", "waterfront"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "expensive", "great", "restaurants", "in", "my", "town"], "ner_tags": ["O", "O", "O", "B-Price", "B-Rating", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "expensive", "restaurants", "nearby", "that", "allow", "children"], "ner_tags": ["O", "O", "O", "B-Price", "O", "B-Location", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "fairly", "inexpensive", "restaurants", "with", "valet", "parking"], "ner_tags": ["O", "O", "O", "B-Price", "I-Price", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "family", "dining", "restaurants", "close", "by", "with", "great", "prices"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Location", "I-Location", "O", "B-Price", "O"]}
+{"tokens": ["are", "there", "any", "family", "friendly", "sit", "down", "restaurants", "in", "this", "mall"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "family", "restaurants", "open", "at", "4", "am", "on", "weekdays"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "family", "style", "steakhouses", "within", "a", "mile", "of", "here"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "B-Cuisine", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "famous", "or", "historical", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Rating", "O", "B-Amenity", "O", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "fast", "food", "places", "open"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Hours"]}
+{"tokens": ["are", "there", "any", "fast", "food", "places", "within", "a", "mile", "of", "me"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location", "I-Location", "O", "O"]}
+{"tokens": ["are", "there", "any", "fast", "food", "restaurants", "along", "my", "route"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "fast", "food", "restaurants", "close", "by"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "fast", "food", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "fast", "food", "restaurants", "offering", "valet", "parking"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "fast", "food", "restaurants", "open", "now"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "fast", "food", "restaurants", "still", "open"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "fast", "food", "restaurants", "with", "a", "parking", "deck", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "O", "B-Amenity", "I-Amenity", "B-Location"]}
+{"tokens": ["are", "there", "any", "fine", "dining", "restaurants", "nearby", "that", "accept", "paypal", "as", "payment"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Location", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "fine", "dining", "restaurants", "that", "allow", "me", "to", "eat", "my", "elegant", "meal", "in", "my", "car", "within", "10", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "fine", "dining", "restaurants", "that", "i", "can", "take", "a", "date", "to", "without", "a", "reservation"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "fine", "dining", "restaurants", "thats", "arent", "downtown"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "first", "rate", "indian", "restaurant", "that", "serves", "curry", "in", "the", "governement", "center"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "B-Cuisine", "O", "O", "O", "B-Dish", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "first", "rate", "restaurant", "on", "the", "waterfront"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "O", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "five", "star", "restaurants", "in", "this", "area"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "food", "trucks", "in", "the", "downtown", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "free", "standing", "cinnabon", "restaurants", "in", "washington", "dc"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "B-Restaurant_Name", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "french", "restaurants", "around", "here"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "full", "service", "restaurants", "open", "after", "midnight", "around", "here"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Hours", "I-Hours", "I-Hours", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "german", "food", "restaurants", "within", "4", "miles"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "german", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "german", "restaurants", "nearby", "that", "celebs", "hangout", "at"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "german", "restaurants", "that", "are", "open", "all", "day", "in", "ashland"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "good", "burger", "joints", "around", "here"], "ner_tags": ["O", "O", "O", "B-Rating", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "good", "delis", "in", "little", "china"], "ner_tags": ["O", "O", "O", "B-Rating", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "good", "mexican", "restaurants", "near", "tuscon"], "ner_tags": ["O", "O", "O", "B-Rating", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "good", "pizza", "places", "around", "here"], "ner_tags": ["O", "O", "O", "B-Rating", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "good", "places", "to", "drink", "nearby", "i", "need", "a", "bar", "thats", "still", "open", "at", "this", "hour", "if", "you", "dont", "know", "the", "hours", "of", "operation", "give", "me", "a", "phone", "number", "so", "i", "can", "check"], "ner_tags": ["O", "O", "O", "B-Rating", "O", "O", "B-Cuisine", "O", "O", "O", "O", "B-Cuisine", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["are", "there", "any", "good", "places", "to", "eat", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Rating", "O", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "good", "places", "with", "fresh", "seafood", "around", "here"], "ner_tags": ["O", "O", "O", "B-Rating", "O", "O", "B-Dish", "I-Dish", "O", "O"]}
+{"tokens": ["are", "there", "any", "good", "potato", "places", "near", "north", "quincy"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "good", "restaurants", "having", "happy", "hour", "now"], "ner_tags": ["O", "O", "O", "B-Rating", "O", "O", "B-Amenity", "I-Amenity", "O"]}
+{"tokens": ["are", "there", "any", "good", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Rating", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "good", "restaurants", "near", "by", "that", "have", "a", "good", "deal", "going", "on", "right", "now"], "ner_tags": ["O", "O", "O", "B-Rating", "O", "B-Location", "I-Location", "O", "O", "O", "B-Price", "I-Price", "O", "O", "B-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "good", "reviews", "for", "hals", "pie", "restaurant"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["are", "there", "any", "good", "seafood", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Rating", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "greek", "restaurants", "in", "memphis"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "greek", "style", "pizza", "parlors", "near", "by"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "I-Cuisine", "I-Cuisine", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "halal", "restaurants", "in", "natick", "open", "around", "8", "pm"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "halal", "restaurants", "within", "ten", "minutes", "of", "here", "that", "are", "open", "before", "seven", "am"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "handicapped", "accessible", "restaurants", "around"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "O"]}
+{"tokens": ["are", "there", "any", "high", "priced", "irish", "restaurants", "on", "forest", "street"], "ner_tags": ["O", "O", "O", "B-Price", "O", "B-Cuisine", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "high", "rated", "chinese", "restaurants", "in", "florence"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "B-Cuisine", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "high", "rated", "pancake", "places", "in", "this", "town"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "highly", "rated", "restaurants", "nearby", "that", "do", "not", "require", "a", "reservation"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "O", "B-Location", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "B-Amenity"]}
+{"tokens": ["are", "there", "any", "highly", "rated", "steak", "houses", "nearby"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "B-Cuisine", "I-Cuisine", "B-Location"]}
+{"tokens": ["are", "there", "any", "highly", "rated", "tapas", "bars", "with", "karaoke", "night"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "B-Cuisine", "I-Cuisine", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "hip", "tea", "places", "nearby", "upscale", "would", "be", "nice"], "ner_tags": ["O", "O", "O", "B-Dish", "B-Cuisine", "O", "B-Location", "B-Price", "O", "O", "O"]}
+{"tokens": ["are", "there", "any", "historic", "restaurants", "in", "the", "nearby", "area", "that", "have", "lobster", "on", "the", "menu"], "ner_tags": ["O", "O", "O", "B-Amenity", "O", "O", "O", "B-Location", "I-Location", "O", "O", "B-Dish", "O", "O", "O"]}
+{"tokens": ["are", "there", "any", "historic", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Amenity", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "hotel", "restraunts", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "hotels", "that", "serve", "dough"], "ner_tags": ["O", "O", "O", "B-Amenity", "O", "O", "B-Dish"]}
+{"tokens": ["are", "there", "any", "hotels", "within", "ten", "miles", "that", "serve", "food"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "ice", "cream", "stores", "along", "the", "way"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "ihops", "nearby"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location"]}
+{"tokens": ["are", "there", "any", "ihops", "within", "5", "miles"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "indian", "restaurants", "near", "me"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "indian", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "indian", "restaurants", "that", "offer", "outdoor", "dining"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "indian", "restaurants", "with", "good", "ratings", "in", "this", "town"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Rating", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "italian", "places", "nearby", "where", "celebrities", "hang", "out"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "italian", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "italian", "restaurants", "near", "me", "that", "are", "open", "till", "11", "pm"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "italian", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "italian", "restaurants", "open", "before", "7", "am"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "italian", "restaurants", "within", "3", "miles", "that", "have", "great", "service"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "jamaican", "restaurants", "that", "are", "open", "24", "7"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "O", "B-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "japanese", "restaurants", "down", "town", "that", "offer", "traditional", "seating", "arrangements"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "japanese", "steakhouses", "in", "los", "angeles"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "jazz", "supper", "clubs", "by", "the", "beach"], "ner_tags": ["O", "O", "O", "B-Amenity", "B-Hours", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "karaoke", "bars", "nearby"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "B-Location"]}
+{"tokens": ["are", "there", "any", "kfc", "restaurants", "along", "my", "route"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "kid", "friendly", "chinese", "restaurants", "around", "here"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "kid", "friendly", "restaurants", "around", "here"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "kid", "friendly", "restaurants", "near", "the", "park"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "kid", "friendly", "restaurants", "nearby", "that", "serve", "sake"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Location", "O", "O", "B-Dish"]}
+{"tokens": ["are", "there", "any", "kid", "friendly", "restaurants", "that", "also", "contain", "a", "smoking", "area"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "kid", "friendly", "restaurants", "that", "require", "an", "elegant", "dress", "code", "nearby"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "B-Location"]}
+{"tokens": ["are", "there", "any", "kid", "friendly", "pizza", "parlors", "around", "here"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "B-Dish", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "korean", "restaurants", "in", "town"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "kosher", "bars", "in", "wichita"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "kosher", "delis", "on", "this", "street"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "kosher", "places", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "local", "bars", "that", "allow", "smoking", "in", "the", "restaurant"], "ner_tags": ["O", "O", "O", "B-Location", "B-Cuisine", "O", "B-Amenity", "I-Amenity", "O", "O", "O"]}
+{"tokens": ["are", "there", "any", "local", "secret", "restaurants", "serving", "filet", "mignon", "nearby"], "ner_tags": ["O", "O", "O", "B-Rating", "I-Rating", "O", "O", "B-Dish", "I-Dish", "B-Location"]}
+{"tokens": ["are", "there", "any", "locations", "serving", "small", "portions", "of", "pastry", "nearby"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Dish", "B-Location"]}
+{"tokens": ["are", "there", "any", "low", "cost", "cuban", "restaurants"], "ner_tags": ["O", "O", "O", "B-Price", "I-Price", "B-Cuisine", "O"]}
+{"tokens": ["are", "there", "any", "malaysian", "places", "around", "roxbury", "crossing"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "mcdonalds", "close", "by"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "mcdonalds", "in", "the", "vicinity"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "mcdonalds", "within", "1", "mile", "of", "my", "job"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "mcdonalds", "within", "5", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location", "O", "O"]}
+{"tokens": ["are", "there", "any", "mcdonalds", "within", "5", "minutes", "of", "here"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location", "O", "O"]}
+{"tokens": ["are", "there", "any", "mexican", "places", "with", "high", "zagat", "ratings", "near", "me"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Rating", "I-Rating", "I-Rating", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "mexican", "restaurant", "in", "five", "miles"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "mexican", "restaurants", "around"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "mexican", "restaurants", "in", "my", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "mexican", "restaurants", "near", "port", "washington", "new", "york"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "michelin", "starred", "fine", "dining", "restaurant", "around"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Rating", "B-Amenity", "I-Amenity", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "mid", "priced", "vegan", "restaurants", "in", "north", "quincy"], "ner_tags": ["O", "O", "O", "B-Price", "O", "B-Cuisine", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "moderately", "priced", "steakhouses", "nearby"], "ner_tags": ["O", "O", "O", "B-Price", "O", "B-Cuisine", "B-Location"]}
+{"tokens": ["are", "there", "any", "mongolian", "eatery", "in", "the", "tri", "state", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "mystery", "dinner", "theaters", "in", "chattanooga"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "I-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "non", "smoking", "bars", "on", "this", "road"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "non", "smoking", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "notable", "pad", "thai", "restaurants", "around", "with", "great", "prices"], "ner_tags": ["O", "O", "O", "B-Rating", "B-Cuisine", "I-Cuisine", "O", "B-Location", "O", "B-Price", "O"]}
+{"tokens": ["are", "there", "any", "olive", "gardens", "on", "my", "route"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "organic", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "outbacks", "along", "the", "route"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "outdoor", "eatery", "on", "battery", "march"], "ner_tags": ["O", "O", "O", "B-Amenity", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "outdoor", "kosher", "restaurants", "nearby", "that", "are", "open", "until", "midnight"], "ner_tags": ["O", "O", "O", "B-Amenity", "B-Cuisine", "O", "B-Location", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "papa", "johns", "in", "glen", "head", "long", "island"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "pet", "friendly", "restaurants", "in", "my", "area"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "pizza", "parlors", "in", "indiana"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "pizza", "places", "5", "miles", "away"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "pizza", "places", "on", "the", "way", "home", "im", "looking", "for", "big", "portions", "so", "i", "can", "bring", "some", "home", "to", "the", "family"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Location", "I-Location", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["are", "there", "any", "pizza", "places", "open", "around", "here"], "ner_tags": ["O", "O", "O", "B-Dish", "O", "B-Hours", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "pizza", "places", "that", "are", "still", "open", "after", "midnight", "less", "than", "10", "minutes", "from", "here"], "ner_tags": ["O", "O", "O", "B-Dish", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "pizza", "places", "with", "chicago", "style", "pizza", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Dish", "I-Dish", "I-Dish", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "pizzerias", "on", "long", "island", "that", "1", "slices", "of", "pizza"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "O", "B-Price", "B-Dish", "I-Dish", "I-Dish"]}
+{"tokens": ["are", "there", "any", "place", "nearby", "with", "fantastic", "prices", "and", "online", "reservations"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "B-Price", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "place", "open", "for", "breakfast", "before", "5", "am"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "place", "that", "caters", "to", "families", "with", "kids"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "place", "that", "is", "open", "after", "12", "p"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "places", "near", "by", "with", "carhops"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "O", "B-Amenity"]}
+{"tokens": ["are", "there", "any", "places", "near", "here", "that", "kids", "would", "want", "to", "eat"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "places", "nearby", "that", "serve", "ice", "cream"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["are", "there", "any", "places", "nearby", "to", "get", "a", "caesar", "salad"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["are", "there", "any", "places", "nearby", "with", "a", "variety", "of", "diabetic", "friendly", "entree", "choices"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "B-Dish", "I-Dish"]}
+{"tokens": ["are", "there", "any", "places", "on", "this", "side", "of", "town", "that", "serve", "mussels", "at", "a", "wonderful", "price", "and", "allow", "you", "to", "bring", "your", "own", "beverages"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "O", "O", "B-Cuisine", "O", "O", "B-Price", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "places", "open", "for", "an", "early", "business", "breakfast", "other", "than", "nu", "way", "cafe"], "ner_tags": ["O", "O", "O", "O", "B-Hours", "O", "O", "B-Hours", "B-Amenity", "B-Hours", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["are", "there", "any", "places", "that", "deliver", "nearby"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "B-Location"]}
+{"tokens": ["are", "there", "any", "places", "that", "have", "happy", "hour", "and", "serve", "soup", "around", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Dish", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "places", "that", "have", "special", "prices", "if", "two", "meals", "are", "ordered"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "places", "that", "promote", "use", "of", "locally", "grown", "produce"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "places", "that", "serve", "asian", "food", "where", "i", "can", "take", "my", "date"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "places", "that", "serve", "bagels", "and", "have", "beer", "along", "this", "route"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Dish", "O", "O", "B-Amenity", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "places", "that", "serve", "chocolate", "for", "dessert", "and", "you", "can", "taste", "free", "samples"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Dish", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "places", "that", "serve", "halal", "nearby"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "B-Location"]}
+{"tokens": ["are", "there", "any", "places", "that", "specialize", "in", "milkshakes", "near", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Dish", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "places", "to", "eat", "around", "here", "with", "a", "drive", "thru"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "places", "to", "eat", "within", "five", "minutes", "of", "here", "try", "some", "place", "with", "amazing", "prices"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "O", "O", "O", "O", "B-Price", "O"]}
+{"tokens": ["are", "there", "any", "places", "to", "get", "desert"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine"]}
+{"tokens": ["are", "there", "any", "places", "where", "i", "could", "catch", "a", "hot", "dog"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["are", "there", "any", "places", "with", "early", "bird", "specials"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "places", "with", "fixed", "menus", "that", "sell", "cookies", "near", "by"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Dish", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "places", "within", "4", "miles", "that", "plays", "nice", "music", "and", "suitable", "for", "a", "group", "of", "people"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "O", "O", "O", "B-Amenity", "O", "O"]}
+{"tokens": ["are", "there", "any", "places", "within", "5", "miles", "that", "serve", "a", "dish", "this", "town", "is", "known", "for"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "O", "B-Dish", "I-Dish", "I-Dish", "I-Dish", "I-Dish", "I-Dish"]}
+{"tokens": ["are", "there", "any", "popeyes", "within", "5", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "raw", "vegan", "restaurants", "in", "the", "long", "beach", "long", "island", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "really", "cheap", "restaurants", "around", "that", "are", "open", "7", "days", "a", "week"], "ner_tags": ["O", "O", "O", "B-Price", "I-Price", "O", "B-Location", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "reasonably", "priced", "mexican", "spots"], "ner_tags": ["O", "O", "O", "B-Price", "O", "B-Cuisine", "O"]}
+{"tokens": ["are", "there", "any", "reasonably", "priced", "restaurant", "that", "opens", "before", "8", "am"], "ner_tags": ["O", "O", "O", "B-Price", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "reasonably", "priced", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Price", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "restarurants", "that", "have", "bands", "playing"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurant", "in", "the", "area", "that", "will", "allow", "me", "to", "bring", "my", "dog"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "around", "featuring", "enchiladas", "or", "mexican", "food"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Dish", "O", "B-Cuisine", "O"]}
+{"tokens": ["are", "there", "any", "restaurants", "around", "featuring", "lunch", "specials"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Hours", "B-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "around", "here", "that", "allow", "dogs"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "around", "here", "that", "give", "senor", "discounts"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "between", "here", "and", "work"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "by", "the", "hospital"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "currently", "serving", "brunch", "within", "three", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Hours", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "in", "inman", "square", "thats", "open", "after", "9", "pm", "7", "days", "a", "week"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "restaurants", "in", "new", "paris", "that", "i", "can", "get", "some", "lunch", "that", "arent", "real", "expensive"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "O", "O", "O", "B-Hours", "O", "B-Price", "I-Price", "I-Price"]}
+{"tokens": ["are", "there", "any", "restaurants", "in", "the", "area", "that", "i", "can", "pay", "with", "travelers", "checks"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "in", "the", "theatre", "district", "located", "on", "beaumont", "street"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "in", "this", "area", "that", "have", "outdoor", "dining", "available"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity", "O"]}
+{"tokens": ["are", "there", "any", "restaurants", "in", "this", "city", "with", "a", "dining", "room", "that", "have", "a", "great", "view", "of", "the", "night", "skyline"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "in", "town", "that", "also", "have", "a", "happy", "hour"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "near", "by"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "near", "the", "theater", "close", "by", "offering", "cocktails"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "O", "B-Dish"]}
+{"tokens": ["are", "there", "any", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "nearby", "that", "are", "open", "late"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "O", "B-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "restaurants", "nearby", "that", "have", "outside", "dining"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "nearby", "that", "serve", "shrimp"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "O", "B-Dish"]}
+{"tokens": ["are", "there", "any", "restaurants", "nearby", "where", "i", "can", "get", "beer", "and", "bratwurst"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "O", "O", "O", "B-Dish", "O", "B-Dish"]}
+{"tokens": ["are", "there", "any", "restaurants", "on", "kerry", "place", "featuring", "fireplace", "dining"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "on", "long", "island", "with", "a", "smoking", "section"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "on", "oak", "street", "that", "serve", "sushi"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "B-Dish"]}
+{"tokens": ["are", "there", "any", "restaurants", "open", "on", "thanksgiving", "day", "that", "serve", "turkey"], "ner_tags": ["O", "O", "O", "O", "B-Hours", "O", "B-Hours", "I-Hours", "O", "O", "B-Dish"]}
+{"tokens": ["are", "there", "any", "restaurants", "open", "that", "have", "a", "buffet", "nearby"], "ner_tags": ["O", "O", "O", "O", "B-Hours", "O", "O", "O", "B-Amenity", "B-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "open", "this", "early", "nearby"], "ner_tags": ["O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "B-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "serving", "french", "fries", "before", "nine", "am", "within", "four", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "O", "O", "B-Dish", "I-Dish", "B-Hours", "I-Hours", "I-Hours", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "serving", "moderately", "priced", "margaritas", "nearby"], "ner_tags": ["O", "O", "O", "O", "O", "B-Price", "O", "B-Dish", "B-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "specializing", "in", "english", "food", "within", "a", "5", "mile", "radius"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "that", "are", "serving", "beans", "at", "2", "am"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Dish", "O", "B-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "restaurants", "that", "have", "discounts", "for", "college", "kids"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "that", "have", "good", "reviews", "for", "their", "milkshakes", "that", "are", "open", "at", "7", "am"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Rating", "I-Rating", "O", "O", "B-Dish", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "restaurants", "that", "have", "two", "for", "1", "deals"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Price", "I-Price", "I-Price", "I-Price"]}
+{"tokens": ["are", "there", "any", "restaurants", "that", "offer", "outdoor", "live", "music", "and", "outdoor", "dining"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "that", "opens", "before", "lunch", "and", "is", "cheap"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Hours", "I-Hours", "O", "O", "B-Price"]}
+{"tokens": ["are", "there", "any", "restaurants", "that", "serve", "mediterranean", "food"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["are", "there", "any", "restaurants", "that", "serves", "southwestern", "cuisine", "and", "is", "located", "with", "5", "miles"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "that", "stay", "open", "past", "midnight", "in", "arlington"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "thats", "serve", "breakfast", "all", "day"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "where", "kids", "can", "eat", "for", "free"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "B-Price"]}
+{"tokens": ["are", "there", "any", "restaurants", "with", "a", "play", "area", "for", "kids", "near", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Amenity", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "with", "fast", "service", "that", "are", "open", "before", "11", "am"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "restaurants", "with", "free", "parking", "around", "here"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "restaurants", "with", "games", "or", "a", "play", "area", "that", "take", "kids", "birthday", "party", "reservations"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "within", "1", "mile", "of", "my", "hotel", "that", "are", "opened", "24", "hours"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "restaurants", "within", "10", "miles", "where", "kids", "eat", "free"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restaurants", "within", "15", "miles", "that", "are", "smoke", "free", "what", "type", "of", "restaurants", "are", "they"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["are", "there", "any", "restaurants", "within", "a", "mile", "of", "here"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O"]}
+{"tokens": ["are", "there", "any", "restaurants", "within", "walking", "distance", "that", "has", "valet", "parking"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restuarants", "open", "till", "midnight", "that", "serve", "perfectly", "portioned", "meals"], "ner_tags": ["O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "restuarants", "within", "10", "miles", "that", "are", "open", "until", "2am", "that", "have", "a", "full", "service", "menu", "and", "serve", "alcohol"], "ner_tags": ["O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "B-Hours", "I-Hours", "I-Hours", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "reviews", "about", "mcdills"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["are", "there", "any", "romantic", "vegan", "restaurants"], "ner_tags": ["O", "O", "O", "B-Amenity", "B-Cuisine", "O"]}
+{"tokens": ["are", "there", "any", "sandwich", "shops", "in", "california"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "scandanavian", "places", "around"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "seafood", "buffet", "places", "around", "here"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Amenity", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "seafood", "restaurants", "close", "to", "hicksville", "ny"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "seafood", "restaurants", "in", "montauk", "ny"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "seafood", "restaurants", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "seafood", "restaurants", "that", "have", "a", "smoking", "section"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "sonics", "along", "my", "route"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "special", "deals", "for", "yogis", "yogurt", "place"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["are", "there", "any", "special", "location", "dining", "restaurants", "that", "serve", "lobster", "roll"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "B-Location", "O", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["are", "there", "any", "special", "occasion", "dining", "facilities", "serving", "tacos", "before", "10", "am"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "O", "B-Dish", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "specialties", "being", "offered", "at", "any", "nearby", "restaurants"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["are", "there", "any", "starbucks", "around"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location"]}
+{"tokens": ["are", "there", "any", "steak", "houses"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine"]}
+{"tokens": ["are", "there", "any", "stylish", "restaurants", "in", "beacon", "hill", "open", "after", "2", "am"], "ner_tags": ["O", "O", "O", "B-Amenity", "O", "O", "B-Location", "I-Location", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "suggestions", "for", "a", "vegetarian", "restaurant", "south", "of", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "suishi", "places", "near", "hear"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "sushi", "bars", "near", "central", "park"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "sushi", "bars", "within", "10", "miles"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "sushi", "places", "in", "town"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "sushi", "restaurants", "in", "my", "area", "that", "are", "open", "for", "lunch"], "ner_tags": ["O", "O", "O", "B-Dish", "O", "O", "B-Location", "I-Location", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "sushi", "restaurants", "with", "take", "out", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity", "B-Location"]}
+{"tokens": ["are", "there", "any", "taco", "bells", "close", "by"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "taco", "bells", "in", "new", "jersey"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "taco", "bells", "on", "my", "route"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "tapas", "bars", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "B-Location"]}
+{"tokens": ["are", "there", "any", "thai", "places", "within", "five", "miles", "of", "my", "current", "location"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "thai", "restaurants", "in", "germantown"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "thai", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "theme", "restaurant", "downtown"], "ner_tags": ["O", "O", "O", "B-Amenity", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "tomachhios", "locations", "within", "five", "miles", "that", "have", "a", "great", "patio", "setting"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "O", "B-Location", "I-Location", "I-Location", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "there", "any", "tourist", "type", "sightseeing", "restaurants"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O"]}
+{"tokens": ["are", "there", "any", "upscale", "non", "smoking", "places", "that", "have", "halal"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "B-Cuisine"]}
+{"tokens": ["are", "there", "any", "vegan", "diners", "in", "this", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "vegan", "or", "vegetarian", "restaurants", "around", "here", "that", "cook", "with", "fake", "and", "substitute", "meats", "other", "than", "boca", "burgers"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Cuisine", "O", "B-Location", "I-Location", "O", "O", "O", "B-Dish", "O", "B-Dish", "I-Dish", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["are", "there", "any", "vegan", "restaurant", "bars", "near", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Amenity", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "vegan", "restaurants", "close", "by", "featuring", "great", "service"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "O", "B-Rating", "I-Rating"]}
+{"tokens": ["are", "there", "any", "vegan", "restaurants", "in", "this", "town"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "vegan", "restaurants", "that", "are", "open", "after", "9", "p"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "vegetarian", "indian", "places", "nearby"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location"]}
+{"tokens": ["are", "there", "any", "vegetarian", "restaurants", "near", "time", "square"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "vegetarian", "restaurants", "that", "are", "open", "til", "midnight"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "vegeterian", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "vietnamese", "places", "around", "here"], "ner_tags": ["O", "O", "O", "B-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "vietnamese", "restaurants", "within", "10", "miles"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "waterfront", "dining", "spots", "that", "is", "open", "before", "12", "a"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "there", "any", "waterfront", "restaurants", "that", "serve", "sausage", "in", "post", "office", "square"], "ner_tags": ["O", "O", "O", "B-Location", "O", "O", "O", "B-Dish", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "wendys", "on", "my", "route"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "O", "B-Location", "I-Location"]}
+{"tokens": ["are", "there", "any", "wendys", "within", "10", "miles", "of", "me"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location", "O", "O"]}
+{"tokens": ["are", "there", "any", "wendys", "within", "5", "miles", "of", "me"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "B-Location", "I-Location", "I-Location", "O", "O"]}
+{"tokens": ["are", "there", "are", "sushi", "bars", "open", "within", "ten", "miles"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "B-Hours", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "four", "star", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "B-Rating", "I-Rating", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "there", "nearby", "restaurants"], "ner_tags": ["O", "O", "B-Location", "O"]}
+{"tokens": ["are", "there", "reservations", "available", "tonight", "for", "7", "pm", "at", "la", "belle", "vie"], "ner_tags": ["O", "O", "B-Amenity", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["are", "there", "restaurants", "nearby", "that", "are", "cheap"], "ner_tags": ["O", "O", "O", "B-Location", "O", "O", "B-Price"]}
+{"tokens": ["are", "there", "steakhouses", "nearby"], "ner_tags": ["O", "O", "B-Cuisine", "B-Location"]}
+{"tokens": ["are", "there", "tapas", "places", "that", "are", "open", "right", "now"], "ner_tags": ["O", "O", "B-Cuisine", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["are", "they", "any", "italian", "restaurants", "between", "home", "and", "work"], "ner_tags": ["O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["are", "we", "near", "a", "place", "to", "get", "a", "good", "bowl", "of", "southern", "grits"], "ner_tags": ["O", "O", "B-Location", "O", "O", "O", "O", "O", "B-Rating", "B-Dish", "I-Dish", "I-Dish", "I-Dish"]}
+{"tokens": ["are", "you", "able", "to", "find", "a", "restaurant", "that", "offers", "free", "refills", "on", "soda"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["are", "you", "able", "to", "tell", "me", "a", "restaurants", "health", "score", "rating"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Rating", "I-Rating", "I-Rating"]}
+{"tokens": ["are", "you", "showing", "any", "wendys", "nearby"], "ner_tags": ["O", "O", "O", "O", "B-Restaurant_Name", "B-Location"]}
+{"tokens": ["area", "restaurants"], "ner_tags": ["B-Location", "O"]}
+{"tokens": ["arrange", "my", "most", "frequented", "diners", "in", "terms", "of", "average", "price"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Price", "O"]}
+{"tokens": ["asian"], "ner_tags": ["B-Cuisine"]}
+{"tokens": ["asian", "by", "the", "river"], "ner_tags": ["B-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["asian", "specialty", "in", "my", "town"], "ner_tags": ["B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["at", "what", "time", "does", "dennys", "open"], "ner_tags": ["O", "O", "O", "O", "B-Restaurant_Name", "B-Hours"]}
+{"tokens": ["at", "what", "time", "does", "johnny", "rockets", "open"], "ner_tags": ["O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Hours"]}
+{"tokens": ["at", "what", "time", "does", "marlenes", "close"], "ner_tags": ["O", "O", "O", "O", "B-Restaurant_Name", "O"]}
+{"tokens": ["at", "what", "times", "does", "pizzeria", "uno", "on", "elm", "street", "open"], "ner_tags": ["O", "O", "B-Hours", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Location", "I-Location", "B-Hours"]}
+{"tokens": ["at", "which", "restaurant", "can", "i", "eat", "breakfast", "for", "dinner"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "I-Cuisine", "I-Cuisine"]}
+{"tokens": ["at", "which", "restaurant", "can", "i", "eat", "some", "good", "seafood"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Rating", "B-Cuisine"]}
+{"tokens": ["at", "which", "restaurants", "can", "eat", "before", "7", "am"], "ner_tags": ["O", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["at", "which", "restaurants", "can", "i", "eat", "outside"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["baby", "can", "you", "find", "me", "a", "good", "mexican", "restaurant", "in", "the", "area"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Rating", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["ballpark", "dining"], "ner_tags": ["B-Cuisine", "O"]}
+{"tokens": ["based", "on", "local", "or", "community", "reviews", "what", "is", "the", "highest", "rated", "restaurant", "within", "15", "miles", "that", "serves", "home", "cooked", "style", "meals"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Rating", "I-Rating", "O", "B-Location", "I-Location", "I-Location", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O"]}
+{"tokens": ["bbq", "joint", "in", "town"], "ner_tags": ["B-Cuisine", "I-Cuisine", "B-Location", "I-Location"]}
+{"tokens": ["bbq", "ribs", "and", "beer", "sports", "bar"], "ner_tags": ["B-Dish", "I-Dish", "O", "B-Dish", "B-Amenity", "I-Amenity"]}
+{"tokens": ["beer", "and", "pub", "grub"], "ner_tags": ["B-Cuisine", "I-Cuisine", "I-Cuisine", "I-Cuisine"]}
+{"tokens": ["begin", "with", "the", "most", "frequented", "eateries", "in", "san", "diego"], "ner_tags": ["O", "O", "O", "O", "B-Hours", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["best", "authentic", "mexican", "chimichangas"], "ner_tags": ["B-Rating", "B-Cuisine", "I-Cuisine", "B-Dish"]}
+{"tokens": ["best", "rated", "donuts", "in", "town"], "ner_tags": ["B-Rating", "I-Rating", "B-Dish", "B-Location", "I-Location"]}
+{"tokens": ["beverly", "burgers", "closest", "to", "my", "area"], "ner_tags": ["B-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["bitch", "i", "need", "a", "sandwich"], "ner_tags": ["O", "O", "O", "O", "B-Dish"]}
+{"tokens": ["book", "me", "a", "dinner", "for", "two", "at", "700", "tonight", "at", "lecooks", "please"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Hours", "I-Hours", "O", "B-Restaurant_Name", "O"]}
+{"tokens": ["book", "me", "a", "table", "for", "1", "at", "the", "closest", "place", "that", "recently", "got", "a", "high", "rating", "for", "their", "food"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Location", "O", "O", "O", "O", "O", "B-Rating", "O", "O", "O", "O"]}
+{"tokens": ["breakfast", "and", "lunch", "resturants"], "ner_tags": ["B-Hours", "O", "B-Hours", "O"]}
+{"tokens": ["breakfast", "spot"], "ner_tags": ["B-Hours", "O"]}
+{"tokens": ["breakfast", "with", "the", "kids"], "ner_tags": ["B-Hours", "O", "O", "B-Amenity"]}
+{"tokens": ["brunch"], "ner_tags": ["B-Cuisine"]}
+{"tokens": ["buffet"], "ner_tags": ["B-Amenity"]}
+{"tokens": ["buffet", "reviews", "nearest"], "ner_tags": ["B-Cuisine", "B-Location", "I-Location"]}
+{"tokens": ["buffets", "nearest"], "ner_tags": ["B-Amenity", "B-Location"]}
+{"tokens": ["burger", "joint"], "ner_tags": ["B-Cuisine", "I-Cuisine"]}
+{"tokens": ["burger", "joint", "that", "takes", "mastercard"], "ner_tags": ["B-Cuisine", "I-Cuisine", "O", "O", "B-Amenity"]}
+{"tokens": ["burger", "king", "hours", "nearby"], "ner_tags": ["B-Restaurant_Name", "I-Restaurant_Name", "B-Hours", "B-Location"]}
+{"tokens": ["burger", "king", "resturant"], "ner_tags": ["B-Restaurant_Name", "I-Restaurant_Name", "O"]}
+{"tokens": ["burrito", "resturant", "near", "my", "location"], "ner_tags": ["B-Dish", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["by", "helping", "me", "find", "a", "place", "to", "satiisfy", "my", "craving", "for", "skillet", "fried", "chicken"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish", "I-Dish"]}
+{"tokens": ["call", "applebees"], "ner_tags": ["O", "B-Restaurant_Name"]}
+{"tokens": ["call", "bouchon", "in", "napa"], "ner_tags": ["O", "B-Restaurant_Name", "O", "B-Location"]}
+{"tokens": ["call", "golden", "corral", "in", "sacramento"], "ner_tags": ["O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Location"]}
+{"tokens": ["call", "hometown", "buffet"], "ner_tags": ["O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["call", "mcdonalds"], "ner_tags": ["O", "B-Restaurant_Name"]}
+{"tokens": ["call", "ohgane", "in", "oakland", "for", "me"], "ner_tags": ["O", "B-Restaurant_Name", "O", "B-Location", "O", "O"]}
+{"tokens": ["call", "roys", "in", "oahu"], "ner_tags": ["O", "B-Restaurant_Name", "O", "B-Location"]}
+{"tokens": ["call", "sonic", "burger"], "ner_tags": ["O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["call", "the", "closest", "applebees", "for", "me"], "ner_tags": ["O", "O", "B-Location", "B-Restaurant_Name", "O", "O"]}
+{"tokens": ["call", "the", "closest", "chinese", "restaurant"], "ner_tags": ["O", "O", "B-Location", "B-Cuisine", "O"]}
+{"tokens": ["call", "the", "closest", "filipino", "restaurant"], "ner_tags": ["O", "O", "B-Location", "B-Cuisine", "O"]}
+{"tokens": ["call", "the", "closest", "hong", "kong", "style", "cafe"], "ner_tags": ["O", "O", "B-Location", "B-Cuisine", "I-Cuisine", "I-Cuisine", "I-Cuisine"]}
+{"tokens": ["call", "the", "pizza", "hut", "closest", "to", "my", "house", "that", "offers", "delivery"], "ner_tags": ["O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location", "I-Location", "I-Location", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["call", "to", "make", "a", "reservation", "for", "bouchon", "in", "napa"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "O", "B-Location"]}
+{"tokens": ["can", "i", "bring", "a", "seeing", "eye", "dog", "to", "the", "nearest", "fast", "food", "restaurant"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "O", "B-Location", "B-Cuisine", "I-Cuisine", "O"]}
+{"tokens": ["can", "i", "bring", "my", "child", "to", "fox", "and", "hound", "after", "9", "pm"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "i", "bring", "my", "dog", "on", "the", "patio"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "i", "bring", "my", "kids", "to", "the", "cuban", "restaurant"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "bring", "my", "kids", "with", "me", "to", "dinner", "at", "lecooks"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Hours", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "bring", "my", "own", "beer", "to", "lincolns", "landing"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "bring", "my", "seven", "children", "to", "the", "italian", "restaurant", "on", "5", "th", "street"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Cuisine", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "bring", "my", "stroller"], "ner_tags": ["O", "O", "B-Amenity", "O", "B-Amenity"]}
+{"tokens": ["can", "i", "eat", "at", "the", "bar", "at", "cj", "gourmet", "pizza"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "eat", "outdoors", "at", "dinosaur", "bbq"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "find", "a", "german", "restaurant", "near", "main", "str"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "find", "a", "noodle", "bar", "after", "midnight"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "I-Dish", "B-Hours", "I-Hours"]}
+{"tokens": ["can", "i", "find", "a", "place", "that", "serves", "excellent", "clam", "sauce"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Rating", "B-Dish", "I-Dish"]}
+{"tokens": ["can", "i", "find", "a", "restaurant", "that", "serves", "a", "few", "vegetarian", "entrees", "as", "well", "as", "meat", "options"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "find", "cheap", "sushi", "someplace", "not", "too", "far"], "ner_tags": ["O", "O", "O", "B-Price", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "find", "chicken", "and", "waffles", "in", "stockton", "ca"], "ner_tags": ["O", "O", "O", "B-Dish", "I-Dish", "I-Dish", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "i", "find", "sushi", "at", "midnight", "in", "berkeley"], "ner_tags": ["O", "O", "O", "B-Dish", "O", "B-Hours", "O", "B-Location"]}
+{"tokens": ["can", "i", "find", "tgif", "fridays", "near", "me"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location"]}
+{"tokens": ["can", "i", "finda", "a", "cinnabon", "in", "the", "volusia", "mall"], "ner_tags": ["O", "O", "O", "O", "B-Restaurant_Name", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "a", "cheese", "bourek", "anywhere", "around", "here"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "I-Dish", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "a", "cheeseburger", "anywhere", "close", "for", "under", "a", "dollar"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "O", "O", "O", "B-Price", "I-Price", "I-Price"]}
+{"tokens": ["can", "i", "get", "a", "fish", "sandwich", "at", "jacks"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "I-Dish", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "a", "good", "home", "made", "burger", "and", "fries", "within", "ten", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "O", "B-Rating", "B-Dish", "I-Dish", "I-Dish", "I-Dish", "I-Dish", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "a", "good", "snack", "somewhere"], "ner_tags": ["O", "O", "O", "O", "B-Rating", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "get", "a", "good", "steak", "at", "the", "hampton", "diner"], "ner_tags": ["O", "O", "O", "O", "B-Rating", "B-Dish", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "a", "list", "of", "chichis", "that", "are", "in", "baltimore"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "O", "O", "O", "B-Location"]}
+{"tokens": ["can", "i", "get", "a", "list", "of", "high", "zagat", "rated", "restaurants", "in", "10", "miles", "of", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Rating", "I-Rating", "I-Rating", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "a", "list", "of", "pizza", "places", "within", "walking", "distance"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Dish", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "a", "list", "of", "restaurants", "that", "are", "still", "open", "that", "serve", "pancakes"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Hours", "I-Hours", "O", "O", "B-Dish"]}
+{"tokens": ["can", "i", "get", "a", "list", "of", "restaurants", "that", "are", "within", "a", "minute", "of", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "a", "list", "of", "restaurants", "that", "have", "a", "kids", "eat", "free", "special", "in", "5", "miles"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "a", "listing", "for", "american", "cuisine"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "get", "a", "partying", "restaurant", "to", "serve", "17", "members", "with", "outdoor", "dining"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "i", "get", "a", "pizza", "around", "here"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "B-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "a", "reservation", "at", "a", "french", "restaurant", "for", "7", "30", "pm", "tonight"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "O", "O", "B-Cuisine", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "i", "get", "a", "reservation", "at", "bella", "napoli", "or", "are", "they", "full"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "O", "O", "O"]}
+{"tokens": ["can", "i", "get", "a", "restaurant", "serving", "birthday", "cakes", "along", "135", "n"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "carry", "out", "after", "12", "pm", "at", "1790", "restaurant", "and", "tavern"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "B-Hours", "I-Hours", "I-Hours", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "carryout", "at", "obriens"], "ner_tags": ["O", "O", "O", "B-Amenity", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "directions", "to", "a", "mexican", "restaurant"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "get", "directions", "to", "the", "closest", "diner"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "B-Cuisine"]}
+{"tokens": ["can", "i", "get", "directions", "to", "the", "nearest", "dennys"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "directions", "to", "the", "nearest", "mcdonalds"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "polish", "sausage", "take", "out", "anywhere", "around", "here"], "ner_tags": ["O", "O", "O", "B-Dish", "I-Dish", "B-Amenity", "I-Amenity", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "some", "barbeque", "now"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "get", "swedish", "meatballs", "for", "take", "out", "anywhere", "at", "2", "am"], "ner_tags": ["O", "O", "O", "B-Dish", "I-Dish", "O", "B-Amenity", "I-Amenity", "B-Location", "O", "B-Hours", "I-Hours"]}
+{"tokens": ["can", "i", "get", "take", "out", "at", "changs"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "the", "menu", "for", "tims", "restaurant"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "the", "nearest", "restaurant", "that", "serves", "lobster", "sandwiches"], "ner_tags": ["O", "O", "O", "O", "B-Location", "O", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["can", "i", "get", "the", "nearest", "soul", "food", "joint", "in", "a", "five", "mile", "radius"], "ner_tags": ["O", "O", "O", "O", "B-Location", "B-Cuisine", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "get", "the", "number", "to", "bertuccis"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "the", "number", "to", "dennys"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "the", "phone", "number", "for", "applebees"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "get", "the", "phone", "number", "for", "the", "nearest", "five", "star", "restaurant"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Location", "B-Rating", "I-Rating", "O"]}
+{"tokens": ["can", "i", "get", "the", "phone", "number", "of", "a", "restaurant", "for", "carry", "out", "order", "of", "spicy", "buffalo", "wings"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Dish", "I-Dish", "I-Dish"]}
+{"tokens": ["can", "i", "get", "to", "a", "place", "that", "is", "within", "five", "minutes", "and", "open", "before", "noon"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "i", "get", "to", "the", "ashland", "pizza", "palace", "in", "5", "minutes", "or", "less"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "O", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "go", "to", "a", "italian", "restaurant", "with", "pizza"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "B-Amenity"]}
+{"tokens": ["can", "i", "have", "a", "business", "dinner", "at", "sevans", "bakery", "in", "chinatown"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Location"]}
+{"tokens": ["can", "i", "have", "a", "list", "of", "nearby", "carryout", "restaurants"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "B-Amenity", "O"]}
+{"tokens": ["can", "i", "have", "a", "list", "of", "restaurants", "that", "serve", "italian", "food"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "have", "a", "moderate", "priced", "japanese", "restaurant"], "ner_tags": ["O", "O", "O", "O", "B-Price", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "have", "a", "phone", "number", "to", "mexican", "take", "out"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Cuisine", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "i", "have", "directions", "to", "mc", "donalds"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "have", "directions", "to", "mcdonalds"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "have", "directions", "to", "the", "closest", "mcdonalds"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "have", "directions", "to", "wendys"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "have", "phone", "numbers", "to", "fine", "dining", "locations", "in", "this", "area"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "i", "have", "some", "fried", "chicken", "for", "lunch"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "I-Dish", "O", "B-Hours"]}
+{"tokens": ["can", "i", "have", "the", "location", "of", "the", "closest", "mcdonalds"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Location", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "have", "the", "menu", "of", "the", "sushi", "place"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "have", "the", "phone", "number", "for", "dominos", "pizza"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "have", "the", "phone", "number", "to", "applebees", "on", "atlantic", "avenue"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "i", "have", "the", "phone", "number", "to", "the", "nearest", "outback"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Location", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "have", "the", "route", "to", "the", "nearest", "taco", "place"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Location", "B-Cuisine", "O"]}
+{"tokens": ["can", "i", "hold", "my", "daughters", "birthday", "party", "at", "charlies"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "just", "get", "a", "burger", "at", "this", "restaurant"], "ner_tags": ["O", "O", "O", "O", "O", "B-Dish", "O", "O", "O"]}
+{"tokens": ["can", "i", "make", "a", "reservation", "for", "little", "q", "hotpot", "restaurant", "on", "valentines", "day"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "O", "O", "O"]}
+{"tokens": ["can", "i", "make", "an", "online", "reservation", "at", "a", "nearby", "place", "called", "cafe", "mirror"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Location", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "make", "online", "reservations"], "ner_tags": ["O", "O", "O", "O", "O"]}
+{"tokens": ["can", "i", "make", "online", "reservations", "for", "delicious", "paisas", "bakery", "for", "midnight"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "O", "B-Hours"]}
+{"tokens": ["can", "i", "make", "reservations", "for", "the", "outback", "steakhouse", "online"], "ner_tags": ["O", "O", "O", "B-Amenity", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Amenity"]}
+{"tokens": ["can", "i", "make", "reservations", "on", "line", "for", "new", "ho", "toy", "restaurant"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O"]}
+{"tokens": ["can", "i", "order", "delivery", "from", "nikos", "diner"], "ner_tags": ["O", "O", "B-Hours", "B-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "order", "take", "out", "at", "nikos", "greek", "cafe"], "ner_tags": ["O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "paid", "with", "a", "credit", "card", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["can", "i", "pay", "by", "check", "at", "mcdonalds"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "pay", "with", "a", "check", "at", "griffins"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "smoke", "in", "maxs", "bar", "and", "grill"], "ner_tags": ["O", "O", "B-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "smoke", "in", "oconnors", "pub", "and", "grill"], "ner_tags": ["O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "split", "entrees", "at", "abuelos"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "still", "find", "any", "chinese", "food", "restaurants", "that", "are", "still", "open", "right", "now"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "i", "use", "a", "visa", "card", "at", "romys", "shrimp", "shack"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "i", "use", "my", "20", "percent", "off", "coupon", "at", "mercys"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "i", "use", "my", "credit", "card", "at", "the", "greek", "lunch", "truck"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Cuisine", "I-Cuisine", "I-Cuisine"]}
+{"tokens": ["can", "i", "wear", "jeans", "at", "cheesecake", "factory"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "ol", "heidleburg", "restaurant", "accept", "a", "party", "of", "12"], "ner_tags": ["O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "check", "whether", "theres", "a", "subway", "in", "this", "town"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "dine", "in", "the", "bar", "at", "cjs", "gourmet", "pizza"], "ner_tags": ["O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "you", "dine", "very", "cheaply", "at", "the", "bar", "at", "ichiban", "steak", "house"], "ner_tags": ["O", "O", "O", "O", "B-Price", "O", "O", "B-Amenity", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "you", "direct", "me", "to", "a", "few", "high", "end", "celebrity", "hangout", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "direct", "me", "to", "a", "restaurant", "that", "sells", "bottles", "of", "wine", "for", "you", "to", "take", "home"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish", "I-Dish", "I-Dish", "I-Dish", "I-Dish", "I-Dish", "I-Dish"]}
+{"tokens": ["can", "you", "direct", "me", "to", "a", "restaurant", "with", "no", "smoking"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "direct", "me", "to", "an", "affordable", "place", "in", "southborough"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Price", "O", "O", "B-Location"]}
+{"tokens": ["can", "you", "direct", "me", "to", "the", "closest", "pizzeria"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "B-Cuisine"]}
+{"tokens": ["can", "you", "direct", "me", "to", "the", "nearest", "needham", "house", "of", "pizza"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "you", "find", "a", "bakery", "along", "my", "route"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "buffet", "nearby"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "O"]}
+{"tokens": ["can", "you", "find", "a", "chinese", "restaurant"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "a", "chinese", "restaurant", "with", "carry", "out"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "comfortable", "place", "on", "shawsheen", "avenue", "that", "has", "fine", "dining"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "O", "O", "B-Location", "I-Location", "O", "O", "B-Cuisine", "I-Cuisine"]}
+{"tokens": ["can", "you", "find", "a", "family", "style", "restaurant", "for", "us"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O"]}
+{"tokens": ["can", "you", "find", "a", "fast", "food", "place", "in", "one", "minute"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "fast", "food", "place", "that", "serves", "healthy", "shakes"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["can", "you", "find", "a", "fine", "dining", "place", "for", "me", "called", "the", "cookhouse"], "ner_tags": ["O", "O", "O", "O", "B-Price", "I-Price", "O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "you", "find", "a", "good", "quality", "restaurant", "that", "has", "burgers", "close", "by"], "ner_tags": ["O", "O", "O", "O", "B-Rating", "I-Rating", "O", "O", "O", "B-Dish", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "good", "restaurant", "for", "a", "childs", "birthday"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "O", "B-Amenity", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "greek", "restaurant", "thats", "open", "24", "hours"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Hours", "I-Hours"]}
+{"tokens": ["can", "you", "find", "a", "highly", "rated", "restaurant", "that", "is", "open", "in", "the", "morning"], "ner_tags": ["O", "O", "O", "O", "B-Rating", "I-Rating", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "you", "find", "a", "kid", "friendly", "restaurant", "with", "prices", "no", "more", "than", "15", "00", "per", "entree", "that", "is", "rated", "four", "stars"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Price", "I-Price", "I-Price", "I-Price", "I-Price", "I-Price", "I-Price", "O", "O", "O", "B-Rating", "I-Rating", "I-Rating"]}
+{"tokens": ["can", "you", "find", "a", "local", "hotspot", "on", "my", "route", "that", "features", "specials"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "locally", "owned", "restaurant", "in", "a", "three", "block", "radius"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "malaysian", "take", "out", "place"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "B-Amenity", "I-Amenity", "O"]}
+{"tokens": ["can", "you", "find", "a", "market", "that", "has", "prix", "fixe", "menus"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity", "O"]}
+{"tokens": ["can", "you", "find", "a", "mediterranean", "restaurant"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "a", "mexican", "cafe"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "I-Cuisine"]}
+{"tokens": ["can", "you", "find", "a", "mexican", "restaurant", "near", "me"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "mexican", "restaurant", "where", "they", "make", "fresh", "guacamole", "at", "your", "table"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Amenity", "B-Dish", "I-Dish", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "monicas", "with", "a", "bar"], "ner_tags": ["O", "O", "O", "O", "B-Restaurant_Name", "O", "O", "B-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "pizza", "place"], "ner_tags": ["O", "O", "O", "O", "B-Dish", "O"]}
+{"tokens": ["can", "you", "find", "a", "place", "serving", "tofu", "at", "12", "pm", "with", "good", "prices"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Dish", "O", "B-Hours", "I-Hours", "O", "B-Price", "O"]}
+{"tokens": ["can", "you", "find", "a", "place", "that", "has", "a", "romantic", "stting"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "place", "that", "is", "pet", "friendly"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "place", "that", "sells", "sangrias", "with", "valet", "parking", "within", "a", "mile"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Dish", "O", "B-Amenity", "I-Amenity", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "place", "that", "serves", "french", "toast"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["can", "you", "find", "a", "place", "to", "eat", "that", "has", "good", "reviews", "of", "their", "steak"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Rating", "I-Rating", "O", "O", "B-Dish"]}
+{"tokens": ["can", "you", "find", "a", "place", "to", "eat", "that", "serves", "sweet", "bread"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["can", "you", "find", "a", "place", "to", "eat", "within", "a", "twenty", "mile", "radius", "that", "serves", "wine", "at", "all", "hours"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "O", "O", "B-Dish", "O", "B-Hours", "I-Hours"]}
+{"tokens": ["can", "you", "find", "a", "place", "to", "watch", "people", "where", "they", "serve", "cajun", "food", "for", "a", "somewhat", "high", "price"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Price", "I-Price", "O"]}
+{"tokens": ["can", "you", "find", "a", "place", "where", "famous", "people", "can", "be", "seen", "like", "stephen", "anthonys", "restaurant", "around", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "place", "where", "i", "can", "grab", "some", "drinks", "on", "my", "route"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Dish", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "place", "where", "i", "can", "have", "dinner", "with", "a", "party", "of", "10", "people", "or", "more"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "O", "O"]}
+{"tokens": ["can", "you", "find", "a", "place", "where", "i", "will", "be", "allowed", "to", "smoke", "while", "eating"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "O", "O"]}
+{"tokens": ["can", "you", "find", "a", "place", "with", "moderately", "priced", "entrees", "such", "as", "kookoo", "cafe"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Price", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "you", "find", "a", "place", "within", "a", "mile", "of", "the", "house"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "O"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "around", "the", "theater", "located", "on", "fort", "myers"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "featuring", "soy", "bean", "curd", "where", "i", "can", "dine", "in", "an", "historic", "setting"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish", "I-Dish", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "in", "this", "area", "where", "souvaki", "is", "served"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "B-Dish", "O", "O"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "near", "by", "that", "serves", "tapas"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "B-Dish"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "near", "downtown", "that", "serves", "french", "cuisine"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "near", "the", "theater", "district", "in", "billerica", "that", "offers", "huge", "portions"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "B-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "serving", "chinese", "food", "within", "2", "miles"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "that", "excepts", "debit"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "that", "has", "a", "play", "area", "for", "the", "kids"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "that", "has", "carry", "out", "and", "is", "not", "too", "far", "from", "8", "th", "and", "maple", "st"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "that", "offers", "chowder", "cuisine", "late", "at", "night"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "you", "find", "a", "restaurant", "that", "serves", "breakfast", "allday"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Cuisine", "B-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "romantic", "afghan", "place"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "a", "romantic", "restaurant", "that", "has", "a", "dress", "code"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "steak", "place", "with", "outdoor", "seating"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "a", "steakhouse", "that", "accepts", "reservations", "and", "make", "one", "for", "8", "00", "pm"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "you", "find", "a", "taco", "bell", "along", "my", "route"], "ner_tags": ["O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "vegan", "bakery", "within", "five", "miles"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "I-Cuisine", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "a", "well", "rated", "japanese", "restaurant", "with", "parking"], "ner_tags": ["O", "O", "O", "O", "B-Rating", "I-Rating", "B-Cuisine", "O", "O", "B-Amenity"]}
+{"tokens": ["can", "you", "find", "an", "affordable", "chinese", "restaurant"], "ner_tags": ["O", "O", "O", "O", "B-Price", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "an", "applebees", "restaurant", "within", "5", "miles"], "ner_tags": ["O", "O", "O", "O", "B-Restaurant_Name", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "an", "elegant", "restaurant", "with", "slightly", "high", "prices", "for", "chowder"], "ner_tags": ["O", "O", "O", "O", "B-Amenity", "O", "O", "B-Price", "I-Price", "O", "O", "B-Dish"]}
+{"tokens": ["can", "you", "find", "an", "expensive", "martins", "home", "bakery", "with", "a", "parking", "lot"], "ner_tags": ["O", "O", "O", "O", "B-Price", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "an", "italian", "restaurant"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "an", "italian", "restaurant", "within", "1", "hour", "drive", "that", "does", "not", "require", "reservations"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "I-Location", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "any", "chinese", "cuisine", "restaurants", "close", "by", "that", "have", "reasonable", "prices"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "O", "B-Location", "I-Location", "O", "O", "B-Price", "O"]}
+{"tokens": ["can", "you", "find", "any", "reviews", "on", "madelines"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Restaurant_Name"]}
+{"tokens": ["can", "you", "find", "butterfields", "restaurant", "where", "i", "can", "sit", "at", "the", "bar", "and", "eat", "with", "fair", "prices"], "ner_tags": ["O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "O", "O", "O", "B-Price", "O"]}
+{"tokens": ["can", "you", "find", "closest", "ice", "cream", "shop"], "ner_tags": ["O", "O", "O", "B-Location", "B-Cuisine", "I-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "closest", "red", "robin"], "ner_tags": ["O", "O", "O", "B-Location", "B-Restaurant_Name", "I-Restaurant_Name"]}
+{"tokens": ["can", "you", "find", "fast", "food", "near", "here"], "ner_tags": ["O", "O", "O", "B-Cuisine", "I-Cuisine", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "leoshe", "place", "around", "here", "that", "has", "a", "brewpub"], "ner_tags": ["O", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location", "O", "O", "O", "B-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "3", "star", "restaurant"], "ner_tags": ["O", "O", "O", "O", "O", "B-Rating", "I-Rating", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "bar", "with", "a", "dining", "option"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "bar", "with", "a", "four", "star", "rating"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "B-Rating", "I-Rating", "I-Rating"]}
+{"tokens": ["can", "you", "find", "me", "a", "beer", "garden"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "I-Cuisine"]}
+{"tokens": ["can", "you", "find", "me", "a", "burger", "joint"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "I-Cuisine"]}
+{"tokens": ["can", "you", "find", "me", "a", "burger", "king", "thats", "open", "right", "now"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "you", "find", "me", "a", "casual", "barbecue", "restaurant", "within", "thirty", "miles", "from", "here"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "casual", "place", "to", "eat"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "cheap", "brazilian", "restaurant", "in", "millis"], "ner_tags": ["O", "O", "O", "O", "O", "B-Price", "B-Cuisine", "O", "O", "B-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "china", "palace", "close", "to", "my", "home"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "chinese", "restaurant"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "chjildren", "friendly", "restaurant", "in", "redding", "ca", "thats", "open", "until", "11pm"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Location", "I-Location", "O", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "you", "find", "me", "a", "coffee", "shop", "with", "internet", "access"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "dairy", "queen", "nearby"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "B-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "drive", "thru", "since", "i", "am", "in", "a", "hurry"], "ner_tags": ["O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "ethiopian", "place", "where", "the", "service", "is", "rated", "high"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "O", "O", "B-Rating", "I-Rating"]}
+{"tokens": ["can", "you", "find", "me", "a", "fair", "priced", "diner"], "ner_tags": ["O", "O", "O", "O", "O", "B-Price", "O", "B-Cuisine"]}
+{"tokens": ["can", "you", "find", "me", "a", "five", "star", "place", "by", "the", "water", "in", "inman", "square"], "ner_tags": ["O", "O", "O", "O", "O", "B-Rating", "I-Rating", "O", "B-Amenity", "I-Amenity", "I-Amenity", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "good", "place", "for", "a", "nice", "date"], "ner_tags": ["O", "O", "O", "O", "O", "B-Rating", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "greek", "diner", "that", "has", "received", "high", "ratings", "on", "its", "service", "and", "has", "outdoor", "dining"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "I-Cuisine", "O", "O", "B-Location", "B-Rating", "I-Rating", "O", "O", "B-Location", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "mcdonalds", "close", "to", "the", "airport"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name", "B-Location", "O", "O", "B-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "mexican", "restaurant", "with", "outdoor", "sitting", "area"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "moderately", "priced", "restaurant", "that", "serves", "wine"], "ner_tags": ["O", "O", "O", "O", "O", "B-Price", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "pastry", "shop", "not", "more", "than", "5", "blocks", "from", "here"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "called", "asai", "fine", "japanese", "cuisine", "with", "a", "nice", "wine", "list"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "I-Restaurant_Name", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "thats", "open", "after", "midnight", "in", "abington", "with", "dinner", "theater"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "O", "B-Location", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "to", "dine", "at", "the", "bar", "for", "some", "tea", "for", "breakfast"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "O", "O", "B-Dish", "O", "B-Hours"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "to", "eat"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "to", "eat", "near", "here"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "to", "eat", "some", "chips", "by", "the", "ocean"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Dish", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "to", "get", "entertainment", "while", "i", "eat"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "to", "get", "mexican", "food"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "where", "the", "entrees", "are", "priced", "under", "10", "per", "person", "but", "still", "has", "good", "food"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "O", "O", "B-Price", "I-Price", "O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "place", "with", "live", "music", "and", "seafood"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "B-Cuisine"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant"], "ner_tags": ["O", "O", "O", "O", "O", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "in", "my", "area", "in", "which", "i", "can", "smoke"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "in", "the", "area", "that", "serves", "chinese", "food", "and", "allows", "carry", "out"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location", "O", "O", "B-Cuisine", "B-Dish", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "near", "the", "bay"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "nearby", "that", "has", "a", "lunch", "special"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "serving", "toppings", "before", "10", "am"], "ner_tags": ["O", "O", "O", "O", "O", "B-Restaurant_Name", "O", "B-Dish", "B-Hours", "I-Hours", "I-Hours"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "has", "a", "smoking", "section", "on", "the", "south", "side", "of", "town"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Location", "I-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "has", "happy", "hour", "and", "serves", "spaghetti"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Dish"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "has", "low", "prices"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Price", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "has", "one", "of", "those", "playrooms", "for", "kids"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "is", "cheap"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Price"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "is", "family", "friendly"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "is", "near", "me"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "is", "open", "at", "6", "am", "for", "breakfast"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Hours", "I-Hours", "I-Hours", "I-Hours", "O", "B-Hours"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "is", "rated", "at", "least", "3", "stars", "and", "low", "priced"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Rating", "I-Rating", "O", "B-Price", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "serves", "new", "york", "style", "pizza"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish", "I-Dish", "I-Dish"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "that", "serves", "vegetarian", "meatloaf"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "with", "a", "good", "view"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "with", "a", "salad", "bar"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "with", "a", "smoking", "area", "nearby"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "B-Location"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "with", "at", "least", "a", "few", "star", "rating"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "B-Rating", "I-Rating", "I-Rating"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "with", "outdoor", "dining", "that", "sells", "fruity", "drinks"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Dish", "I-Dish"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "with", "outside", "dining"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "a", "restaurant", "with", "valet", "parking", "that", "will", "impress", "my", "date"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "O", "O", "B-Amenity", "O", "O"]}
+{"tokens": ["can", "you", "find", "me", "a", "seafood", "restaurant", "that", "serves", "crabs"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Dish"]}
+{"tokens": ["can", "you", "find", "me", "a", "vegetarian", "restaurant"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "me", "an", "eatery", "that", "accepts", "american", "express", "credit", "cards"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Amenity", "I-Amenity", "I-Amenity", "I-Amenity", "I-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "an", "italian", "restaurant", "within", "10", "miles"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "chinese", "food", "on", "the", "way", "home"], "ner_tags": ["O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "restaurants", "in", "the", "area"], "ner_tags": ["O", "O", "O", "O", "O", "B-Location", "I-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "some", "chinese", "food"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "me", "some", "delicious", "chinese", "food"], "ner_tags": ["O", "O", "O", "O", "O", "B-Rating", "B-Cuisine", "O"]}
+{"tokens": ["can", "you", "find", "me", "some", "kosher", "food", "that", "is", "romantic"], "ner_tags": ["O", "O", "O", "O", "O", "B-Cuisine", "O", "O", "O", "B-Amenity"]}
+{"tokens": ["can", "you", "find", "me", "someplace", "with", "a", "good", "wine", "list", "this", "time"], "ner_tags": ["O", "O", "O", "O", "O", "O", "O", "B-Rating", "B-Amenity", "I-Amenity", "O", "O"]}
+{"tokens": ["can", "you", "find", "me", "somewhere", "in", "southborough", "thats", "not", "too", "expensive"], "ner_tags": ["O", "O", "O", "O", "O", "O", "B-Location", "O", "B-Price", "I-Price", "I-Price"]}
+{"tokens": ["can", "you", "find", "me", "the", "best", "chinese", "food", "in", "town"], "ner_tags": ["O", "O", "O", "O", "O", "B-Rating", "B-Cuisine", "O", "B-Location", "I-Location"]}
+{"tokens": ["can", "you", "find", "me", "the", "best", "place", "to", "get", "a", "sub"], "ner_tags": ["O", "O", "O", "O", "O", "B-Rating", "O", "O", "O", "O", "B-Dish"]}
+{"tokens": ["can", "you", "find", "me", "the", "best", "place", "to", "get", "japanese"], "ner_tags": ["O", "O", "O", "O", "O", "B-Rating", "O", "O", "O", "B-Cuisine"]}
