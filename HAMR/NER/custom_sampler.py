@@ -14,23 +14,24 @@ class HardnessAwareSampler(Sampler):
     meta_probs are updated externally by the Trainer, reflecting the probability
     that a sample should be drawn next.
     """
-    def __init__(self,
-                 dataset_len: int,
-                 meta_probs: torch.Tensor,  # Shared tensor, updated by Trainer
-                 alpha: float = 0.5,
-                 epsilon: float = 1e-6,
-                 num_samples: Optional[int] = None,
-                 neighbor_boost: Optional[torch.Tensor] = None,
-                 lambda_boost: float = 0.0,
-                 replacement: bool = False):
+    def __init__(
+        self,
+        dataset_len: int,
+        meta_probs: torch.Tensor,  # Shared tensor, updated by Trainer
+        alpha: float = 0.5,
+        epsilon: float = 1e-6,
+        num_samples: Optional[int] = None,
+        neighbor_boost: Optional[torch.Tensor] = None,
+        lambda_boost: float = 0.0,
+    ):
         self.dataset_len = dataset_len
         self.meta_probs = meta_probs # Direct reference to trainer's meta_probs
         self.alpha = alpha
         self.epsilon = epsilon
-        self.num_samples = num_samples if num_samples is not None else self.dataset_len
+        self.num_samples = int(num_samples) if num_samples is not None else self.dataset_len
         self.lambda_boost = lambda_boost
         self.neighbor_boost = neighbor_boost  # Should be a direct reference to trainer's tensor (on GPU)
-        self.replacement = replacement
+        self.replacement = True
         
         if self.neighbor_boost is not None:
             logger.info(f"HardnessAwareSampler initialized with neighbor_boost tensor (id: {id(self.neighbor_boost)}, device: {self.neighbor_boost.device}).")
@@ -43,78 +44,20 @@ class HardnessAwareSampler(Sampler):
             raise ValueError(f"meta_probs length ({self.meta_probs.numel()}) must match dataset_len ({self.dataset_len})")
 
     def _calculate_probabilities(self) -> torch.Tensor:
-        current_probs_from_trainer = self.meta_probs.cpu().float()
-        logger.debug(f"[Sampler_CalcProbs] Input meta_probs_from_trainer (sum={current_probs_from_trainer.sum().item():.4f}, "
-                     f"min={current_probs_from_trainer.min().item():.4f}, max={current_probs_from_trainer.max().item():.4f}, "
-                     f"num_zeros={(current_probs_from_trainer == 0).sum().item()})")
-        
-        weights = (current_probs_from_trainer + self.epsilon) ** self.alpha
-        logger.debug(f"[Sampler_CalcProbs] Weights after alpha (sum={weights.sum().item():.4f}, "
-                     f"min={weights.min().item():.4f}, max={weights.max().item():.4f}, "
-                     f"non_zero={(weights > 0).sum().item()}/{weights.numel()})")
-
+        base = (self.meta_probs.cpu().float() + self.epsilon) ** self.alpha
         if self.neighbor_boost is not None:
-            current_neighbor_boost_for_calc = self.neighbor_boost.cpu().float()
-            logger.debug(f"[Sampler] Neighbor_boost (id: {id(self.neighbor_boost)}, device: {self.neighbor_boost.device}): using .cpu().float() for calculation. Sum={current_neighbor_boost_for_calc.sum().item():.4f}, non_zero={(current_neighbor_boost_for_calc > 0).sum().item()}/{current_neighbor_boost_for_calc.numel()}, max={current_neighbor_boost_for_calc.max().item():.4f}")
-            
-            weights_after_boost = weights * (1 + self.lambda_boost * current_neighbor_boost_for_calc)
-            logger.debug(f"[Sampler] Weights after boost (lambda={self.lambda_boost}): sum={weights_after_boost.sum().item():.4f}, min={weights_after_boost.min().item():.4f}, max={weights_after_boost.max().item():.4f}, non_zero={(weights_after_boost > 0).sum().item()}/{weights_after_boost.numel()}")
-            
-            # Check if boosting changed weights significantly
-            if not torch.allclose(weights, weights_after_boost) and weights.sum() > 0:
-                change_ratio = (weights_after_boost.sum() - weights.sum()) / weights.sum()
-                logger.debug(f"[Sampler] Relative change in sum of weights due to boost: {change_ratio.item():.4%}")
-            else:
-                logger.debug("[Sampler] Neighbor boost did not significantly change weights or initial weights sum to zero.")
-            weights = weights_after_boost # Apply the boost
-        
-        sum_weights = weights.sum()
-        if sum_weights <= 1e-9: # Check for near-zero sum
-            logger.warning(f"[Sampler_CalcProbs_WARN] Sum of weights is very small or zero ({sum_weights.item()}). "
-                           f"This will lead to uniform sampling or errors. "
-                           f"Input meta_probs sum: {current_probs_from_trainer.sum().item()}. Alpha: {self.alpha}")
-            # Fallback to uniform if sum_weights is effectively zero
-            probs = torch.ones_like(weights) / weights.numel()
-        else:
-            probs = weights / sum_weights
-            probs = probs.clamp(min=1e-12)  # Prevent negative/zero probabilities for multinomial
-        
-        logger.debug(f"[Sampler_CalcProbs] Final sampling probs (sum={probs.sum().item():.4f}, "
-                     f"min={probs.min().item():.4f}, max={probs.max().item():.4f}, "
-                     f"num_zeros={(probs == 0).sum().item()})")
-        return probs
+            base = base * (1.0 + self.lambda_boost * self.neighbor_boost.cpu().float())
+        probs = base / base.sum()
+        return probs.clamp(min=1e-12)
 
     def __iter__(self):
-        probabilities = self._calculate_probabilities()
-        
-        # Ensure probabilities are valid for multinomial sampling
-        if torch.any(probabilities < 0):
-            logger.error("Negative probabilities found before multinomial sampling. This should not happen.")
-            # Fallback to uniform if something went wrong
-            probabilities = torch.ones(self.dataset_len, dtype=torch.float) / self.dataset_len
-        
-        if torch.all(probabilities == 0):
-            logger.warning("All probabilities are zero. Falling back to uniform sampling.")
-            probabilities = torch.ones(self.dataset_len, dtype=torch.float) / self.dataset_len
-
-        indices = torch.multinomial(probabilities, self.num_samples, replacement=self.replacement)
-        logger.info(f"unique_in_batch={indices.unique().numel()}/{self.num_samples}")
-        
-        return iter(indices.tolist())
+        p = self._calculate_probabilities()
+        idx = torch.multinomial(p, self.num_samples, replacement=True)
+        u, c = idx.unique(return_counts=True)
+        logger.info(f"[Sampler] draws={self.num_samples}, unique={u.numel()}, max_repeats={int(c.max().item())}")
+        return iter(idx.tolist())
 
     def __len__(self):
         return self.num_samples
 
-    def update_sampler_config(self, meta_probs: torch.Tensor):
-        """Allows external updates to the meta_probs if needed."""
-        if meta_probs.numel() != self.dataset_len:
-            raise ValueError("New meta_probs tensor length does not match dataset length.")
-        self.meta_probs = meta_probs
-        sample_idxs = original_indices[:5].tolist() if original_indices is not None else []
-        sample_vals = {idx: self.meta_probs[idx].item() for idx in sample_idxs}
-        logger.debug(f"[meta_probs-Update] sample idx→prob {sample_vals}")
-
-    def set_neighbor_boost(self, boost_tensor):
-        if boost_tensor.numel() != self.dataset_len:
-            raise ValueError("neighbor_boost length mismatch")
-        logger.warning("HardnessAwareSampler.set_neighbor_boost was called. This is unexpected with the current design of shared tensor reference.")
+    # removed deprecated methods

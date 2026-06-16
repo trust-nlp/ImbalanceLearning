@@ -107,6 +107,7 @@ class HardnessAwareTrainer(Trainer):
                  meta_update_lr: float = 2e-4,
                  meta_update_scale_factor: float = 2.0,
                  precomputed_embeddings=None,
+                 sampler_oversample_ratio: float = 1.0,
                  **kwargs):
         super().__init__(*args, **kwargs)
         # ** Ensure Trainer does not call torch.compile **
@@ -142,6 +143,7 @@ class HardnessAwareTrainer(Trainer):
         self.wnet_lr = wnet_lr
         self.meta_update_lr = meta_update_lr
         self.meta_update_scale_factor = meta_update_scale_factor
+        self.sampler_oversample_ratio = float(sampler_oversample_ratio)
 
         logger.info(f"HardnessAwareTrainer initialized. Hardness Sampling Enabled: {self.hardness_aware_sampling_enabled}")
         if self.hardness_aware_sampling_enabled:
@@ -200,6 +202,7 @@ class HardnessAwareTrainer(Trainer):
         if passed_boost_tensor is not None:
             logger.info(f"  Trainer._get_train_sampler passing _neighbor_boost id={id(passed_boost_tensor)}, device={passed_boost_tensor.device}")
 
+        n = int(self.train_dataset_len * self.sampler_oversample_ratio)
         return HardnessAwareSampler(
             dataset_len=self.train_dataset_len,
             meta_probs=self.meta_probs,
@@ -207,8 +210,7 @@ class HardnessAwareTrainer(Trainer):
             epsilon=1e-6,
             neighbor_boost=passed_boost_tensor,
             lambda_boost=self.knn_lambda,
-            num_samples=None,
-            replacement=False,
+            num_samples=n,
         )
 
     def _get_per_sentence_loss(self, outputs: Union[Dict, Tuple], labels: torch.Tensor, model_config: Any) -> torch.Tensor:
@@ -243,10 +245,24 @@ class HardnessAwareTrainer(Trainer):
         """
         loss_tensor = loss_tensor.to(self.args.device)
         if loss_tensor.numel() == 0:
-            return torch.empty_like(loss_tensor)
+            raise ValueError("loss_tensor is empty; check dataloader/batch construction")
         mean = loss_tensor.mean()
         std = loss_tensor.std(unbiased=False).clamp(min=1e-6)
         return (loss_tensor - mean) / std
+
+    def _compute_sample_weights(self, z: torch.Tensor) -> torch.Tensor:
+        """
+        Compute per-sample weights from normalized loss z using WNet.
+        Returns weights with mean ~1 and clipped range.
+        """
+        if z.dim() != 2 or z.size(-1) != 1:
+            raise ValueError(f"Expected z shape [B,1], got {tuple(z.shape)}")
+
+        w_logit = self.wnet(z).squeeze(-1)  # [B]
+        w = torch.sigmoid(w_logit) + 1e-6
+        w = w / (w.mean().detach() + 1e-6)
+        w = w.clamp(min=0.1, max=8.0)
+        return w
 
     def compute_loss(self, model, inputs, return_outputs=False):
         """
@@ -283,84 +299,85 @@ class HardnessAwareTrainer(Trainer):
         logger.debug(f"[Loss-PerSentence] min={per_sentence_loss.min().item():.6f}, max={per_sentence_loss.max().item():.6f}, mean={per_sentence_loss.mean().item():.6f}")
 
         if self.hardness_aware_sampling_enabled:
-            # ---------- VNet forward pass ----------
-            z = self._normalize_loss(per_sentence_loss.detach()).unsqueeze(-1)  # z-score normalization
-            logger.debug(f"[VNet-Input z] min={z.min().item():.6f}, max={z.max().item():.6f}, mean={z.mean().item():.6f}")
+            # ---------- WNet forward (pre-update) ----------
+            z = self._normalize_loss(per_sentence_loss.detach()).unsqueeze(-1)  # [B,1]
+            w_pre = self._compute_sample_weights(z)
 
-            w_logit = self.wnet(z).squeeze(-1)
-            logger.debug(f"[WNet-w_logit] min={w_logit.min().item():.6f}, max={w_logit.max().item():.6f}, mean={w_logit.mean().item():.6f}")
-            w = torch.sigmoid(w_logit) + 1e-6               # Single sigmoid
-            w = w / (w.mean().detach() + 1e-6)              # Normalize mean to 1
-            w = w.clamp(min=0.1, max=8.0)                  # Relax weight range
-            logger.debug(f"[WNet-w(after norm)] min={w.min().item():.6f}, max={w.max().item():.6f}, mean={w.mean().item():.6f}")
-
-            # Print weight distribution every 50 steps
             if self.state.global_step % 50 == 0:
-                logger.info(f"[W] step={self.state.global_step} mean={w.mean():.2f}  "
-                           f"p10={w.quantile(0.1).item():.2f}  p90={w.quantile(0.9).item():.2f}")
+                logger.info(
+                    f"[W(pre)] step={self.state.global_step} mean={w_pre.mean():.2f}  "
+                    f"p10={w_pre.quantile(0.1).item():.2f}  p90={w_pre.quantile(0.9).item():.2f}"
+                )
 
-            # ---------- Inner (meta) gradient step ----------
-            inner_loss = (w * per_sentence_loss).mean()      # With gradients for second-order
+            # ---------- Inner loss for virtual step (build meta-grad graph) ----------
+            inner_loss = (w_pre * per_sentence_loss).mean()
+
+            wnet_updated = False
             if self.meta_dataloader is not None:
-                # 1. Get a meta-batch
                 try:
-                    logger.debug(f"[MetaBatch-Pull] Fetching one meta_batch")
+                    logger.debug("[MetaBatch-Pull] Fetching one meta_batch")
                     meta_batch = next(self._meta_iter)
                 except StopIteration:
                     self._meta_iter = iter(self.meta_dataloader)
-                    logger.debug(f"[MetaBatch-Pull] Iterator reset, fetching again")
+                    logger.debug("[MetaBatch-Pull] Iterator reset, fetching again")
                     meta_batch = next(self._meta_iter)
 
-                # 1.1 Prepare meta inputs and extract labels separately
                 meta_inputs = self._prepare_inputs(meta_batch)
                 logger.debug(f"[MetaBatch-Inputs] keys = {list(meta_inputs.keys())}")
                 meta_labels = meta_inputs.pop("labels")
+                if meta_labels is None:
+                    raise ValueError("Meta labels missing")
 
-                # 2. Compute gradients for model parameters from the current batch and take a virtual update
                 logger.debug(f"[MetaStep] About to functional_call with inner_lr = {self.inner_lr}")
                 grads = torch.autograd.grad(
                     inner_loss,
                     tuple(model.parameters()),
-                    create_graph=True,        # Allow second-order gradients
+                    create_graph=True,
                 )
-                # 2.1 Construct updated parameter dictionary from model.named_parameters()
+
                 updated_param_dict = OrderedDict()
                 for (name, param), grad in zip(model.named_parameters(), grads):
                     updated_param_dict[name] = param - self.inner_lr * grad
-
-                # 2.2 Add all buffers to the dictionary (keeping original values)
                 for name, buf in model.named_buffers():
                     updated_param_dict[name] = buf
 
-                # 2.3 Put labels back to ensure loss is calculated during functional_call
                 meta_inputs["labels"] = meta_labels
-
-                # 3. Forward pass on meta-batch with updated parameters
                 meta_outputs = functional_call(model, updated_param_dict, (), meta_inputs, strict=False)
                 meta_loss = meta_outputs.loss
                 logger.debug(f"[MetaLoss] value = {meta_loss.item():.6f}")
 
-                # 4. Update WNet
+                # Update WNet
                 self.wopt.zero_grad()
                 meta_loss.backward(retain_graph=True)
                 self.wopt.step()
+                wnet_updated = True
 
-            # ---------- Update sampling probabilities (cumulative update) ----------
-            if self.hardness_aware_sampling_enabled and original_indices is not None:
-                # --- v3: EMA + uniform floor ---
-                gamma = 0.99
-                self.meta_probs.mul_(gamma)
-                self.meta_probs.index_add_(0, original_indices.cpu(), (1 - gamma) * w.detach().cpu())
-                self.meta_probs.add_(1e-4)
-                self.meta_probs.div_(self.meta_probs.sum())
+            # ---------- WNet forward (post-update) ----------
+            # Main-model final update must use post-update weights.
+            with torch.no_grad():
+                w_post = self._compute_sample_weights(z) if wnet_updated else w_pre
+
+            if self.state.global_step % 50 == 0:
+                logger.info(
+                    f"[W(post)] step={self.state.global_step} mean={w_post.mean():.2f}  "
+                    f"p10={w_post.quantile(0.1).item():.2f}  p90={w_post.quantile(0.9).item():.2f}"
+                )
+
+            # ---------- Update sampler probabilities using post-update weights ----------
+            if original_indices is None:
+                raise ValueError("orig_idx missing while hardness_aware_sampling_enabled is True")
+
+            gamma = 0.99
+            self.meta_probs.mul_(gamma)
+            self.meta_probs.index_add_(0, original_indices.cpu(), (1 - gamma) * w_post.cpu())
+            self.meta_probs.add_(1e-4)
+            self.meta_probs.div_(self.meta_probs.sum())
+
+            loss_main = (w_post.detach() * per_sentence_loss).mean()
         else:
-            # Standard training, no hardness aware sampling
             loss_main = outputs.loss
 
-        # ---------- (Re-forward) Compute main model gradients ----------
+        # ---------- Main model backward ----------
         self.optimizer.zero_grad(set_to_none=True)
-        loss_main = (w.detach() * per_sentence_loss).mean()  # Use loss from the first forward pass
-        # Backprop only along the graph of the second forward pass
         self.accelerator.backward(loss_main)
-
-        return loss_main.detach() / self.args.gradient_accumulation_steps 
+        return loss_main.detach() / self.args.gradient_accumulation_steps

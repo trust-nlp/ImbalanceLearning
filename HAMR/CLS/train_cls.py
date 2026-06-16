@@ -251,10 +251,10 @@ class ExtraTrainingArguments(TrainingArguments):
     )
     wnet_lr: float = field(default=1e-4)
     meta_update_lr: float = field(default=2e-4)
-    meta_update_scale_factor: float = field(default=2.0)
     embedding_dir: Optional[str] = field(default=None)
     weighted_loss: bool = field(default=True, metadata={"help": "Whether to multiply loss by sample weights."})
     weighted_sampling: bool = field(default=True, metadata={"help": "Whether to use sample weights for resampling."})
+    sampler_oversample_ratio: float = field(default=1.0, metadata={"help": "Epoch draws / dataset_len."})
 
 
 accuracy_metric = evaluate.load("accuracy")
@@ -738,11 +738,11 @@ def main():
                 knn_hard_sample_ratio=training_args.knn_hard_sample_ratio,
                 wnet_lr=training_args.wnet_lr,
                 meta_update_lr=training_args.meta_update_lr,
-                meta_update_scale_factor=training_args.meta_update_scale_factor,
                 precomputed_embeddings=emb_matrix,
                 # Added
                 weighted_loss=training_args.weighted_loss,
                 weighted_sampling=training_args.weighted_sampling,
+                sampler_oversample_ratio=training_args.sampler_oversample_ratio,
             )
         )
     )
@@ -768,6 +768,15 @@ def main():
         trainer.log_metrics("train", metrics)
         trainer.save_metrics("train", metrics)
         trainer.save_state()
+        train_runtime = metrics.get("train_runtime", None)
+        train_sps = metrics.get("train_samples_per_second", None)
+        if train_runtime is not None:
+            logger.info(f"[Cost] train_runtime_sec={train_runtime:.3f}")
+        if train_sps is not None:
+            logger.info(f"[Cost] train_samples_per_second={train_sps:.3f}")
+        if torch.cuda.is_available():
+            max_mem_gb = torch.cuda.max_memory_allocated() / (1024 ** 3)
+            logger.info(f"[Cost] max_gpu_mem_gb={max_mem_gb:.3f}")
 
     # Evaluation
     if training_args.do_eval:

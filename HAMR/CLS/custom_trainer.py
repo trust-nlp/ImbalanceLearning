@@ -12,7 +12,7 @@ from torch.func import functional_call
 from torch.utils.data import DataLoader
 from collections import OrderedDict
 from transformers import Trainer, TrainerCallback, TrainingArguments, TrainerState, TrainerControl
-from typing import Optional, Dict, Union, Any, List, Tuple
+from typing import Optional, Dict, Union, Any
 import logging
 # Enable global INFO level logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
@@ -102,10 +102,10 @@ class HardnessAwareTrainerForCls(Trainer):
                  knn_hard_sample_ratio: float = 0.2,
                  wnet_lr: float = 1e-4,
                  meta_update_lr: float = 2e-4,
-                 meta_update_scale_factor: float = 2.0,
                  precomputed_embeddings=None,
                  weighted_loss: bool = True,
                  weighted_sampling: bool = True,
+                 sampler_oversample_ratio: float = 1.0,
                  **kwargs):
         super().__init__(*args, **kwargs)
         # Ensure Trainer does not call torch.compile
@@ -138,13 +138,13 @@ class HardnessAwareTrainerForCls(Trainer):
 
         self.train_dataset_len = train_dataset_len
         self.wnet_lr = wnet_lr
-        self.meta_update_scale_factor = meta_update_scale_factor
         self.weighted_loss = weighted_loss
         self.weighted_sampling = weighted_sampling
+        self.sampler_oversample_ratio = float(sampler_oversample_ratio)
 
         logger.info(f"HardnessAwareTrainerForCls initialized. Hardness Sampling Enabled: {self.hardness_aware_sampling_enabled}")
         if self.hardness_aware_sampling_enabled:
-            logger.info(f"  H.Alpha: {self.hardness_alpha}, WNet LR: {self.wnet_lr}, MetaUpdateScale: {self.meta_update_scale_factor}")
+            logger.info(f"  H.Alpha: {self.hardness_alpha}, WNet LR: {self.wnet_lr}")
             if self.train_dataset_len is None or self.train_dataset_len == 0:
                 raise ValueError("HardnessAwareTrainer: train_dataset_len must be greater than 0")
 
@@ -188,6 +188,7 @@ class HardnessAwareTrainerForCls(Trainer):
             raise ValueError("Trainer: training requires a train_dataset.")
 
         logger.info("Creating HardnessAwareSampler for training.")
+        n = int(self.train_dataset_len * self.sampler_oversample_ratio)
         return HardnessAwareSampler(
             dataset_len=self.train_dataset_len,
             meta_probs=self.meta_probs,
@@ -195,8 +196,7 @@ class HardnessAwareTrainerForCls(Trainer):
             epsilon=1e-6,
             neighbor_boost=self._neighbor_boost,
             lambda_boost=self.knn_lambda,
-            num_samples=None,        # One epoch iterates through all samples once
-            replacement=False,
+            num_samples=n,
         )
 
     def _get_per_sample_loss(self, outputs, labels):
@@ -240,17 +240,20 @@ class HardnessAwareTrainerForCls(Trainer):
             outputs = model(**inputs)
         per_sample_loss = self._get_per_sample_loss(outputs, inputs["labels"])
 
-        # --- WNet forward pass and weight calculation ---
+        # --- WNet forward pass and weight calculation (PRE-update) ---
         z = self._normalize_loss(per_sample_loss.detach()).unsqueeze(-1)
         z = z.to(self.wnet.linear1.weight.device)
-        w_logit = self.wnet(z).squeeze(-1)
-        w = torch.sigmoid(w_logit)
-        w = w / (w.mean().detach() + 1e-6)  # Normalize mean to 1
-        w = w.clamp(min=0.1, max=8.0)
-        w = w.to(per_sample_loss.device)
+
+        w_pre_logit = self.wnet(z).squeeze(-1)
+        w_pre = torch.sigmoid(w_pre_logit)
+        w_pre = w_pre / (w_pre.mean().detach() + 1e-6)  # mean-normalize to 1
+        w_pre = w_pre.clamp(min=0.1, max=8.0).to(per_sample_loss.device)
+
+        # Default: if no meta step happens, main update uses w_pre
+        w_used = w_pre
 
         # --- Inner (meta) gradient step ---
-        inner_loss = (w * per_sample_loss).mean()
+        inner_loss = (w_pre * per_sample_loss).mean()
 
         if self.meta_dataloader is not None:
             try:
@@ -281,10 +284,16 @@ class HardnessAwareTrainerForCls(Trainer):
             
             # Update WNet
             self.wopt.zero_grad()
-            torch.autograd.backward(meta_loss,
-                                     retain_graph=True,
-                                     inputs=list(self.wnet.parameters()))
+            torch.autograd.backward(meta_loss, inputs=list(self.wnet.parameters()))
             self.wopt.step()
+
+            # Recompute weights using UPDATED wNet for the real (main) update
+            with torch.no_grad():
+                w_post_logit = self.wnet(z).squeeze(-1)
+                w_post = torch.sigmoid(w_post_logit)
+                w_post = w_post / (w_post.mean() + 1e-6)
+                w_post = w_post.clamp(min=0.1, max=8.0).to(per_sample_loss.device)
+            w_used = w_post
 
         # --- Update sampling probabilities (EMA) ---
         if original_indices is not None:
@@ -293,13 +302,13 @@ class HardnessAwareTrainerForCls(Trainer):
                 self.meta_probs.mul_(gamma)
                 self.meta_probs.index_add_(0,
                                            original_indices.to(self.meta_probs.device),
-                                           (1 - gamma) * w.detach().to(self.meta_probs.device))
+                                           (1 - gamma) * w_used.detach().to(self.meta_probs.device))
                 self.meta_probs.add_(1e-6)
                 self.meta_probs.div_(self.meta_probs.sum())
 
         # --- Compute main model gradients ---
         if self.weighted_loss:
-            main_loss = (w.detach() * per_sample_loss).mean()
+            main_loss = (w_used.detach() * per_sample_loss).mean()
         else:
             main_loss = per_sample_loss.mean()
         

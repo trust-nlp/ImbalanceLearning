@@ -6,7 +6,7 @@
 #SBATCH --mem=32G               # Memory allocation
 #SBATCH --time=12:00:00         # Maximum runtime
 #SBATCH --partition=bigTiger    # Partition to submit to
-#SBATCH --nodelist=itiger01
+#SBATCH --nodelist=itiger05
 # Exit on error
 set -e
 
@@ -24,13 +24,14 @@ model_name="microsoft/deberta-v3-base"
 # model_name="answerdotai/ModernBERT-base"
 
 
-HARDNESS_ALPHA=0.7       
+HARDNESS_ALPHA=0.7      
 KNN_K=10
-KNN_LAMBDA=0.1
-KNN_HARD_RATIO=0.3
+KNN_LAMBDA=0.7
+KNN_HARD_RATIO=0.1
 LEARNING_RATE=4e-5
 WNET_LR=1e-4                   
 META_UPDATE_LR=2e-4            
+OVERSAMPLE_RATIO=1.2
 
 
 train_file="HAMR/Datasets/${dataset}/train.json"
@@ -53,13 +54,12 @@ python HAMR/CLS/train_cls.py \
     --log_level info \
     --logging_strategy epoch \
     --logging_steps 500 \
-    --seed 42 \
+    --seed 43 \
     --train_file ${train_file} \
     --validation_file ${validation_file} \
     --test_file ${test_file} \
     --text_column_names text \
     --label_column_name label \
-    --shuffle_train_dataset \
     --metric_name f1 \
     --do_train --do_eval --do_predict \
     --max_seq_length 512 \
@@ -77,12 +77,12 @@ python HAMR/CLS/train_cls.py \
     --knn_lambda ${KNN_LAMBDA} \
     --knn_hard_sample_ratio ${KNN_HARD_RATIO} \
     --knn_build_freq 1 \
-    --meta_update_scale_factor 2.0 \
     --embedding_dir HAMR/embedding_data/${dataset} \
     --weighted_loss true \
-    --weighted_sampling true
+    --weighted_sampling true \
+    --sampler_oversample_ratio ${OVERSAMPLE_RATIO}
 
-
+    # --shuffle_train_dataset \
 
 # sbatch HAMR/CLS/run_cls.sh
 

@@ -6,7 +6,7 @@
 #SBATCH --mem=50G                       # Memory allocation
 #SBATCH --time=12:00:00                 # Maximum runtime
 #SBATCH --partition=bigTiger            # Submission partition
-#SBATCH --nodelist=itiger01             # Specify node (can be removed if not needed)
+#SBATCH --nodelist=itiger05             # Specify node (can be removed if not needed)
 
 # Exit on error
 set -e
@@ -20,9 +20,9 @@ source /project/hrao/miniconda3/bin/activate
 conda activate imbalance_env
 
 # Change the dataset here!
-dataset="mit_restaurant"
+# dataset="mit_restaurant"
 # dataset="bionlp2004"
-# dataset="tweetner7_2020"
+dataset="tweetner7_2020"
 
 # Change the model here!
 model_name="microsoft/deberta-v3-base"
@@ -43,14 +43,18 @@ output_dir="HAMR/NER/models/${dataset}_${SLURM_JOB_ID}"
 mkdir -p "$output_dir"
 
 # Hardness-aware sampling parameters
-HARDNESS_ALPHA=0.1       
+HARDNESS_ALPHA=0.7 
+KNN_LAMBDA=0.1      
 KNN_K=10
-KNN_LAMBDA=0.2
+KNN_HARD_RATIO=0.1
+
 KNN_FREQ=1
-KNN_HARD_RATIO=0.2
+
+LEARNING_RATE=2e-5
 WNET_LR=3e-4                   
 META_UPDATE_LR=2e-4            
-LEARNING_RATE=2e-5
+
+OVERSAMPLE_RATIO=1.2
 
 
 python HAMR/NER/train_ner.py \
@@ -61,7 +65,7 @@ python HAMR/NER/train_ner.py \
     --output_dir ${output_dir} \
     --do_train --do_eval --do_predict \
     --per_device_train_batch_size 8 \
-    --per_device_eval_batch_size 4 \
+    --per_device_eval_batch_size 8 \
     --fp16 \
     --learning_rate ${LEARNING_RATE} \
     --num_train_epochs 8 \
@@ -85,7 +89,7 @@ python HAMR/NER/train_ner.py \
     --knn_hard_sample_ratio ${KNN_HARD_RATIO} \
     --wnet_lr ${WNET_LR} \
     --meta_update_lr ${META_UPDATE_LR} \
-    --meta_update_scale_factor 2.0 \
-    --remove_unused_columns False
+    --remove_unused_columns False \
+    --sampler_oversample_ratio ${OVERSAMPLE_RATIO}
 
 # sbatch HAMR/NER/run_ner.sh

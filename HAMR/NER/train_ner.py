@@ -233,6 +233,10 @@ class HardnessArgs:
         default=None,
         metadata={"help": "Path to directory that stores pre-computed *.npy sentence embeddings produced by embed_conll.py."},
     )
+    sampler_oversample_ratio: float = field(
+        default=1.0,
+        metadata={"help": "Epoch draws / dataset_len for sampler."},
+    )
 
 
 # Define CustomDataCollatorForTokenClassification class
@@ -809,6 +813,7 @@ def main():
             meta_update_lr=hardness_args.meta_update_lr,
             meta_update_scale_factor=hardness_args.meta_update_scale_factor,
             precomputed_embeddings=train_sentence_embeddings,
+            sampler_oversample_ratio=hardness_args.sampler_oversample_ratio,
         )
         # Create and add the new callback instance
         knn_callback = KnnEpochEndCallback(trainer) # Pass the trainer instance
@@ -829,16 +834,21 @@ def main():
             checkpoint = last_checkpoint
         train_result = trainer.train(resume_from_checkpoint=checkpoint)
         metrics = train_result.metrics
-        trainer.save_model()  # Saves the tokenizer too for easy upload
-
+        trainer.save_model()
         max_train_samples = (
             data_args.max_train_samples if data_args.max_train_samples is not None else len(train_dataset)
         )
         metrics["train_samples"] = min(max_train_samples, len(train_dataset))
-
         trainer.log_metrics("train", metrics)
         trainer.save_metrics("train", metrics)
         trainer.save_state()
+        train_runtime = metrics["train_runtime"]
+        train_sps = metrics["train_samples_per_second"]
+        logger.info(f"[Cost] train_runtime_sec={train_runtime:.3f}")
+        logger.info(f"[Cost] train_samples_per_second={train_sps:.3f}")
+        if torch.cuda.is_available():
+            max_mem_gb = torch.cuda.max_memory_allocated() / (1024 ** 3)
+            logger.info(f"[Cost] max_gpu_mem_gb={max_mem_gb:.3f}")
 
     # Evaluation
     if training_args.do_eval:
